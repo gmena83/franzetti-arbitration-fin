@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Link } from "wouter";
 
 /* Home Page - Franzetti Arbitration
  * Design: Professional Legal Minimalism with client's requested changes
@@ -8,6 +7,7 @@ import { Link } from "wouter";
  * - Hero with photo (looking at camera, holding hands)
  * - Testimonials section
  * - Full About section with Experience details
+ * - Institution logos with URLs
  */
 
 const professionalBackground = [
@@ -16,42 +16,56 @@ const professionalBackground = [
     location: "Washington, DC",
     role: "Founder and Principal",
     period: "Dec. 2025 – Present",
+    logo: null,
+    url: null,
   },
   {
     title: "King & Spalding LLP",
     location: "Washington, DC and Miami",
     role: "Partner",
     period: "Sept. 2021 – Dec. 2025",
+    logo: "/images/logos/king-spalding.jpg",
+    url: "https://www.kslaw.com",
   },
   {
     title: "Dechert LLP",
     location: "Washington, DC",
     role: "Partner",
     period: "Sept. 2015 – Sept. 2021",
+    logo: null,
+    url: "https://www.dechert.com",
   },
   {
     title: "Weil, Gotshal & Manges LLP",
     location: "Washington, DC",
     role: "Associate",
     period: "Jul. 2012 – Sept. 2015",
+    logo: null,
+    url: "https://www.weil.com",
   },
   {
     title: "Crowell & Moring LLP",
     location: "Washington, DC",
     role: "Associate",
     period: "Sept. 2008 – Jul. 2012",
+    logo: null,
+    url: "https://www.crowell.com",
   },
   {
     title: "Wald & Advogados Associados",
     location: "São Paulo, Brazil",
     role: "Associate",
     period: "Jul. 2001 – Sept. 2006",
+    logo: null,
+    url: null,
   },
   {
     title: "Dinamarco & Rossi Advocacia",
     location: "São Paulo",
     role: "Associate / Intern",
     period: "Jul. 1997 – Jul. 2001",
+    logo: null,
+    url: null,
   },
 ];
 
@@ -61,12 +75,15 @@ const academia = [
     role: "Adjunct Professor",
     course: "International Arbitration in the Energy Sector",
     period: "2024-2025",
+    url: "https://www.law.miami.edu",
   },
   {
     institution: "Georgetown University Law Center",
     role: "Adjunct Professor",
     course: "Investor-State Dispute Resolution",
     period: "2017-2022",
+    logo: "/images/logos/georgetown-law.png",
+    url: "https://www.law.georgetown.edu",
   },
 ];
 
@@ -76,36 +93,45 @@ const education = [
     institution: "Georgetown University Law Center",
     note: "High Honor, Dean's List",
     year: "2008",
+    logo: "/images/logos/georgetown-law.png",
+    url: "https://www.law.georgetown.edu",
   },
   {
     degree: "Specialization",
     institution: "Getúlio Vargas Foundation",
     note: "Business and Economics Law",
     year: "2006",
+    url: "https://portal.fgv.br",
   },
   {
     degree: "LL.B.",
     institution: "University of São Paulo, Law School",
     note: "",
     year: "2000",
+    logo: "/images/logos/usp-law.jpg",
+    url: "https://www.direito.usp.br",
   },
 ];
 
 const professionalAssociations = [
-  "Panel of Arbitrators of the International Centre of Dispute Resolution (ICDR)",
-  "Panel of Arbitrators of the American Arbitration Association (AAA)",
-  "Panel of Arbitrators of the Hong Kong International Arbitration Centre (HKIAC)",
-  "Panel of Arbitrators of the Brazil-Canada Chamber of Commerce (CAM-CCBC)",
-  "Panel of Arbitrators of the Capital Market Chamber of B3 S.A – Brasil, Bolsa, Balcão (CAM)",
-  "Arbitration and Mediation Committee of the International Court of Commerce (ICC) Brazil",
-  "International Bar Association – Dispute Resolution Section",
-  "Rising Arbitrators Initiative (RAI)",
-  "Arbitral Women",
-  "Miami International Arbitration Society (MIAS)",
-  "Brazilian Arbitration Committee (CBAR)",
+  { name: "Panel of Arbitrators of the International Centre of Dispute Resolution (ICDR)", logo: "/images/logos/aaa-icdr.jpg", url: "https://www.icdr.org" },
+  { name: "Panel of Arbitrators of the American Arbitration Association (AAA)", logo: "/images/logos/aaa-icdr.jpg", url: "https://www.adr.org" },
+  { name: "Panel of Arbitrators of the Hong Kong International Arbitration Centre (HKIAC)", url: "https://www.hkiac.org" },
+  { name: "Panel of Arbitrators of the Brazil-Canada Chamber of Commerce (CAM-CCBC)", logo: "/images/logos/cam-ccbc.png", url: "https://ccbc.org.br/cam-ccbc-centro-arbitragem-mediacao" },
+  { name: "Panel of Arbitrators of the Capital Market Chamber of B3 S.A – Brasil, Bolsa, Balcão (CAM)", url: "https://www.b3.com.br" },
+  { name: "Arbitration and Mediation Committee of the International Court of Commerce (ICC) Brazil", logo: "/images/logos/icc.png", url: "https://iccwbo.org/dispute-resolution/dispute-resolution-services/arbitration" },
+  { name: "International Bar Association – Dispute Resolution Section", logo: "/images/logos/iba.png", url: "https://www.ibanet.org" },
+  { name: "Rising Arbitrators Initiative (RAI)", url: "https://www.risingarbitrators.org" },
+  { name: "Arbitral Women", logo: "/images/logos/arbitralwomen.jpg", url: "https://www.arbitralwomen.org" },
+  { name: "Miami International Arbitration Society (MIAS)", logo: "/images/logos/mias.jpg", url: "https://miamiarbitration.com" },
+  { name: "Brazilian Arbitration Committee (CBAR)", logo: "/images/logos/cbar.jpg", url: "https://cbar.org.br" },
 ];
 
-const barAdmissions = ["District of Columbia", "New York", "Brazil"];
+const barAdmissions = [
+  { name: "District of Columbia", logo: "/images/logos/dcbar.jpg", url: "https://www.dcbar.org" },
+  { name: "New York", logo: "/images/logos/nysba.jpg", url: "https://nysba.org" },
+  { name: "Brazil", logo: "/images/logos/oab.jpg", url: "https://www.oab.org.br" },
+];
 
 const languages = ["English", "Portuguese", "Spanish"];
 
@@ -267,13 +293,24 @@ export default function Home() {
             </h3>
             <div className="space-y-4">
               {professionalBackground.map((item, index) => (
-                <div key={index} className="flex flex-col sm:flex-row sm:justify-between py-2">
-                  <div>
-                    <span className="font-semibold text-charcoal">{item.title}</span>
-                    <span className="text-gray-600">, {item.location}</span>
-                    <span className="text-gray-600">, {item.role}</span>
+                <div key={index} className="flex flex-col sm:flex-row sm:justify-between py-3 items-start sm:items-center">
+                  <div className="flex items-center gap-4">
+                    {item.logo && (
+                      <img src={item.logo} alt={item.title} className="h-8 w-auto object-contain hidden sm:block" />
+                    )}
+                    <div>
+                      {item.url ? (
+                        <a href={item.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-charcoal hover:text-aquamarine transition-colors">
+                          {item.title}
+                        </a>
+                      ) : (
+                        <span className="font-semibold text-charcoal">{item.title}</span>
+                      )}
+                      <span className="text-gray-600">, {item.location}</span>
+                      <span className="text-gray-600">, {item.role}</span>
+                    </div>
                   </div>
-                  <span className="text-gray-400 text-sm sm:text-base">{item.period}</span>
+                  <span className="text-gray-400 text-sm sm:text-base mt-1 sm:mt-0">{item.period}</span>
                 </div>
               ))}
             </div>
@@ -292,13 +329,24 @@ export default function Home() {
             </h3>
             <div className="space-y-4">
               {academia.map((item, index) => (
-                <div key={index} className="flex flex-col sm:flex-row sm:justify-between py-2">
-                  <div>
-                    <span className="font-semibold text-charcoal">{item.institution}</span>
-                    <span className="text-gray-600">, {item.role}</span>
-                    <span className="text-gray-600">, {item.course}</span>
+                <div key={index} className="flex flex-col sm:flex-row sm:justify-between py-3 items-start sm:items-center">
+                  <div className="flex items-center gap-4">
+                    {item.logo && (
+                      <img src={item.logo} alt={item.institution} className="h-8 w-auto object-contain hidden sm:block" />
+                    )}
+                    <div>
+                      {item.url ? (
+                        <a href={item.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-charcoal hover:text-aquamarine transition-colors">
+                          {item.institution}
+                        </a>
+                      ) : (
+                        <span className="font-semibold text-charcoal">{item.institution}</span>
+                      )}
+                      <span className="text-gray-600">, {item.role}</span>
+                      <span className="text-gray-600">, {item.course}</span>
+                    </div>
                   </div>
-                  <span className="text-gray-400 text-sm sm:text-base">{item.period}</span>
+                  <span className="text-gray-400 text-sm sm:text-base mt-1 sm:mt-0">{item.period}</span>
                 </div>
               ))}
             </div>
@@ -315,15 +363,27 @@ export default function Home() {
             <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-200">
               Education
             </h3>
-            <div className="space-y-3">
+            <div className="space-y-4">
               {education.map((item, index) => (
-                <div key={index} className="flex flex-col sm:flex-row sm:justify-between py-2">
-                  <div>
-                    <span className="font-semibold text-charcoal">{item.degree}</span>
-                    <span className="text-gray-600">, {item.institution}</span>
-                    {item.note && <span className="text-gray-500"> ({item.note})</span>}
+                <div key={index} className="flex flex-col sm:flex-row sm:justify-between py-3 items-start sm:items-center">
+                  <div className="flex items-center gap-4">
+                    {item.logo && (
+                      <img src={item.logo} alt={item.institution} className="h-10 w-auto object-contain hidden sm:block" />
+                    )}
+                    <div>
+                      <span className="font-semibold text-charcoal">{item.degree}</span>
+                      <span className="text-gray-600">, </span>
+                      {item.url ? (
+                        <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-aquamarine transition-colors">
+                          {item.institution}
+                        </a>
+                      ) : (
+                        <span className="text-gray-600">{item.institution}</span>
+                      )}
+                      {item.note && <span className="text-gray-500"> ({item.note})</span>}
+                    </div>
                   </div>
-                  <span className="text-gray-400 text-sm sm:text-base">{item.year}</span>
+                  <span className="text-gray-400 text-sm sm:text-base mt-1 sm:mt-0">{item.year}</span>
                 </div>
               ))}
             </div>
@@ -340,14 +400,20 @@ export default function Home() {
             <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-200">
               Professional Associations
             </h3>
-            <ul className="space-y-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {professionalAssociations.map((item, index) => (
-                <li key={index} className="flex items-start">
-                  <span className="inline-block w-2 h-2 rounded-full bg-aquamarine mt-2 mr-3 flex-shrink-0"></span>
-                  <span className="text-gray-700">{item}</span>
-                </li>
+                <div key={index} className="flex items-center gap-3 py-2">
+                  <span className="inline-block w-2 h-2 rounded-full bg-aquamarine flex-shrink-0"></span>
+                  {item.url ? (
+                    <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-aquamarine transition-colors">
+                      {item.name}
+                    </a>
+                  ) : (
+                    <span className="text-gray-700">{item.name}</span>
+                  )}
+                </div>
               ))}
-            </ul>
+            </div>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -361,11 +427,17 @@ export default function Home() {
               <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-200">
                 Bar Admissions
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {barAdmissions.map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <span className="inline-block w-2 h-2 rounded-full bg-aquamarine mt-2 mr-3 flex-shrink-0"></span>
-                    <span className="text-gray-700">{item}</span>
+                  <li key={index} className="flex items-center gap-3">
+                    <span className="inline-block w-2 h-2 rounded-full bg-aquamarine flex-shrink-0"></span>
+                    {item.url ? (
+                      <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-aquamarine transition-colors">
+                        {item.name}
+                      </a>
+                    ) : (
+                      <span className="text-gray-700">{item.name}</span>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -381,10 +453,10 @@ export default function Home() {
               <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-200">
                 Languages
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {languages.map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <span className="inline-block w-2 h-2 rounded-full bg-aquamarine mt-2 mr-3 flex-shrink-0"></span>
+                  <li key={index} className="flex items-center gap-3">
+                    <span className="inline-block w-2 h-2 rounded-full bg-aquamarine flex-shrink-0"></span>
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}

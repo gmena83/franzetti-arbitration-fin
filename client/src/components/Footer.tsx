@@ -17,9 +17,9 @@ const navLinks = [
 ];
 
 const cvLinks = [
-  { label: "CV (English)", href: "#" },
-  { label: "CV (Español)", href: "#" },
-  { label: "CV (Português)", href: "#" },
+  { label: "CV (English)", href: "/cv/Franzetti-CV-English.docx" },
+  { label: "CV (Español)", href: "/cv/Franzetti-CV-English.docx" },
+  { label: "CV (Português)", href: "/cv/Franzetti-CV-English.docx" },
 ];
 
 export default function Footer() {
@@ -70,6 +70,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
+                    download
                     className="text-gray-300 hover:text-aquamarine transition-colors text-sm"
                   >
                     {link.label}
