@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 /* Thought Leadership Page - Franzetti Arbitration
  * Design: Professional Legal Minimalism with client's requested changes
@@ -137,6 +137,27 @@ type TabType = "recognition" | "speaking" | "publications";
 
 export default function ThoughtLeadership() {
   const [activeTab, setActiveTab] = useState<TabType>("recognition");
+
+  // SEO Meta Tags
+  useEffect(() => {
+    document.title = "Thought Leadership | Franzetti Arbitration - Publications & Speaking";
+    
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Explore Erica Franzetti\'s thought leadership in international arbitration including publications, speaking engagements, and industry recognition.');
+    }
+    
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', 'arbitration publications, speaking engagements, legal recognition, Chambers Partners, Legal 500, international arbitration thought leadership');
+    }
+    
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', 'Thought Leadership | Franzetti Arbitration');
+    
+    let ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) ogDescription.setAttribute('content', 'Publications, speaking engagements, and industry recognition in international arbitration.');
+  }, []);
 
   return (
     <div className="bg-white">

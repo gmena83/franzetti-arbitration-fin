@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 /* Home Page - Franzetti Arbitration
  * Design: Professional Legal Minimalism with client's requested changes
@@ -149,6 +150,27 @@ const testimonials = [
 ];
 
 export default function Home() {
+  // SEO Meta Tags - Reset to default on home page
+  useEffect(() => {
+    document.title = "Franzetti Arbitration | International Arbitrator & Counsel";
+    
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Erica Franzetti is a leading international arbitrator and counsel with extensive experience in international commercial and investor-state arbitration.');
+    }
+    
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', 'international arbitration, arbitrator, investor-state disputes, commercial arbitration, ICSID, ICC, energy arbitration, construction arbitration, Erica Franzetti, Washington DC arbitrator, Latin America arbitration');
+    }
+    
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', 'Franzetti Arbitration | International Arbitrator & Counsel');
+    
+    let ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) ogDescription.setAttribute('content', 'Erica Franzetti is a leading international arbitrator and counsel with extensive experience in international commercial and investor-state arbitration.');
+  }, []);
+
   return (
     <div className="bg-white">
       {/* Hero Section */}

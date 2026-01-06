@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 /* Expertise Page (formerly Cases) - Franzetti Arbitration
  * Design: Professional Legal Minimalism with client's requested changes
@@ -179,6 +179,30 @@ const mattersAsCounsel = [
 
 export default function Cases() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
+
+  // SEO Meta Tags
+  useEffect(() => {
+    document.title = "Expertise | Franzetti Arbitration - International Arbitration Cases";
+    
+    // Update meta description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Explore Erica Franzetti\'s expertise in international arbitration including investor-state disputes, energy, infrastructure, construction, and commercial arbitration cases.');
+    }
+    
+    // Update meta keywords
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', 'arbitration expertise, investor-state disputes, energy arbitration, infrastructure disputes, construction arbitration, commercial arbitration, ICSID cases, ICC arbitration');
+    }
+    
+    // Update Open Graph tags
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', 'Expertise | Franzetti Arbitration');
+    
+    let ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) ogDescription.setAttribute('content', 'Explore Erica Franzetti\'s expertise in international arbitration including investor-state disputes, energy, infrastructure, and commercial cases.');
+  }, []);
 
   const scrollToSection = (id: string) => {
     setActiveCategory(id);

@@ -1,0 +1,8 @@
+# Robots.txt for Franzetti Arbitration
+# https://franzettiarb.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://franzettiarb.com/sitemap.xml
