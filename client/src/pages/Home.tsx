@@ -297,9 +297,11 @@ export default function Home() {
               {professionalBackground.map((item, index) => (
                 <div key={index} className="flex flex-col sm:flex-row sm:justify-between py-3 items-start sm:items-center">
                   <div className="flex items-center gap-4">
-                    {item.logo && (
-                      <img src={item.logo} alt={item.title} className="h-8 w-auto object-contain hidden sm:block" />
-                    )}
+                    <div className="w-32 flex-shrink-0 hidden sm:flex items-center justify-start">
+                      {item.logo && (
+                        <img src={item.logo} alt={item.title} className="h-8 w-auto max-w-full object-contain" />
+                      )}
+                    </div>
                     <div>
                       {item.url ? (
                         <a href={item.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-charcoal hover:text-aquamarine transition-colors">
@@ -312,7 +314,7 @@ export default function Home() {
                       <span className="text-gray-600">, {item.role}</span>
                     </div>
                   </div>
-                  <span className="text-gray-400 text-sm sm:text-base mt-1 sm:mt-0">{item.period}</span>
+                  <span className="text-gray-400 text-sm sm:text-base mt-1 sm:mt-0 whitespace-nowrap">{item.period}</span>
                 </div>
               ))}
             </div>
@@ -333,9 +335,11 @@ export default function Home() {
               {academia.map((item, index) => (
                 <div key={index} className="flex flex-col sm:flex-row sm:justify-between py-3 items-start sm:items-center">
                   <div className="flex items-center gap-4">
-                    {item.logo && (
-                      <img src={item.logo} alt={item.institution} className="h-8 w-auto object-contain hidden sm:block" />
-                    )}
+                    <div className="w-32 flex-shrink-0 hidden sm:flex items-center justify-start">
+                      {item.logo && (
+                        <img src={item.logo} alt={item.institution} className="h-8 w-auto max-w-full object-contain" />
+                      )}
+                    </div>
                     <div>
                       {item.url ? (
                         <a href={item.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-charcoal hover:text-aquamarine transition-colors">
@@ -369,9 +373,11 @@ export default function Home() {
               {education.map((item, index) => (
                 <div key={index} className="flex flex-col sm:flex-row sm:justify-between py-3 items-start sm:items-center">
                   <div className="flex items-center gap-4">
-                    {item.logo && (
-                      <img src={item.logo} alt={item.institution} className="h-10 w-auto object-contain hidden sm:block" />
-                    )}
+                    <div className="w-32 flex-shrink-0 hidden sm:flex items-center justify-start">
+                      {item.logo && (
+                        <img src={item.logo} alt={item.institution} className="h-10 w-auto max-w-full object-contain" />
+                      )}
+                    </div>
                     <div>
                       <span className="font-semibold text-charcoal">{item.degree}</span>
                       <span className="text-gray-600">, </span>
