@@ -16,8 +16,8 @@ const professionalBackground = [
     location: "Washington, DC",
     role: "Founder and Principal",
     period: "Dec. 2025 – Present",
-    logo: null,
-    url: null,
+    logo: "/images/Franzetti-principal-dark.svg",
+    url: "https://www.franzettiarb.com",
   },
   {
     title: "King & Spalding LLP",
@@ -32,7 +32,7 @@ const professionalBackground = [
     location: "Washington, DC",
     role: "Partner",
     period: "Sept. 2015 – Sept. 2021",
-    logo: null,
+    logo: "/images/dechert-logo.jpg",
     url: "https://www.dechert.com",
   },
   {
@@ -40,7 +40,7 @@ const professionalBackground = [
     location: "Washington, DC",
     role: "Associate",
     period: "Jul. 2012 – Sept. 2015",
-    logo: null,
+    logo: "/images/weil-logo.jpg",
     url: "https://www.weil.com",
   },
   {
@@ -48,7 +48,7 @@ const professionalBackground = [
     location: "Washington, DC",
     role: "Associate",
     period: "Sept. 2008 – Jul. 2012",
-    logo: null,
+    logo: "/images/crowell-logo.jpg",
     url: "https://www.crowell.com",
   },
   {
@@ -56,16 +56,16 @@ const professionalBackground = [
     location: "São Paulo, Brazil",
     role: "Associate",
     period: "Jul. 2001 – Sept. 2006",
-    logo: null,
-    url: null,
+    logo: "/images/wald-logo.png",
+    url: "https://www.wald.com.br",
   },
   {
     title: "Dinamarco & Rossi Advocacia",
     location: "São Paulo",
     role: "Associate / Intern",
     period: "Jul. 1997 – Jul. 2001",
-    logo: null,
-    url: null,
+    logo: "/images/dinamarco-logo.jpg",
+    url: "https://www.dinamarcoadvocacia.com.br",
   },
 ];
 
@@ -75,6 +75,7 @@ const academia = [
     role: "Adjunct Professor",
     course: "International Arbitration in the Energy Sector",
     period: "2024-2025",
+    logo: "/images/miami-law-logo.jpg",
     url: "https://www.law.miami.edu",
   },
   {
@@ -101,6 +102,7 @@ const education = [
     institution: "Getúlio Vargas Foundation",
     note: "Business and Economics Law",
     year: "2006",
+    logo: "/images/fgv-logo.png",
     url: "https://portal.fgv.br",
   },
   {
@@ -108,7 +110,7 @@ const education = [
     institution: "University of São Paulo, Law School",
     note: "",
     year: "2000",
-    logo: "/images/logos/usp-law.jpg",
+    logo: "/images/usp-law-logo.jpg",
     url: "https://www.direito.usp.br",
   },
 ];
