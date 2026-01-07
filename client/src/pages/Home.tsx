@@ -103,9 +103,9 @@ const education = [
     url: "https://www.law.georgetown.edu",
   },
   {
-    degree: "Specialization",
+    degree: "Postgraduate Specialization in Business and Economic Law",
     institution: "Getúlio Vargas Foundation",
-    note: "Business and Economics Law",
+    note: "",
     year: "2006",
     logo: "/images/fgv-logo.png",
     url: "https://portal.fgv.br",
@@ -250,12 +250,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="flex flex-col justify-center bg-gray-200/50 p-8 lg:p-12 rounded-sm"
             >
-              {/* Bigger logo in hero section */}
-              <img
-                src="/images/Franzetti-principal-dark.svg"
-                alt="Franzetti Arbitration"
-                className="h-24 lg:h-32 w-auto mb-8"
-              />
+
               {/* Bigger/bolder text as per client request */}
               <h1 className="text-4xl lg:text-5xl font-serif font-bold text-charcoal mb-4">
                 {heroTitle}
@@ -298,7 +293,7 @@ export default function Home() {
               {language === "ES" ? "SOBRE" : language === "PT" ? "SOBRE" : "ABOUT"}
             </h2>
 
-            <div className="prose prose-lg max-w-none text-gray-700 space-y-6 text-justify">
+            <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
               <p>
                 {language === "ES" 
                   ? "Erica Franzetti es una destacada árbitro internacional y abogada con amplia experiencia en arbitraje comercial internacional y arbitraje inversionista-Estado en una amplia gama de sectores industriales, incluyendo energía, recursos naturales, infraestructura, manufactura, servicios financieros y tecnología."

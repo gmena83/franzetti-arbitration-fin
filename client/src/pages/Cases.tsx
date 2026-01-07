@@ -258,45 +258,27 @@ export default function Cases() {
             </p>
           </motion.div>
 
-          {/* Symmetric 2x2 Grid of Images */}
+          {/* Subject Matter Navigation - Bigger text, no images */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-2 gap-4 max-w-4xl mx-auto mb-12"
-          >
-            {expertiseImages.map((img, index) => (
-              <div key={index} className="aspect-square overflow-hidden rounded-sm shadow-lg">
-                <img
-                  src={img}
-                  alt={`Erica Franzetti ${index + 1}`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-            ))}
-          </motion.div>
-
-          {/* Subject Matter Navigation - Darker grey separators */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-wrap justify-center items-center gap-2 text-sm"
+            className="flex flex-wrap justify-center items-center gap-3 text-lg lg:text-xl"
           >
             {subjectMatters.map((matter, index) => (
               <span key={matter.id} className="flex items-center">
                 <button
                   onClick={() => scrollToSection(matter.id)}
-                  className={`hover:text-aquamarine transition-colors ${
+                  className={`hover:text-aquamarine transition-colors font-medium ${
                     activeCategory === matter.id
-                      ? "text-aquamarine font-medium"
+                      ? "text-aquamarine"
                       : "text-charcoal"
                   }`}
                 >
                   {getLabel(matter)}
                 </button>
                 {index < subjectMatters.length - 1 && (
-                  <span className="mx-2 text-gray-500">|</span>
+                  <span className="mx-3 text-gray-400">|</span>
                 )}
               </span>
             ))}

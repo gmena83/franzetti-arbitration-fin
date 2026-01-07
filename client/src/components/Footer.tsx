@@ -38,7 +38,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-6">
               <img
-                src="/images/Franzetti-principal-white.svg"
+                src="/images/Franzetti-logo-new.png"
                 alt="Franzetti Arbitration"
                 className="h-20 w-auto"
               />
