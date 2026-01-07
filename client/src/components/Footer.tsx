@@ -40,7 +40,7 @@ export default function Footer() {
               <img
                 src="/images/Franzetti-logo-transparent.png"
                 alt="Franzetti Arbitration"
-                className="h-20 w-auto invert brightness-200"
+                className="h-20 w-auto bg-white px-4 py-2"
               />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
