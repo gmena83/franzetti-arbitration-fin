@@ -186,17 +186,9 @@ export default function ThoughtLeadership() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl lg:text-5xl font-serif font-semibold text-charcoal mb-8">
+              <h1 className="text-4xl lg:text-5xl font-serif font-semibold text-charcoal">
                 {language === "ES" ? "LIDERAZGO INTELECTUAL" : language === "PT" ? "LIDERANÇA INTELECTUAL" : "THOUGHT LEADERSHIP"}
               </h1>
-
-              {/* Featured Testimonial */}
-              <div className="bg-white p-6 rounded-sm shadow-sm border-l-4 border-aquamarine">
-                <blockquote className="text-lg text-gray-700 italic mb-3">
-                  "Erica is a superstar who stands out for her extremely well-versed approach in high-stakes international disputes."
-                </blockquote>
-                <p className="text-sm text-gray-500 font-medium">— Legal 500</p>
-              </div>
             </motion.div>
 
             <motion.div
