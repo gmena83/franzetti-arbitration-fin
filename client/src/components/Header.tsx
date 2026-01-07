@@ -38,7 +38,7 @@ export default function Header() {
             <img
               src="/images/Franzetti-logo-transparent.png"
               alt="Franzetti Arbitration"
-              className="h-16 w-auto"
+              className="h-20 w-auto"
             />
           </Link>
 
