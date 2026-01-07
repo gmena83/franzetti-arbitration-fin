@@ -49,8 +49,8 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   
-  /* Custom Franzetti colors */
-  --color-aquamarine: oklch(0.72 0.12 180);
+  /* Custom Franzetti colors - Aquamarine adjusted to be more blue */
+  --color-aquamarine: oklch(0.65 0.14 230);
   --color-nude: oklch(0.75 0.08 60);
   --color-charcoal: oklch(0.25 0.02 260);
   --color-slate-dark: oklch(0.20 0.02 260);
@@ -61,7 +61,7 @@
 }
 
 :root {
-  --aquamarine: #5BBFBA;
+  --aquamarine: #3A9BC7;
   --nude: #D4A574;
   --charcoal: #1a1a2e;
   --slate-dark: #16213e;

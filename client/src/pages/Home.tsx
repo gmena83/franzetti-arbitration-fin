@@ -1,14 +1,17 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 /* Home Page - Franzetti Arbitration
  * Design: Professional Legal Minimalism with client's requested changes
- * - Whiter base color
- * - Profile instead of Home
- * - Hero with photo (looking at camera, holding hands)
- * - Testimonials section
- * - Full About section with Experience details
- * - Institution logos with URLs
+ * - Bigger logo in hero section
+ * - Grey card height matches picture height
+ * - Bigger/bolder text in hero
+ * - Symmetric testimonials (two side by side)
+ * - Justified text in About
+ * - LinkedIn-style logos for Professional Associations
+ * - Academia: "Professor" without "Adjunct" prefix
+ * - Languages ordered: English, Spanish, Portuguese
  */
 
 const professionalBackground = [
@@ -70,10 +73,11 @@ const professionalBackground = [
   },
 ];
 
+// Academia: "Professor" without "Adjunct" prefix as per client request
 const academia = [
   {
     institution: "University of Miami",
-    role: "Adjunct Professor",
+    role: "Professor",
     course: "International Arbitration in the Energy Sector",
     period: "2024-2025",
     logo: "/images/miami-law-logo.jpg",
@@ -81,7 +85,7 @@ const academia = [
   },
   {
     institution: "Georgetown University Law Center",
-    role: "Adjunct Professor",
+    role: "Professor",
     course: "Investor-State Dispute Resolution",
     period: "2017-2022",
     logo: "/images/logos/georgetown-law.png",
@@ -116,18 +120,63 @@ const education = [
   },
 ];
 
+// Professional Associations with LinkedIn-style logos and URLs
 const professionalAssociations = [
-  { name: "Panel of Arbitrators of the International Centre of Dispute Resolution (ICDR)", logo: "/images/logos/aaa-icdr.jpg", url: "https://www.icdr.org" },
-  { name: "Panel of Arbitrators of the American Arbitration Association (AAA)", logo: "/images/logos/aaa-icdr.jpg", url: "https://www.adr.org" },
-  { name: "Panel of Arbitrators of the Hong Kong International Arbitration Centre (HKIAC)", url: "https://www.hkiac.org" },
-  { name: "Panel of Arbitrators of the Brazil-Canada Chamber of Commerce (CAM-CCBC)", logo: "/images/logos/cam-ccbc.png", url: "https://ccbc.org.br/cam-ccbc-centro-arbitragem-mediacao" },
-  { name: "Panel of Arbitrators of the Capital Market Chamber of B3 S.A – Brasil, Bolsa, Balcão (CAM)", url: "https://www.b3.com.br" },
-  { name: "Arbitration and Mediation Committee of the International Court of Commerce (ICC) Brazil", logo: "/images/logos/icc.png", url: "https://iccwbo.org/dispute-resolution/dispute-resolution-services/arbitration" },
-  { name: "International Bar Association – Dispute Resolution Section", logo: "/images/logos/iba.png", url: "https://www.ibanet.org" },
-  { name: "Rising Arbitrators Initiative (RAI)", url: "https://www.risingarbitrators.org" },
-  { name: "Arbitral Women", logo: "/images/logos/arbitralwomen.jpg", url: "https://www.arbitralwomen.org" },
-  { name: "Miami International Arbitration Society (MIAS)", logo: "/images/logos/mias.jpg", url: "https://miamiarbitration.com" },
-  { name: "Brazilian Arbitration Committee (CBAR)", logo: "/images/logos/cbar.jpg", url: "https://cbar.org.br" },
+  { 
+    name: "Panel of Arbitrators of the International Centre of Dispute Resolution (ICDR)", 
+    logo: "/images/logos/aaa-icdr.jpg", 
+    url: "https://www.icdr.org" 
+  },
+  { 
+    name: "Panel of Arbitrators of the American Arbitration Association (AAA)", 
+    logo: "/images/logos/aaa-icdr.jpg", 
+    url: "https://www.adr.org" 
+  },
+  { 
+    name: "Panel of Arbitrators of the Hong Kong International Arbitration Centre (HKIAC)", 
+    logo: "/images/logos/hkiac.png", 
+    url: "https://www.hkiac.org" 
+  },
+  { 
+    name: "Panel of Arbitrators of the Brazil-Canada Chamber of Commerce (CAM-CCBC)", 
+    logo: "/images/logos/cam-ccbc.png", 
+    url: "https://ccbc.org.br/cam-ccbc-centro-arbitragem-mediacao" 
+  },
+  { 
+    name: "Panel of Arbitrators of the Capital Market Chamber of B3 S.A – Brasil, Bolsa, Balcão (CAM)", 
+    logo: "/images/logos/b3.png", 
+    url: "https://www.b3.com.br" 
+  },
+  { 
+    name: "Arbitration and Mediation Committee of the International Court of Commerce (ICC) Brazil", 
+    logo: "/images/logos/icc.png", 
+    url: "https://iccwbo.org/dispute-resolution/dispute-resolution-services/arbitration" 
+  },
+  { 
+    name: "International Bar Association – Dispute Resolution Section", 
+    logo: "/images/logos/iba.png", 
+    url: "https://www.ibanet.org" 
+  },
+  { 
+    name: "Rising Arbitrators Initiative (RAI)", 
+    logo: "/images/logos/rai.png", 
+    url: "https://www.risingarbitrators.org" 
+  },
+  { 
+    name: "Arbitral Women", 
+    logo: "/images/logos/arbitralwomen.jpg", 
+    url: "https://www.arbitralwomen.org" 
+  },
+  { 
+    name: "Miami International Arbitration Society (MIAS)", 
+    logo: "/images/logos/mias.jpg", 
+    url: "https://miamiarbitration.com" 
+  },
+  { 
+    name: "Brazilian Arbitration Committee (CBAR)", 
+    logo: "/images/logos/cbar.jpg", 
+    url: "https://cbar.org.br" 
+  },
 ];
 
 const barAdmissions = [
@@ -136,8 +185,10 @@ const barAdmissions = [
   { name: "Brazil", logo: "/images/logos/oab.jpg", url: "https://www.oab.org.br" },
 ];
 
-const languages = ["English", "Portuguese", "Spanish"];
+// Languages reordered: English, Spanish, Portuguese as per client request
+const languages = ["English", "Spanish", "Portuguese"];
 
+// Symmetric testimonials - two side by side
 const testimonials = [
   {
     quote: "Erica is a superstar who stands out for her extremely well-versed approach in high-stakes international disputes.",
@@ -150,6 +201,8 @@ const testimonials = [
 ];
 
 export default function Home() {
+  const { t, language } = useLanguage();
+  
   // SEO Meta Tags - Reset to default on home page
   useEffect(() => {
     document.title = "Franzetti Arbitration | International Arbitrator & Counsel";
@@ -171,24 +224,44 @@ export default function Home() {
     if (ogDescription) ogDescription.setAttribute('content', 'Erica Franzetti is a leading international arbitrator and counsel with extensive experience in international commercial and investor-state arbitration.');
   }, []);
 
+  // Get translated content
+  const heroTitle = language === "ES" 
+    ? "Árbitro Internacional y Abogada." 
+    : language === "PT" 
+    ? "Árbitro Internacional e Advogada." 
+    : "International Arbitrator and Counsel.";
+    
+  const heroSubtitle = language === "ES"
+    ? "Resolviendo y previniendo disputas con integridad, eficiencia y rigor."
+    : language === "PT"
+    ? "Resolvendo e prevenindo disputas com integridade, eficiência e rigor."
+    : "Resolving and preventing disputes with integrity, efficiency, and rigor.";
+
   return (
     <div className="bg-white">
-      {/* Hero Section */}
+      {/* Hero Section - Grey card height matches picture, bigger/bolder text */}
       <section className="bg-gray-100">
         <div className="container py-16 lg:py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+            {/* Text Content - Grey card with matching height */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="space-y-4"
+              className="flex flex-col justify-center bg-gray-200/50 p-8 lg:p-12 rounded-sm"
             >
-              <h1 className="text-3xl lg:text-4xl font-serif font-bold text-charcoal">
-                International Arbitrator and Counsel.
+              {/* Bigger logo in hero section */}
+              <img
+                src="/images/Franzetti-principal-dark.svg"
+                alt="Franzetti Arbitration"
+                className="h-24 lg:h-32 w-auto mb-8"
+              />
+              {/* Bigger/bolder text as per client request */}
+              <h1 className="text-4xl lg:text-5xl font-serif font-bold text-charcoal mb-4">
+                {heroTitle}
               </h1>
-              <p className="text-lg lg:text-xl text-gray-600 leading-relaxed">
-                Resolving and preventing disputes with integrity, efficiency, and rigor.
+              <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-medium">
+                {heroSubtitle}
               </p>
             </motion.div>
 
@@ -197,107 +270,114 @@ export default function Home() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
+              className="relative h-full"
             >
               <img
                 src="/images/EricaFranzetti39057-RT.jpg"
                 alt="Erica Franzetti"
-                className="w-full max-w-lg mx-auto lg:ml-auto object-cover rounded-sm shadow-xl"
+                className="w-full h-full object-cover rounded-sm shadow-xl"
+                style={{ minHeight: "400px" }}
               />
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* About Section with Testimonials */}
+      {/* About Section with Symmetric Testimonials */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* About Text */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="lg:col-span-2"
-            >
-              <h2 className="text-3xl lg:text-4xl font-serif font-semibold text-charcoal mb-8">
-                ABOUT
-              </h2>
+          {/* About Text - Justified as per client request */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl lg:text-4xl font-serif font-semibold text-charcoal mb-8">
+              {language === "ES" ? "SOBRE" : language === "PT" ? "SOBRE" : "ABOUT"}
+            </h2>
 
-              <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
-                <p>
-                  Erica Franzetti is a leading international arbitrator and counsel
-                  with extensive experience in international commercial and
-                  investor–state arbitration across a wide range of industry
-                  sectors, including energy, natural resources, infrastructure,
-                  manufacturing, financial services, and technology.
-                </p>
+            <div className="prose prose-lg max-w-none text-gray-700 space-y-6 text-justify">
+              <p>
+                {language === "ES" 
+                  ? "Erica Franzetti es una destacada árbitro internacional y abogada con amplia experiencia en arbitraje comercial internacional y arbitraje inversionista-Estado en una amplia gama de sectores industriales, incluyendo energía, recursos naturales, infraestructura, manufactura, servicios financieros y tecnología."
+                  : language === "PT"
+                  ? "Erica Franzetti é uma destacada árbitro internacional e advogada com vasta experiência em arbitragem comercial internacional e arbitragem investidor-Estado em uma ampla gama de setores industriais, incluindo energia, recursos naturais, infraestrutura, manufatura, serviços financeiros e tecnologia."
+                  : "Erica Franzetti is a leading international arbitrator and counsel with extensive experience in international commercial and investor–state arbitration across a wide range of industry sectors, including energy, natural resources, infrastructure, manufacturing, financial services, and technology."}
+              </p>
 
-                <p>
-                  Drawing on decades of experience as counsel in complex, high‑value
-                  disputes, Erica brings a deep understanding of arbitral strategy,
-                  procedure, and advocacy to her work as an arbitrator.
-                </p>
+              <p>
+                {language === "ES"
+                  ? "Aprovechando décadas de experiencia como abogada en disputas complejas y de alto valor, Erica aporta una profunda comprensión de la estrategia arbitral, el procedimiento y la defensa a su trabajo como árbitro."
+                  : language === "PT"
+                  ? "Aproveitando décadas de experiência como advogada em disputas complexas e de alto valor, Erica traz uma profunda compreensão da estratégia arbitral, procedimento e advocacia para seu trabalho como árbitro."
+                  : "Drawing on decades of experience as counsel in complex, high‑value disputes, Erica brings a deep understanding of arbitral strategy, procedure, and advocacy to her work as an arbitrator."}
+              </p>
 
-                <p>
-                  Erica has served as an arbitrator in both domestic and
-                  international commercial disputes, including as chair of arbitral
-                  tribunals constituted under various institutional and ad hoc
-                  rules. Her experience on all sides of arbitration enables her to
-                  manage proceedings efficiently and fairly, with a practical
-                  appreciation of the challenges faced by parties and counsel.
-                </p>
+              <p>
+                {language === "ES"
+                  ? "Erica ha actuado como árbitro en disputas comerciales tanto nacionales como internacionales, incluyendo como presidenta de tribunales arbitrales constituidos bajo diversas reglas institucionales y ad hoc. Su experiencia en todos los aspectos del arbitraje le permite gestionar los procedimientos de manera eficiente y justa, con una apreciación práctica de los desafíos que enfrentan las partes y los abogados."
+                  : language === "PT"
+                  ? "Erica atuou como árbitro em disputas comerciais nacionais e internacionais, incluindo como presidente de tribunais arbitrais constituídos sob diversas regras institucionais e ad hoc. Sua experiência em todos os aspectos da arbitragem permite-lhe gerenciar os procedimentos de forma eficiente e justa, com uma apreciação prática dos desafios enfrentados pelas partes e advogados."
+                  : "Erica has served as an arbitrator in both domestic and international commercial disputes, including as chair of arbitral tribunals constituted under various institutional and ad hoc rules. Her experience on all sides of arbitration enables her to manage proceedings efficiently and fairly, with a practical appreciation of the challenges faced by parties and counsel."}
+              </p>
 
-                <p>
-                  While her primary focus is on her work as an arbitrator, Erica
-                  continues to provide select counsel services, offering legal
-                  assessments and strategic advice at every stage of a dispute—from
-                  its inception through award enforcement—drawing on deep
-                  familiarity with diverse procedural frameworks and jurisdictions.
-                </p>
+              <p>
+                {language === "ES"
+                  ? "Si bien su enfoque principal es su trabajo como árbitro, Erica continúa brindando servicios selectos de asesoría, ofreciendo evaluaciones legales y asesoramiento estratégico en cada etapa de una disputa—desde su inicio hasta la ejecución del laudo—aprovechando su profunda familiaridad con diversos marcos procesales y jurisdicciones."
+                  : language === "PT"
+                  ? "Embora seu foco principal seja seu trabalho como árbitro, Erica continua a fornecer serviços selecionados de consultoria, oferecendo avaliações legais e aconselhamento estratégico em cada estágio de uma disputa—desde seu início até a execução da sentença—aproveitando sua profunda familiaridade com diversos marcos processuais e jurisdições."
+                  : "While her primary focus is on her work as an arbitrator, Erica continues to provide select counsel services, offering legal assessments and strategic advice at every stage of a dispute—from its inception through award enforcement—drawing on deep familiarity with diverse procedural frameworks and jurisdictions."}
+              </p>
 
-                <p>
-                  In addition to her arbitral practice, Erica is actively engaged in
-                  the academic and professional development of international
-                  arbitration. She frequently teaches, publishes, and speaks on
-                  arbitration‑related topics, sharing insights drawn from her
-                  practical experience and scholarly interests to help advance
-                  dialogue and best practices in the field.
-                </p>
+              <p>
+                {language === "ES"
+                  ? "Además de su práctica arbitral, Erica participa activamente en el desarrollo académico y profesional del arbitraje internacional. Frecuentemente enseña, publica y habla sobre temas relacionados con el arbitraje, compartiendo conocimientos derivados de su experiencia práctica e intereses académicos para ayudar a avanzar el diálogo y las mejores prácticas en el campo."
+                  : language === "PT"
+                  ? "Além de sua prática arbitral, Erica está ativamente envolvida no desenvolvimento acadêmico e profissional da arbitragem internacional. Ela frequentemente ensina, publica e fala sobre tópicos relacionados à arbitragem, compartilhando insights derivados de sua experiência prática e interesses acadêmicos para ajudar a avançar o diálogo e as melhores práticas no campo."
+                  : "In addition to her arbitral practice, Erica is actively engaged in the academic and professional development of international arbitration. She frequently teaches, publishes, and speaks on arbitration‑related topics, sharing insights drawn from her practical experience and scholarly interests to help advance dialogue and best practices in the field."}
+              </p>
 
-                <p>
-                  Before establishing her own practice, Erica practiced for 25 years
-                  at leading global law firms. She began her career as a litigator
-                  in Brazil, relocated to the United States nearly two decades ago,
-                  and spent almost 20 years in Big Law, including nearly a decade as
-                  a partner. She is admitted to practice in Washington, D.C., New
-                  York, and Brazil, and she works in English, Spanish, and
-                  Portuguese.
-                </p>
-              </div>
-            </motion.div>
+              <p>
+                {language === "ES"
+                  ? "Antes de establecer su propia práctica, Erica ejerció durante 25 años en firmas de abogados globales líderes. Comenzó su carrera como litigante en Brasil, se trasladó a los Estados Unidos hace casi dos décadas y pasó casi 20 años en grandes firmas, incluyendo casi una década como socia. Está admitida para ejercer en Washington, D.C., Nueva York y Brasil, y trabaja en inglés, español y portugués."
+                  : language === "PT"
+                  ? "Antes de estabelecer sua própria prática, Erica exerceu durante 25 anos em escritórios de advocacia globais líderes. Ela começou sua carreira como litigante no Brasil, mudou-se para os Estados Unidos há quase duas décadas e passou quase 20 anos em grandes escritórios, incluindo quase uma década como sócia. Ela está admitida para exercer em Washington, D.C., Nova York e Brasil, e trabalha em inglês, espanhol e português."
+                  : "Before establishing her own practice, Erica practiced for 25 years at leading global law firms. She began her career as a litigator in Brazil, relocated to the United States nearly two decades ago, and spent almost 20 years in Big Law, including nearly a decade as a partner. She is admitted to practice in Washington, D.C., New York, and Brazil, and she works in English, Spanish, and Portuguese."}
+              </p>
+            </div>
+          </motion.div>
 
-            {/* Testimonials Sidebar */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-8"
-            >
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-gray-50 p-6 rounded-sm border-l-4 border-aquamarine">
-                  <blockquote className="text-gray-700 italic mb-3">
-                    "{testimonial.quote}"
-                  </blockquote>
-                  <p className="text-sm text-gray-500 font-medium">
-                    — {testimonial.source}
-                  </p>
+          {/* Symmetric Testimonials - Two side by side with LinkedIn-style logos */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          >
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-gray-50 p-6 rounded-sm border-l-4 border-aquamarine">
+                <div className="flex items-start gap-3 mb-4">
+                  {/* LinkedIn-style logo placeholder */}
+                  <div className="w-10 h-10 rounded-full bg-aquamarine/20 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-aquamarine" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <blockquote className="text-gray-700 italic">
+                      "{testimonial.quote}"
+                    </blockquote>
+                    <p className="text-sm text-gray-500 font-medium mt-3">
+                      — {testimonial.source}
+                    </p>
+                  </div>
                 </div>
-              ))}
-            </motion.div>
-          </div>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
@@ -312,8 +392,8 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-200">
-              Professional Background
+            <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
+              {language === "ES" ? "Trayectoria Profesional" : language === "PT" ? "Trajetória Profissional" : "Professional Background"}
             </h3>
             <div className="space-y-4">
               {professionalBackground.map((item, index) => (
@@ -342,7 +422,7 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Academia (formerly Teaching Experience) */}
+          {/* Academia - "Professor" without "Adjunct" prefix */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -350,8 +430,8 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-200">
-              Academia
+            <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
+              {language === "ES" ? "Academia" : language === "PT" ? "Academia" : "Academia"}
             </h3>
             <div className="space-y-4">
               {academia.map((item, index) => (
@@ -388,8 +468,8 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-200">
-              Education
+            <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
+              {language === "ES" ? "Educación" : language === "PT" ? "Educação" : "Education"}
             </h3>
             <div className="space-y-4">
               {education.map((item, index) => (
@@ -419,7 +499,7 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Professional Associations */}
+          {/* Professional Associations - LinkedIn-style logos with URLs */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -427,19 +507,26 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-200">
-              Professional Associations
+            <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
+              {language === "ES" ? "Asociaciones Profesionales" : language === "PT" ? "Associações Profissionais" : "Professional Associations"}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {professionalAssociations.map((item, index) => (
                 <div key={index} className="flex items-center gap-3 py-2">
-                  <span className="inline-block w-2 h-2 rounded-full bg-aquamarine flex-shrink-0"></span>
+                  {/* LinkedIn-style logo display */}
+                  <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-gray-100 rounded">
+                    {item.logo ? (
+                      <img src={item.logo} alt={item.name} className="h-6 w-6 object-contain" />
+                    ) : (
+                      <span className="inline-block w-2 h-2 rounded-full bg-aquamarine"></span>
+                    )}
+                  </div>
                   {item.url ? (
-                    <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-aquamarine transition-colors">
+                    <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-aquamarine transition-colors text-sm">
                       {item.name}
                     </a>
                   ) : (
-                    <span className="text-gray-700">{item.name}</span>
+                    <span className="text-gray-700 text-sm">{item.name}</span>
                   )}
                 </div>
               ))}
@@ -454,8 +541,8 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-200">
-                Bar Admissions
+              <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
+                {language === "ES" ? "Colegiaturas" : language === "PT" ? "Inscrições na Ordem" : "Bar Admissions"}
               </h3>
               <ul className="space-y-3">
                 {barAdmissions.map((item, index) => (
@@ -473,21 +560,27 @@ export default function Home() {
               </ul>
             </motion.div>
 
-            {/* Languages */}
+            {/* Languages - Reordered: English, Spanish, Portuguese */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-200">
-                Languages
+              <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
+                {language === "ES" ? "Idiomas" : language === "PT" ? "Idiomas" : "Languages"}
               </h3>
               <ul className="space-y-3">
                 {languages.map((item, index) => (
                   <li key={index} className="flex items-center gap-3">
                     <span className="inline-block w-2 h-2 rounded-full bg-aquamarine flex-shrink-0"></span>
-                    <span className="text-gray-700">{item}</span>
+                    <span className="text-gray-700">
+                      {language === "ES" 
+                        ? (item === "English" ? "Inglés" : item === "Spanish" ? "Español" : "Portugués")
+                        : language === "PT"
+                        ? (item === "English" ? "Inglês" : item === "Spanish" ? "Espanhol" : "Português")
+                        : item}
+                    </span>
                   </li>
                 ))}
               </ul>

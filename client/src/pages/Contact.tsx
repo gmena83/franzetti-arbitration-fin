@@ -238,7 +238,7 @@ export default function Contact() {
                 <h3 className="text-lg font-semibold text-charcoal mb-4">Connect</h3>
                 <div className="flex items-center gap-4">
                   <a
-                    href="https://www.linkedin.com/in/erica-franzetti"
+                    href="https://www.linkedin.com/in/erica-franzetti-48a7b1a/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-charcoal hover:text-aquamarine transition-colors"

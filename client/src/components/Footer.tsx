@@ -1,50 +1,61 @@
 import { Link } from "wouter";
+import { Mail, Phone } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 /* Footer Component - Franzetti Arbitration
  * Design: Professional Legal Minimalism with client's requested changes
+ * - Black background (not navy blue)
  * - White logo version (larger)
  * - Links to other pages
- * - CV downloads (EN, ES, PT)
- * - LinkedIn link
+ * - CV downloads (EN, ES, PT) - reordered
+ * - Correct LinkedIn URL
+ * - Email and phone icons
  * - Disclaimer, Privacy Policy, Cookies Policy
  */
 
-const navLinks = [
-  { label: "Profile", href: "/" },
-  { label: "Expertise", href: "/cases" },
-  { label: "Thought Leadership", href: "/thought-leadership" },
-  { label: "Contact", href: "/contact" },
-];
-
-const cvLinks = [
-  { label: "CV (English)", href: "/cv/Franzetti-CV-English.docx" },
-  { label: "CV (Español)", href: "/cv/Franzetti-CV-English.docx" },
-  { label: "CV (Português)", href: "/cv/Franzetti-CV-English.docx" },
-];
-
 export default function Footer() {
+  const { t, language } = useLanguage();
+  
+  const navLinks = [
+    { label: t("nav.profile"), href: "/" },
+    { label: t("nav.expertise"), href: "/cases" },
+    { label: t("nav.thoughtLeadership"), href: "/thought-leadership" },
+    { label: t("nav.contact"), href: "/contact" },
+  ];
+
+  // CV links reordered: English, Spanish, Portuguese
+  const cvLinks = [
+    { label: "CV (English)", href: "/cv/Franzetti-CV-English.pdf" },
+    { label: "CV (Español)", href: "/cv/Franzetti-CV-Spanish.pdf" },
+    { label: "CV (Português)", href: "/cv/Franzetti-CV-Portuguese.pdf" },
+  ];
+
   return (
-    <footer className="bg-charcoal text-white">
+    <footer className="bg-black text-white">
       <div className="container py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* Logo and Description */}
+          {/* Logo and Description - Bigger logo (h-20 instead of h-16) */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-6">
               <img
                 src="/images/Franzetti-principal-white.svg"
                 alt="Franzetti Arbitration"
-                className="h-16 w-auto"
+                className="h-20 w-auto"
               />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
-              International arbitration and counsel services specializing in commercial and investor-state disputes.
+              {language === "ES" 
+                ? "Servicios de arbitraje internacional y asesoría especializados en disputas comerciales e inversionista-Estado."
+                : language === "PT"
+                ? "Serviços de arbitragem internacional e consultoria especializados em disputas comerciais e investidor-Estado."
+                : "International arbitration and counsel services specializing in commercial and investor-state disputes."}
             </p>
           </div>
 
           {/* Navigation Links */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">
-              Navigation
+              {language === "ES" ? "Navegación" : language === "PT" ? "Navegação" : "Navigation"}
             </h4>
             <ul className="space-y-2">
               {navLinks.map((link) => (
@@ -60,10 +71,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* CV Downloads */}
+          {/* CV Downloads - Reordered: EN, ES, PT */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">
-              Download CV
+              {t("footer.downloadCV")}
             </h4>
             <ul className="space-y-2">
               {cvLinks.map((link) => (
@@ -80,14 +91,15 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact & Social */}
+          {/* Contact & Social - with icons */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">
-              Connect
+              {language === "ES" ? "Conectar" : language === "PT" ? "Conectar" : "Connect"}
             </h4>
             <div className="space-y-3">
+              {/* LinkedIn - Correct URL */}
               <a
-                href="https://www.linkedin.com/in/erica-franzetti"
+                href="https://www.linkedin.com/in/erica-franzetti-48a7b1a/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-gray-300 hover:text-aquamarine transition-colors text-sm"
@@ -102,16 +114,20 @@ export default function Footer() {
                 </svg>
                 LinkedIn
               </a>
+              {/* Email with icon */}
               <a
                 href="mailto:efranzetti@franzettiarb.com"
-                className="text-gray-300 hover:text-aquamarine transition-colors text-sm"
+                className="flex items-center gap-2 text-gray-300 hover:text-aquamarine transition-colors text-sm"
               >
+                <Mail className="w-5 h-5" />
                 efranzetti@franzettiarb.com
               </a>
+              {/* Phone with icon */}
               <a
                 href="tel:+12027448469"
-                className="text-gray-300 hover:text-aquamarine transition-colors text-sm"
+                className="flex items-center gap-2 text-gray-300 hover:text-aquamarine transition-colors text-sm"
               >
+                <Phone className="w-5 h-5" />
                 +1 202 744 8469
               </a>
             </div>
@@ -122,28 +138,28 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Franzetti Arbitration. All rights reserved.
+              © {new Date().getFullYear()} Franzetti Arbitration. {t("footer.rights")}
             </p>
             <div className="flex flex-wrap items-center gap-4 text-sm">
               <a
                 href="#"
                 className="text-gray-400 hover:text-aquamarine transition-colors"
               >
-                Disclaimer
+                {t("footer.disclaimer")}
               </a>
               <span className="text-gray-600">|</span>
               <a
                 href="#"
                 className="text-gray-400 hover:text-aquamarine transition-colors"
               >
-                Privacy Policy
+                {t("footer.privacy")}
               </a>
               <span className="text-gray-600">|</span>
               <a
                 href="#"
                 className="text-gray-400 hover:text-aquamarine transition-colors"
               >
-                Cookies Policy
+                {t("footer.cookies")}
               </a>
             </div>
           </div>

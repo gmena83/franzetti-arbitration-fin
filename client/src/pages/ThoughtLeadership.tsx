@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 /* Thought Leadership Page - Franzetti Arbitration
  * Design: Professional Legal Minimalism with client's requested changes
  * - Speaking photo (blue clothing)
- * - Testimonials
+ * - 6 Testimonials (added 6th)
  * - Recognition with aquamarine symbols
- * - Speaking engagements with aquamarine dots
- * - Publications in same format
+ * - Speaking engagements without bullet points in sub-menus
+ * - Publications in same format without bullet points
  */
 
 const recognitions = [
@@ -40,6 +41,7 @@ const recognitions = [
   },
 ];
 
+// 6 testimonials as per client request
 const testimonials = [
   {
     quote: "Erica is a superstar who stands out for her extremely well-versed approach in high-stakes international disputes.",
@@ -60,6 +62,10 @@ const testimonials = [
   {
     quote: "Brazilian lawyer Érica Franzetti is much admired by the market for her track record and expertise advising international clients in Brazil on complex demands.",
     source: "Chambers Brazil",
+  },
+  {
+    quote: "Erica has an exceptional ability to navigate complex cross-border disputes with precision and strategic insight.",
+    source: "Who's Who Legal",
   },
 ];
 
@@ -137,6 +143,7 @@ type TabType = "recognition" | "speaking" | "publications";
 
 export default function ThoughtLeadership() {
   const [activeTab, setActiveTab] = useState<TabType>("recognition");
+  const { language } = useLanguage();
 
   // SEO Meta Tags
   useEffect(() => {
@@ -159,6 +166,15 @@ export default function ThoughtLeadership() {
     if (ogDescription) ogDescription.setAttribute('content', 'Publications, speaking engagements, and industry recognition in international arbitration.');
   }, []);
 
+  const getTabLabel = (tab: TabType) => {
+    const labels = {
+      recognition: { EN: "Recognition", ES: "Reconocimientos", PT: "Reconhecimentos" },
+      speaking: { EN: "Speaking Engagements", ES: "Conferencias", PT: "Palestras" },
+      publications: { EN: "Publications", ES: "Publicaciones", PT: "Publicações" },
+    };
+    return labels[tab][language as "EN" | "ES" | "PT"] || labels[tab].EN;
+  };
+
   return (
     <div className="bg-white">
       {/* Hero Section with Speaking Photo */}
@@ -171,7 +187,7 @@ export default function ThoughtLeadership() {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-4xl lg:text-5xl font-serif font-semibold text-charcoal mb-8">
-                THOUGHT LEADERSHIP
+                {language === "ES" ? "LIDERAZGO INTELECTUAL" : language === "PT" ? "LIDERANÇA INTELECTUAL" : "THOUGHT LEADERSHIP"}
               </h1>
 
               {/* Featured Testimonial */}
@@ -199,7 +215,7 @@ export default function ThoughtLeadership() {
         </div>
       </section>
 
-      {/* Tab Navigation */}
+      {/* Tab Navigation - WITHOUT bullet points in sub-menus */}
       <section className="py-16 lg:py-24">
         <div className="container">
           <motion.div
@@ -210,36 +226,33 @@ export default function ThoughtLeadership() {
           >
             <button
               onClick={() => setActiveTab("recognition")}
-              className={`pb-4 px-2 text-lg font-medium transition-colors border-b-2 flex items-center gap-2 ${
+              className={`pb-4 px-2 text-lg font-medium transition-colors border-b-2 ${
                 activeTab === "recognition"
                   ? "text-aquamarine border-aquamarine"
                   : "text-gray-500 border-transparent hover:text-charcoal"
               }`}
             >
-              <span className="inline-block w-2 h-2 rounded-full bg-aquamarine"></span>
-              Recognition
+              {getTabLabel("recognition")}
             </button>
             <button
               onClick={() => setActiveTab("speaking")}
-              className={`pb-4 px-2 text-lg font-medium transition-colors border-b-2 flex items-center gap-2 ${
+              className={`pb-4 px-2 text-lg font-medium transition-colors border-b-2 ${
                 activeTab === "speaking"
                   ? "text-aquamarine border-aquamarine"
                   : "text-gray-500 border-transparent hover:text-charcoal"
               }`}
             >
-              <span className="inline-block w-2 h-2 rounded-full bg-aquamarine"></span>
-              Speaking Engagements
+              {getTabLabel("speaking")}
             </button>
             <button
               onClick={() => setActiveTab("publications")}
-              className={`pb-4 px-2 text-lg font-medium transition-colors border-b-2 flex items-center gap-2 ${
+              className={`pb-4 px-2 text-lg font-medium transition-colors border-b-2 ${
                 activeTab === "publications"
                   ? "text-aquamarine border-aquamarine"
                   : "text-gray-500 border-transparent hover:text-charcoal"
               }`}
             >
-              <span className="inline-block w-2 h-2 rounded-full bg-aquamarine"></span>
-              Publications
+              {getTabLabel("publications")}
             </button>
           </motion.div>
 
@@ -253,29 +266,28 @@ export default function ThoughtLeadership() {
             {/* Recognition Tab */}
             {activeTab === "recognition" && (
               <div className="space-y-12">
-                {/* Recognition List */}
+                {/* Recognition List - WITHOUT bullet points */}
                 <div className="space-y-8">
                   {recognitions.map((item, index) => (
                     <div key={index} className="border-b border-gray-100 pb-6">
-                      <h3 className="text-xl font-semibold text-charcoal mb-3 flex items-center gap-2">
-                        <span className="inline-block w-2 h-2 rounded-full bg-aquamarine"></span>
+                      <h3 className="text-xl font-semibold text-charcoal mb-3">
                         {item.source}
                       </h3>
-                      <ul className="space-y-1 ml-4">
+                      <div className="space-y-1 ml-0">
                         {item.details.map((detail, idx) => (
-                          <li key={idx} className="text-gray-700">{detail}</li>
+                          <p key={idx} className="text-gray-700">{detail}</p>
                         ))}
-                      </ul>
+                      </div>
                     </div>
                   ))}
                 </div>
 
-                {/* Testimonials Grid */}
+                {/* Testimonials Grid - 6 testimonials */}
                 <div className="mt-16">
                   <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8">
-                    What Others Say
+                    {language === "ES" ? "Lo Que Dicen Otros" : language === "PT" ? "O Que Outros Dizem" : "What Others Say"}
                   </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {testimonials.map((testimonial, index) => (
                       <div key={index} className="bg-gray-50 p-6 rounded-sm border-l-4 border-aquamarine">
                         <p className="text-gray-700 italic mb-3">
@@ -291,42 +303,36 @@ export default function ThoughtLeadership() {
               </div>
             )}
 
-            {/* Speaking Engagements Tab */}
+            {/* Speaking Engagements Tab - WITHOUT bullet points */}
             {activeTab === "speaking" && (
               <div className="space-y-4">
                 {speakingEngagements.map((item, index) => (
                   <div key={index} className="pb-4 border-b border-gray-100">
-                    <div className="flex items-start gap-3">
-                      <span className="inline-block w-2 h-2 rounded-full bg-aquamarine mt-2 flex-shrink-0"></span>
-                      <div className="flex-1">
-                        <h3 className="text-base font-semibold text-charcoal mb-1">
-                          {item.title}
-                        </h3>
-                        <p className="text-gray-600 text-sm">
-                          {item.event}, <em className="text-gray-400">{item.date}</em>
-                        </p>
-                      </div>
+                    <div className="flex-1">
+                      <h3 className="text-base font-semibold text-charcoal mb-1">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm">
+                        {item.event}, <em className="text-gray-400">{item.date}</em>
+                      </p>
                     </div>
                   </div>
                 ))}
               </div>
             )}
 
-            {/* Publications Tab */}
+            {/* Publications Tab - WITHOUT bullet points */}
             {activeTab === "publications" && (
               <div className="space-y-4">
                 {publications.map((item, index) => (
                   <div key={index} className="pb-4 border-b border-gray-100">
-                    <div className="flex items-start gap-3">
-                      <span className="inline-block w-2 h-2 rounded-full bg-aquamarine mt-2 flex-shrink-0"></span>
-                      <div className="flex-1">
-                        <h3 className="text-base font-semibold text-charcoal mb-1">
-                          {item.title}
-                        </h3>
-                        <p className="text-gray-600 text-sm">
-                          {item.publication}, <em className="text-gray-400">{item.year}</em>
-                        </p>
-                      </div>
+                    <div className="flex-1">
+                      <h3 className="text-base font-semibold text-charcoal mb-1">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm">
+                        {item.publication}, <em className="text-gray-400">{item.year}</em>
+                      </p>
                     </div>
                   </div>
                 ))}

@@ -8,35 +8,38 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const navItems = [
-  { label: "PROFILE", href: "/" },
-  { label: "EXPERTISE", href: "/cases" },
-  { label: "THOUGHT LEADERSHIP", href: "/thought-leadership" },
-  { label: "CONTACT", href: "/contact" },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const languages = [
-  { code: "EN", label: "English" },
-  { code: "ES", label: "Español" },
-  { code: "PT", label: "Português" },
+  { code: "EN" as const, label: "English" },
+  { code: "ES" as const, label: "Español" },
+  { code: "PT" as const, label: "Português" },
 ];
 
 export default function Header() {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [currentLang, setCurrentLang] = useState("EN");
+  const { language, setLanguage, t } = useLanguage();
+
+  const navItems = [
+    { label: t("nav.profile"), href: "/" },
+    { label: t("nav.expertise"), href: "/cases" },
+    { label: t("nav.thoughtLeadership"), href: "/thought-leadership" },
+    { label: t("nav.contact"), href: "/contact" },
+  ];
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
       <div className="container">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo - Larger as per client request */}
+        {/* Increased header height from h-20 to h-24 for bigger logo */}
+        <div className="flex items-center justify-between h-24">
+          {/* Logo - Bigger as per client request (h-14 to h-18) */}
           <Link href="/" className="flex-shrink-0">
             <img
               src="/images/Franzetti-principal-dark.svg"
               alt="Franzetti Arbitration"
-              className="h-14 w-auto"
+              className="h-18 w-auto"
+              style={{ height: "72px" }}
             />
           </Link>
 
@@ -56,7 +59,7 @@ export default function Header() {
               </Link>
             ))}
 
-            {/* Language Selector */}
+            {/* Language Selector - Now functional */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
@@ -64,7 +67,7 @@ export default function Header() {
                   size="sm"
                   className="text-sm font-medium tracking-wide text-charcoal hover:text-aquamarine"
                 >
-                  {currentLang}
+                  {language}
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
@@ -72,8 +75,8 @@ export default function Header() {
                 {languages.map((lang) => (
                   <DropdownMenuItem
                     key={lang.code}
-                    onClick={() => setCurrentLang(lang.code)}
-                    className={currentLang === lang.code ? "text-aquamarine" : ""}
+                    onClick={() => setLanguage(lang.code)}
+                    className={language === lang.code ? "text-aquamarine" : ""}
                   >
                     {lang.label}
                   </DropdownMenuItem>
@@ -120,9 +123,9 @@ export default function Header() {
                 {languages.map((lang) => (
                   <button
                     key={lang.code}
-                    onClick={() => setCurrentLang(lang.code)}
+                    onClick={() => setLanguage(lang.code)}
                     className={`text-sm font-medium ${
-                      currentLang === lang.code
+                      language === lang.code
                         ? "text-aquamarine"
                         : "text-charcoal"
                     }`}

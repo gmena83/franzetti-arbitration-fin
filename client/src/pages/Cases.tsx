@@ -1,22 +1,23 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 /* Expertise Page (formerly Cases) - Franzetti Arbitration
  * Design: Professional Legal Minimalism with client's requested changes
- * - Subject matter categories with nude separators
+ * - Symmetric grid layout with 4 attached images
+ * - Subject matter categories with darker grey separators
  * - Cases organized under subject matter headings
- * - Photo of Erica in white, sitting down
  */
 
 const subjectMatters = [
-  { id: "investor-state", label: "Investor-State Disputes" },
-  { id: "energy", label: "Energy and Natural Resources" },
-  { id: "infrastructure", label: "Infrastructure & Construction" },
-  { id: "corporate", label: "Joint Venture & Shareholder Disputes" },
-  { id: "post-ma", label: "Post-M&A" },
-  { id: "distribution", label: "Sale & Distribution Agreements" },
-  { id: "franchise", label: "Franchise Agreements" },
-  { id: "hospitality", label: "Hospitality" },
+  { id: "investor-state", label: "Investor-State Disputes", labelES: "Disputas Inversionista-Estado", labelPT: "Disputas Investidor-Estado" },
+  { id: "energy", label: "Energy and Natural Resources", labelES: "Energía y Recursos Naturales", labelPT: "Energia e Recursos Naturais" },
+  { id: "infrastructure", label: "Infrastructure & Construction", labelES: "Infraestructura y Construcción", labelPT: "Infraestrutura e Construção" },
+  { id: "corporate", label: "Joint Venture & Shareholder Disputes", labelES: "Disputas de Joint Venture y Accionistas", labelPT: "Disputas de Joint Venture e Acionistas" },
+  { id: "post-ma", label: "Post-M&A", labelES: "Post-M&A", labelPT: "Pós-M&A" },
+  { id: "distribution", label: "Sale & Distribution Agreements", labelES: "Acuerdos de Venta y Distribución", labelPT: "Acordos de Venda e Distribuição" },
+  { id: "franchise", label: "Franchise Agreements", labelES: "Acuerdos de Franquicia", labelPT: "Acordos de Franquia" },
+  { id: "hospitality", label: "Hospitality", labelES: "Hospitalidad", labelPT: "Hospitalidade" },
 ];
 
 const arbitratorAppointments = [
@@ -177,26 +178,32 @@ const mattersAsCounsel = [
   },
 ];
 
+// 4 images for the symmetric grid layout
+const expertiseImages = [
+  "/images/EricaFranzettiWhatsAppImage2025-12-26at14.55.54(1)-2.png",
+  "/images/EricaFranzettiWhatsAppImage2025-12-18at19.20.56.png",
+  "/images/EricaFranzettiWhatsAppImage2025-12-26at14.55.54(1).png",
+  "/images/Erica1WhatsAppImage2025-12-26at14.55.53-topaz-3.png",
+];
+
 export default function Cases() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const { language } = useLanguage();
 
   // SEO Meta Tags
   useEffect(() => {
     document.title = "Expertise | Franzetti Arbitration - International Arbitration Cases";
     
-    // Update meta description
     let metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Explore Erica Franzetti\'s expertise in international arbitration including investor-state disputes, energy, infrastructure, construction, and commercial arbitration cases.');
     }
     
-    // Update meta keywords
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (metaKeywords) {
       metaKeywords.setAttribute('content', 'arbitration expertise, investor-state disputes, energy arbitration, infrastructure disputes, construction arbitration, commercial arbitration, ICSID cases, ICC arbitration');
     }
     
-    // Update Open Graph tags
     let ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) ogTitle.setAttribute('content', 'Expertise | Franzetti Arbitration');
     
@@ -222,60 +229,82 @@ export default function Cases() {
     return { arbitratorCases, counselCases };
   };
 
+  const getLabel = (matter: typeof subjectMatters[0]) => {
+    if (language === "ES") return matter.labelES;
+    if (language === "PT") return matter.labelPT;
+    return matter.label;
+  };
+
   return (
     <div className="bg-white">
-      {/* Hero Section with Photo */}
+      {/* Hero Section with Symmetric Grid of 4 Images */}
       <section className="bg-gray-100 py-16">
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h1 className="text-4xl lg:text-5xl font-serif font-semibold text-charcoal mb-8">
-                EXPERTISE
-              </h1>
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h1 className="text-4xl lg:text-5xl font-serif font-semibold text-charcoal mb-4">
+              {language === "ES" ? "EXPERIENCIA" : language === "PT" ? "EXPERIÊNCIA" : "EXPERTISE"}
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              {language === "ES" 
+                ? "Experiencia especializada en diversos sectores y tipos de disputas"
+                : language === "PT"
+                ? "Experiência especializada em diversos setores e tipos de disputas"
+                : "Specialized experience across diverse sectors and dispute types"}
+            </p>
+          </motion.div>
 
-              {/* Subject Matter Navigation */}
-              <div className="flex flex-wrap items-center gap-2 text-sm">
-                {subjectMatters.map((matter, index) => (
-                  <span key={matter.id} className="flex items-center">
-                    <button
-                      onClick={() => scrollToSection(matter.id)}
-                      className={`hover:text-aquamarine transition-colors ${
-                        activeCategory === matter.id
-                          ? "text-aquamarine font-medium"
-                          : "text-charcoal"
-                      }`}
-                    >
-                      {matter.label}
-                    </button>
-                    {index < subjectMatters.length - 1 && (
-                      <span className="mx-2 text-nude">|</span>
-                    )}
-                  </span>
-                ))}
+          {/* Symmetric 2x2 Grid of Images */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="grid grid-cols-2 gap-4 max-w-4xl mx-auto mb-12"
+          >
+            {expertiseImages.map((img, index) => (
+              <div key={index} className="aspect-square overflow-hidden rounded-sm shadow-lg">
+                <img
+                  src={img}
+                  alt={`Erica Franzetti ${index + 1}`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
               </div>
-            </motion.div>
+            ))}
+          </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex justify-center lg:justify-end"
-            >
-              <img
-                src="/images/EricaFranzetti39394-RT-RT.jpg"
-                alt="Erica Franzetti"
-                className="w-full max-w-sm object-cover rounded-sm shadow-lg"
-              />
-            </motion.div>
-          </div>
+          {/* Subject Matter Navigation - Darker grey separators */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-wrap justify-center items-center gap-2 text-sm"
+          >
+            {subjectMatters.map((matter, index) => (
+              <span key={matter.id} className="flex items-center">
+                <button
+                  onClick={() => scrollToSection(matter.id)}
+                  className={`hover:text-aquamarine transition-colors ${
+                    activeCategory === matter.id
+                      ? "text-aquamarine font-medium"
+                      : "text-charcoal"
+                  }`}
+                >
+                  {getLabel(matter)}
+                </button>
+                {index < subjectMatters.length - 1 && (
+                  <span className="mx-2 text-gray-500">|</span>
+                )}
+              </span>
+            ))}
+          </motion.div>
         </div>
       </section>
 
-      {/* Cases by Category */}
+      {/* Cases by Category - Darker grey separator lines */}
       <section className="py-16 lg:py-24">
         <div className="container">
           {subjectMatters.map((matter) => {
@@ -292,14 +321,15 @@ export default function Cases() {
                 transition={{ duration: 0.6 }}
                 className="mb-16 scroll-mt-24"
               >
-                <h2 className="text-2xl lg:text-3xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-200">
-                  {matter.label}
+                {/* Darker grey border (border-gray-400 instead of border-gray-200) */}
+                <h2 className="text-2xl lg:text-3xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-400">
+                  {getLabel(matter)}
                 </h2>
 
                 {arbitratorCases.length > 0 && (
                   <div className="mb-8">
                     <h3 className="text-lg font-semibold text-charcoal mb-4">
-                      As Arbitrator
+                      {language === "ES" ? "Como Árbitro" : language === "PT" ? "Como Árbitro" : "As Arbitrator"}
                     </h3>
                     <ul className="space-y-3">
                       {arbitratorCases.map((item, index) => (
@@ -317,7 +347,7 @@ export default function Cases() {
                 {counselCases.length > 0 && (
                   <div>
                     <h3 className="text-lg font-semibold text-charcoal mb-4">
-                      As Counsel
+                      {language === "ES" ? "Como Abogada" : language === "PT" ? "Como Advogada" : "As Counsel"}
                     </h3>
                     <ul className="space-y-3">
                       {counselCases.map((item, index) => (
