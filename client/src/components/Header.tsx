@@ -36,10 +36,9 @@ export default function Header() {
           {/* Logo - Bigger as per client request (h-14 to h-18) */}
           <Link href="/" className="flex-shrink-0">
             <img
-              src="/images/Franzetti-logo-clean.png"
+              src="/images/Franzetti-logo-transparent.png"
               alt="Franzetti Arbitration"
-              className="h-20 w-auto"
-              style={{ height: "80px" }}
+              className="h-16 w-auto"
             />
           </Link>
 
