@@ -296,30 +296,6 @@ export default function Home() {
             <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
               <p>
                 {language === "ES" 
-                  ? "Erica Franzetti es una destacada árbitro internacional y abogada con amplia experiencia en arbitraje comercial internacional y arbitraje inversionista-Estado en una amplia gama de sectores industriales, incluyendo energía, recursos naturales, infraestructura, manufactura, servicios financieros y tecnología."
-                  : language === "PT"
-                  ? "Erica Franzetti é uma destacada árbitro internacional e advogada com vasta experiência em arbitragem comercial internacional e arbitragem investidor-Estado em uma ampla gama de setores industriais, incluindo energia, recursos naturais, infraestrutura, manufatura, serviços financeiros e tecnologia."
-                  : "Erica Franzetti is a leading international arbitrator and counsel with extensive experience in international commercial and investor–state arbitration across a wide range of industry sectors, including energy, natural resources, infrastructure, manufacturing, financial services, and technology."}
-              </p>
-
-              <p>
-                {language === "ES"
-                  ? "Aprovechando décadas de experiencia como abogada en disputas complejas y de alto valor, Erica aporta una profunda comprensión de la estrategia arbitral, el procedimiento y la defensa a su trabajo como árbitro."
-                  : language === "PT"
-                  ? "Aproveitando décadas de experiência como advogada em disputas complexas e de alto valor, Erica traz uma profunda compreensão da estratégia arbitral, procedimento e advocacia para seu trabalho como árbitro."
-                  : "Drawing on decades of experience as counsel in complex, high‑value disputes, Erica brings a deep understanding of arbitral strategy, procedure, and advocacy to her work as an arbitrator."}
-              </p>
-
-              <p>
-                {language === "ES"
-                  ? "Erica ha actuado como árbitro en disputas comerciales tanto nacionales como internacionales, incluyendo como presidenta de tribunales arbitrales constituidos bajo diversas reglas institucionales y ad hoc. Su experiencia en todos los aspectos del arbitraje le permite gestionar los procedimientos de manera eficiente y justa, con una apreciación práctica de los desafíos que enfrentan las partes y los abogados."
-                  : language === "PT"
-                  ? "Erica atuou como árbitro em disputas comerciais nacionais e internacionais, incluindo como presidente de tribunais arbitrais constituídos sob diversas regras institucionais e ad hoc. Sua experiência em todos os aspectos da arbitragem permite-lhe gerenciar os procedimentos de forma eficiente e justa, com uma apreciação prática dos desafios enfrentados pelas partes e advogados."
-                  : "Erica has served as an arbitrator in both domestic and international commercial disputes, including as chair of arbitral tribunals constituted under various institutional and ad hoc rules. Her experience on all sides of arbitration enables her to manage proceedings efficiently and fairly, with a practical appreciation of the challenges faced by parties and counsel."}
-              </p>
-
-              <p>
-                {language === "ES"
                   ? "Si bien su enfoque principal es su trabajo como árbitro, Erica continúa brindando servicios selectos de asesoría, ofreciendo evaluaciones legales y asesoramiento estratégico en cada etapa de una disputa—desde su inicio hasta la ejecución del laudo—aprovechando su profunda familiaridad con diversos marcos procesales y jurisdicciones."
                   : language === "PT"
                   ? "Embora seu foco principal seja seu trabalho como árbitro, Erica continua a fornecer serviços selecionados de consultoria, oferecendo avaliações legais e aconselhamento estratégico em cada estágio de uma disputa—desde seu início até a execução da sentença—aproveitando sua profunda familiaridade com diversos marcos processuais e jurisdições."
@@ -328,10 +304,26 @@ export default function Home() {
 
               <p>
                 {language === "ES"
-                  ? "Además de su práctica arbitral, Erica participa activamente en el desarrollo académico y profesional del arbitraje internacional. Frecuentemente enseña, publica y habla sobre temas relacionados con el arbitraje, compartiendo conocimientos derivados de su experiencia práctica e intereses académicos para ayudar a avanzar el diálogo y las mejores prácticas en el campo."
+                  ? "Su práctica abarca una amplia gama de industrias y tipos de disputas, incluyendo gobierno corporativo, fusiones y adquisiciones (M&A), joint ventures, propiedad intelectual, disputas bajo la Convención de las Naciones Unidas sobre los Contratos de Compraventa Internacional de Mercaderías (CISG), privatización, telecomunicaciones, generación de energía, concesiones mineras, precios del gas y GNL, gestión hotelera, financiamiento de proyectos, inversiones de capital de riesgo y construcción. Su trayectoria incluye disputas corporativas de alto riesgo bajo las reglas de la CCI y CNUDMI, arbitrajes CIADI en los sectores de energía e infraestructura, y la ejecución de laudos arbitrales ante tribunales federales de EE.UU."
                   : language === "PT"
-                  ? "Além de sua prática arbitral, Erica está ativamente envolvida no desenvolvimento acadêmico e profissional da arbitragem internacional. Ela frequentemente ensina, publica e fala sobre tópicos relacionados à arbitragem, compartilhando insights derivados de sua experiência prática e interesses acadêmicos para ajudar a avançar o diálogo e as melhores práticas no campo."
-                  : "In addition to her arbitral practice, Erica is actively engaged in the academic and professional development of international arbitration. She frequently teaches, publishes, and speaks on arbitration‑related topics, sharing insights drawn from her practical experience and scholarly interests to help advance dialogue and best practices in the field."}
+                  ? "Sua prática abrange uma ampla gama de indústrias e tipos de disputas, incluindo governança corporativa, fusões e aquisições (M&A), joint ventures, propriedade intelectual, disputas sob a Convenção das Nações Unidas sobre Contratos de Compra e Venda Internacional de Mercadorias (CISG), privatização, telecomunicações, geração de energia, concessões minerais, preços de gás e GNL, gestão hoteleira, financiamento de projetos, investimentos de capital de risco e construção. Seu histórico inclui disputas corporativas de alto risco sob as regras da ICC e UNCITRAL, arbitragens ICSID nos setores de energia e infraestrutura, e a execução de sentenças arbitrais perante tribunais federais dos EUA."
+                  : "Her practice spans a broad range of industries and dispute types, including corporate governance, mergers and acquisitions (M&A), joint ventures, intellectual property, disputes under the United Nations Convention on Contracts for the International Sale of Goods (CISG), privatization, telecommunications, power generation, mineral concessions, gas pricing and LNG, hotel management, project finance, venture capital investments, and construction. Her track record includes high-stakes corporate disputes under ICC and UNCITRAL rules, ICSID arbitrations in the energy and infrastructure sectors, and the enforcement of arbitral awards before U.S. federal courts."}
+              </p>
+
+              <p>
+                {language === "ES"
+                  ? "Erica ha recibido reconocimiento de primer nivel de los principales directorios legales, incluyendo Chambers and Partners, The Legal 500, Lexology (anteriormente conocido como Who's Who Legal), Latin Lawyer y Best Lawyers, y ha sido nombrada una de las 100 Mejores Abogadas de América Latina por Latinvex."
+                  : language === "PT"
+                  ? "Erica recebeu reconhecimento de primeira linha dos principais diretórios jurídicos, incluindo Chambers and Partners, The Legal 500, Lexology (anteriormente conhecido como Who's Who Legal), Latin Lawyer e Best Lawyers, e foi nomeada uma das 100 Melhores Advogadas da América Latina pela Latinvex."
+                  : "Erica has received top-tier recognition from leading legal directories, including Chambers and Partners, The Legal 500, Lexology (formerly known as Who's Who Legal), Latin Lawyer, and Best Lawyers, and has been named one of Latin America's Top 100 Female Lawyers by Latinvex."}
+              </p>
+
+              <p>
+                {language === "ES"
+                  ? "Además de su práctica, Erica publica regularmente y habla en conferencias de arbitraje internacional y ha dado clases en instituciones académicas líderes, incluyendo Georgetown University Law Center, donde ha enseñado un curso sobre arbitraje inversionista-Estado, y la Universidad de Miami, donde enseña un curso sobre arbitraje en el sector energético."
+                  : language === "PT"
+                  ? "Além de sua prática, Erica publica regularmente e fala em conferências de arbitragem internacional e lecionou em instituições acadêmicas líderes, incluindo Georgetown University Law Center, onde ensinou um curso sobre arbitragem investidor-Estado, e a Universidade de Miami, onde ensina um curso sobre arbitragem no setor de energia."
+                  : "In addition to her practice, Erica regularly publishes and speaks at international arbitration conferences and has lectured at leading academic institutions, including Georgetown University Law Center, where she has taught a course on investor–state arbitration, and the University of Miami, where she teaches a course on arbitration in the energy sector."}
               </p>
 
               <p>
