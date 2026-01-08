@@ -37,7 +37,7 @@ export default function Header() {
           {/* Logo - Bigger as per client request (h-14 to h-18) */}
           <Link href="/" className="flex-shrink-0">
             <img
-              src="/images/Franzetti-logo-transparent.png"
+              src="/images/Franzetti-secondary-dark.png"
               alt="Franzetti Arbitration"
               className="h-20 w-auto"
             />
