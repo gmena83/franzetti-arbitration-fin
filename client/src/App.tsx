@@ -10,6 +10,7 @@ import Experience from "./pages/Experience";
 import Cases from "./pages/Cases";
 import ThoughtLeadership from "./pages/ThoughtLeadership";
 import Contact from "./pages/Contact";
+import NewsInsights from "./pages/NewsInsights";
 import Layout from "./components/Layout";
 
 function Router() {
@@ -21,6 +22,7 @@ function Router() {
         <Route path="/cases" component={Cases} />
         <Route path="/thought-leadership" component={ThoughtLeadership} />
         <Route path="/contact" component={Contact} />
+        <Route path="/news-insights" component={NewsInsights} />
         <Route path="/404" component={NotFound} />
         <Route component={NotFound} />
       </Switch>

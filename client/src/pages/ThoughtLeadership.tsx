@@ -14,30 +14,89 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const recognitions = [
   {
     source: "Chambers and Partners",
-    details: [
-      "USA, International Arbitration: Counsel, Band 6, Four years ranked",
-      "Brazil, International Arbitration, Band 3, Three years ranked",
+    url: "https://chambers.com/",
+    sections: [
+      {
+        title: "USA, International Arbitration: Counsel, Band 6, Four years ranked.",
+        quotes: [
+          "\"I think really highly of her, she's fabulous. She comes across as very intelligent and capable, and she's always really professional and personable.\" Chambers USA survey respondent",
+          "\"Erica is a superb cross-examiner and a fantastic lawyer. She's also very detail-oriented and thorough.\" Chambers USA survey respondent",
+          "\"Érica was very impressive in handling a complex case.\" Chambers USA survey respondent",
+        ],
+      },
+      {
+        title: "Brazil, International Arbitration, Band 3, Three years ranked.",
+        quotes: [
+          "\"Brazilian lawyer Érica Franzetti is much admired by the market for her soundtrack record and expertise advising international clients in Brazil on complex demands, including sophisticated M&A-related arbitration cases, counsel on claiming damages and the chairing of arbitral tribunals.\" Chambers Brazil",
+        ],
+      },
     ],
   },
   {
     source: "Legal 500",
-    details: ["USA, Latin America, International Arbitration"],
+    url: "https://www.legal500.com/",
+    sections: [
+      {
+        title: "USA, Latin America, International Arbitration",
+        quotes: [
+          "\"Erica is a superstar who stands out for her extremely well-versed approach in high-stakes international disputes.\" Legal 500 respondent survey",
+        ],
+      },
+    ],
   },
   {
     source: "Lexology (formerly Who's Who Legal)",
-    details: ["International Arbitration"],
+    url: "https://www.lexology.com/",
+    sections: [
+      {
+        title: "International Arbitration",
+        quotes: [
+          "\"Erica is a great lawyer with significant experience in Latin America\"",
+          "\"One of the best of her generation\"",
+          "\"Her technical skills, experience in the field, relentless dedication to client service and commercial mindset are really impressive\"",
+        ],
+      },
+    ],
+  },
+  {
+    source: "Latin Lawyer",
+    url: "https://latinlawyer.com/",
+    sections: [
+      {
+        title: "International Arbitration LACCA Approved",
+        quotes: [],
+      },
+    ],
   },
   {
     source: "Latinvex",
-    details: ["Latin America's Top 100 Female Lawyers (2024)"],
+    url: "https://latinvex.com/",
+    sections: [
+      {
+        title: "Latin America's Top 100 Female Lawyers (2024)",
+        quotes: [],
+      },
+    ],
   },
   {
     source: "Best Lawyers",
-    details: ["The Best Lawyers in America: International Arbitration – Commercial (2026)"],
+    url: "https://www.bestlawyers.com/",
+    sections: [
+      {
+        title: "The Best Lawyers in America: International Arbitration – Commercial (2026)",
+        quotes: [],
+      },
+    ],
   },
   {
     source: "Lawdragon 500",
-    details: ["Leading Global Litigators (2024)"],
+    url: "https://www.lawdragon.com/",
+    sections: [
+      {
+        title: "Leading Global Litigators (2024)",
+        quotes: [],
+      },
+    ],
   },
 ];
 
@@ -258,16 +317,32 @@ export default function ThoughtLeadership() {
             {/* Recognition Tab */}
             {activeTab === "recognition" && (
               <div className="space-y-12">
-                {/* Recognition List - WITHOUT bullet points */}
+                {/* Recognition List - WITH clickable organization names */}
                 <div className="space-y-8">
                   {recognitions.map((item, index) => (
                     <div key={index} className="border-b border-gray-100 pb-6">
                       <h3 className="text-xl font-semibold text-charcoal mb-3">
-                        {item.source}
+                        <a 
+                          href={item.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="hover:text-aquamarine transition-colors underline"
+                        >
+                          {item.source}
+                        </a>
                       </h3>
-                      <div className="space-y-1 ml-0">
-                        {item.details.map((detail, idx) => (
-                          <p key={idx} className="text-gray-700">{detail}</p>
+                      <div className="space-y-4 ml-0">
+                        {item.sections.map((section, sIdx) => (
+                          <div key={sIdx}>
+                            <p className="text-gray-700 font-medium">{section.title}</p>
+                            {section.quotes.length > 0 && (
+                              <div className="mt-2 space-y-2 ml-4">
+                                {section.quotes.map((quote, qIdx) => (
+                                  <p key={qIdx} className="text-gray-600 italic text-sm">{quote}</p>
+                                ))}
+                              </div>
+                            )}
+                          </div>
                         ))}
                       </div>
                     </div>

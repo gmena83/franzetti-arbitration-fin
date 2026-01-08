@@ -25,6 +25,7 @@ export default function Header() {
     { label: t("nav.profile"), href: "/" },
     { label: t("nav.expertise"), href: "/cases" },
     { label: t("nav.thoughtLeadership"), href: "/thought-leadership" },
+    { label: t("nav.newsInsights"), href: "/news-insights" },
     { label: t("nav.contact"), href: "/contact" },
   ];
 

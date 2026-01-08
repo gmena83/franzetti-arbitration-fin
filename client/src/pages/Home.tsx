@@ -77,7 +77,7 @@ const professionalBackground = [
 const academia = [
   {
     institution: "University of Miami",
-    role: "Professor",
+    role: "Adjunct Professor",
     course: "International Arbitration in the Energy Sector",
     period: "2024-2025",
     logo: "/images/miami-law-logo.jpg",
@@ -85,7 +85,7 @@ const academia = [
   },
   {
     institution: "Georgetown University Law Center",
-    role: "Professor",
+    role: "Adjunct Professor",
     course: "Investor-State Dispute Resolution",
     period: "2017-2022",
     logo: "/images/logos/georgetown-law.png",
