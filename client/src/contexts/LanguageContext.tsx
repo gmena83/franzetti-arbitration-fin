@@ -17,7 +17,6 @@ export const translations: Translations = {
   "nav.expertise": { EN: "EXPERTISE", ES: "EXPERIENCIA", PT: "EXPERIÊNCIA" },
   "nav.thoughtLeadership": { EN: "THOUGHT LEADERSHIP", ES: "LIDERAZGO INTELECTUAL", PT: "LIDERANÇA INTELECTUAL" },
   "nav.contact": { EN: "CONTACT", ES: "CONTACTO", PT: "CONTATO" },
-  "nav.newsInsights": { EN: "NEWS AND INSIGHTS", ES: "NOTICIAS Y PERSPECTIVAS", PT: "NOTÍCIAS E INSIGHTS" },
   
   // Hero Section
   "hero.title": { 
