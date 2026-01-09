@@ -295,51 +295,27 @@ export default function Home() {
 
             <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
               <p>
-                {language === "ES" 
-                  ? "Erica Franzetti es una destacada árbitro internacional y abogada con amplia experiencia en arbitraje comercial internacional y arbitraje inversionista-Estado en una amplia gama de sectores industriales, incluyendo energía, recursos naturales, infraestructura, manufactura, servicios financieros y tecnología."
-                  : language === "PT"
-                  ? "Erica Franzetti é uma destacada árbitro internacional e advogada com vasta experiência em arbitragem comercial internacional e arbitragem investidor-Estado em uma ampla gama de setores industriais, incluindo energia, recursos naturais, infraestrutura, manufatura, serviços financeiros e tecnologia."
-                  : "Erica Franzetti is a leading international arbitrator and counsel with extensive experience in international commercial and investor–state arbitration across a wide range of industry sectors, including energy, natural resources, infrastructure, manufacturing, financial services, and technology."}
+                Erica Franzetti is a leading international arbitrator with extensive experience in international commercial and investor–state arbitration across a wide range of industry sectors, including energy, natural resources, infrastructure, manufacturing, financial services, and technology. Drawing decades of experience as counsel in complex, high value disputes, Erica brings a deep understanding of arbitral strategy, procedure, and advocacy to her work as an arbitrator. With training in both civil and common law, she often counsels clients on resolving cross-border disputes and protecting their investments under international treaties. She has been involved in proceedings spanning numerous jurisdictions, including Argentina, Brazil, Canada, Chile, Colombia, Croatia, England, Ghana, Hungary, Peru, the Philippines, and the United States.
               </p>
 
               <p>
-                {language === "ES"
-                  ? "Aprovechando décadas de experiencia como abogada en disputas complejas y de alto valor, Erica aporta una profunda comprensión de la estrategia arbitral, el procedimiento y la defensa a su trabajo como árbitro."
-                  : language === "PT"
-                  ? "Aproveitando décadas de experiência como advogada em disputas complexas e de alto valor, Erica traz uma profunda compreensão da estratégia arbitral, procedimento e advocacia para seu trabalho como árbitro."
-                  : "Drawing on decades of experience as counsel in complex, high‑value disputes, Erica brings a deep understanding of arbitral strategy, procedure, and advocacy to her work as an arbitrator."}
+                Erica has served as an arbitrator in both domestic and international disputes, including as chair of arbitral tribunals constituted under various institutional and rules. She has served as counsel in international arbitration proceedings held under the rules of the International Chamber of Commerce (ICC), the American Arbitration Association (AAA), the International Centre for Dispute Resolution (ICDR), the London Court of International Arbitration (LCIA), and the International Centre for Settlement of Investment Disputes (ICSID), among others. Her experience on all sides of arbitration enables her to manage proceedings efficiently and fairly, with a practical appreciation of the challenges faced by parties and counsel.
               </p>
 
               <p>
-                {language === "ES"
-                  ? "Erica ha actuado como árbitro en disputas comerciales tanto nacionales como internacionales, incluyendo como presidenta de tribunales arbitrales constituidos bajo diversas reglas institucionales y ad hoc. Su experiencia en todos los aspectos del arbitraje le permite gestionar los procedimientos de manera eficiente y justa, con una apreciación práctica de los desafíos que enfrentan las partes y los abogados."
-                  : language === "PT"
-                  ? "Erica atuou como árbitro em disputas comerciais nacionais e internacionais, incluindo como presidente de tribunais arbitrais constituídos sob diversas regras institucionais e ad hoc. Sua experiência em todos os aspectos da arbitragem permite-lhe gerenciar os procedimentos de forma eficiente e justa, com uma apreciação prática dos desafios enfrentados pelas partes e advogados."
-                  : "Erica has served as an arbitrator in both domestic and international commercial disputes, including as chair of arbitral tribunals constituted under various institutional and ad hoc rules. Her experience on all sides of arbitration enables her to manage proceedings efficiently and fairly, with a practical appreciation of the challenges faced by parties and counsel."}
+                While her primary focus is on her work as an arbitrator, Erica continues to provide select counsel services, offering legal assessments and strategic advice at every stage of a dispute—from its inception through award enforcement—drawing on deep familiarity with diverse procedural frameworks and jurisdictions. Her practice spans a broad range of industries and dispute types, including corporate governance, mergers and acquisitions (M&A), joint ventures, intellectual property, disputes under the United Nations Convention on Contracts for the International Sale of Goods (CISG), privatization, telecommunications, power generation, mineral concessions, gas pricing and LNG, hotel management, project finance, venture capital investments, and construction. Her track record includes high-stakes corporate disputes under ICC and UNCITRAL rules, ICSID arbitrations in the energy and infrastructure sectors, and the enforcement of arbitral awards before U.S. federal courts.
               </p>
 
               <p>
-                {language === "ES"
-                  ? "Si bien su enfoque principal es su trabajo como árbitro, Erica continúa brindando servicios selectos de asesoría, ofreciendo evaluaciones legales y asesoramiento estratégico en cada etapa de una disputa—desde su inicio hasta la ejecución del laudo—aprovechando su profunda familiaridad con diversos marcos procesales y jurisdicciones."
-                  : language === "PT"
-                  ? "Embora seu foco principal seja seu trabalho como árbitro, Erica continua a fornecer serviços selecionados de consultoria, oferecendo avaliações legais e aconselhamento estratégico em cada estágio de uma disputa—desde seu início até a execução da sentença—aproveitando sua profunda familiaridade com diversos marcos processuais e jurisdições."
-                  : "While her primary focus is on her work as an arbitrator, Erica continues to provide select counsel services, offering legal assessments and strategic advice at every stage of a dispute—from its inception through award enforcement—drawing on deep familiarity with diverse procedural frameworks and jurisdictions."}
+                Erica has received top-tier recognition from leading legal directories, including Chambers and Partners, The Legal 500, Lexology (formerly known as Who's Who Legal), Latin Lawyer, and Best Lawyers, and has been named one of Latin America's Top 100 Female Lawyers by Latinvex.
               </p>
 
               <p>
-                {language === "ES"
-                  ? "Además de su práctica arbitral, Erica participa activamente en el desarrollo académico y profesional del arbitraje internacional. Frecuentemente enseña, publica y habla sobre temas relacionados con el arbitraje, compartiendo conocimientos derivados de su experiencia práctica e intereses académicos para ayudar a avanzar el diálogo y las mejores prácticas en el campo."
-                  : language === "PT"
-                  ? "Além de sua prática arbitral, Erica está ativamente envolvida no desenvolvimento acadêmico e profissional da arbitragem internacional. Ela frequentemente ensina, publica e fala sobre tópicos relacionados à arbitragem, compartilhando insights derivados de sua experiência prática e interesses acadêmicos para ajudar a avançar o diálogo e as melhores práticas no campo."
-                  : "In addition to her arbitral practice, Erica is actively engaged in the academic and professional development of international arbitration. She frequently teaches, publishes, and speaks on arbitration‑related topics, sharing insights drawn from her practical experience and scholarly interests to help advance dialogue and best practices in the field."}
+                In addition to her practice, Erica regularly publishes and speaks at international arbitration conferences and has lectured at leading academic institutions, including Georgetown University Law Center, where she has taught a course on investor–state arbitration, and the University of Miami, where she teaches a course on arbitration in the energy sector.
               </p>
 
               <p>
-                {language === "ES"
-                  ? "Antes de establecer su propia práctica, Erica ejerció durante 25 años en firmas de abogados globales líderes. Comenzó su carrera como litigante en Brasil, se trasladó a los Estados Unidos hace casi dos décadas y pasó casi 20 años en grandes firmas, incluyendo casi una década como socia. Está admitida para ejercer en Washington, D.C., Nueva York y Brasil, y trabaja en inglés, español y portugués."
-                  : language === "PT"
-                  ? "Antes de estabelecer sua própria prática, Erica exerceu durante 25 anos em escritórios de advocacia globais líderes. Ela começou sua carreira como litigante no Brasil, mudou-se para os Estados Unidos há quase duas décadas e passou quase 20 anos em grandes escritórios, incluindo quase uma década como sócia. Ela está admitida para exercer em Washington, D.C., Nova York e Brasil, e trabalha em inglês, espanhol e português."
-                  : "Before establishing her own practice, Erica practiced for 25 years at leading global law firms. She began her career as a litigator in Brazil, relocated to the United States nearly two decades ago, and spent almost 20 years in Big Law, including nearly a decade as a partner. She is admitted to practice in Washington, D.C., New York, and Brazil, and she works in English, Spanish, and Portuguese."}
+                Before establishing her own practice, Erica practiced for 25 years at leading global law firms. She began her career as a litigator in Brazil, relocated to the United States nearly two decades ago, and spent almost 20 years in Big Law, including nearly a decade as a partner. She is admitted to practice in Washington, D.C., New York, and Brazil, and she works in English, Spanish, and Portuguese.
               </p>
             </div>
           </motion.div>

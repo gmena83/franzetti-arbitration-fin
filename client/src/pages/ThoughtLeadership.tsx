@@ -14,29 +14,40 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const recognitions = [
   {
     source: "Chambers and Partners",
+    url: "https://chambers.com/lawyer/erica-franzetti-usa-5:25438623",
     details: [
-      "USA, International Arbitration: Counsel, Band 6, Four years ranked",
-      "Brazil, International Arbitration, Band 3, Three years ranked",
+      "USA, International Arbitration: Counsel, Band 6, Four years ranked.",
+      "Brazil, International Arbitration, Band 3, Three years ranked.",
     ],
   },
   {
     source: "Legal 500",
+    url: "https://www.legal500.com/firms/50539-king-spalding-llp/global/lawyers/2970274-erica-franzetti",
     details: ["USA, Latin America, International Arbitration"],
   },
   {
     source: "Lexology (formerly Who's Who Legal)",
+    url: "https://www.lexology.com/firms/1696/erica_franzetti",
     details: ["International Arbitration"],
   },
   {
+    source: "Latin Lawyer",
+    url: "https://latinlawyer.com/article/king-spalding-hires-latam-arbitration-partner-dechert",
+    details: ["International Arbitration LACCA Approved"],
+  },
+  {
     source: "Latinvex",
+    url: "https://latinvex.com/",
     details: ["Latin America's Top 100 Female Lawyers (2024)"],
   },
   {
     source: "Best Lawyers",
+    url: "https://www.bestlawyers.com/",
     details: ["The Best Lawyers in America: International Arbitration – Commercial (2026)"],
   },
   {
     source: "Lawdragon 500",
+    url: "https://www.lawdragon.com/guides/2024-07-19-the-2024-lawdragon-500-leading-global-litigators",
     details: ["Leading Global Litigators (2024)"],
   },
 ];
@@ -44,11 +55,7 @@ const recognitions = [
 // 6 testimonials as per client request
 const testimonials = [
   {
-    quote: "Erica is a superstar who stands out for her extremely well-versed approach in high-stakes international disputes.",
-    source: "Legal 500",
-  },
-  {
-    quote: "I think really highly of her, she's fabulous. She comes across as very intelligent and capable, and she's always really professional and personable.",
+    quote: "I think highly of her, she's fabulous. She comes across as very intelligent and capable, and she's always professional and personable.",
     source: "Chambers USA",
   },
   {
@@ -60,12 +67,16 @@ const testimonials = [
     source: "Chambers USA",
   },
   {
-    quote: "Brazilian lawyer Érica Franzetti is much admired by the market for her track record and expertise advising international clients in Brazil on complex demands.",
+    quote: "Brazilian lawyer Érica Franzetti is much admired by the market for her soundtrack record and expertise advising international clients in Brazil on complex demands, including sophisticated M&A-related arbitration cases, counsel on claiming damages and the chairing of arbitral tribunals.",
     source: "Chambers Brazil",
   },
   {
-    quote: "Erica has an exceptional ability to navigate complex cross-border disputes with precision and strategic insight.",
-    source: "Who's Who Legal",
+    quote: "Erica is a superstar who stands out for her extremely well-versed approach in high-stakes international disputes.",
+    source: "Legal 500",
+  },
+  {
+    quote: "Erica is a great lawyer with significant experience in Latin America. One of the best of her generation. Her technical skills, experience in the field, relentless dedication to client service and commercial mindset are really impressive.",
+    source: "Lexology (Who's Who Legal)",
   },
 ];
 
@@ -263,7 +274,14 @@ export default function ThoughtLeadership() {
                   {recognitions.map((item, index) => (
                     <div key={index} className="border-b border-gray-100 pb-6">
                       <h3 className="text-xl font-semibold text-charcoal mb-3">
-                        {item.source}
+                        <a 
+                          href={item.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="hover:text-aquamarine transition-colors"
+                        >
+                          {item.source}
+                        </a>
                       </h3>
                       <div className="space-y-1 ml-0">
                         {item.details.map((detail, idx) => (
