@@ -75,7 +75,7 @@ const testimonials = [
     source: "Legal 500",
   },
   {
-    quote: "\"Erica is a great lawyer with significant experience in Latin America.\" \"One of the best of her generation.\"",
+    quote: "Erica is a great lawyer with significant experience in Latin America.\n\nOne of the best of her generation.",
     source: "Lexology (Who's Who Legal)",
   },
 ];
@@ -323,7 +323,7 @@ export default function ThoughtLeadership() {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {testimonials.map((testimonial, index) => (
                       <div key={index} className="bg-gray-50 p-6 rounded-sm border-l-4 border-aquamarine">
-                        <p className="text-gray-700 italic mb-3">
+                        <p className="text-gray-700 italic mb-3 whitespace-pre-line">
                           "{testimonial.quote}"
                         </p>
                         <p className="text-sm text-gray-500 font-medium">
