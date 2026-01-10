@@ -216,23 +216,23 @@ export default function ThoughtLeadership() {
             >
               <div className="grid grid-cols-2 gap-3 max-w-md">
                 <img
-                  src="/images/speaking-new.jpeg"
-                  alt="Erica Franzetti speaking in Rio"
+                  src="/images/speaking-brazil-sitting.jpeg"
+                  alt="Erica Franzetti sitting with Brazil background"
                   className="w-full h-40 object-cover rounded-sm shadow-lg"
                 />
                 <img
-                  src="/images/speaking-purple.jpeg"
-                  alt="Erica Franzetti presenting"
+                  src="/images/speaking-podium-closeup.jpeg"
+                  alt="Erica Franzetti smiling on podium"
                   className="w-full h-40 object-cover rounded-sm shadow-lg"
                 />
                 <img
-                  src="/images/speaking-cbar.jpeg"
-                  alt="Erica Franzetti at CBAR Congress"
+                  src="/images/speaking-cbar-podium.jpeg"
+                  alt="Erica Franzetti at CBAR Congress podium"
                   className="w-full h-40 object-cover rounded-sm shadow-lg"
                 />
                 <img
-                  src="/images/speaking-white.jpeg"
-                  alt="Erica Franzetti speaking at panel"
+                  src="/images/speaking-white-suit.jpeg"
+                  alt="Erica Franzetti in white suit with microphone"
                   className="w-full h-40 object-cover rounded-sm shadow-lg"
                 />
               </div>
