@@ -188,7 +188,7 @@ const barAdmissions = [
 // Languages reordered: English, Spanish, Portuguese as per client request
 const languages = ["English", "Spanish", "Portuguese"];
 
-// Symmetric testimonials - two side by side
+// Testimonials - three quote cards
 const testimonials = [
   {
     quote: "Erica is a superstar who stands out for her extremely well-versed approach in high-stakes international disputes.",
@@ -197,6 +197,10 @@ const testimonials = [
   {
     quote: "I think really highly of her, she's fabulous. She comes across as very intelligent and capable, and she's always really professional and personable.",
     source: "Chambers USA",
+  },
+  {
+    quote: "Her technical skills, experience in the field, relentless dedication to client service and commercial mindset are really impressive.",
+    source: "Lexology",
   },
 ];
 
@@ -315,18 +319,18 @@ export default function Home() {
               </p>
 
               <p>
-                Before establishing her own practice, Erica practiced for 25 years at leading global law firms. She began her career as a litigator in Brazil, relocated to the United States nearly two decades ago, and spent almost 20 years in Big Law, including nearly a decade as a partner. She is admitted to practice in Washington, D.C., New York, and Brazil, and she works in English, Spanish, and Portuguese.
+                Before founding her own practice, Erica built a 25-year career at market-leading law firms. She began her career as a litigator in Brazil, relocated to the United States in 2006, and spent nearly 20 years in Big Law, including almost a decade as a partner. For more than four years, she practiced at King & Spalding as part of its globally recognized, top-ranked international arbitration group, after several years in the international arbitration practice at Dechert. She is admitted to practice in Washington, D.C., New York, and Brazil, and works fluently in English, Spanish, and Portuguese.
               </p>
             </div>
           </motion.div>
 
-          {/* Symmetric Testimonials - Two side by side with LinkedIn-style logos */}
+          {/* Testimonials - Three quote cards with LinkedIn-style logos */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-gray-50 p-6 rounded-sm border-l-4 border-aquamarine">

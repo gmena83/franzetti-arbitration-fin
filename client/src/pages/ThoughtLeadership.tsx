@@ -75,7 +75,7 @@ const testimonials = [
     source: "Legal 500",
   },
   {
-    quote: "Erica is a great lawyer with significant experience in Latin America. One of the best of her generation. Her technical skills, experience in the field, relentless dedication to client service and commercial mindset are really impressive.",
+    quote: "\"Erica is a great lawyer with significant experience in Latin America.\" \"One of the best of her generation.\"",
     source: "Lexology (Who's Who Legal)",
   },
 ];
@@ -197,9 +197,15 @@ export default function ThoughtLeadership() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl lg:text-5xl font-serif font-semibold text-charcoal">
+              <h1 className="text-4xl lg:text-5xl font-serif font-semibold text-charcoal mb-6">
                 {language === "ES" ? "LIDERAZGO INTELECTUAL" : language === "PT" ? "LIDERANÇA INTELECTUAL" : "THOUGHT LEADERSHIP"}
               </h1>
+              <div className="bg-white p-6 rounded-sm border-l-4 border-aquamarine shadow-sm">
+                <p className="text-lg text-gray-700 italic">
+                  "Her technical skills, experience in the field, relentless dedication to client service and commercial mindset are really impressive."
+                </p>
+                <p className="text-sm text-gray-500 font-medium mt-2">— Lexology (Who's Who Legal)</p>
+              </div>
             </motion.div>
 
             <motion.div
@@ -208,11 +214,28 @@ export default function ThoughtLeadership() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex justify-center lg:justify-end"
             >
-              <img
-                src="/images/Gemini_Generated_Image_bpk3s8bpk3s8bpk3-RT.jpg"
-                alt="Erica Franzetti speaking"
-                className="w-full max-w-md object-cover rounded-sm shadow-lg"
-              />
+              <div className="grid grid-cols-2 gap-3 max-w-md">
+                <img
+                  src="/images/speaking-rio.jpeg"
+                  alt="Erica Franzetti speaking in Rio"
+                  className="w-full h-40 object-cover rounded-sm shadow-lg"
+                />
+                <img
+                  src="/images/speaking-purple.jpeg"
+                  alt="Erica Franzetti presenting"
+                  className="w-full h-40 object-cover rounded-sm shadow-lg"
+                />
+                <img
+                  src="/images/speaking-cbar.jpeg"
+                  alt="Erica Franzetti at CBAR Congress"
+                  className="w-full h-40 object-cover rounded-sm shadow-lg"
+                />
+                <img
+                  src="/images/speaking-white.jpeg"
+                  alt="Erica Franzetti speaking at panel"
+                  className="w-full h-40 object-cover rounded-sm shadow-lg"
+                />
+              </div>
             </motion.div>
           </div>
         </div>
