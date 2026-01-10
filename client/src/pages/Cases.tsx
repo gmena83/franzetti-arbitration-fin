@@ -19,7 +19,13 @@ const subjectMatters = [
   { id: "risk", label: "Risk Analysis and Case Assessment", labelES: "Análisis de Riesgo y Evaluación de Casos", labelPT: "Análise de Risco e Avaliação de Casos" },
 ];
 
-const arbitratorAppointments = [
+type CaseItem = {
+  text: string;
+  categories: string[];
+  hasHtml?: boolean;
+};
+
+const arbitratorAppointments: CaseItem[] = [
   {
     text: "Co-arbitrator in an ICDR arbitration between two multinational companies concerning the purchase of electric vehicle charging equipment governed by the laws of Delaware",
     categories: ["commercial"],
@@ -66,7 +72,7 @@ const arbitratorAppointments = [
   },
 ];
 
-const mattersAsCounsel = [
+const mattersAsCounsel: CaseItem[] = [
   {
     text: "Represented a Brazilian company in an ICDR arbitration against an American company in connection with a distribution agreement governed by New York Law.",
     categories: ["commercial"],
@@ -108,16 +114,18 @@ const mattersAsCounsel = [
     categories: ["deal-structure"],
   },
   {
-    text: "Represented the Respondent in Croatia v. MOL Hungarian Oil and Gas PLC (PCA Case No. 2014-15), a contractual dispute under the UNCITRAL rules regarding shareholder's rights and the corporate governance of a Croatian oil and gas company, the validity of a gas master agreement, and corruption allegations.",
+    text: "Represented the Respondent in Croatia v. MOL Hungarian Oil and Gas PLC (<a href='https://pca-cpa.org/cn/cases/291/' target='_blank' class='text-aquamarine hover:underline'>PCA Case No. 2014-15</a>), a contractual dispute under the UNCITRAL rules regarding shareholder's rights and the corporate governance of a Croatian oil and gas company, the validity of a gas master agreement, and corruption allegations.",
     categories: ["deal-structure"],
+    hasHtml: true,
   },
   {
     text: "Represented a multinational company against a Greek company in a JAMS arbitration arising out of a share purchase agreement governed by the laws of the State of New York.",
     categories: ["deal-structure"],
   },
   {
-    text: "Represented Claimant in Afilias plc. v. ICANN (ICDR No. XX) in dispute concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
+    text: "Represented Claimant in Afilias plc. v. ICANN (<a href='https://www.icann.org/resources/pages/irp-afilias-v-icann-2018-11-30-en' target='_blank' class='text-aquamarine hover:underline'>ICDR Case No. 01-18-0004-2702</a>) in dispute concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
     categories: ["deal-structure"],
+    hasHtml: true,
   },
   {
     text: "Represented Dotgay LLC in a dispute concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
@@ -128,16 +136,19 @@ const mattersAsCounsel = [
     categories: ["deal-structure"],
   },
   {
-    text: "Represented Claimant in Amazon.com, Inc. v. ICANN (ICDR No. XX) concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
+    text: "Represented Claimant in Amazon.com, Inc. v. ICANN (<a href='https://www.icann.org/en/system/files/files/irp-amazon-request-redacted-02mar16-en.pdf' target='_blank' class='text-aquamarine hover:underline'>ICDR Case No. 01-16-0000-7056</a>) concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
     categories: ["deal-structure"],
+    hasHtml: true,
   },
   {
-    text: "Represented Claimant in DotConnectAfrica Trust v. ICANN (ICDR No. XX) concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
+    text: "Represented Claimant in DotConnectAfrica Trust v. ICANN (<a href='https://www.icann.org/en/news/irp/dca-v-icann' target='_blank' class='text-aquamarine hover:underline'>ICDR Case No. 50-117-T-1083-13</a>) concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
     categories: ["deal-structure"],
+    hasHtml: true,
   },
   {
-    text: "Represented Claimant in ICM Registry v. ICANN (ICDR No. XX) concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
+    text: "Represented Claimant in ICM Registry v. ICANN (<a href='https://www.icann.org/en/news/irp/icm-v-icann' target='_blank' class='text-aquamarine hover:underline'>ICDR Case No. 50-117-T-00224-08</a>) concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
     categories: ["deal-structure"],
+    hasHtml: true,
   },
   {
     text: "Advising a Brazilian company and its American subsidiary regarding a Joint Operating Agreement for the construction of an oil platform in Nigeria.",
@@ -160,28 +171,34 @@ const mattersAsCounsel = [
     categories: ["energy"],
   },
   {
-    text: "Represented the Claimant in Gasoducto Sur Peruano S.A. En Liquidación v. Republic of Peru (ICSID Case No. ARB/24/29), a contractual dispute over a gas pipeline project that collapsed in the wake of the Odebrecht corruption scandal.",
+    text: "Represented the Claimant in Gasoducto Sur Peruano S.A. En Liquidación v. Republic of Peru (<a href='https://icsid.worldbank.org/cases/pending' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/24/29</a>), a contractual dispute over a gas pipeline project that collapsed in the wake of the Odebrecht corruption scandal.",
     categories: ["energy"],
+    hasHtml: true,
   },
   {
-    text: "Represented the Claimant in MOL Hungarian Oil and Gas Company v. Republic of Croatia (ICSID Case No. ARB /13/32), a dispute under the Energy Charter Treaty for measures related to the privatization of a Croatian oil and gas company, the supply of gas, and the criminal prosecution of Claimant's CEO for bribery accusations.",
+    text: "Represented the Claimant in MOL Hungarian Oil and Gas Company v. Republic of Croatia (<a href='https://www.italaw.com/cases/2516' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/13/32</a>), a dispute under the Energy Charter Treaty for measures related to the privatization of a Croatian oil and gas company, the supply of gas, and the criminal prosecution of Claimant's CEO for bribery accusations.",
     categories: ["energy"],
+    hasHtml: true,
   },
   {
-    text: "Represented the Respondent in Croatia v. MOL Hungarian Oil and Gas PLC (PCA Case No. 2014-15), a contractual dispute under the UNCITRAL rules regarding shareholder's rights and the corporate governance of a Croatian oil and gas company, the validity of a gas master agreement, and corruption allegations.",
+    text: "Represented the Respondent in Croatia v. MOL Hungarian Oil and Gas PLC (<a href='https://pca-cpa.org/cn/cases/291/' target='_blank' class='text-aquamarine hover:underline'>PCA Case No. 2014-15</a>), a contractual dispute under the UNCITRAL rules regarding shareholder's rights and the corporate governance of a Croatian oil and gas company, the validity of a gas master agreement, and corruption allegations.",
     categories: ["energy"],
+    hasHtml: true,
   },
   {
-    text: "Represented the Claimants in Pluspetrol Perú et al v Perúpetro (ICSID Case No. ARB/12/28), a dispute arising out of a gas supply contract regarding royalty payments and the sale of liquified natural gas (LNG).",
+    text: "Represented the Claimants in Pluspetrol Perú et al v Perúpetro (<a href='https://www.italaw.com/cases/3111' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/12/28</a>), a dispute arising out of a gas supply contract regarding royalty payments and the sale of liquified natural gas (LNG).",
     categories: ["energy"],
+    hasHtml: true,
   },
   {
-    text: "Represented the Claimant in Pac Rim Cayman LLC v. Republic of El Salvador (ICSID Case No. ARB/09/12), a dispute under the Central America-Dominican Republic-Unites States Free Trade Agreement regarding the government's refusal to issue mining exploitation licenses.",
+    text: "Represented the Claimant in Pac Rim Cayman LLC v. Republic of El Salvador (<a href='https://www.italaw.com/cases/783' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/09/12</a>), a dispute under the Central America-Dominican Republic-Unites States Free Trade Agreement regarding the government's refusal to issue mining exploitation licenses.",
     categories: ["energy"],
+    hasHtml: true,
   },
   {
-    text: "Represented the Respondent in Chevron Overseas Finance GmbH v. The Republic of the Philippines (PCA Case No. 2019-25), a dispute under the Philippines-Switzerland BIT and the UNCITRAL rules involving the Malampaya gas field.",
+    text: "Represented the Respondent in Chevron Overseas Finance GmbH v. The Republic of the Philippines (<a href='https://pca-cpa.org/en/cases/223/' target='_blank' class='text-aquamarine hover:underline'>PCA Case No. 2019-25</a>), a dispute under the Philippines-Switzerland BIT and the UNCITRAL rules involving the Malampaya gas field.",
     categories: ["energy"],
+    hasHtml: true,
   },
   {
     text: "Advised a Canadian investor in the energy sector in Colombia regarding investment treaty protections.",
@@ -192,36 +209,43 @@ const mattersAsCounsel = [
     categories: ["investor-state"],
   },
   {
-    text: "Representing the Claimant in Quanta Services Netherlands B.V. v. Republic of Peru (ICSID CASE No. ARB/21/1), a dispute under the Netherlands-Peru Bilateral Investment Treaty (BIT) arising from measures related to concessions to build and operate fiber-optic networks.",
+    text: "Representing the Claimant in Quanta Services Netherlands B.V. v. Republic of Peru (<a href='https://www.italaw.com/cases/9781' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/21/1</a>), a dispute under the Netherlands-Peru Bilateral Investment Treaty (BIT) arising from measures related to concessions to build and operate fiber-optic networks.",
     categories: ["investor-state"],
+    hasHtml: true,
   },
   {
     text: "Advised Shell's subsidiary BG Overseas Limited with respect to an investment dispute against the Republic of Bolivia under the UK-Bolivia BIT involving regulatory measures affecting operation contracts for the extraction of hydrocarbons in Bolivia.",
     categories: ["investor-state"],
   },
   {
-    text: "Represented the Claimant in Gasoducto Sur Peruano S.A. En Liquidación v. Republic of Peru (ICSID Case No. ARB/24/29), a contractual dispute over a gas pipeline project that collapsed in the wake of the Odebrecht corruption scandal.",
+    text: "Represented the Claimant in Gasoducto Sur Peruano S.A. En Liquidación v. Republic of Peru (<a href='https://icsid.worldbank.org/cases/pending' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/24/29</a>), a contractual dispute over a gas pipeline project that collapsed in the wake of the Odebrecht corruption scandal.",
     categories: ["investor-state"],
+    hasHtml: true,
   },
   {
-    text: "Represented the Claimant in MOL Hungarian Oil and Gas Company v. Republic of Croatia (ICSID Case No. ARB /13/32), a dispute under the Energy Charter Treaty for measures related to the privatization of a Croatian oil and gas company, the supply of gas, and the criminal prosecution of Claimant's CEO for bribery accusations.",
+    text: "Represented the Claimant in MOL Hungarian Oil and Gas Company v. Republic of Croatia (<a href='https://www.italaw.com/cases/2516' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/13/32</a>), a dispute under the Energy Charter Treaty for measures related to the privatization of a Croatian oil and gas company, the supply of gas, and the criminal prosecution of Claimant's CEO for bribery accusations.",
     categories: ["investor-state"],
+    hasHtml: true,
   },
   {
-    text: "Represented the Respondent in Croatia v. MOL Hungarian Oil and Gas PLC (PCA Case No. 2014-15), a contractual dispute under the UNCITRAL rules regarding shareholder's rights and the corporate governance of a Croatian oil and gas company, the validity of a gas master agreement, and corruption allegations.",
+    text: "Represented the Respondent in Croatia v. MOL Hungarian Oil and Gas PLC (<a href='https://pca-cpa.org/cn/cases/291/' target='_blank' class='text-aquamarine hover:underline'>PCA Case No. 2014-15</a>), a contractual dispute under the UNCITRAL rules regarding shareholder's rights and the corporate governance of a Croatian oil and gas company, the validity of a gas master agreement, and corruption allegations.",
     categories: ["investor-state"],
+    hasHtml: true,
   },
   {
-    text: "Represented the Claimants in Pluspetrol Perú et al v Perúpetro (ICSID Case No. ARB/12/28), a dispute arising out of a gas supply contract regarding royalty payments and the sale of liquified natural gas (LNG).",
+    text: "Represented the Claimants in Pluspetrol Perú et al v Perúpetro (<a href='https://www.italaw.com/cases/3111' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/12/28</a>), a dispute arising out of a gas supply contract regarding royalty payments and the sale of liquified natural gas (LNG).",
     categories: ["investor-state"],
+    hasHtml: true,
   },
   {
-    text: "Represented the Claimant in Pac Rim Cayman LLC v. Republic of El Salvador (ICSID Case No. ARB/09/12), a dispute under the Central America-Dominican Republic-Unites States Free Trade Agreement regarding the government's refusal to issue mining exploitation licenses.",
+    text: "Represented the Claimant in Pac Rim Cayman LLC v. Republic of El Salvador (<a href='https://www.italaw.com/cases/783' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/09/12</a>), a dispute under the Central America-Dominican Republic-Unites States Free Trade Agreement regarding the government's refusal to issue mining exploitation licenses.",
     categories: ["investor-state"],
+    hasHtml: true,
   },
   {
-    text: "Represented the Respondent in Chevron Overseas Finance GmbH v. The Republic of the Philippines (PCA Case No. 2019-25), a dispute under the Philippines-Switzerland BIT and the UNCITRAL rules involving the Malampaya gas field.",
+    text: "Represented the Respondent in Chevron Overseas Finance GmbH v. The Republic of the Philippines (<a href='https://pca-cpa.org/en/cases/223/' target='_blank' class='text-aquamarine hover:underline'>PCA Case No. 2019-25</a>), a dispute under the Philippines-Switzerland BIT and the UNCITRAL rules involving the Malampaya gas field.",
     categories: ["investor-state"],
+    hasHtml: true,
   },
   {
     text: "Advised a Turkish investor in Turkmenistan regarding investment treaties protections.",
@@ -236,8 +260,9 @@ const mattersAsCounsel = [
     categories: ["investor-state"],
   },
   {
-    text: "Representing Petitioner Redes Andinas de Comunicaciones S.R.L. v. Republic of Peru, et al (US District Court for the District of Columbia Civil Action No. 11-3631), a proceeding to recognize and enforce two ICC arbitral awards.",
+    text: "Representing Petitioner Redes Andinas de Comunicaciones S.R.L. v. Republic of Peru, et al (<a href='https://www.courtlistener.com/docket/66609467/redes-andinas-de-comunicaciones-srl-v-republic-of-peru/' target='_blank' class='text-aquamarine hover:underline'>US District Court for the District of Columbia Civil Action No. 22-3631</a>), a proceeding to recognize and enforce two ICC arbitral awards.",
     categories: ["recognition"],
+    hasHtml: true,
   },
   {
     text: "Assisted third‑party funders and investment funds on the assessment, valuation, and strategy of investment and commercial disputes.",
@@ -384,9 +409,13 @@ export default function Cases() {
                       {arbitratorCases.map((item, index) => (
                         <li key={index} className="flex items-start">
                           <span className="inline-block w-2 h-2 rounded-full bg-aquamarine mt-2 mr-3 flex-shrink-0"></span>
-                          <span className="text-gray-700 leading-relaxed">
-                            {item.text}
-                          </span>
+                          {item.hasHtml ? (
+                            <span className="text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: item.text }} />
+                          ) : (
+                            <span className="text-gray-700 leading-relaxed">
+                              {item.text}
+                            </span>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -402,9 +431,13 @@ export default function Cases() {
                       {counselCases.map((item, index) => (
                         <li key={index} className="flex items-start">
                           <span className="inline-block w-2 h-2 rounded-full bg-aquamarine mt-2 mr-3 flex-shrink-0"></span>
-                          <span className="text-gray-700 leading-relaxed">
-                            {item.text}
-                          </span>
+                          {item.hasHtml ? (
+                            <span className="text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: item.text }} />
+                          ) : (
+                            <span className="text-gray-700 leading-relaxed">
+                              {item.text}
+                            </span>
+                          )}
                         </li>
                       ))}
                     </ul>
