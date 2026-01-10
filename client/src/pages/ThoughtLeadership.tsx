@@ -216,7 +216,7 @@ export default function ThoughtLeadership() {
             >
               <div className="grid grid-cols-2 gap-3 max-w-md">
                 <img
-                  src="/images/speaking-rio.jpeg"
+                  src="/images/speaking-new.jpeg"
                   alt="Erica Franzetti speaking in Rio"
                   className="w-full h-40 object-cover rounded-sm shadow-lg"
                 />

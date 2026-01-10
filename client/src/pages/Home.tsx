@@ -28,7 +28,7 @@ const professionalBackground = [
     location: "Washington, DC and Miami",
     role: "Partner",
     period: "Sept. 2021 – Dec. 2025",
-    logo: "/images/logos/king-spalding.jpg",
+    logo: "/images/king-spalding-logo.png",
     url: "https://www.kslaw.com",
   },
   {
@@ -36,7 +36,7 @@ const professionalBackground = [
     location: "Washington, DC",
     role: "Partner",
     period: "Sept. 2015 – Sept. 2021",
-    logo: "/images/dechert-logo.jpg",
+    logo: "/images/dechert-logo-new.png",
     url: "https://www.dechert.com",
   },
   {
@@ -44,7 +44,7 @@ const professionalBackground = [
     location: "Washington, DC",
     role: "Associate",
     period: "Jul. 2012 – Sept. 2015",
-    logo: "/images/weil-logo.jpg",
+    logo: "/images/weil-logo-new.png",
     url: "https://www.weil.com",
   },
   {
@@ -52,7 +52,7 @@ const professionalBackground = [
     location: "Washington, DC",
     role: "Associate",
     period: "Sept. 2008 – Jul. 2012",
-    logo: "/images/crowell-logo.jpg",
+    logo: "/images/crowell-logo-new.png",
     url: "https://www.crowell.com",
   },
   {
@@ -60,7 +60,7 @@ const professionalBackground = [
     location: "São Paulo, Brazil",
     role: "Associate",
     period: "Jul. 2001 – Sept. 2006",
-    logo: "/images/wald-logo.png",
+    logo: "/images/wald-logo-new.png",
     url: "https://www.wald.com.br",
   },
   {
@@ -68,7 +68,7 @@ const professionalBackground = [
     location: "São Paulo",
     role: "Associate / Intern",
     period: "Jul. 1997 – Jul. 2001",
-    logo: "/images/dinamarco-logo.jpg",
+    logo: "/images/dinamarco-logo-new.png",
     url: "https://www.dinamarcoadvocacia.com.br",
   },
 ];
@@ -80,7 +80,7 @@ const academia = [
     role: "Professor",
     course: "International Arbitration in the Energy Sector",
     period: "2024-2025",
-    logo: "/images/miami-law-logo.jpg",
+    logo: "/images/miami-logo-new.png",
     url: "https://www.law.miami.edu",
   },
   {
@@ -88,7 +88,7 @@ const academia = [
     role: "Professor",
     course: "Investor-State Dispute Resolution",
     period: "2017-2022",
-    logo: "/images/logos/georgetown-law.png",
+    logo: "/images/georgetown-logo-new.png",
     url: "https://www.law.georgetown.edu",
   },
 ];
@@ -99,7 +99,7 @@ const education = [
     institution: "Georgetown University Law Center",
     note: "High Honor, Dean's List",
     year: "2008",
-    logo: "/images/logos/georgetown-law.png",
+    logo: "/images/georgetown-logo-new.png",
     url: "https://www.law.georgetown.edu",
   },
   {
@@ -115,7 +115,7 @@ const education = [
     institution: "University of São Paulo, Law School",
     note: "",
     year: "2000",
-    logo: "/images/usp-law-logo.jpg",
+    logo: "/images/usp-logo.png",
     url: "https://www.direito.usp.br",
   },
 ];
@@ -134,7 +134,7 @@ const professionalAssociations = [
   },
   { 
     name: "Panel of Arbitrators of the Hong Kong International Arbitration Centre (HKIAC)", 
-    logo: "/images/logos/hkiac.png", 
+    logo: "/images/hkiac-logo.png", 
     url: "https://www.hkiac.org" 
   },
   { 
@@ -144,7 +144,7 @@ const professionalAssociations = [
   },
   { 
     name: "Panel of Arbitrators of the Capital Market Chamber of B3 S.A – Brasil, Bolsa, Balcão (CAM)", 
-    logo: "/images/logos/b3.png", 
+    logo: "/images/cam-b3-logo.png", 
     url: "https://www.b3.com.br" 
   },
   { 
@@ -159,8 +159,8 @@ const professionalAssociations = [
   },
   { 
     name: "Rising Arbitrators Initiative (RAI)", 
-    logo: "/images/logos/rai.png", 
-    url: "https://www.risingarbitrators.org" 
+    logo: "/images/rai-logo.png", 
+    url: "https://risingarbitrators.com/" 
   },
   { 
     name: "Arbitral Women", 
