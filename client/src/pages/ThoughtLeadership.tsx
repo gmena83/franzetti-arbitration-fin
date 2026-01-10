@@ -75,7 +75,7 @@ const testimonials = [
     source: "Legal 500",
   },
   {
-    quote: "Erica is a great lawyer with significant experience in Latin America.\n\nOne of the best of her generation.",
+    quote: "Erica is a great lawyer with significant experience in Latin America.\"\n\n\"One of the best of her generation.",
     source: "Lexology (Who's Who Legal)",
   },
 ];
