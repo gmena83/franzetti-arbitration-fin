@@ -27,7 +27,7 @@ type CaseItem = {
 
 const arbitratorAppointments: CaseItem[] = [
   {
-    text: "Co-arbitrator in an ICDR arbitration between two multinational companies concerning the purchase of electric vehicle charging equipment governed by the laws of Delaware",
+    text: "Co-arbitrator in an ICDR arbitration between two multinational companies concerning the purchase of electric vehicle charging equipment governed by the laws of Delaware.",
     categories: ["commercial"],
   },
   {
@@ -55,11 +55,11 @@ const arbitratorAppointments: CaseItem[] = [
     categories: ["commercial"],
   },
   {
-    text: "Sole arbitrator in several arbitrations under the AAA Commercial Rules involving claims for breach of contract in the financial services industries",
+    text: "Sole arbitrator in several arbitrations under the AAA Commercial Rules involving claims for breach of contract in the financial services industries.",
     categories: ["commercial"],
   },
   {
-    text: "Co-arbitrator in an ICDR construction dispute involving a concession agreement for the development of a highway project in a Latin American State",
+    text: "Co-arbitrator in an ICDR construction dispute involving a concession agreement for the development of a highway project in a Latin American State.",
     categories: ["construction"],
   },
   {
@@ -67,7 +67,7 @@ const arbitratorAppointments: CaseItem[] = [
     categories: ["construction"],
   },
   {
-    text: "Co-arbitrator in a CAM arbitration involving a corporate dispute related to a major oil company in Brazil.",
+    text: "Co-arbitrator in a CAM arbitration concerning the challenge of an arbitrator in a shareholder dispute involving a major oil and gas corporation.",
     categories: ["deal-structure"],
   },
 ];
@@ -123,13 +123,7 @@ const mattersAsCounsel: CaseItem[] = [
     categories: ["deal-structure"],
   },
   {
-    text: "Represented Claimant in Afilias plc. v. ICANN (<a href='https://www.icann.org/resources/pages/irp-afilias-v-icann-2018-11-30-en' target='_blank' class='text-aquamarine hover:underline'>ICDR Case No. 01-18-0004-2702</a>) in dispute concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
-    categories: ["deal-structure"],
-    hasHtml: true,
-  },
-  {
-    text: "Represented Dotgay LLC in a dispute concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain. <a href='https://domainincite.com/17910-gay-is-gay-enough-after-all-icann-overturns-community-panel-decision' target='_blank' class='text-aquamarine hover:underline ml-1'>[Media: Domain Incite]</a>",
-    hasHtml: true,
+    text: "Represented Dotgay LLC in a dispute concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
     categories: ["deal-structure"],
   },
   {
@@ -137,17 +131,17 @@ const mattersAsCounsel: CaseItem[] = [
     categories: ["deal-structure"],
   },
   {
-    text: "Represented Claimant in Amazon.com, Inc. v. ICANN (<a href='https://www.icann.org/en/system/files/files/irp-amazon-request-redacted-02mar16-en.pdf' target='_blank' class='text-aquamarine hover:underline'>ICDR Case No. 01-16-0000-7056</a>) concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain. <a href='https://www.npr.org/2019/05/22/725610775/after-7-year-battle-amazon-nears-victory-in-domain-name-dispute' target='_blank' class='text-aquamarine hover:underline ml-1'>[Media: NPR]</a> <a href='https://www.cfr.org/blog/case-amazon-and-what-it-means-icann' target='_blank' class='text-aquamarine hover:underline ml-1'>[Media: CFR]</a>",
+    text: "Represented Claimant in Amazon.com, Inc. v. ICANN (<a href='https://www.icann.org/en/system/files/files/irp-amazon-request-redacted-02mar16-en.pdf' target='_blank' class='text-aquamarine hover:underline'>ICDR Case No. 01-16-0000-7056</a>) concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
     categories: ["deal-structure"],
     hasHtml: true,
   },
   {
-    text: "Represented Claimant in DotConnectAfrica Trust v. ICANN (<a href='https://www.icann.org/en/news/irp/dca-v-icann' target='_blank' class='text-aquamarine hover:underline'>ICDR Case No. 50-117-T-1083-13</a>) concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain. <a href='https://law.justia.com/cases/california/court-of-appeal/2021/b302739.html' target='_blank' class='text-aquamarine hover:underline ml-1'>[Media: Justia]</a>",
+    text: "Represented Claimant in DotConnectAfrica Trust v. ICANN (<a href='https://www.icann.org/en/news/irp/dca-v-icann' target='_blank' class='text-aquamarine hover:underline'>ICDR Case No. 50-117-T-1083-13</a>) concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
     categories: ["deal-structure"],
     hasHtml: true,
   },
   {
-    text: "Represented Claimant in ICM Registry v. ICANN (<a href='https://www.icann.org/en/news/irp/icm-v-icann' target='_blank' class='text-aquamarine hover:underline'>ICDR Case No. 50-117-T-00224-08</a>) concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain. <a href='https://icannwiki.org/ICM_v._ICANN' target='_blank' class='text-aquamarine hover:underline ml-1'>[Media: ICANNWiki]</a>",
+    text: "Represented Claimant in ICM Registry v. ICANN (<a href='https://www.icann.org/en/news/irp/icm-v-icann' target='_blank' class='text-aquamarine hover:underline'>ICDR Case No. 50-117-T-00224-08</a>) concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
     categories: ["deal-structure"],
     hasHtml: true,
   },
@@ -168,17 +162,16 @@ const mattersAsCounsel: CaseItem[] = [
     categories: ["energy"],
   },
   {
-    text: "Advised Shell's subsidiary BG Overseas Limited with respect to an investment dispute against the Republic of Bolivia under the UK-Bolivia BIT involving regulatory measures affecting operation contracts for the extraction of hydrocarbons in Bolivia. <a href='https://www.kslaw.com/news-and-insights/harry-burnett-rica-franzetti-and-fernando-rodriguez-cortina-represent-shell-in-an-investment-treaty-claim-against-bolivia' target='_blank' class='text-aquamarine hover:underline ml-1'>[Media: K&S]</a>",
+    text: "Advised Shell's subsidiary BG Overseas Limited with respect to an investment dispute against the Republic of Bolivia under the UK-Bolivia BIT involving regulatory measures affecting operation contracts for the extraction of hydrocarbons in Bolivia.",
+    categories: ["energy"],
+  },
+  {
+    text: "Represented the Claimant in Gasoducto Sur Peruano S.A. En Liquidación v. Republic of Peru (<a href='https://icsid.worldbank.org/cases/pending' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/24/29</a>), a contractual dispute over a gas pipeline project that collapsed in the wake of the Odebrecht corruption scandal.",
     categories: ["energy"],
     hasHtml: true,
   },
   {
-    text: "Represented the Claimant in Gasoducto Sur Peruano S.A. En Liquidación v. Republic of Peru (<a href='https://icsid.worldbank.org/cases/pending' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/24/29</a>), a contractual dispute over a gas pipeline project that collapsed in the wake of the Odebrecht corruption scandal. <a href='https://www.kslaw.com/news-and-insights/ks-advises-gasoducto-sur-peruano-in-an-icsid-claim-against-peru-over-a-natural-gas-pipeline-project-that-collapsed-in-the-wake-of-the-odebrecht-corruption-scandal' target='_blank' class='text-aquamarine hover:underline ml-1'>[Media: K&S]</a>",
-    categories: ["energy"],
-    hasHtml: true,
-  },
-  {
-    text: "Represented the Claimant in MOL Hungarian Oil and Gas Company v. Republic of Croatia (<a href='https://www.italaw.com/cases/2516' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/13/32</a>), a dispute under the Energy Charter Treaty for measures related to the privatization of a Croatian oil and gas company, the supply of gas, and the criminal prosecution of Claimant's CEO for bribery accusations. <a href='https://www.acerislaw.com/investment-arbitration-and-the-never-ending-mol-v-croatia-saga/' target='_blank' class='text-aquamarine hover:underline ml-1'>[Media: Aceris Law]</a> <a href='https://legalblogs.wolterskluwer.com/arbitration-blog/mol-v-croatia-saga-a-two-faced-janus-in-the-isds-reform-debate/' target='_blank' class='text-aquamarine hover:underline ml-1'>[Media: Kluwer]</a>",
+    text: "Represented the Claimant in MOL Hungarian Oil and Gas Company v. Republic of Croatia (<a href='https://www.italaw.com/cases/2516' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/13/32</a>), a dispute under the Energy Charter Treaty for measures related to the privatization of a Croatian oil and gas company, the supply of gas, and the criminal prosecution of Claimant's CEO for bribery accusations.",
     categories: ["energy"],
     hasHtml: true,
   },
@@ -193,7 +186,7 @@ const mattersAsCounsel: CaseItem[] = [
     hasHtml: true,
   },
   {
-    text: "Represented the Claimant in Pac Rim Cayman LLC v. Republic of El Salvador (<a href='https://www.italaw.com/cases/783' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/09/12</a>), a dispute under the Central America-Dominican Republic-Unites States Free Trade Agreement regarding the government's refusal to issue mining exploitation licenses. <a href='https://www.iisd.org/itn/2018/10/18/pac-rim-v-el-salvador/' target='_blank' class='text-aquamarine hover:underline ml-1'>[Media: IISD]</a>",
+    text: "Represented the Claimant in Pac Rim Cayman LLC v. Republic of El Salvador (<a href='https://www.italaw.com/cases/783' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/09/12</a>), a dispute under the Central America-Dominican Republic-Unites States Free Trade Agreement regarding the government's refusal to issue mining exploitation licenses.",
     categories: ["energy"],
     hasHtml: true,
   },
@@ -216,17 +209,16 @@ const mattersAsCounsel: CaseItem[] = [
     hasHtml: true,
   },
   {
-    text: "Advised Shell's subsidiary BG Overseas Limited with respect to an investment dispute against the Republic of Bolivia under the UK-Bolivia BIT involving regulatory measures affecting operation contracts for the extraction of hydrocarbons in Bolivia. <a href='https://www.kslaw.com/news-and-insights/harry-burnett-rica-franzetti-and-fernando-rodriguez-cortina-represent-shell-in-an-investment-treaty-claim-against-bolivia' target='_blank' class='text-aquamarine hover:underline ml-1'>[Media: K&S]</a>",
+    text: "Advised Shell's subsidiary BG Overseas Limited with respect to an investment dispute against the Republic of Bolivia under the UK-Bolivia BIT involving regulatory measures affecting operation contracts for the extraction of hydrocarbons in Bolivia.",
+    categories: ["investor-state"],
+  },
+  {
+    text: "Represented the Claimant in Gasoducto Sur Peruano S.A. En Liquidación v. Republic of Peru (<a href='https://icsid.worldbank.org/cases/pending' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/24/29</a>), a contractual dispute over a gas pipeline project that collapsed in the wake of the Odebrecht corruption scandal.",
     categories: ["investor-state"],
     hasHtml: true,
   },
   {
-    text: "Represented the Claimant in Gasoducto Sur Peruano S.A. En Liquidación v. Republic of Peru (<a href='https://icsid.worldbank.org/cases/pending' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/24/29</a>), a contractual dispute over a gas pipeline project that collapsed in the wake of the Odebrecht corruption scandal. <a href='https://www.kslaw.com/news-and-insights/ks-advises-gasoducto-sur-peruano-in-an-icsid-claim-against-peru-over-a-natural-gas-pipeline-project-that-collapsed-in-the-wake-of-the-odebrecht-corruption-scandal' target='_blank' class='text-aquamarine hover:underline ml-1'>[Media: K&S]</a>",
-    categories: ["investor-state"],
-    hasHtml: true,
-  },
-  {
-    text: "Represented the Claimant in MOL Hungarian Oil and Gas Company v. Republic of Croatia (<a href='https://www.italaw.com/cases/2516' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/13/32</a>), a dispute under the Energy Charter Treaty for measures related to the privatization of a Croatian oil and gas company, the supply of gas, and the criminal prosecution of Claimant's CEO for bribery accusations. <a href='https://www.acerislaw.com/investment-arbitration-and-the-never-ending-mol-v-croatia-saga/' target='_blank' class='text-aquamarine hover:underline ml-1'>[Media: Aceris Law]</a> <a href='https://legalblogs.wolterskluwer.com/arbitration-blog/mol-v-croatia-saga-a-two-faced-janus-in-the-isds-reform-debate/' target='_blank' class='text-aquamarine hover:underline ml-1'>[Media: Kluwer]</a>",
+    text: "Represented the Claimant in MOL Hungarian Oil and Gas Company v. Republic of Croatia (<a href='https://www.italaw.com/cases/2516' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/13/32</a>), a dispute under the Energy Charter Treaty for measures related to the privatization of a Croatian oil and gas company, the supply of gas, and the criminal prosecution of Claimant's CEO for bribery accusations.",
     categories: ["investor-state"],
     hasHtml: true,
   },
@@ -241,7 +233,7 @@ const mattersAsCounsel: CaseItem[] = [
     hasHtml: true,
   },
   {
-    text: "Represented the Claimant in Pac Rim Cayman LLC v. Republic of El Salvador (<a href='https://www.italaw.com/cases/783' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/09/12</a>), a dispute under the Central America-Dominican Republic-Unites States Free Trade Agreement regarding the government's refusal to issue mining exploitation licenses. <a href='https://www.iisd.org/itn/2018/10/18/pac-rim-v-el-salvador/' target='_blank' class='text-aquamarine hover:underline ml-1'>[Media: IISD]</a>",
+    text: "Represented the Claimant in Pac Rim Cayman LLC v. Republic of El Salvador (<a href='https://www.italaw.com/cases/783' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/09/12</a>), a dispute under the Central America-Dominican Republic-Unites States Free Trade Agreement regarding the government's refusal to issue mining exploitation licenses.",
     categories: ["investor-state"],
     hasHtml: true,
   },
@@ -259,11 +251,11 @@ const mattersAsCounsel: CaseItem[] = [
     categories: ["investor-state"],
   },
   {
-    text: "Advised a Canadian investor in the energy sector in Colombia regarding investment treaty protections",
+    text: "Advised a Canadian investor in the energy sector in Colombia regarding investment treaty protections.",
     categories: ["investor-state"],
   },
   {
-    text: "Representing Petitioner Redes Andinas de Comunicaciones S.R.L. v. Republic of Peru, et al (<a href='https://www.courtlistener.com/docket/66609467/redes-andinas-de-comunicaciones-srl-v-republic-of-peru/' target='_blank' class='text-aquamarine hover:underline'>US District Court for the District of Columbia Civil Action No. 22-3631</a>), a proceeding to recognize and enforce two ICC arbitral awards. <a href='https://www.kslaw.com/news-and-insights/ashley-parrish-and-rica-franzetti-represent-redes-andinas-de-comunicaciones-srl-before-a-dc-federal-court' target='_blank' class='text-aquamarine hover:underline ml-1'>[Media: K&S]</a>",
+    text: "Representing Petitioner Redes Andinas de Comunicaciones S.R.L. v. Republic of Peru, et al (<a href='https://www.courtlistener.com/docket/66609467/redes-andinas-de-comunicaciones-srl-v-republic-of-peru/' target='_blank' class='text-aquamarine hover:underline'>US District Court for the District of Columbia Civil Action No. 22-3631</a>), a proceeding to recognize and enforce two ICC arbitral awards.",
     categories: ["recognition"],
     hasHtml: true,
   },
@@ -330,6 +322,11 @@ export default function Cases() {
     return matter.label;
   };
 
+  // Check if section should show role headings (only for commercial, construction, deal-structure)
+  const shouldShowRoleHeadings = (categoryId: string) => {
+    return ["commercial", "construction", "deal-structure"].includes(categoryId);
+  };
+
   return (
     <div className="bg-white">
       {/* Hero Section with Symmetric Grid of 4 Images */}
@@ -388,6 +385,8 @@ export default function Cases() {
             const { arbitratorCases, counselCases } = getFilteredCases(matter.id);
             if (arbitratorCases.length === 0 && counselCases.length === 0) return null;
 
+            const showRoleHeadings = shouldShowRoleHeadings(matter.id);
+
             return (
               <motion.div
                 key={matter.id}
@@ -403,48 +402,67 @@ export default function Cases() {
                   {getLabel(matter)}
                 </h2>
 
-                {arbitratorCases.length > 0 && (
-                  <div className="mb-8">
-                    <h3 className="text-lg font-semibold text-charcoal mb-4">
-                      {language === "ES" ? "Como Árbitro" : language === "PT" ? "Como Árbitro" : "As Arbitrator"}
-                    </h3>
-                    <ul className="space-y-3">
-                      {arbitratorCases.map((item, index) => (
-                        <li key={index} className="flex items-start">
-                          <span className="inline-block w-2 h-2 rounded-full bg-aquamarine mt-2 mr-3 flex-shrink-0"></span>
-                          {item.hasHtml ? (
-                            <span className="text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: item.text }} />
-                          ) : (
-                            <span className="text-gray-700 leading-relaxed">
-                              {item.text}
-                            </span>
-                          )}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
+                {showRoleHeadings ? (
+                  <>
+                    {arbitratorCases.length > 0 && (
+                      <div className="mb-8">
+                        <h3 className="text-lg font-semibold text-charcoal mb-4">
+                          {language === "ES" ? "Como Árbitro" : language === "PT" ? "Como Árbitro" : "As Arbitrator"}
+                        </h3>
+                        <ul className="space-y-3">
+                          {arbitratorCases.map((item, index) => (
+                            <li key={index} className="flex items-start">
+                              <span className="inline-block w-2 h-2 rounded-full bg-aquamarine mt-2 mr-3 flex-shrink-0"></span>
+                              {item.hasHtml ? (
+                                <span className="text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: item.text }} />
+                              ) : (
+                                <span className="text-gray-700 leading-relaxed">
+                                  {item.text}
+                                </span>
+                              )}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
 
-                {counselCases.length > 0 && (
-                  <div>
-                    <h3 className="text-lg font-semibold text-charcoal mb-4">
-                      {language === "ES" ? "Como Abogada" : language === "PT" ? "Como Advogada" : "As Counsel"}
-                    </h3>
-                    <ul className="space-y-3">
-                      {counselCases.map((item, index) => (
-                        <li key={index} className="flex items-start">
-                          <span className="inline-block w-2 h-2 rounded-full bg-aquamarine mt-2 mr-3 flex-shrink-0"></span>
-                          {item.hasHtml ? (
-                            <span className="text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: item.text }} />
-                          ) : (
-                            <span className="text-gray-700 leading-relaxed">
-                              {item.text}
-                            </span>
-                          )}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                    {counselCases.length > 0 && (
+                      <div>
+                        <h3 className="text-lg font-semibold text-charcoal mb-4">
+                          {language === "ES" ? "Como Abogada" : language === "PT" ? "Como Advogada" : "As Counsel"}
+                        </h3>
+                        <ul className="space-y-3">
+                          {counselCases.map((item, index) => (
+                            <li key={index} className="flex items-start">
+                              <span className="inline-block w-2 h-2 rounded-full bg-aquamarine mt-2 mr-3 flex-shrink-0"></span>
+                              {item.hasHtml ? (
+                                <span className="text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: item.text }} />
+                              ) : (
+                                <span className="text-gray-700 leading-relaxed">
+                                  {item.text}
+                                </span>
+                              )}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <ul className="space-y-3">
+                    {[...arbitratorCases, ...counselCases].map((item, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="inline-block w-2 h-2 rounded-full bg-aquamarine mt-2 mr-3 flex-shrink-0"></span>
+                        {item.hasHtml ? (
+                          <span className="text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: item.text }} />
+                        ) : (
+                          <span className="text-gray-700 leading-relaxed">
+                            {item.text}
+                          </span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
                 )}
               </motion.div>
             );

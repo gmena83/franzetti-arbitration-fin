@@ -34,7 +34,7 @@ const professionalBackground = [
   {
     title: "Dechert LLP",
     location: "Washington, DC",
-    role: "Partner",
+    role: "Partner / Counsel",
     period: "Sept. 2015 – Sept. 2021",
     logo: "/images/dechert-logo-new.png",
     url: "https://www.dechert.com",
@@ -77,7 +77,7 @@ const professionalBackground = [
 const academia = [
   {
     institution: "University of Miami",
-    role: "Professor",
+    role: "Adjunct Professor",
     course: "International Arbitration in the Energy Sector",
     period: "2024-2025",
     logo: "/images/miami-logo-new.png",
@@ -85,7 +85,7 @@ const academia = [
   },
   {
     institution: "Georgetown University Law Center",
-    role: "Professor",
+    role: "Adjunct Professor",
     course: "Investor-State Dispute Resolution",
     period: "2017-2022",
     logo: "/images/georgetown-logo-new.png",
@@ -236,10 +236,10 @@ export default function Home() {
     : "International Arbitrator and Counsel.";
     
   const heroSubtitle = language === "ES"
-    ? "Resolviendo y previniendo disputas con integridad, eficiencia y rigor."
+    ? "Resolución independiente de disputas con integridad, eficiencia y rigor."
     : language === "PT"
-    ? "Resolvendo e prevenindo disputas com integridade, eficiência e rigor."
-    : "Resolving and preventing disputes with integrity, efficiency, and rigor.";
+    ? "Resolução independente de disputas com integridade, eficiência e rigor."
+    : "Independent dispute resolution with integrity, efficiency, and rigor.";
 
   return (
     <div className="bg-white">
@@ -299,15 +299,15 @@ export default function Home() {
 
             <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
               <p>
-                Erica Franzetti is a leading international arbitrator with extensive experience in international commercial and investor–state arbitration across a wide range of industry sectors, including energy, natural resources, infrastructure, manufacturing, financial services, and technology. Drawing decades of experience as counsel in complex, high value disputes, Erica brings a deep understanding of arbitral strategy, procedure, and advocacy to her work as an arbitrator. With training in both civil and common law, she often counsels clients on resolving cross-border disputes and protecting their investments under international treaties. She has been involved in proceedings spanning numerous jurisdictions, including Argentina, Brazil, Canada, Chile, Colombia, Croatia, England, Ghana, Hungary, Peru, the Philippines, and the United States.
+                Erica Franzetti is a leading international arbitrator with extensive experience in international commercial and investor–state arbitration across a wide range of industry sectors, including energy, natural resources, infrastructure, manufacturing, financial services, and technology. Drawing decades of experience as counsel in complex, high value disputes, Erica brings a deep understanding of arbitral strategy, procedure, and advocacy to her work as an arbitrator. With training in both civil and common law, she often counsels clients on resolving cross-border disputes and protecting their investments under international treaties. She has been involved in proceedings spanning numerous jurisdictions, including Argentina, Brazil, Canada, Chile, Colombia, Croatia, the Dominican Republic, England, Ghana, Mexico, Hungary, Peru, the Philippines, and the United States.
               </p>
 
               <p>
-                Erica has served as an arbitrator in both domestic and international disputes, including as chair of arbitral tribunals constituted under various institutional and rules. She has served as counsel in international arbitration proceedings held under the rules of the International Chamber of Commerce (ICC), the American Arbitration Association (AAA), the International Centre for Dispute Resolution (ICDR), the London Court of International Arbitration (LCIA), and the International Centre for Settlement of Investment Disputes (ICSID), among others. Her experience on all sides of arbitration enables her to manage proceedings efficiently and fairly, with a practical appreciation of the challenges faced by parties and counsel.
+                Erica has served as an arbitrator in both domestic and international disputes, including as chair of arbitral tribunals constituted under various institutional rules. She has served as counsel in international arbitration proceedings administered by leading institutions such as the International Chamber of Commerce (ICC), the American Arbitration Association (AAA), the International Centre for Dispute Resolution (ICDR), the London Court of International Arbitration (LCIA), and the International Centre for Settlement of Investment Disputes (ICSID), among others, as well as ad hoc arbitrations (including UNCITRAL). Her experience on all sides of arbitration enables her to manage proceedings efficiently and fairly, with a practical appreciation of the challenges faced by parties and counsel.
               </p>
 
               <p>
-                While her primary focus is on her work as an arbitrator, Erica continues to provide select counsel services, offering legal assessments and strategic advice at every stage of a dispute—from its inception through award enforcement—drawing on deep familiarity with diverse procedural frameworks and jurisdictions. Her practice spans a broad range of industries and dispute types, including corporate governance, mergers and acquisitions (M&A), joint ventures, intellectual property, disputes under the United Nations Convention on Contracts for the International Sale of Goods (CISG), privatization, telecommunications, power generation, mineral concessions, gas pricing and LNG, hotel management, project finance, venture capital investments, and construction. Her track record includes high-stakes corporate disputes under ICC and UNCITRAL rules, ICSID arbitrations in the energy and infrastructure sectors, and the enforcement of arbitral awards before U.S. federal courts.
+                While her primary focus is on her work as an arbitrator, Erica provides select counsel services, offering legal assessments and strategic advice at every stage of a dispute—from its inception through award enforcement—drawing on deep familiarity with diverse procedural frameworks and jurisdictions. Her practice spans a broad range of industries and dispute types, including corporate governance, mergers and acquisitions (M&A), joint ventures, intellectual property, disputes under the United Nations Convention on Contracts for the International Sale of Goods (CISG), privatization, telecommunications, power generation, mineral concessions, gas pricing and LNG, hotel management, project finance, venture capital investments, and construction.
               </p>
 
               <p>
@@ -374,9 +374,9 @@ export default function Home() {
               {professionalBackground.map((item, index) => (
                 <div key={index} className="flex flex-col sm:flex-row sm:justify-between py-3 items-start sm:items-center">
                   <div className="flex items-center gap-4">
-                    <div className="w-32 flex-shrink-0 hidden sm:flex items-center justify-start">
+                    <div className="w-16 sm:w-32 flex-shrink-0 flex items-center justify-start">
                       {item.logo && (
-                        <img src={item.logo} alt={item.title} className="h-8 w-auto max-w-full object-contain" />
+                        <img src={item.logo} alt={item.title} className="h-6 sm:h-8 w-auto max-w-full object-contain" />
                       )}
                     </div>
                     <div>
@@ -412,9 +412,9 @@ export default function Home() {
               {academia.map((item, index) => (
                 <div key={index} className="flex flex-col sm:flex-row sm:justify-between py-3 items-start sm:items-center">
                   <div className="flex items-center gap-4">
-                    <div className="w-32 flex-shrink-0 hidden sm:flex items-center justify-start">
+                    <div className="w-16 sm:w-32 flex-shrink-0 flex items-center justify-start">
                       {item.logo && (
-                        <img src={item.logo} alt={item.institution} className="h-8 w-auto max-w-full object-contain" />
+                        <img src={item.logo} alt={item.institution} className="h-6 sm:h-8 w-auto max-w-full object-contain" />
                       )}
                     </div>
                     <div>
@@ -450,9 +450,9 @@ export default function Home() {
               {education.map((item, index) => (
                 <div key={index} className="flex flex-col sm:flex-row sm:justify-between py-3 items-start sm:items-center">
                   <div className="flex items-center gap-4">
-                    <div className="w-32 flex-shrink-0 hidden sm:flex items-center justify-start">
+                    <div className="w-16 sm:w-32 flex-shrink-0 flex items-center justify-start">
                       {item.logo && (
-                        <img src={item.logo} alt={item.institution} className="h-10 w-auto max-w-full object-contain" />
+                        <img src={item.logo} alt={item.institution} className="h-8 sm:h-10 w-auto max-w-full object-contain" />
                       )}
                     </div>
                     <div>
