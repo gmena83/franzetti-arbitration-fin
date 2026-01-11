@@ -69,7 +69,7 @@ const professionalBackground = [
     role: "Associate / Intern",
     period: "Jul. 1997 – Jul. 2001",
     logo: "/images/dinamarco-logo-new.png",
-    url: "https://www.dinamarcoadvocacia.com.br",
+    url: "https://www.dinamarco.com.br/",
   },
 ];
 
@@ -150,7 +150,7 @@ const professionalAssociations = [
   { 
     name: "Arbitration and Mediation Committee of the International Court of Commerce (ICC) Brazil", 
     logo: "/images/logos/icc.png", 
-    url: "https://iccwbo.org/dispute-resolution/dispute-resolution-services/arbitration" 
+    url: "https://www.iccbrasil.org/en/dispute-resolution/" 
   },
   { 
     name: "International Bar Association – Dispute Resolution Section", 
@@ -168,14 +168,14 @@ const professionalAssociations = [
     url: "https://www.arbitralwomen.org" 
   },
   { 
-    name: "Miami International Arbitration Society (MIAS)", 
-    logo: "/images/logos/mias.jpg", 
-    url: "https://miamiarbitration.com" 
-  },
-  { 
     name: "Brazilian Arbitration Committee (CBAR)", 
     logo: "/images/logos/cbar.jpg", 
     url: "https://cbar.org.br" 
+  },
+  { 
+    name: "Miami International Arbitration Society (MIAS)", 
+    logo: "/images/logos/mias.jpg", 
+    url: "https://www.mias.org/arbitration-in-miami" 
   },
 ];
 
