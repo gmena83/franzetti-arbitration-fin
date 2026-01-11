@@ -20,7 +20,7 @@ const professionalBackground = [
     location: "Washington, DC",
     role: "Founder and Principal",
     period: "Dec. 2025 – Present",
-    logo: "/images/Franzetti-principal-dark.svg",
+    logo: "/images/Franzetti-vertical-dark.png",
     url: "https://www.franzettiarb.com",
   },
   {
