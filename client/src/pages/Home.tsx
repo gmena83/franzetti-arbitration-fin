@@ -375,7 +375,11 @@ export default function Home() {
 
             <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
               <p>
-                Erica Franzetti is a leading international arbitrator with extensive experience in international commercial and investor–state arbitration across a wide range of industry sectors, including energy, natural resources, infrastructure, manufacturing, financial services, and technology. Drawing on decades of experience as counsel in complex, high value disputes, Erica brings a deep understanding of arbitral strategy, procedure, and advocacy to her work as an arbitrator. With training in both civil and common law, she often counsels clients on resolving cross-border disputes and protecting their investments under international treaties. She has been involved in proceedings spanning numerous jurisdictions, including Argentina, Brazil, Canada, Chile, Colombia, Croatia, the Dominican Republic, Ghana, Mexico, Hungary, Peru, the Philippines, the United Kingdom, and the United States.
+                Erica Franzetti is a globally recognized international arbitrator and trusted disputes counsel for high-stakes cross-border matters—bringing disciplined judgment, procedural command, and real-world advocacy insight to every engagement.
+              </p>
+
+              <p>
+                Erica has extensive experience in international commercial and investor-state arbitration across a wide range of industries, including energy, natural resources, infrastructure, manufacturing, financial services, and technology. Her practice is dedicated primarily to arbitral decision-making as a neutral, while also providing selective counsel on dispute strategy, enforcement, and investment treaty protection. She supports clients in disputes connected to North America, Latin America, the Lusophone jurisdictions, and beyond, across civil and common law systems, with the linguistic and cultural fluency required to manage proceedings involving multinational parties and cross-border evidence.
               </p>
 
               {/* Embedded Quote 1 - The Legal 500 */}
@@ -387,7 +391,11 @@ export default function Home() {
               </div>
 
               <p>
-                Erica has served as an arbitrator in both domestic and international disputes, including as chair of arbitral tribunals constituted under various institutional rules. She has served as counsel in international arbitration proceedings administered by leading institutions such as the International Chamber of Commerce (ICC), the American Arbitration Association (AAA), the International Centre for Dispute Resolution (ICDR), the London Court of International Arbitration (LCIA), and the International Centre for Settlement of Investment Disputes (ICSID), among others, as well as ad hoc arbitrations (including UNCITRAL). Her experience on all sides of arbitration enables her to manage proceedings efficiently and fairly, with a practical appreciation of the challenges faced by parties and counsel.
+                Erica serves as arbitrator in U.S. and international disputes, including appointments as chair of arbitral tribunals. She draws on deep experience across civil and common law traditions to manage proceedings efficiently, fairly, and with procedural rigor. Her experience includes proceedings under ICC, AAA, ICDR, LCIA, ICSID, and UNCITRAL rules, with extensive familiarity with arbitral procedure, tribunal management, and decision-writing. Her practical case management is informed by decades as lead counsel in complex, high-value disputes.
+              </p>
+
+              <p>
+                As counsel, Erica provides targeted legal assessments and strategic advice at critical stages of cross-border disputes, including early-stage dispute prevention and risk assessment, strategic advice on arbitration strategy and procedural posture, investment treaty analysis and protection, and post-award and enforcement strategy across jurisdictions.
               </p>
 
               {/* Embedded Quote 2 - Chambers USA */}
@@ -399,11 +407,11 @@ export default function Home() {
               </div>
 
               <p>
-                While her primary focus is on her work as an arbitrator, Erica provides select counsel services, offering legal assessments and strategic advice at every stage of a dispute—from its inception through award enforcement—drawing on deep familiarity with diverse procedural frameworks and jurisdictions. Her practice spans a broad range of industries and dispute types, including corporate governance, mergers and acquisitions (M&A), joint ventures, intellectual property, disputes under the United Nations Convention on Contracts for the International Sale of Goods (CISG), privatization, telecommunications, power generation, mineral concessions, gas pricing and LNG, hotel management, project finance, venture capital investments, and construction.
+                Erica has been involved in arbitration proceedings spanning numerous jurisdictions, including Argentina, Brazil, Canada, Chile, Colombia, Croatia, the Dominican Republic, Ghana, Hungary, Mexico, Peru, the Philippines, and the United States, advising and adjudicating disputes involving cross-border investments, multinational parties, and sovereign interests. Her experience encompasses both international commercial arbitration and investor-state arbitration, with matters seated across multiple jurisdictions and administered under leading institutional and ad hoc rules.
               </p>
 
               <p>
-                Erica has received top-tier recognition from leading legal directories, including <em>Chambers & Partners</em>, <em>The Legal 500</em>, <em>Lexology</em> (formerly known as Who's Who Legal), <em>Latin Lawyer</em>, and <em>Best Lawyers</em>, and has been named one of Latin America's Top 100 Female Lawyers by <em>Latinvex</em>.
+                Her depth of knowledge spans a broad range of sectors and complex disputes, including commercial contracts (hotel management, distribution, intellectual property, and matters under the CISG), construction, concessions and infrastructure (telecommunications, power generation, and highways), corporate governance and accountability, mergers and acquisitions (M&A), shareholding disputes, joint ventures and venture capital investments, and energy and natural resources (mining, oil and gas, LNG pricing, electricity generation, and nuclear energy).
               </p>
 
               {/* Embedded Quote 3 - Lexology */}
@@ -415,11 +423,15 @@ export default function Home() {
               </div>
 
               <p>
-                In addition to her practice, Erica regularly publishes and speaks at international arbitration conferences and has lectured at leading academic institutions, including Georgetown University Law Center, where she has taught a course on investor–state arbitration, and the University of Miami, where she teaches a course on arbitration in the energy sector.
+                Erica is consistently recognized by leading legal directories and publications, including <em>Chambers and Partners</em>, <em>The Legal 500</em>, <em>Lexology</em> (formerly Who's Who Legal), <em>Latin Lawyer</em>, and <em>Best Lawyers</em>, and has been named one of Latin America's Top 100 Female Lawyers by <em>Latinvex</em>.
               </p>
 
               <p>
-                Before founding her own practice, Erica built a 25-year career at market-leading law firms. She began her career as a litigator in Brazil, relocated to the United States in 2006, and spent nearly 20 years in Big Law, including almost a decade as a partner. For more than four years, she practiced at King & Spalding as part of its globally recognized, top-ranked international arbitration group, after several years in the international arbitration practice at Dechert. She is admitted to practice in Washington, D.C., New York, and Brazil, and works fluently in English, Spanish, and Portuguese.
+                Erica regularly publishes and speaks on international arbitration, investment arbitration, and dispute resolution strategy at international conferences and professional forums. Her teaching experience includes positions at leading academic institutions, including Georgetown University Law Center (investor-state arbitration) and the University of Miami (arbitration in the energy sector).
+              </p>
+
+              <p>
+                Erica is the founder of this independent practice after a 25-year career in international disputes at market-leading firms. She began practice as a litigator in Brazil, relocated to the United States in 2006, and spent nearly two decades in Big Law. She is a former partner in globally recognized international arbitration practices, including the Global Arbitration Review (GAR) No. 1 ranked international disputes team for 2021–2025. She is admitted to practice in Washington, D.C., New York, and Brazil, and works fluently in English, Spanish, and Portuguese.
               </p>
             </div>
           </motion.div>
