@@ -12,7 +12,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const subjectMatters = [
   { id: "commercial", label: "Commercial Contracts", labelES: "Contratos Comerciales", labelPT: "Contratos Comerciais" },
   { id: "construction", label: "Construction & Infrastructure", labelES: "Construcción e Infraestructura", labelPT: "Construção e Infraestrutura" },
-  { id: "deal-structure", label: "Deal-Structure, Post-Transaction, Governance & Accountability", labelES: "Estructura de Transacciones, Post-Transacción, Gobernanza y Responsabilidad", labelPT: "Estrutura de Transações, Pós-Transação, Governança e Responsabilidade" },
+  { id: "deal-structure", label: "Deal Structure, Post-Transaction, Governance & Accountability", labelES: "Estructura de Transacciones, Post-Transacción, Gobernanza y Responsabilidad", labelPT: "Estrutura de Transações, Pós-Transação, Governança e Responsabilidade" },
   { id: "energy", label: "Energy & Natural Resources", labelES: "Energía y Recursos Naturales", labelPT: "Energia e Recursos Naturais" },
   { id: "investor-state", label: "Investor-State Disputes", labelES: "Disputas Inversionista-Estado", labelPT: "Disputas Investidor-Estado" },
   { id: "recognition", label: "Recognition & Enforcement of Arbitral Awards", labelES: "Reconocimiento y Ejecución de Laudos Arbitrales", labelPT: "Reconhecimento e Execução de Sentenças Arbitrais" },
@@ -27,7 +27,7 @@ type CaseItem = {
 
 const arbitratorAppointments: CaseItem[] = [
   {
-    text: "Co-arbitrator in an ICDR arbitration between two multinational companies concerning the purchase of electric vehicle charging equipment governed by the laws of Delaware.",
+    text: "Co-arbitrator in an ICDR arbitration between two multinational companies concerning the purchase of electric vehicle charging equipment governed by the laws of the State of Delaware.",
     categories: ["commercial"],
   },
   {
@@ -59,7 +59,7 @@ const arbitratorAppointments: CaseItem[] = [
     categories: ["commercial"],
   },
   {
-    text: "Co-arbitrator in an ICDR construction dispute involving a concession agreement for the development of a highway project in a Latin American state.",
+    text: "Co-arbitrator in an ICDR construction dispute involving a concession agreement for the development of a highway project in a Latin American State.",
     categories: ["construction"],
   },
   {
@@ -74,7 +74,7 @@ const arbitratorAppointments: CaseItem[] = [
 
 const mattersAsCounsel: CaseItem[] = [
   {
-    text: "Represented a Brazilian company in an ICDR arbitration against an American company in connection with a distribution agreement governed by New York law.",
+    text: "Represented a Brazilian company in an ICDR arbitration against an American company in connection with a distribution agreement governed by the laws of the State of New York.",
     categories: ["commercial"],
   },
   {
@@ -82,7 +82,7 @@ const mattersAsCounsel: CaseItem[] = [
     categories: ["commercial"],
   },
   {
-    text: "Represented an American company in an ICDR dispute involving a services agreement governed by the laws of California.",
+    text: "Represented an American company in an ICDR dispute involving a services agreement governed by the laws of the State of California.",
     categories: ["commercial"],
   },
   {
@@ -90,7 +90,7 @@ const mattersAsCounsel: CaseItem[] = [
     categories: ["commercial"],
   },
   {
-    text: "Represented an Argentinean firm in an ICDR arbitration against a Chilean gas company in connection with a services agreement governed by Argentine law.",
+    text: "Represented an Argentine firm in an ICDR arbitration against a Chilean gas company in connection with a services agreement governed by Argentine law.",
     categories: ["commercial"],
   },
   {
@@ -114,7 +114,7 @@ const mattersAsCounsel: CaseItem[] = [
     categories: ["deal-structure"],
   },
   {
-    text: "Represented the Respondent in Croatia v. MOL Hungarian Oil and Gas PLC (<a href='https://pca-cpa.org/cn/cases/291/' target='_blank' class='text-aquamarine hover:underline'>PCA Case No. 2014-15</a>), a contractual dispute under the UNCITRAL rules regarding shareholder's rights and the corporate governance of a Croatian oil and gas company, the validity of a gas master agreement, and corruption allegations.",
+    text: "Represented the Respondent in Croatia v. MOL Hungarian Oil and Gas PLC (<a href='https://pca-cpa.org/cn/cases/291/' target='_blank' class='text-aquamarine hover:underline'>PCA Case No. 2014-15</a>), a contractual dispute under the UNCITRAL rules regarding shareholders' rights and the corporate governance of a Croatian oil and gas company, the validity of a gas master agreement, and corruption allegations.",
     categories: ["deal-structure"],
     hasHtml: true,
   },
@@ -180,17 +180,17 @@ const mattersAsCounsel: CaseItem[] = [
     hasHtml: true,
   },
   {
-    text: "Represented the Respondent in Croatia v. MOL Hungarian Oil and Gas PLC (<a href='https://pca-cpa.org/cn/cases/291/' target='_blank' class='text-aquamarine hover:underline'>PCA Case No. 2014-15</a>), a contractual dispute under the UNCITRAL rules regarding shareholder's rights and the corporate governance of a Croatian oil and gas company, the validity of a gas master agreement, and corruption allegations.",
+    text: "Represented the Respondent in Croatia v. MOL Hungarian Oil and Gas PLC (<a href='https://pca-cpa.org/cn/cases/291/' target='_blank' class='text-aquamarine hover:underline'>PCA Case No. 2014-15</a>), a contractual dispute under the UNCITRAL rules regarding shareholders' rights and the corporate governance of a Croatian oil and gas company, the validity of a gas master agreement, and corruption allegations.",
     categories: ["energy"],
     hasHtml: true,
   },
   {
-    text: "Represented the Claimants in Pluspetrol Perú et al v Perúpetro (<a href='https://www.italaw.com/cases/3111' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/12/28</a>), a dispute arising out of a gas supply contract regarding royalty payments and the sale of liquified natural gas (LNG).",
+    text: "Represented the Claimants in Pluspetrol Perú et al. v. Perúpetro (<a href='https://www.italaw.com/cases/3111' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/12/28</a>), a dispute arising out of a gas supply contract regarding royalty payments and the sale of liquified natural gas (LNG).",
     categories: ["energy"],
     hasHtml: true,
   },
   {
-    text: "Represented the Claimant in Pac Rim Cayman LLC v. Republic of El Salvador (<a href='https://www.italaw.com/cases/783' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/09/12</a>), a dispute under the Central America-Dominican Republic-Unites States Free Trade Agreement regarding the government's refusal to issue mining exploitation licenses.",
+    text: "Represented the Claimant in Pac Rim Cayman LLC v. Republic of El Salvador (<a href='https://www.italaw.com/cases/783' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/09/12</a>), a dispute under the Central America-Dominican Republic-United States Free Trade Agreement regarding the government's refusal to issue mining exploitation licenses.",
     categories: ["energy"],
     hasHtml: true,
   },
@@ -227,17 +227,17 @@ const mattersAsCounsel: CaseItem[] = [
     hasHtml: true,
   },
   {
-    text: "Represented the Respondent in Croatia v. MOL Hungarian Oil and Gas PLC (<a href='https://pca-cpa.org/cn/cases/291/' target='_blank' class='text-aquamarine hover:underline'>PCA Case No. 2014-15</a>), a contractual dispute under the UNCITRAL rules regarding shareholder's rights and the corporate governance of a Croatian oil and gas company, the validity of a gas master agreement, and corruption allegations.",
+    text: "Represented the Respondent in Croatia v. MOL Hungarian Oil and Gas PLC (<a href='https://pca-cpa.org/cn/cases/291/' target='_blank' class='text-aquamarine hover:underline'>PCA Case No. 2014-15</a>), a contractual dispute under the UNCITRAL rules regarding shareholders' rights and the corporate governance of a Croatian oil and gas company, the validity of a gas master agreement, and corruption allegations.",
     categories: ["investor-state"],
     hasHtml: true,
   },
   {
-    text: "Represented the Claimants in Pluspetrol Perú et al v Perúpetro (<a href='https://www.italaw.com/cases/3111' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/12/28</a>), a dispute arising out of a gas supply contract regarding royalty payments and the sale of liquified natural gas (LNG).",
+    text: "Represented the Claimants in Pluspetrol Perú et al. v. Perúpetro (<a href='https://www.italaw.com/cases/3111' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/12/28</a>), a dispute arising out of a gas supply contract regarding royalty payments and the sale of liquified natural gas (LNG).",
     categories: ["investor-state"],
     hasHtml: true,
   },
   {
-    text: "Represented the Claimant in Pac Rim Cayman LLC v. Republic of El Salvador (<a href='https://www.italaw.com/cases/783' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/09/12</a>), a dispute under the Central America-Dominican Republic-Unites States Free Trade Agreement regarding the government's refusal to issue mining exploitation licenses.",
+    text: "Represented the Claimant in Pac Rim Cayman LLC v. Republic of El Salvador (<a href='https://www.italaw.com/cases/783' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/09/12</a>), a dispute under the Central America-Dominican Republic-United States Free Trade Agreement regarding the government's refusal to issue mining exploitation licenses.",
     categories: ["investor-state"],
     hasHtml: true,
   },
@@ -247,7 +247,7 @@ const mattersAsCounsel: CaseItem[] = [
     hasHtml: true,
   },
   {
-    text: "Advised a Turkish investor in Turkmenistan regarding investment treaties protections.",
+    text: "Advised a Turkish investor in Turkmenistan regarding investment treaty protections.",
     categories: ["investor-state"],
   },
   {
@@ -385,6 +385,14 @@ export default function Cases() {
       {/* Cases by Category - Darker grey separator lines */}
       <section className="py-16 lg:py-24">
         <div className="container">
+          {/* Context sentence */}
+          <p className="text-gray-600 text-center mb-12 max-w-4xl mx-auto">
+            {language === "ES" 
+              ? "Los asuntos descritos a continuación reflejan la experiencia adquirida en roles anteriores en firmas de abogados internacionales líderes."
+              : language === "PT"
+              ? "Os assuntos descritos abaixo refletem a experiência adquirida em funções anteriores em escritórios de advocacia internacionais líderes."
+              : "The matters described below reflect experience gained in prior roles at leading international law firms."}
+          </p>
           {subjectMatters.map((matter) => {
             const { arbitratorCases, counselCases } = getFilteredCases(matter.id);
             if (arbitratorCases.length === 0 && counselCases.length === 0) return null;

@@ -19,7 +19,7 @@ const professionalBackground = [
     title: "Franzetti Arbitration",
     location: "Washington, DC",
     role: "Founder and Principal",
-    period: "Dec. 2025 – Present",
+    period: "Jan. 2026 – Present",
     logo: "/images/Franzetti-vertical-dark.png",
     url: "https://www.franzettiarb.com",
   },
@@ -65,7 +65,7 @@ const professionalBackground = [
   },
   {
     title: "Dinamarco & Rossi Advocacia",
-    location: "São Paulo",
+    location: "São Paulo, Brazil",
     role: "Associate / Intern",
     period: "Jul. 1997 – Jul. 2001",
     logo: "/images/dinamarco-logo-new.png",
@@ -302,7 +302,7 @@ export default function Home() {
 
             <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
               <p>
-                Erica Franzetti is a leading international arbitrator with extensive experience in international commercial and investor–state arbitration across a wide range of industry sectors, including energy, natural resources, infrastructure, manufacturing, financial services, and technology. Drawing on decades of experience as counsel in complex, high value disputes, Erica brings a deep understanding of arbitral strategy, procedure, and advocacy to her work as an arbitrator. With training in both civil and common law, she often counsels clients on resolving cross-border disputes and protecting their investments under international treaties. She has been involved in proceedings spanning numerous jurisdictions, including Argentina, Brazil, Canada, Chile, Colombia, Croatia, the Dominican Republic, England, Ghana, Mexico, Hungary, Peru, the Philippines, and the United States.
+                Erica Franzetti is a leading international arbitrator with extensive experience in international commercial and investor–state arbitration across a wide range of industry sectors, including energy, natural resources, infrastructure, manufacturing, financial services, and technology. Drawing on decades of experience as counsel in complex, high value disputes, Erica brings a deep understanding of arbitral strategy, procedure, and advocacy to her work as an arbitrator. With training in both civil and common law, she often counsels clients on resolving cross-border disputes and protecting their investments under international treaties. She has been involved in proceedings spanning numerous jurisdictions, including Argentina, Brazil, Canada, Chile, Colombia, Croatia, the Dominican Republic, Ghana, Mexico, Hungary, Peru, the Philippines, the United Kingdom, and the United States.
               </p>
 
               <p>
@@ -314,7 +314,7 @@ export default function Home() {
               </p>
 
               <p>
-                Erica has received top-tier recognition from leading legal directories, including Chambers & Partners, The Legal 500, Lexology (formerly known as Who's Who Legal), Latin Lawyer, and Best Lawyers, and has been named one of Latin America's Top 100 Female Lawyers by Latinvex.
+                Erica has received top-tier recognition from leading legal directories, including <em>Chambers & Partners</em>, <em>The Legal 500</em>, <em>Lexology</em> (formerly known as Who's Who Legal), <em>Latin Lawyer</em>, and <em>Best Lawyers</em>, and has been named one of Latin America's Top 100 Female Lawyers by <em>Latinvex</em>.
               </p>
 
               <p>

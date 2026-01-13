@@ -45,10 +45,10 @@ export default function Footer() {
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
               {language === "ES" 
-                ? "Servicios de arbitraje internacional y asesoría especializados en disputas comerciales e inversionista-Estado."
+                ? "Servicios de arbitraje internacional y asesoría enfocados en disputas comerciales e inversionista-Estado."
                 : language === "PT"
-                ? "Serviços de arbitragem internacional e consultoria especializados em disputas comerciais e investidor-Estado."
-                : "International arbitration and counsel services specializing in commercial and investor-state disputes."}
+                ? "Serviços de arbitragem internacional e consultoria focados em disputas comerciais e investidor-Estado."
+                : "International arbitration and counsel services focused on commercial and investor-state disputes."}
             </p>
           </div>
 

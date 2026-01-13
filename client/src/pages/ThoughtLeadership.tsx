@@ -150,7 +150,26 @@ const publications = [
   { title: "US Judicial Discovery in Private International Arbitration: Outlook Remains Uncertain", publication: "Miami Arbitration Reports, Vol. 1, Issue 5", year: "October 2009" },
 ];
 
-type TabType = "recognition" | "speaking" | "publications";
+type TabType = "recognition" | "speaking" | "publications" | "academia";
+
+const academia = [
+  {
+    institution: "University of Miami",
+    role: "Adjunct Professor",
+    course: "International Arbitration in the Energy Sector",
+    period: "2024-2025",
+    logo: "/images/miami-logo-new.png",
+    url: "https://www.law.miami.edu",
+  },
+  {
+    institution: "Georgetown University Law Center",
+    role: "Adjunct Professor",
+    course: "Investor-State Dispute Resolution",
+    period: "2017-2022",
+    logo: "/images/georgetown-logo-new.png",
+    url: "https://www.law.georgetown.edu",
+  },
+];
 
 export default function ThoughtLeadership() {
   const [activeTab, setActiveTab] = useState<TabType>("recognition");
@@ -182,6 +201,7 @@ export default function ThoughtLeadership() {
       recognition: { EN: "Recognition", ES: "Reconocimientos", PT: "Reconhecimentos" },
       speaking: { EN: "Speaking Engagements", ES: "Conferencias", PT: "Palestras" },
       publications: { EN: "Publications", ES: "Publicaciones", PT: "Publicações" },
+      academia: { EN: "Academic Experience", ES: "Experiencia Académica", PT: "Experiência Acadêmica" },
     };
     return labels[tab][language as "EN" | "ES" | "PT"] || labels[tab].EN;
   };
@@ -204,7 +224,7 @@ export default function ThoughtLeadership() {
                 <p className="text-lg text-gray-700 italic">
                   "Her technical skills, experience in the field, relentless dedication to client service and commercial mindset are really impressive."
                 </p>
-                <p className="text-sm text-gray-500 font-medium mt-2">— Lexology (Who's Who Legal)</p>
+                <p className="text-sm text-gray-500 font-medium mt-2">— Lexology (Who's Who Legal) about Erica Franzetti</p>
               </div>
             </motion.div>
 
@@ -279,6 +299,16 @@ export default function ThoughtLeadership() {
               }`}
             >
               {getTabLabel("publications")}
+            </button>
+            <button
+              onClick={() => setActiveTab("academia")}
+              className={`pb-4 px-2 text-lg font-medium transition-colors border-b-2 ${
+                activeTab === "academia"
+                  ? "text-aquamarine border-aquamarine"
+                  : "text-gray-500 border-transparent hover:text-charcoal"
+              }`}
+            >
+              {getTabLabel("academia")}
             </button>
           </motion.div>
 
@@ -366,6 +396,34 @@ export default function ThoughtLeadership() {
                       <p className="text-gray-600 text-sm">
                         {item.publication}, <em className="text-gray-400">{item.year}</em>
                       </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Academic Experience Tab */}
+            {activeTab === "academia" && (
+              <div className="space-y-6">
+                {academia.map((item, index) => (
+                  <div key={index} className="flex items-start gap-6 pb-6 border-b border-gray-100">
+                    <div className="w-20 h-20 flex-shrink-0 flex items-center justify-center">
+                      <img src={item.logo} alt={item.institution} className="max-w-full max-h-full object-contain" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-charcoal mb-1">
+                        <a 
+                          href={item.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="hover:text-aquamarine transition-colors"
+                        >
+                          {item.institution}
+                        </a>
+                      </h3>
+                      <p className="text-gray-700">{item.role}</p>
+                      <p className="text-gray-600 text-sm">{item.course}</p>
+                      <p className="text-gray-400 text-sm mt-1">{item.period}</p>
                     </div>
                   </div>
                 ))}
