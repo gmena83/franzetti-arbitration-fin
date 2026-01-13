@@ -264,7 +264,7 @@ const mattersAsCounsel: CaseItem[] = [
     hasHtml: true,
   },
   {
-    text: "Assisted third‑party funders and investment funds on the assessment, valuation, and strategy of investment and commercial disputes.",
+    text: "Assisted third‑party funders and investment funds on the assessment, valuation, and strategy of investor-State and commercial disputes.",
     categories: ["risk"],
   },
 ];

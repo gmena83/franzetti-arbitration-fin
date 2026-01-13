@@ -21,7 +21,7 @@ const recognitions = [
     ],
   },
   {
-    source: "Legal 500",
+    source: "The Legal 500",
     url: "https://www.legal500.com/firms/50539-king-spalding-llp/global/lawyers/2970274-erica-franzetti",
     details: ["USA, Latin America, International Arbitration"],
   },
@@ -72,7 +72,7 @@ const testimonials = [
   },
   {
     quote: "Erica is a superstar who stands out for her extremely well-versed approach in high-stakes international disputes.",
-    source: "Legal 500",
+    source: "The Legal 500",
   },
   {
     quote: "Erica is a great lawyer with significant experience in Latin America.\"\n\n\"One of the best of her generation.",
@@ -103,7 +103,9 @@ const speakingEngagements = [
   { title: "Supply Chain Disputes", event: "AAA-ICDR International Arbitration Track of the Florida Bar's International Law Sectional Annual Event", date: "April 1, 2022" },
   { title: "ICDR Rules on International Dispute Resolution Procedures", event: "The Chartered Institute of Arbitrators (CIArb) Brazil Branch", date: "December 8, 2021" },
   { title: "Hot Topics Related To Arbitration", event: "Brazilian-American Chamber of Commerce, New York City", date: "November 30, 2021" },
+  { title: "Key Types of Privileges and Their Application in International Disputes", event: "Dechert LLP Webinar Series", date: "March 17, April 5, April 28, 2021" },
   { title: "Virtual Hearings in International Arbitration", event: "Vancouver International Arbitration Centre Webinar", date: "October 5, 2020" },
+  { title: "From NAFTA to USMCA: A Discussion on Key Changes to Trade and Investment", event: "Dechert LLP Webinar", date: "July 29, 2020" },
   { title: "Key Considerations for Legal Positions on Force Majeure: Practical Steps if Disputes are Inevitable", event: "Nairobi Centre For International Arbitration Webinar", date: "August 13, 2020" },
   { title: "Procedimentos Virtuais e Táticas de Guerrilha em Arbitragem", event: "INOVARB AmCham Brazil Webinar", date: "June 4, 2020" },
   { title: "Arbitrajes Virtuales: Ventajas e Inconvenientes", event: "IPA Instituto Peruano de Arbitraje", date: "May 14, 2020" },
@@ -186,7 +188,7 @@ export default function ThoughtLeadership() {
     
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (metaKeywords) {
-      metaKeywords.setAttribute('content', 'arbitration publications, speaking engagements, legal recognition, Chambers Partners, Legal 500, international arbitration thought leadership');
+      metaKeywords.setAttribute('content', 'arbitration publications, speaking engagements, legal recognition, Chambers Partners, The Legal 500, international arbitration thought leadership');
     }
     
     let ogTitle = document.querySelector('meta[property="og:title"]');

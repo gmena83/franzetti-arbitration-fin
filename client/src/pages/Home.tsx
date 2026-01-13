@@ -192,7 +192,7 @@ const languages = ["English", "Spanish", "Portuguese"];
 const testimonials = [
   {
     quote: "Erica is a superstar who stands out for her extremely well-versed approach in high-stakes international disputes.",
-    source: "Legal 500",
+    source: "The Legal 500",
     logo: "/images/logos/legal500-logo.png",
   },
   {
