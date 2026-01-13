@@ -1,0 +1,12 @@
+{
+  "name": "franzetti-arbitration",
+  "type": "web-static",
+  "build": {
+    "command": "pnpm build",
+    "output": "dist/public"
+  },
+  "server": {
+    "command": "node dist/index.js",
+    "port": 5000
+  }
+}
