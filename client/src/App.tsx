@@ -10,6 +10,9 @@ import Experience from "./pages/Experience";
 import Cases from "./pages/Cases";
 import ThoughtLeadership from "./pages/ThoughtLeadership";
 import Contact from "./pages/Contact";
+import Disclaimer from "./pages/Disclaimer";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import CookiesPolicy from "./pages/CookiesPolicy";
 import Layout from "./components/Layout";
 
 function Router() {
@@ -21,6 +24,9 @@ function Router() {
         <Route path="/cases" component={Cases} />
         <Route path="/thought-leadership" component={ThoughtLeadership} />
         <Route path="/contact" component={Contact} />
+        <Route path="/disclaimer" component={Disclaimer} />
+        <Route path="/privacy-policy" component={PrivacyPolicy} />
+        <Route path="/cookies-policy" component={CookiesPolicy} />
         <Route path="/404" component={NotFound} />
         <Route component={NotFound} />
       </Switch>

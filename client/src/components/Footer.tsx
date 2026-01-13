@@ -141,26 +141,26 @@ export default function Footer() {
               © {new Date().getFullYear()} Franzetti Arbitration. {t("footer.rights")}
             </p>
             <div className="flex flex-wrap items-center gap-4 text-sm">
-              <a
-                href="#"
+              <Link
+                href="/disclaimer"
                 className="text-gray-400 hover:text-aquamarine transition-colors"
               >
                 {t("footer.disclaimer")}
-              </a>
+              </Link>
               <span className="text-gray-600">|</span>
-              <a
-                href="#"
+              <Link
+                href="/privacy-policy"
                 className="text-gray-400 hover:text-aquamarine transition-colors"
               >
                 {t("footer.privacy")}
-              </a>
+              </Link>
               <span className="text-gray-600">|</span>
-              <a
-                href="#"
+              <Link
+                href="/cookies-policy"
                 className="text-gray-400 hover:text-aquamarine transition-colors"
               >
                 {t("footer.cookies")}
-              </a>
+              </Link>
             </div>
           </div>
         </div>
