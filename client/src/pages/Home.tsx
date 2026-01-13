@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 /* Home Page - Franzetti Arbitration
@@ -189,6 +189,22 @@ const barAdmissions = [
 const languages = ["English", "Spanish", "Portuguese"];
 
 // Testimonials - three quote cards with institution logos
+// Carousel quotes - different from embedded quotes
+const carouselQuotes = [
+  {
+    quote: "Erica is a superb cross-examiner and a fantastic lawyer. She's also very detail-oriented and thorough.",
+    source: "Chambers USA",
+  },
+  {
+    quote: "Érica was very impressive in handling a complex case.",
+    source: "Chambers USA",
+  },
+  {
+    quote: "Brazilian lawyer Érica Franzetti is much admired by the market for her sound record and expertise advising international clients in Brazil on complex demands, including sophisticated M&A-related arbitration cases, counsel on claiming damages and the chairing of arbitral tribunals.",
+    source: "Chambers Brazil",
+  },
+];
+
 const testimonials = [
   {
     quote: "Erica is a superstar who stands out for her extremely well-versed approach in high-stakes international disputes.",
@@ -206,6 +222,60 @@ const testimonials = [
     logo: "/images/logos/lexology-logo.png",
   },
 ];
+
+// Quotes Carousel Component - 50% bigger cards, auto-rotate every 3 seconds
+function QuotesCarousel({ quotes }: { quotes: { quote: string; source: string }[] }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % quotes.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [quotes.length]);
+
+  return (
+    <section className="py-12 lg:py-16 bg-gray-50">
+      <div className="container">
+        <div className="flex justify-center">
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ duration: 0.5 }}
+            className="bg-white rounded-sm shadow-sm p-12 lg:p-16 max-w-4xl w-full"
+          >
+            <div className="flex items-start gap-6">
+              <div className="w-1 bg-aquamarine self-stretch flex-shrink-0"></div>
+              <div>
+                <p className="text-xl lg:text-2xl text-gray-700 italic leading-relaxed mb-6">
+                  "{quotes[currentIndex].quote}"
+                </p>
+                <p className="text-base lg:text-lg text-gray-500 font-medium">
+                  — {quotes[currentIndex].source}
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+        {/* Navigation dots */}
+        <div className="flex justify-center gap-2 mt-8">
+          {quotes.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-3 h-3 rounded-full transition-colors ${
+                index === currentIndex ? "bg-charcoal" : "bg-gray-300"
+              }`}
+              aria-label={`Go to quote ${index + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function Home() {
   const { t, language } = useLanguage();
@@ -284,6 +354,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Quotes Carousel Section */}
+      <QuotesCarousel quotes={carouselQuotes} />
 
       {/* About Section with Symmetric Testimonials */}
       <section className="py-16 lg:py-24 bg-white">

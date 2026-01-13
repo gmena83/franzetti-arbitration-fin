@@ -37,13 +37,13 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
       <div className="container">
         {/* Increased header height for bigger logo - logo should occupy ~70% of header height */}
-        <div className="flex items-center justify-between h-28">
+        <div className="flex items-center justify-between h-36">
           {/* Logo - Bigger as per client request - ~70% of header height */}
           <Link href="/" className="flex-shrink-0">
             <img
               src="/images/Franzetti-principal-dark.png"
               alt="Franzetti Arbitration"
-              className="h-[4.5rem] w-auto"
+              className="h-[6.75rem] w-auto"
             />
           </Link>
 
