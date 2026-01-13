@@ -189,8 +189,9 @@ const barAdmissions = [
 const languages = ["English", "Spanish", "Portuguese"];
 
 // Testimonials - three quote cards with institution logos
-// Carousel quotes - different from embedded quotes
+// Carousel quotes - now includes ALL quotes (original carousel + embedded quotes from About section)
 const carouselQuotes = [
+  // Original carousel quotes
   {
     quote: "Erica is a superb cross-examiner and a fantastic lawyer. She's also very detail-oriented and thorough.",
     source: "Chambers USA",
@@ -202,6 +203,19 @@ const carouselQuotes = [
   {
     quote: "Brazilian lawyer Érica Franzetti is much admired by the market for her sound record and expertise advising international clients in Brazil on complex demands, including sophisticated M&A-related arbitration cases, counsel on claiming damages and the chairing of arbitral tribunals.",
     source: "Chambers Brazil",
+  },
+  // Previously embedded quotes from About section
+  {
+    quote: "Erica is a superstar who stands out for her extremely well-versed approach in high-stakes international disputes.",
+    source: "The Legal 500",
+  },
+  {
+    quote: "I think really highly of her, she's fabulous. She comes across as very intelligent and capable, and she's always really professional and personable.",
+    source: "Chambers USA",
+  },
+  {
+    quote: "Her technical skills, experience in the field, relentless dedication to client service and commercial mindset are really impressive.",
+    source: "Lexology",
   },
 ];
 

@@ -31,7 +31,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#888888] text-white">
+    <footer className="bg-black text-white">
       {/* Logo section matching header height and positioning */}
       <div className="container">
         <div className="flex items-center h-36 border-b border-gray-600">
