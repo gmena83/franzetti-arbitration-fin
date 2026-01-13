@@ -4,8 +4,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 /* Footer Component - Franzetti Arbitration
  * Design: Professional Legal Minimalism with client's requested changes
- * - Black background (not navy blue)
- * - White logo version (larger)
+ * - Gray background (#888888)
+ * - White logo version matching header logo size and position
  * - Links to other pages
  * - CV downloads (EN, ES, PT) - reordered
  * - Correct LinkedIn URL
@@ -31,19 +31,26 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#333333] text-white">
+    <footer className="bg-[#888888] text-white">
+      {/* Logo section matching header height and positioning */}
+      <div className="container">
+        <div className="flex items-center h-36 border-b border-gray-600">
+          {/* Logo - Same size as header (h-[6.75rem]) and same position (left-aligned) */}
+          <Link href="/" className="flex-shrink-0">
+            <img
+              src="/images/Franzetti-principal-white.png"
+              alt="Franzetti Arbitration"
+              className="h-[6.75rem] w-auto"
+            />
+          </Link>
+        </div>
+      </div>
+      
       <div className="container py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* Logo and Description - Bigger logo (h-20 instead of h-16) */}
+          {/* Description */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-block mb-6">
-              <img
-                src="/images/Franzetti-principal-white.png"
-                alt="Franzetti Arbitration"
-                className="h-20 w-auto"
-              />
-            </Link>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-200 text-sm leading-relaxed">
               {language === "ES" 
                 ? "Servicios de arbitraje internacional y asesoría enfocados en disputas comerciales e inversionista-Estado."
                 : language === "PT"
@@ -54,7 +61,7 @@ export default function Footer() {
 
           {/* Navigation Links */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">
               {language === "ES" ? "Navegación" : language === "PT" ? "Navegação" : "Navigation"}
             </h4>
             <ul className="space-y-2">
@@ -62,7 +69,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-aquamarine transition-colors text-sm"
+                    className="text-gray-200 hover:text-aquamarine transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -73,7 +80,7 @@ export default function Footer() {
 
           {/* CV Downloads - Reordered: EN, ES, PT */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">
               {t("footer.downloadCV")}
             </h4>
             <ul className="space-y-2">
@@ -82,7 +89,7 @@ export default function Footer() {
                   <a
                     href={link.href}
                     download
-                    className="text-gray-300 hover:text-aquamarine transition-colors text-sm"
+                    className="text-gray-200 hover:text-aquamarine transition-colors text-sm"
                   >
                     {link.label}
                   </a>
@@ -93,7 +100,7 @@ export default function Footer() {
 
           {/* Contact & Social - with icons */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">
               {language === "ES" ? "Conectar" : language === "PT" ? "Conectar" : "Connect"}
             </h4>
             <div className="space-y-3">
@@ -102,7 +109,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/erica-franzetti-48a7b1a/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-gray-300 hover:text-aquamarine transition-colors text-sm"
+                className="flex items-center gap-2 text-gray-200 hover:text-aquamarine transition-colors text-sm"
               >
                 <svg
                   className="w-5 h-5"
@@ -117,7 +124,7 @@ export default function Footer() {
               {/* Email with icon */}
               <a
                 href="mailto:efranzetti@franzettiarb.com"
-                className="flex items-center gap-2 text-gray-300 hover:text-aquamarine transition-colors text-sm"
+                className="flex items-center gap-2 text-gray-200 hover:text-aquamarine transition-colors text-sm"
               >
                 <Mail className="w-5 h-5" />
                 efranzetti@franzettiarb.com
@@ -125,7 +132,7 @@ export default function Footer() {
               {/* Phone with icon */}
               <a
                 href="tel:+12027448469"
-                className="flex items-center gap-2 text-gray-300 hover:text-aquamarine transition-colors text-sm"
+                className="flex items-center gap-2 text-gray-200 hover:text-aquamarine transition-colors text-sm"
               >
                 <Phone className="w-5 h-5" />
                 +1 202 744 8469
@@ -135,29 +142,29 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-gray-700">
+        <div className="mt-12 pt-8 border-t border-gray-600">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-300 text-sm">
               © {new Date().getFullYear()} Franzetti Arbitration. {t("footer.rights")}
             </p>
             <div className="flex flex-wrap items-center gap-4 text-sm">
               <Link
                 href="/disclaimer"
-                className="text-gray-400 hover:text-aquamarine transition-colors"
+                className="text-gray-300 hover:text-aquamarine transition-colors"
               >
                 {t("footer.disclaimer")}
               </Link>
-              <span className="text-gray-600">|</span>
+              <span className="text-gray-500">|</span>
               <Link
                 href="/privacy-policy"
-                className="text-gray-400 hover:text-aquamarine transition-colors"
+                className="text-gray-300 hover:text-aquamarine transition-colors"
               >
                 {t("footer.privacy")}
               </Link>
-              <span className="text-gray-600">|</span>
+              <span className="text-gray-500">|</span>
               <Link
                 href="/cookies-policy"
-                className="text-gray-400 hover:text-aquamarine transition-colors"
+                className="text-gray-300 hover:text-aquamarine transition-colors"
               >
                 {t("footer.cookies")}
               </Link>

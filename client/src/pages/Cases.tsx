@@ -131,19 +131,16 @@ const mattersAsCounsel: CaseItem[] = [
     categories: ["deal-structure"],
   },
   {
-    text: "Represented Claimant in Amazon.com, Inc. v. ICANN (<a href='https://www.icann.org/en/system/files/files/irp-amazon-request-redacted-02mar16-en.pdf' target='_blank' class='text-aquamarine hover:underline'>ICDR Case No. 01-16-0000-7056</a>) concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
+    text: "Represented Claimant in Amazon.com, Inc. v. ICANN (ICDR Case No. 01-16-0000-7056) concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
     categories: ["deal-structure"],
-    hasHtml: true,
   },
   {
-    text: "Represented Claimant in DotConnectAfrica Trust v. ICANN (<a href='https://www.icann.org/en/news/irp/dca-v-icann' target='_blank' class='text-aquamarine hover:underline'>ICDR Case No. 50-117-T-1083-13</a>) concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
+    text: "Represented Claimant in DotConnectAfrica Trust v. ICANN (ICDR Case No. 50-117-T-1083-13) concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
     categories: ["deal-structure"],
-    hasHtml: true,
   },
   {
-    text: "Represented Claimant in ICM Registry v. ICANN (<a href='https://www.icann.org/en/news/irp/icm-v-icann' target='_blank' class='text-aquamarine hover:underline'>ICDR Case No. 50-117-T-00224-08</a>) concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
+    text: "Represented Claimant in ICM Registry v. ICANN (ICDR Case No. 50-117-T-00224-08) concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
     categories: ["deal-structure"],
-    hasHtml: true,
   },
   {
     text: "Advise a Brazilian company and its American subsidiary regarding a Joint Operating Agreement for the construction of an oil platform in Nigeria.",

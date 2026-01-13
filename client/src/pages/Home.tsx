@@ -223,57 +223,56 @@ const testimonials = [
   },
 ];
 
-// Quotes Carousel Component - 50% bigger cards, auto-rotate every 3 seconds
-function QuotesCarousel({ quotes }: { quotes: { quote: string; source: string }[] }) {
+// Hero Quotes Carousel Component - Compact with fixed height for hero section
+function HeroQuotesCarousel({ quotes }: { quotes: { quote: string; source: string }[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % quotes.length);
-    }, 3000);
+    }, 4000);
     return () => clearInterval(interval);
   }, [quotes.length]);
 
   return (
-    <section className="py-12 lg:py-16 bg-gray-50">
-      <div className="container">
-        <div className="flex justify-center">
-          <motion.div
-            key={currentIndex}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.5 }}
-            className="bg-white rounded-sm shadow-sm p-12 lg:p-16 max-w-4xl w-full"
-          >
-            <div className="flex items-start gap-6">
-              <div className="w-1 bg-aquamarine self-stretch flex-shrink-0"></div>
-              <div>
-                <p className="text-xl lg:text-2xl text-gray-700 italic leading-relaxed mb-6">
-                  "{quotes[currentIndex].quote}"
-                </p>
-                <p className="text-base lg:text-lg text-gray-500 font-medium">
-                  — {quotes[currentIndex].source}
-                </p>
-              </div>
+    <div className="mt-6">
+      {/* Fixed height container to prevent layout shifts */}
+      <div className="h-[120px] lg:h-[100px] relative overflow-hidden">
+        <motion.div
+          key={currentIndex}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.4 }}
+          className="absolute inset-0"
+        >
+          <div className="flex items-start gap-3">
+            <div className="w-1 bg-aquamarine self-stretch flex-shrink-0 min-h-[60px]"></div>
+            <div>
+              <p className="text-base lg:text-lg text-gray-600 italic leading-relaxed line-clamp-3">
+                "{quotes[currentIndex].quote}"
+              </p>
+              <p className="text-sm text-gray-500 font-medium mt-2">
+                — {quotes[currentIndex].source}
+              </p>
             </div>
-          </motion.div>
-        </div>
-        {/* Navigation dots */}
-        <div className="flex justify-center gap-2 mt-8">
-          {quotes.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentIndex ? "bg-charcoal" : "bg-gray-300"
-              }`}
-              aria-label={`Go to quote ${index + 1}`}
-            />
-          ))}
-        </div>
+          </div>
+        </motion.div>
       </div>
-    </section>
+      {/* Navigation dots */}
+      <div className="flex gap-2 mt-4">
+        {quotes.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-2 h-2 rounded-full transition-colors ${
+              index === currentIndex ? "bg-charcoal" : "bg-gray-400"
+            }`}
+            aria-label={`Go to quote ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -332,9 +331,8 @@ export default function Home() {
               <h1 className="text-4xl lg:text-5xl font-serif font-bold text-charcoal mb-4">
                 {heroTitle}
               </h1>
-              <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-medium">
-                {heroSubtitle}
-              </p>
+              {/* Quote carousel replaces the static subtitle */}
+              <HeroQuotesCarousel quotes={carouselQuotes} />
             </motion.div>
 
             {/* Hero Image - Looking at camera, holding hands */}
@@ -354,9 +352,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Quotes Carousel Section */}
-      <QuotesCarousel quotes={carouselQuotes} />
 
       {/* About Section with Symmetric Testimonials */}
       <section className="py-16 lg:py-24 bg-white">
