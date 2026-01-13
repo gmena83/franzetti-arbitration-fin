@@ -154,7 +154,7 @@ const mattersAsCounsel: CaseItem[] = [
     categories: ["energy"],
   },
   {
-    text: "Advised a major oil and gas company regarding an LCIA dispute arising out of a services agreement governed by English law.",
+    text: "Advised a major oil and gas company regarding an LCIA dispute arising out of a services agreement governed by the laws of the United Kingdom.",
     categories: ["energy"],
   },
   {

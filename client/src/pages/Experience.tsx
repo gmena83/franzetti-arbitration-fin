@@ -10,7 +10,7 @@ const professionalBackground = [
     title: "Franzetti Arbitration",
     location: "Washington, DC",
     role: "Founder and Principal",
-    period: "Dec. 2025 – Present",
+    period: "Jan. 2026 – Present",
   },
   {
     title: "King & Spalding LLP",
@@ -44,7 +44,7 @@ const professionalBackground = [
   },
   {
     title: "Dinamarco & Rossi Advocacia",
-    location: "São Paulo",
+    location: "São Paulo, Brazil",
     role: "Associate / Intern",
     period: "Jul. 1997 – Jul. 2001",
   },
