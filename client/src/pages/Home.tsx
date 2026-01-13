@@ -306,7 +306,7 @@ export default function Home() {
               </p>
 
               {/* Embedded Quote 1 - The Legal 500 */}
-              <div className="my-8 ml-[12.5%] max-w-3xl pl-6 border-l-4 border-aquamarine">
+              <div className="my-8 ml-[12.5%] mr-[12.5%] pl-6 border-l-4 border-aquamarine">
                 <p className="text-gray-700 italic text-lg">
                   "Erica is a superstar who stands out for her extremely well-versed approach in high-stakes international disputes."
                 </p>
@@ -318,7 +318,7 @@ export default function Home() {
               </p>
 
               {/* Embedded Quote 2 - Chambers USA */}
-              <div className="my-8 ml-[12.5%] max-w-3xl pl-6 border-l-4 border-aquamarine">
+              <div className="my-8 ml-[12.5%] mr-[12.5%] pl-6 border-l-4 border-aquamarine">
                 <p className="text-gray-700 italic text-lg">
                   "I think really highly of her, she's fabulous. She comes across as very intelligent and capable, and she's always really professional and personable."
                 </p>
@@ -334,7 +334,7 @@ export default function Home() {
               </p>
 
               {/* Embedded Quote 3 - Lexology */}
-              <div className="my-8 ml-[12.5%] max-w-3xl pl-6 border-l-4 border-aquamarine">
+              <div className="my-8 ml-[12.5%] mr-[12.5%] pl-6 border-l-4 border-aquamarine">
                 <p className="text-gray-700 italic text-lg">
                   "Her technical skills, experience in the field, relentless dedication to client service and commercial mindset are really impressive."
                 </p>
