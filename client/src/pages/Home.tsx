@@ -378,25 +378,28 @@ export default function Home() {
             <div className="space-y-4">
               {professionalBackground.map((item, index) => (
                 <div key={index} className="flex flex-col sm:flex-row sm:justify-between py-3 items-start sm:items-center">
-                  <div className="flex items-center gap-4">
-                    <div className="w-16 sm:w-32 flex-shrink-0 flex items-center justify-start">
+                  <div className="flex items-start gap-4 w-full sm:w-auto">
+                    <div className="w-12 sm:w-32 flex-shrink-0 flex items-center justify-start pt-1">
                       {item.logo && (
                         <img src={item.logo} alt={item.title} className="h-6 sm:h-8 w-auto max-w-full object-contain" />
                       )}
                     </div>
-                    <div>
-                      {item.url ? (
-                        <a href={item.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-charcoal hover:text-aquamarine transition-colors">
-                          {item.title}
-                        </a>
-                      ) : (
-                        <span className="font-semibold text-charcoal">{item.title}</span>
-                      )}
-                      <span className="text-gray-600">, {item.location}</span>
-                      <span className="text-gray-600">, {item.role}</span>
+                    <div className="flex-1">
+                      <div>
+                        {item.url ? (
+                          <a href={item.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-charcoal hover:text-aquamarine transition-colors">
+                            {item.title}
+                          </a>
+                        ) : (
+                          <span className="font-semibold text-charcoal">{item.title}</span>
+                        )}
+                        <span className="text-gray-600">, {item.location}</span>
+                        <span className="text-gray-600">, {item.role}</span>
+                      </div>
+                      <span className="text-gray-400 text-sm block sm:hidden mt-1">{item.period}</span>
                     </div>
                   </div>
-                  <span className="text-gray-400 text-sm sm:text-base mt-1 sm:mt-0 whitespace-nowrap">{item.period}</span>
+                  <span className="text-gray-400 text-sm sm:text-base whitespace-nowrap hidden sm:block">{item.period}</span>
                 </div>
               ))}
             </div>
@@ -416,25 +419,28 @@ export default function Home() {
             <div className="space-y-4">
               {academia.map((item, index) => (
                 <div key={index} className="flex flex-col sm:flex-row sm:justify-between py-3 items-start sm:items-center">
-                  <div className="flex items-center gap-4">
-                    <div className="w-16 sm:w-32 flex-shrink-0 flex items-center justify-start">
+                  <div className="flex items-start gap-4 w-full sm:w-auto">
+                    <div className="w-12 sm:w-32 flex-shrink-0 flex items-center justify-start pt-1">
                       {item.logo && (
                         <img src={item.logo} alt={item.institution} className="h-6 sm:h-8 w-auto max-w-full object-contain" />
                       )}
                     </div>
-                    <div>
-                      {item.url ? (
-                        <a href={item.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-charcoal hover:text-aquamarine transition-colors">
-                          {item.institution}
-                        </a>
-                      ) : (
-                        <span className="font-semibold text-charcoal">{item.institution}</span>
-                      )}
-                      <span className="text-gray-600">, {item.role}</span>
-                      <span className="text-gray-600">, {item.course}</span>
+                    <div className="flex-1">
+                      <div>
+                        {item.url ? (
+                          <a href={item.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-charcoal hover:text-aquamarine transition-colors">
+                            {item.institution}
+                          </a>
+                        ) : (
+                          <span className="font-semibold text-charcoal">{item.institution}</span>
+                        )}
+                        <span className="text-gray-600">, {item.role}</span>
+                        <span className="text-gray-600">, {item.course}</span>
+                      </div>
+                      <span className="text-gray-400 text-sm block sm:hidden mt-1">{item.period}</span>
                     </div>
                   </div>
-                  <span className="text-gray-400 text-sm sm:text-base mt-1 sm:mt-0">{item.period}</span>
+                  <span className="text-gray-400 text-sm sm:text-base whitespace-nowrap hidden sm:block">{item.period}</span>
                 </div>
               ))}
             </div>
@@ -454,26 +460,29 @@ export default function Home() {
             <div className="space-y-4">
               {education.map((item, index) => (
                 <div key={index} className="flex flex-col sm:flex-row sm:justify-between py-3 items-start sm:items-center">
-                  <div className="flex items-center gap-4">
-                    <div className="w-16 sm:w-32 flex-shrink-0 flex items-center justify-start">
+                  <div className="flex items-start gap-4 w-full sm:w-auto">
+                    <div className="w-12 sm:w-32 flex-shrink-0 flex items-center justify-start pt-1">
                       {item.logo && (
                         <img src={item.logo} alt={item.institution} className="h-8 sm:h-10 w-auto max-w-full object-contain" />
                       )}
                     </div>
-                    <div>
-                      <span className="font-semibold text-charcoal">{item.degree}</span>
-                      <span className="text-gray-600">, </span>
-                      {item.url ? (
-                        <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-aquamarine transition-colors">
-                          {item.institution}
-                        </a>
-                      ) : (
-                        <span className="text-gray-600">{item.institution}</span>
-                      )}
-                      {item.note && <span className="text-gray-500"> ({item.note})</span>}
+                    <div className="flex-1">
+                      <div>
+                        <span className="font-semibold text-charcoal">{item.degree}</span>
+                        <span className="text-gray-600">, </span>
+                        {item.url ? (
+                          <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-aquamarine transition-colors">
+                            {item.institution}
+                          </a>
+                        ) : (
+                          <span className="text-gray-600">{item.institution}</span>
+                        )}
+                        {item.note && <span className="text-gray-500"> ({item.note})</span>}
+                      </div>
+                      <span className="text-gray-400 text-sm block sm:hidden mt-1">{item.year}</span>
                     </div>
                   </div>
-                  <span className="text-gray-400 text-sm sm:text-base mt-1 sm:mt-0">{item.year}</span>
+                  <span className="text-gray-400 text-sm sm:text-base whitespace-nowrap hidden sm:block">{item.year}</span>
                 </div>
               ))}
             </div>
