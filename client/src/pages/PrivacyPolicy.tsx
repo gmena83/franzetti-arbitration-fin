@@ -72,8 +72,8 @@ export default function PrivacyPolicy() {
                 <h2 className="text-xl font-semibold text-charcoal mb-4">5. Your Rights</h2>
                 <p className="text-justify">
                   Depending on your location, you may have the right to access, correct, or delete your personal data. To exercise these rights, please contact us at{" "}
-                  <a href="mailto:efranzetti@franzettiarb.com" className="text-aquamarine hover:underline">
-                    efranzetti@franzettiarb.com
+                  <a href="mailto:admin@franzettiarb.com" className="text-aquamarine hover:underline">
+                    admin@franzettiarb.com
                   </a>.
                 </p>
               </div>

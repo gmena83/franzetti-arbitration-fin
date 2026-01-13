@@ -270,7 +270,7 @@ export default function ThoughtLeadership() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex flex-wrap gap-6 mb-12 border-b border-gray-200"
+            className="flex flex-col md:flex-row md:flex-wrap gap-2 md:gap-6 mb-12 border-b border-gray-200"
           >
             <button
               onClick={() => setActiveTab("recognition")}

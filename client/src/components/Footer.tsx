@@ -131,11 +131,11 @@ export default function Footer() {
               </a>
               {/* Phone with icon */}
               <a
-                href="tel:+12027448469"
+                href="tel:+12027431132"
                 className="flex items-center gap-2 text-gray-200 hover:text-aquamarine transition-colors text-sm"
               >
                 <Phone className="w-5 h-5" />
-                +1 202 744 8469
+                +1 202 743 1132
               </a>
             </div>
           </div>

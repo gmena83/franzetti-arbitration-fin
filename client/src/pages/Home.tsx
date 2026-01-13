@@ -384,11 +384,11 @@ export default function Home() {
 
             <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
               <p>
-                Erica Franzetti is a globally recognized international arbitrator and trusted disputes counsel for high-stakes cross-border matters—bringing disciplined judgment, procedural command, and real-world advocacy insight to every engagement.
+                Erica Franzetti is a globally recognized international arbitrator and trusted disputes counsel for high-stakes cross-border matters—bringing disciplined judgment, procedural command, and seasoned advocacy experience to every engagement.
               </p>
 
               <p>
-                Erica has extensive experience in international commercial and investor-state arbitration across a wide range of industries, including energy, natural resources, infrastructure, manufacturing, financial services, and technology. Her practice is dedicated primarily to arbitral decision-making, while also providing selective counsel on dispute strategy, enforcement, and investment treaty protection. She manages disputes connected to North America, Latin America, the Lusophone jurisdictions, and beyond, across civil and common law systems, with the linguistic and cultural fluency required to manage proceedings involving multinational parties and cross-border evidence.
+                She has extensive experience in international commercial and investor-state arbitration across a wide range of industries, including energy, natural resources, infrastructure, manufacturing, financial services, and technology. Her practice is dedicated primarily to arbitral decision-making, while also providing selective counsel on dispute strategy, enforcement, and investment treaty protection. She manages disputes connected to North America, Latin America, the Lusophone jurisdictions, and beyond, across civil and common law systems, with the linguistic and cultural fluency required to manage proceedings involving multinational parties and cross-border evidence.
               </p>
 
               {/* Embedded Quote 1 - The Legal 500 */}
@@ -399,11 +399,8 @@ export default function Home() {
                 <p className="text-sm text-gray-500 font-medium mt-2">– <em>The Legal 500</em></p>
               </div>
 
-              <h3 className="text-xl font-serif font-semibold text-charcoal mt-8 mb-4">Services Provided</h3>
-
-              <h4 className="text-lg font-semibold text-charcoal mt-6 mb-3">Independent Arbitrator</h4>
               <p>
-                Erica serves as arbitrator in U.S. and international disputes, including as chair of arbitral tribunals. She draws on deep experience across civil and common law traditions to manage proceedings efficiently, fairly, and with procedural rigor.
+                Erica serves as arbitrator in U.S. and international disputes, including as chair of arbitral tribunals. She draws on extensive experience across civil and common law traditions to manage proceedings efficiently, fairly, and with procedural rigor.
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Experience under ICC, AAA, ICDR, LCIA, ICSID, and UNCITRAL rules</li>
@@ -411,9 +408,8 @@ export default function Home() {
                 <li>Practical case management informed by decades as lead counsel in complex, high-value disputes</li>
               </ul>
 
-              <h4 className="text-lg font-semibold text-charcoal mt-6 mb-3">Counsel</h4>
-              <p>
-                Targeted legal assessments and strategic advice at critical stages of cross-border disputes.
+              <p className="mt-6">
+                She provides select counsel services, including targeted legal assessments and strategic advice at critical stages of cross-border disputes. Counsel services include:
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Early-stage dispute prevention and risk assessment</li>
@@ -437,11 +433,11 @@ export default function Home() {
                 Her experience encompasses both international commercial arbitration and investor-state arbitration, with matters seated across multiple jurisdictions and administered under leading institutional and ad hoc rules.
               </p>
 
-              <p>Depth of knowledge across a broad range of sectors and complex disputes, including:</p>
+              <p>She has deep knowledge across a broad range of sectors and complex disputes, including:</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Commercial contracts, including hotel management, distribution, intellectual property and matters under the Convention on Contracts for the International Sale of Goods (CISG)</li>
+                <li>Commercial contracts, such as hotel management, distribution, intellectual property and matters under the Convention on Contracts for the International Sale of Goods (CISG)</li>
                 <li>Construction, concessions and infrastructure, including telecommunications, power generation and highways</li>
-                <li>Corporate governance & accountability, mergers and acquisitions (M&A), shareholding disputes, joint ventures and venture capital investments,</li>
+                <li>Corporate governance & accountability, mergers and acquisitions (M&A), shareholding disputes, joint ventures and venture capital investments</li>
                 <li>Energy and natural resources, including mining, oil and gas, LNG pricing, electricity generation and nuclear energy</li>
               </ul>
 

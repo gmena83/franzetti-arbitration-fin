@@ -214,11 +214,11 @@ export default function Contact() {
                   </a>
                   
                   <a
-                    href="tel:+12027448469"
+                    href="tel:+12027431132"
                     className="flex items-center gap-3 text-charcoal hover:text-aquamarine transition-colors"
                   >
                     <Phone className="w-5 h-5 text-aquamarine" />
-                    <span>+1 202 744 8469</span>
+                    <span>+1 202 743 1132</span>
                   </a>
                   
                   <a
@@ -255,7 +255,7 @@ export default function Contact() {
                   </a>
                   
                   <a
-                    href="https://wa.me/12027448469"
+                    href="https://wa.me/12027431132"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-charcoal hover:text-aquamarine transition-colors"
