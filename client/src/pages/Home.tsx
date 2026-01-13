@@ -305,9 +305,25 @@ export default function Home() {
                 Erica Franzetti is a leading international arbitrator with extensive experience in international commercial and investor–state arbitration across a wide range of industry sectors, including energy, natural resources, infrastructure, manufacturing, financial services, and technology. Drawing on decades of experience as counsel in complex, high value disputes, Erica brings a deep understanding of arbitral strategy, procedure, and advocacy to her work as an arbitrator. With training in both civil and common law, she often counsels clients on resolving cross-border disputes and protecting their investments under international treaties. She has been involved in proceedings spanning numerous jurisdictions, including Argentina, Brazil, Canada, Chile, Colombia, Croatia, the Dominican Republic, Ghana, Mexico, Hungary, Peru, the Philippines, the United Kingdom, and the United States.
               </p>
 
+              {/* Embedded Quote 1 - The Legal 500 */}
+              <div className="my-8 mx-auto max-w-2xl pl-6 border-l-4 border-aquamarine">
+                <p className="text-gray-700 italic text-lg">
+                  "Erica is a superstar who stands out for her extremely well-versed approach in high-stakes international disputes."
+                </p>
+                <p className="text-sm text-gray-500 font-medium mt-2">– <em>The Legal 500</em></p>
+              </div>
+
               <p>
                 Erica has served as an arbitrator in both domestic and international disputes, including as chair of arbitral tribunals constituted under various institutional rules. She has served as counsel in international arbitration proceedings administered by leading institutions such as the International Chamber of Commerce (ICC), the American Arbitration Association (AAA), the International Centre for Dispute Resolution (ICDR), the London Court of International Arbitration (LCIA), and the International Centre for Settlement of Investment Disputes (ICSID), among others, as well as ad hoc arbitrations (including UNCITRAL). Her experience on all sides of arbitration enables her to manage proceedings efficiently and fairly, with a practical appreciation of the challenges faced by parties and counsel.
               </p>
+
+              {/* Embedded Quote 2 - Chambers USA */}
+              <div className="my-8 mx-auto max-w-2xl pl-6 border-l-4 border-aquamarine">
+                <p className="text-gray-700 italic text-lg">
+                  "I think really highly of her, she's fabulous. She comes across as very intelligent and capable, and she's always really professional and personable."
+                </p>
+                <p className="text-sm text-gray-500 font-medium mt-2">– <em>Chambers USA</em></p>
+              </div>
 
               <p>
                 While her primary focus is on her work as an arbitrator, Erica provides select counsel services, offering legal assessments and strategic advice at every stage of a dispute—from its inception through award enforcement—drawing on deep familiarity with diverse procedural frameworks and jurisdictions. Her practice spans a broad range of industries and dispute types, including corporate governance, mergers and acquisitions (M&A), joint ventures, intellectual property, disputes under the United Nations Convention on Contracts for the International Sale of Goods (CISG), privatization, telecommunications, power generation, mineral concessions, gas pricing and LNG, hotel management, project finance, venture capital investments, and construction.
@@ -316,6 +332,14 @@ export default function Home() {
               <p>
                 Erica has received top-tier recognition from leading legal directories, including <em>Chambers & Partners</em>, <em>The Legal 500</em>, <em>Lexology</em> (formerly known as Who's Who Legal), <em>Latin Lawyer</em>, and <em>Best Lawyers</em>, and has been named one of Latin America's Top 100 Female Lawyers by <em>Latinvex</em>.
               </p>
+
+              {/* Embedded Quote 3 - Lexology */}
+              <div className="my-8 mx-auto max-w-2xl pl-6 border-l-4 border-aquamarine">
+                <p className="text-gray-700 italic text-lg">
+                  "Her technical skills, experience in the field, relentless dedication to client service and commercial mindset are really impressive."
+                </p>
+                <p className="text-sm text-gray-500 font-medium mt-2">– <em>Lexology</em></p>
+              </div>
 
               <p>
                 In addition to her practice, Erica regularly publishes and speaks at international arbitration conferences and has lectured at leading academic institutions, including Georgetown University Law Center, where she has taught a course on investor–state arbitration, and the University of Miami, where she teaches a course on arbitration in the energy sector.
@@ -327,37 +351,7 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Testimonials - Three quote cards with institution logos */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-          >
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-sm border-l-4 border-aquamarine">
-                <div className="flex items-start gap-3 mb-4">
-                  {/* Institution logo */}
-                  <div className="w-16 h-10 flex items-center justify-center flex-shrink-0">
-                    <img 
-                      src={testimonial.logo} 
-                      alt={testimonial.source} 
-                      className="max-w-full max-h-full object-contain"
-                    />
-                  </div>
-                  <div>
-                    <blockquote className="text-gray-700 italic">
-                      "{testimonial.quote}"
-                    </blockquote>
-                    <p className="text-sm text-gray-500 font-medium mt-3">
-                      — {testimonial.source}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </motion.div>
+
         </div>
       </section>
 
