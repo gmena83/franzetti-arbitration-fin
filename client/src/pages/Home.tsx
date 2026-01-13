@@ -379,15 +379,7 @@ export default function Home() {
               </p>
 
               <p>
-                Erica has extensive experience in international commercial and investor-state arbitration across a wide range of industries, including energy, natural resources, infrastructure, manufacturing, financial services, and technology.
-              </p>
-
-              <p>
-                Her practice is dedicated primarily to arbitral decision-making as a neutral, while also providing selective counsel on dispute strategy, enforcement, and investment treaty protection.
-              </p>
-
-              <p>
-                Supports clients in disputes connected to North America, Latin America, the Lusophone jurisdictions, and beyond, across civil and common law systems, with the linguistic and cultural fluency required to manage proceedings involving multinational parties and cross-border evidence.
+                Erica has extensive experience in international commercial and investor-state arbitration across a wide range of industries, including energy, natural resources, infrastructure, manufacturing, financial services, and technology. Her practice is dedicated primarily to arbitral decision-making, while also providing selective counsel on dispute strategy, enforcement, and investment treaty protection. She manages disputes connected to North America, Latin America, the Lusophone jurisdictions, and beyond, across civil and common law systems, with the linguistic and cultural fluency required to manage proceedings involving multinational parties and cross-border evidence.
               </p>
 
               {/* Embedded Quote 1 - The Legal 500 */}
@@ -398,23 +390,27 @@ export default function Home() {
                 <p className="text-sm text-gray-500 font-medium mt-2">– <em>The Legal 500</em></p>
               </div>
 
-              <h3 className="text-xl font-serif font-semibold text-charcoal mt-8 mb-4">Services</h3>
+              <h3 className="text-xl font-serif font-semibold text-charcoal mt-8 mb-4">Services Provided</h3>
 
               <h4 className="text-lg font-semibold text-charcoal mt-6 mb-3">Independent Arbitrator</h4>
+              <p>
+                Erica serves as arbitrator in U.S. and international disputes, including as chair of arbitral tribunals. She draws on deep experience across civil and common law traditions to manage proceedings efficiently, fairly, and with procedural rigor.
+              </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Serves as arbitrator in U.S. and international disputes, including appointments as chair of arbitral tribunals. Draws on deep experience across civil and common law traditions to manage proceedings efficiently, fairly, and with procedural rigor.</li>
-                <li>Experience under ICC, AAA, ICDR, LCIA, ICSID, and UNCITRAL rules.</li>
-                <li>Extensive familiarity with arbitral procedure, tribunal management, and decision-writing.</li>
-                <li>Practical case management informed by decades as lead counsel in complex, high-value disputes.</li>
+                <li>Experience under ICC, AAA, ICDR, LCIA, ICSID, and UNCITRAL rules</li>
+                <li>Extensive familiarity with arbitral procedure, tribunal management, and decision-writing</li>
+                <li>Practical case management informed by decades as lead counsel in complex, high-value disputes</li>
               </ul>
 
               <h4 className="text-lg font-semibold text-charcoal mt-6 mb-3">Counsel</h4>
+              <p>
+                Targeted legal assessments and strategic advice at critical stages of cross-border disputes.
+              </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Provides targeted legal assessments and strategic advice at critical stages of cross-border disputes.</li>
-                <li>Early-stage dispute prevention and risk assessment.</li>
-                <li>Strategic advice on arbitration strategy and procedural posture.</li>
-                <li>Investment treaty analysis and protection.</li>
-                <li>Post-award and enforcement strategy across jurisdictions.</li>
+                <li>Early-stage dispute prevention and risk assessment</li>
+                <li>Strategic advice on arbitration strategy and procedural posture</li>
+                <li>Investment treaty analysis and protection</li>
+                <li>Post-award and enforcement strategy across jurisdictions</li>
               </ul>
 
               {/* Embedded Quote 2 - Chambers USA */}
@@ -425,21 +421,19 @@ export default function Home() {
                 <p className="text-sm text-gray-500 font-medium mt-2">– <em>Chambers USA</em></p>
               </div>
 
-              <h3 className="text-xl font-serif font-semibold text-charcoal mt-8 mb-4">International Experience</h3>
               <p>
-                Involved in arbitration proceedings spanning numerous jurisdictions, including Argentina, Brazil, Canada, Chile, Colombia, Croatia, the Dominican Republic, Ghana, Hungary, Mexico, Peru, the Philippines, and the United States, advising and adjudicating disputes involving cross-border investments, multinational parties, and sovereign interests.
+                Erica has been involved in arbitration proceedings spanning numerous jurisdictions, including Argentina, Brazil, Canada, Chile, Colombia, Croatia, the Dominican Republic, Ghana, Hungary, Mexico, Peru, the Philippines, and the United States, advising and adjudicating disputes involving cross-border investments, multinational parties, and sovereign interests.
               </p>
               <p>
-                Erica's experience encompasses both international commercial arbitration and investor-state arbitration, with matters seated across multiple jurisdictions and administered under leading institutional and ad hoc rules.
+                Her experience encompasses both international commercial arbitration and investor-state arbitration, with matters seated across multiple jurisdictions and administered under leading institutional and ad hoc rules.
               </p>
 
-              <h3 className="text-xl font-serif font-semibold text-charcoal mt-8 mb-4">Dispute Experience</h3>
               <p>Depth of knowledge across a broad range of sectors and complex disputes, including:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Commercial contracts, including hotel management, distribution, intellectual property and matters under the Convention on Contracts for the International Sale of Goods (CISG)</li>
-                <li>Construction, concessions and infrastructure, including telecommunications, power generation and highways.</li>
-                <li>Corporate governance & accountability, mergers and acquisitions (M&A), shareholding disputes, joint ventures and venture capital investments.</li>
-                <li>Energy and natural resources, including mining, oil and gas, LNG pricing, electricity generation and nuclear energy.</li>
+                <li>Construction, concessions and infrastructure, including telecommunications, power generation and highways</li>
+                <li>Corporate governance & accountability, mergers and acquisitions (M&A), shareholding disputes, joint ventures and venture capital investments,</li>
+                <li>Energy and natural resources, including mining, oil and gas, LNG pricing, electricity generation and nuclear energy</li>
               </ul>
 
               {/* Embedded Quote 3 - Lexology */}
@@ -450,43 +444,20 @@ export default function Home() {
                 <p className="text-sm text-gray-500 font-medium mt-2">– <em>Lexology</em></p>
               </div>
 
-              <h3 className="text-xl font-serif font-semibold text-charcoal mt-8 mb-4">Recognition</h3>
-              <p>Consistently recognized by leading legal directories and publications, including:</p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li><em>Chambers and Partners</em></li>
-                <li><em>The Legal 500</em></li>
-                <li><em>Lexology</em> (formerly Who's Who Legal)</li>
-                <li><em>Latin Lawyer</em></li>
-                <li><em>Best Lawyers</em></li>
-              </ul>
-              <p>Named one of Latin America's Top 100 Female Lawyers by <em>Latinvex</em>.</p>
-
-              <h3 className="text-xl font-serif font-semibold text-charcoal mt-8 mb-4">Thought Leadership and Academic Engagement</h3>
               <p>
-                Regularly publishes and speaks on international arbitration, investment arbitration, and dispute resolution strategy at international conferences and professional forums.
+                Erica has received top-tier recognition from leading legal directories, including <em>Chambers & Partners</em>, <em>The Legal 500</em>, <em>Lexology</em> (formerly known as Who's Who Legal), <em>Latin Lawyer</em>, and <em>Best Lawyers</em>, and has been named one of Latin America's Top 100 Female Lawyers by <em>Latinvex</em>.
               </p>
-              <p>Teaching experience at leading academic institutions, including:</p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Georgetown University Law Center (investor-state arbitration)</li>
-                <li>University of Miami (arbitration in the energy sector)</li>
-              </ul>
 
-              <h3 className="text-xl font-serif font-semibold text-charcoal mt-8 mb-4">Career Overview</h3>
               <p>
-                Founder of this independent practice after a 25-year career in international disputes at market-leading firms.
+                She regularly publishes and speaks on international commercial arbitration, investor-state arbitration, and dispute resolution strategy at international conferences and professional forums, and has teaching experience at leading academic institutions, such as the Georgetown University Law Center and the University of Miami.
               </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Began practice as a litigator in Brazil</li>
-                <li>Relocated to the United States in 2006</li>
-                <li>Nearly two decades in Big Law</li>
-                <li>Former partner in globally recognized international arbitration practices, including the Global Arbitration Review (GAR) No. 1 ranked international disputes team for 2021–2025.</li>
-              </ul>
 
-              <p className="mt-6">
-                <strong>Admissions:</strong> Washington, D.C. · New York · Brazil
-              </p>
               <p>
-                <strong>Languages:</strong> English · Spanish · Portuguese
+                Before founding her own practice, Erica built a 25-year career at market-leading law firms. She began her career as a litigator in Brazil, relocated to the United States in 2006, and spent nearly 20 years in Big Law, including almost a decade as a partner in globally recognized international arbitration teams.
+              </p>
+
+              <p>
+                She is admitted to practice in Washington, D.C., New York, and Brazil, and works fluently in English, Spanish, and Portuguese.
               </p>
             </div>
           </motion.div>
