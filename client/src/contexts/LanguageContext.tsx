@@ -14,13 +14,13 @@ interface Translations {
 export const translations: Translations = {
   // Navigation
   "nav.profile": { EN: "PROFILE", ES: "PERFIL", PT: "PERFIL" },
-  "nav.expertise": { EN: "EXPERTISE", ES: "EXPERIENCIA", PT: "EXPERIÊNCIA" },
+  "nav.expertise": { EN: "EXPERIENCE", ES: "EXPERIENCIA", PT: "EXPERIÊNCIA" },
   "nav.thoughtLeadership": { EN: "THOUGHT LEADERSHIP", ES: "LIDERAZGO INTELECTUAL", PT: "LIDERANÇA INTELECTUAL" },
   "nav.contact": { EN: "CONTACT", ES: "CONTACTO", PT: "CONTATO" },
   
   // Hero Section
   "hero.title": { 
-    EN: "International Arbitrator and Counsel.", 
+    EN: "International Arbitrator & Counsel.", 
     ES: "Árbitro Internacional y Abogada.", 
     PT: "Árbitro Internacional e Advogada." 
   },
@@ -48,11 +48,11 @@ export const translations: Translations = {
   "section.whatOthersSay": { EN: "What Others Say", ES: "Lo Que Dicen Otros", PT: "O Que Outros Dizem" },
   
   // Expertise Page
-  "expertise.title": { EN: "Expertise", ES: "Experiencia", PT: "Experiência" },
+  "expertise.title": { EN: "Experience", ES: "Experiencia", PT: "Experiência" },
   "expertise.subtitle": { 
-    EN: "Specialized experience across diverse sectors and dispute types", 
-    ES: "Experiencia especializada en diversos sectores y tipos de disputas", 
-    PT: "Experiência especializada em diversos setores e tipos de disputas" 
+    EN: "Proven track record across diverse sectors and dispute types", 
+    ES: "Trayectoria comprobada en diversos sectores y tipos de disputas", 
+    PT: "Trajetória comprovada em diversos setores e tipos de disputas" 
   },
   
   // Thought Leadership Page

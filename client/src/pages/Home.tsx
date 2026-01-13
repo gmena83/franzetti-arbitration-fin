@@ -134,7 +134,7 @@ const professionalAssociations = [
   },
   { 
     name: "Panel of Arbitrators of the Hong Kong International Arbitration Centre (HKIAC)", 
-    logo: "/images/hkiac-logo.png", 
+    logo: "/images/cam-b3-logo.png", 
     url: "https://www.hkiac.org" 
   },
   { 
@@ -144,11 +144,11 @@ const professionalAssociations = [
   },
   { 
     name: "Panel of Arbitrators of the Capital Market Chamber of B3 S.A – Brasil, Bolsa, Balcão (CAM)", 
-    logo: "/images/cam-b3-logo.png", 
+    logo: "/images/hkiac-logo.png", 
     url: "https://www.b3.com.br" 
   },
   { 
-    name: "Arbitration and Mediation Committee of the International Court of Commerce (ICC) Brazil", 
+    name: "Arbitration & Mediation Committee of the International Court of Commerce (ICC) Brazil", 
     logo: "/images/logos/icc.png", 
     url: "https://www.iccbrasil.org/en/dispute-resolution/" 
   },
@@ -188,19 +188,22 @@ const barAdmissions = [
 // Languages reordered: English, Spanish, Portuguese as per client request
 const languages = ["English", "Spanish", "Portuguese"];
 
-// Testimonials - three quote cards
+// Testimonials - three quote cards with institution logos
 const testimonials = [
   {
     quote: "Erica is a superstar who stands out for her extremely well-versed approach in high-stakes international disputes.",
     source: "Legal 500",
+    logo: "/images/logos/legal500-logo.png",
   },
   {
     quote: "I think really highly of her, she's fabulous. She comes across as very intelligent and capable, and she's always really professional and personable.",
     source: "Chambers USA",
+    logo: "/images/logos/chambers-usa.png",
   },
   {
     quote: "Her technical skills, experience in the field, relentless dedication to client service and commercial mindset are really impressive.",
     source: "Lexology",
+    logo: "/images/logos/lexology-logo.png",
   },
 ];
 
@@ -233,7 +236,7 @@ export default function Home() {
     ? "Árbitro Internacional y Abogada." 
     : language === "PT" 
     ? "Árbitro Internacional e Advogada." 
-    : "International Arbitrator and Counsel.";
+    : "International Arbitrator & Counsel.";
     
   const heroSubtitle = language === "ES"
     ? "Resolución independiente de disputas con integridad, eficiencia y rigor."
@@ -299,7 +302,7 @@ export default function Home() {
 
             <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
               <p>
-                Erica Franzetti is a leading international arbitrator with extensive experience in international commercial and investor–state arbitration across a wide range of industry sectors, including energy, natural resources, infrastructure, manufacturing, financial services, and technology. Drawing decades of experience as counsel in complex, high value disputes, Erica brings a deep understanding of arbitral strategy, procedure, and advocacy to her work as an arbitrator. With training in both civil and common law, she often counsels clients on resolving cross-border disputes and protecting their investments under international treaties. She has been involved in proceedings spanning numerous jurisdictions, including Argentina, Brazil, Canada, Chile, Colombia, Croatia, the Dominican Republic, England, Ghana, Mexico, Hungary, Peru, the Philippines, and the United States.
+                Erica Franzetti is a leading international arbitrator with extensive experience in international commercial and investor–state arbitration across a wide range of industry sectors, including energy, natural resources, infrastructure, manufacturing, financial services, and technology. Drawing on decades of experience as counsel in complex, high value disputes, Erica brings a deep understanding of arbitral strategy, procedure, and advocacy to her work as an arbitrator. With training in both civil and common law, she often counsels clients on resolving cross-border disputes and protecting their investments under international treaties. She has been involved in proceedings spanning numerous jurisdictions, including Argentina, Brazil, Canada, Chile, Colombia, Croatia, the Dominican Republic, England, Ghana, Mexico, Hungary, Peru, the Philippines, and the United States.
               </p>
 
               <p>
@@ -311,7 +314,7 @@ export default function Home() {
               </p>
 
               <p>
-                Erica has received top-tier recognition from leading legal directories, including Chambers and Partners, The Legal 500, Lexology (formerly known as Who's Who Legal), Latin Lawyer, and Best Lawyers, and has been named one of Latin America's Top 100 Female Lawyers by Latinvex.
+                Erica has received top-tier recognition from leading legal directories, including Chambers & Partners, The Legal 500, Lexology (formerly known as Who's Who Legal), Latin Lawyer, and Best Lawyers, and has been named one of Latin America's Top 100 Female Lawyers by Latinvex.
               </p>
 
               <p>
@@ -324,7 +327,7 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Testimonials - Three quote cards with LinkedIn-style logos */}
+          {/* Testimonials - Three quote cards with institution logos */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -335,11 +338,13 @@ export default function Home() {
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-gray-50 p-6 rounded-sm border-l-4 border-aquamarine">
                 <div className="flex items-start gap-3 mb-4">
-                  {/* LinkedIn-style logo placeholder */}
-                  <div className="w-10 h-10 rounded-full bg-aquamarine/20 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-aquamarine" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
+                  {/* Institution logo */}
+                  <div className="w-16 h-10 flex items-center justify-center flex-shrink-0">
+                    <img 
+                      src={testimonial.logo} 
+                      alt={testimonial.source} 
+                      className="max-w-full max-h-full object-contain"
+                    />
                   </div>
                   <div>
                     <blockquote className="text-gray-700 italic">
@@ -488,10 +493,10 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {professionalAssociations.map((item, index) => (
                 <div key={index} className="flex items-center gap-3 py-2">
-                  {/* LinkedIn-style logo display */}
-                  <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-gray-100 rounded">
+                  {/* Professional Association logo display - doubled size */}
+                  <div className="w-20 h-20 flex-shrink-0 flex items-center justify-center bg-gray-100 rounded">
                     {item.logo ? (
-                      <img src={item.logo} alt={item.name} className="h-6 w-6 object-contain" />
+                      <img src={item.logo} alt={item.name} className="h-12 w-12 object-contain" />
                     ) : (
                       <span className="inline-block w-2 h-2 rounded-full bg-aquamarine"></span>
                     )}

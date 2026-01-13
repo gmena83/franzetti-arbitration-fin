@@ -96,7 +96,7 @@ const professionalAssociations = [
   "Panel of Arbitrators of the Hong Kong International Arbitration Centre (HKIAC)",
   "Panel of Arbitrators of the Brazil-Canada Chamber of Commerce (CAM-CCBC)",
   "Panel of Arbitrators of the Capital Market Chamber of B3 S.A – Brasil, Bolsa, Balcão (CAM)",
-  "Arbitration and Mediation Committee of the International Court of Commerce (ICC) Brazil",
+  "Arbitration & Mediation Committee of the International Court of Commerce (ICC) Brazil",
   "International Bar Association – Dispute Resolution Section",
   "Rising Arbitrators Initiative (RAI)",
   "Arbitral Women",

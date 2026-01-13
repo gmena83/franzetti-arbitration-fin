@@ -12,11 +12,11 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const subjectMatters = [
   { id: "commercial", label: "Commercial Contracts", labelES: "Contratos Comerciales", labelPT: "Contratos Comerciais" },
   { id: "construction", label: "Construction & Infrastructure", labelES: "Construcción e Infraestructura", labelPT: "Construção e Infraestrutura" },
-  { id: "deal-structure", label: "Deal-Structure, Post-Transaction, Governance and Accountability", labelES: "Estructura de Transacciones, Post-Transacción, Gobernanza y Responsabilidad", labelPT: "Estrutura de Transações, Pós-Transação, Governança e Responsabilidade" },
-  { id: "energy", label: "Energy and Natural Resources", labelES: "Energía y Recursos Naturales", labelPT: "Energia e Recursos Naturais" },
+  { id: "deal-structure", label: "Deal-Structure, Post-Transaction, Governance & Accountability", labelES: "Estructura de Transacciones, Post-Transacción, Gobernanza y Responsabilidad", labelPT: "Estrutura de Transações, Pós-Transação, Governança e Responsabilidade" },
+  { id: "energy", label: "Energy & Natural Resources", labelES: "Energía y Recursos Naturales", labelPT: "Energia e Recursos Naturais" },
   { id: "investor-state", label: "Investor-State Disputes", labelES: "Disputas Inversionista-Estado", labelPT: "Disputas Investidor-Estado" },
-  { id: "recognition", label: "Recognition and Enforcement of Arbitral Awards", labelES: "Reconocimiento y Ejecución de Laudos Arbitrales", labelPT: "Reconhecimento e Execução de Sentenças Arbitrais" },
-  { id: "risk", label: "Risk Analysis and Case Assessment", labelES: "Análisis de Riesgo y Evaluación de Casos", labelPT: "Análise de Risco e Avaliação de Casos" },
+  { id: "recognition", label: "Recognition & Enforcement of Arbitral Awards", labelES: "Reconocimiento y Ejecución de Laudos Arbitrales", labelPT: "Reconhecimento e Execução de Sentenças Arbitrais" },
+  { id: "risk", label: "Risk Analysis & Case Assessment", labelES: "Análisis de Riesgo y Evaluación de Casos", labelPT: "Análise de Risco e Avaliação de Casos" },
 ];
 
 type CaseItem = {
@@ -59,7 +59,7 @@ const arbitratorAppointments: CaseItem[] = [
     categories: ["commercial"],
   },
   {
-    text: "Co-arbitrator in an ICDR construction dispute involving a concession agreement for the development of a highway project in a Latin American State.",
+    text: "Co-arbitrator in an ICDR construction dispute involving a concession agreement for the development of a highway project in a Latin American state.",
     categories: ["construction"],
   },
   {
@@ -74,7 +74,7 @@ const arbitratorAppointments: CaseItem[] = [
 
 const mattersAsCounsel: CaseItem[] = [
   {
-    text: "Represented a Brazilian company in an ICDR arbitration against an American company in connection with a distribution agreement governed by New York Law.",
+    text: "Represented a Brazilian company in an ICDR arbitration against an American company in connection with a distribution agreement governed by New York law.",
     categories: ["commercial"],
   },
   {
@@ -94,7 +94,7 @@ const mattersAsCounsel: CaseItem[] = [
     categories: ["commercial"],
   },
   {
-    text: "Advising a Brazilian construction company and its American subsidiary regarding a Joint Operating Agreement for the construction of an oil platform in Nigeria.",
+    text: "Advise a Brazilian construction company and its American subsidiary regarding a Joint Operating Agreement for the construction of an oil platform in Nigeria.",
     categories: ["construction"],
   },
   {
@@ -106,11 +106,11 @@ const mattersAsCounsel: CaseItem[] = [
     categories: ["deal-structure"],
   },
   {
-    text: "Advising a Brazilian company and its American subsidiary regarding a Joint Operating Agreement for the construction of an oil platform in Nigeria.",
+    text: "Advise a Brazilian company and its American subsidiary regarding a Joint Operating Agreement for the construction of an oil platform in Nigeria.",
     categories: ["deal-structure"],
   },
   {
-    text: "Advising a Dutch investor on financing and corporate governance issues connected to a joint venture agreement for the development of a startup energy project in a Latin American country.",
+    text: "Advise a Dutch investor on financing and corporate governance issues connected to a joint venture agreement for the development of a startup energy project in a Latin American country.",
     categories: ["deal-structure"],
   },
   {
@@ -146,11 +146,15 @@ const mattersAsCounsel: CaseItem[] = [
     hasHtml: true,
   },
   {
-    text: "Advising a Brazilian company and its American subsidiary regarding a Joint Operating Agreement for the construction of an oil platform in Nigeria.",
+    text: "Advise a Brazilian company and its American subsidiary regarding a Joint Operating Agreement for the construction of an oil platform in Nigeria.",
     categories: ["energy"],
   },
   {
-    text: "Advising a Dutch investor on financing and corporate governance issues connected to the development of a startup energy project in a Latin American country.",
+    text: "Advise a Dutch investor on financing and corporate governance issues connected to the development of a startup energy project in a Latin American country.",
+    categories: ["energy"],
+  },
+  {
+    text: "Advised a major oil and gas company regarding an LCIA dispute arising out of a services agreement governed by English law.",
     categories: ["energy"],
   },
   {
@@ -200,11 +204,11 @@ const mattersAsCounsel: CaseItem[] = [
     categories: ["energy"],
   },
   {
-    text: "Advising an American landowner in Albania regarding investment protection rights.",
+    text: "Advise an American landowner in Albania regarding investment protection rights.",
     categories: ["investor-state"],
   },
   {
-    text: "Representing the Claimant in Quanta Services Netherlands B.V. v. Republic of Peru (<a href='https://www.italaw.com/cases/9781' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/21/1</a>), a dispute under the Netherlands-Peru Bilateral Investment Treaty (BIT) arising from measures related to concessions to build and operate fiber-optic networks.",
+    text: "Represent the Claimant in Quanta Services Netherlands B.V. v. Republic of Peru (<a href='https://www.italaw.com/cases/9781' target='_blank' class='text-aquamarine hover:underline'>ICSID Case No. ARB/21/1</a>), a dispute under the Netherlands-Peru Bilateral Investment Treaty (BIT) arising from measures related to concessions to build and operate fiber-optic networks.",
     categories: ["investor-state"],
     hasHtml: true,
   },
@@ -255,7 +259,7 @@ const mattersAsCounsel: CaseItem[] = [
     categories: ["investor-state"],
   },
   {
-    text: "Representing Petitioner Redes Andinas de Comunicaciones S.R.L. v. Republic of Peru, et al (<a href='https://www.courtlistener.com/docket/66609467/redes-andinas-de-comunicaciones-srl-v-republic-of-peru/' target='_blank' class='text-aquamarine hover:underline'>US District Court for the District of Columbia Civil Action No. 22-3631</a>), a proceeding to recognize and enforce two ICC arbitral awards.",
+    text: "Represent Petitioner Redes Andinas de Comunicaciones S.R.L. v. Republic of Peru, et al (<a href='https://www.courtlistener.com/docket/66609467/redes-andinas-de-comunicaciones-srl-v-republic-of-peru/' target='_blank' class='text-aquamarine hover:underline'>US District Court for the District of Columbia Civil Action No. 22-3631</a>), a proceeding to recognize and enforce two ICC arbitral awards.",
     categories: ["recognition"],
     hasHtml: true,
   },
@@ -279,23 +283,23 @@ export default function Cases() {
 
   // SEO Meta Tags
   useEffect(() => {
-    document.title = "Expertise | Franzetti Arbitration - International Arbitration Cases";
+    document.title = "Experience | Franzetti Arbitration - International Arbitration Cases";
     
     let metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Explore Erica Franzetti\'s expertise in international arbitration including investor-state disputes, energy, infrastructure, construction, and commercial arbitration cases.');
+      metaDescription.setAttribute('content', 'Explore Erica Franzetti\'s experience in international arbitration including investor-state disputes, energy, infrastructure, construction, and commercial arbitration cases.');
     }
     
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (metaKeywords) {
-      metaKeywords.setAttribute('content', 'arbitration expertise, investor-state disputes, energy arbitration, infrastructure disputes, construction arbitration, commercial arbitration, ICSID cases, ICC arbitration');
+      metaKeywords.setAttribute('content', 'arbitration experience, investor-state disputes, energy arbitration, infrastructure disputes, construction arbitration, commercial arbitration, ICSID cases, ICC arbitration');
     }
     
     let ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) ogTitle.setAttribute('content', 'Expertise | Franzetti Arbitration');
+    if (ogTitle) ogTitle.setAttribute('content', 'Experience | Franzetti Arbitration');
     
     let ogDescription = document.querySelector('meta[property="og:description"]');
-    if (ogDescription) ogDescription.setAttribute('content', 'Explore Erica Franzetti\'s expertise in international arbitration including investor-state disputes, energy, infrastructure, and commercial cases.');
+    if (ogDescription) ogDescription.setAttribute('content', 'Explore Erica Franzetti\'s experience in international arbitration including investor-state disputes, energy, infrastructure, and commercial cases.');
   }, []);
 
   const scrollToSection = (id: string) => {
@@ -339,14 +343,14 @@ export default function Cases() {
             className="text-center mb-12"
           >
             <h1 className="text-4xl lg:text-5xl font-serif font-semibold text-charcoal mb-4">
-              {language === "ES" ? "EXPERIENCIA" : language === "PT" ? "EXPERIÊNCIA" : "EXPERTISE"}
+              {language === "ES" ? "EXPERIENCIA" : language === "PT" ? "EXPERIÊNCIA" : "EXPERIENCE"}
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               {language === "ES" 
-                ? "Experiencia especializada en diversos sectores y tipos de disputas"
+                ? "Trayectoria comprobada en diversos sectores y tipos de disputas"
                 : language === "PT"
-                ? "Experiência especializada em diversos setores e tipos de disputas"
-                : "Specialized experience across diverse sectors and dispute types"}
+                ? "Trajetória comprovada em diversos setores e tipos de disputas"
+                : "Proven track record across diverse sectors and dispute types"}
             </p>
           </motion.div>
 

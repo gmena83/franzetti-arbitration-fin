@@ -13,7 +13,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const recognitions = [
   {
-    source: "Chambers and Partners",
+    source: "Chambers & Partners",
     url: "https://chambers.com/lawyer/erica-franzetti-usa-5:25438623",
     details: [
       "USA, International Arbitration: Counsel, Band 6, Four years ranked.",
