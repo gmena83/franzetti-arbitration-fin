@@ -21,7 +21,7 @@ const professionalBackground = [
     role: "Founder and Principal",
     period: "Jan. 2026 – Present",
     logo: "/images/Franzetti-vertical-dark.png",
-    url: "https://www.franzettiarb.com",
+    url: "https://www.franzettiarbitration.com",
   },
   {
     title: "King & Spalding LLP",
