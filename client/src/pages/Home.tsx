@@ -384,7 +384,7 @@ export default function Home() {
               </p>
 
               <p>
-                She has extensive experience in international commercial and investor-state arbitration across a wide range of industries. Her practice is dedicated to arbitral decision-making and providing bespoke counsel on dispute strategy, enforcement, and investment treaty protection. She manages disputes connected to North America, Latin America, the Lusophone jurisdictions, and beyond, across civil and common law systems, with the linguistic and cultural fluency required to manage cross-border proceedings.
+                She has extensive experience in international commercial and investor-state arbitration across a wide range of industries. Her practice is dedicated to arbitral decision-making and providing bespoke counsel on dispute strategy, enforcement, and investment treaty protection. She manages disputes connected to North America, Latin America, the Lusophone jurisdictions, and beyond, with the linguistic and cultural fluency required to manage cross-border proceedings.
               </p>
 
               {/* Embedded Quote 1 - The Legal 500 */}
@@ -396,7 +396,7 @@ export default function Home() {
               </div>
 
               <p>
-                Erica serves as arbitrator in U.S. and international disputes, including as chair of arbitral tribunals. She draws on extensive experience across civil and common law traditions to manage proceedings efficiently, fairly, and with procedural rigor.
+                Erica serves as arbitrator in U.S. and international disputes, including as chair of arbitral tribunals. She draws on extensive experience to manage proceedings efficiently, fairly, and with procedural rigor.
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Experience under ICC, AAA, ICDR, LCIA, ICSID, and UNCITRAL rules</li>
