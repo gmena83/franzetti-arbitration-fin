@@ -1,25 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { ChevronDown, Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-
-const languages = [
-  { code: "EN" as const, label: "English" },
-  { code: "ES" as const, label: "Español" },
-  { code: "PT" as const, label: "Português" },
-];
 
 export default function Header() {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { language, setLanguage, t } = useLanguage();
+  const { t } = useLanguage();
 
   // Scroll to top when location changes
   useEffect(() => {
@@ -63,30 +50,7 @@ export default function Header() {
               </Link>
             ))}
 
-            {/* Language Selector - Now functional */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="text-sm font-medium tracking-wide text-charcoal hover:text-aquamarine"
-                >
-                  {language}
-                  <ChevronDown className="ml-1 h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="bg-white">
-                {languages.map((lang) => (
-                  <DropdownMenuItem
-                    key={lang.code}
-                    onClick={() => setLanguage(lang.code)}
-                    className={language === lang.code ? "text-aquamarine" : ""}
-                  >
-                    {lang.label}
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+
           </nav>
 
           {/* Mobile Menu Button */}
@@ -121,23 +85,7 @@ export default function Header() {
                   {item.label}
                 </Link>
               ))}
-              
-              {/* Mobile Language Selector */}
-              <div className="flex items-center space-x-4 pt-4 border-t border-gray-100">
-                {languages.map((lang) => (
-                  <button
-                    key={lang.code}
-                    onClick={() => setLanguage(lang.code)}
-                    className={`text-sm font-medium ${
-                      language === lang.code
-                        ? "text-aquamarine"
-                        : "text-charcoal"
-                    }`}
-                  >
-                    {lang.code}
-                  </button>
-                ))}
-              </div>
+
             </div>
           </nav>
         )}
