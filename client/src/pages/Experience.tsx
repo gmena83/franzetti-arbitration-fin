@@ -234,38 +234,7 @@ export default function Experience() {
           </motion.div>
         </div>
 
-        {/* CV Download Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mt-16 pt-8 border-t border-gray-200"
-        >
-          <h3 className="text-xl font-serif font-semibold text-charcoal mb-4">
-            Download CV
-          </h3>
-          <div className="flex flex-wrap gap-4">
-            <a
-              href="#"
-              className="inline-flex items-center px-4 py-2 bg-aquamarine text-white rounded hover:bg-opacity-90 transition-colors text-sm font-medium"
-            >
-              English
-            </a>
-            <a
-              href="#"
-              className="inline-flex items-center px-4 py-2 bg-aquamarine text-white rounded hover:bg-opacity-90 transition-colors text-sm font-medium"
-            >
-              Español
-            </a>
-            <a
-              href="#"
-              className="inline-flex items-center px-4 py-2 bg-aquamarine text-white rounded hover:bg-opacity-90 transition-colors text-sm font-medium"
-            >
-              Português
-            </a>
-          </div>
-        </motion.div>
+
       </div>
     </div>
   );
