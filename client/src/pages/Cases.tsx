@@ -93,7 +93,7 @@ const mattersAsCounsel: CaseItem[] = [
     categories: ["commercial"],
   },
   {
-    text: "Advise a Brazilian construction company and its American subsidiary regarding a Joint Operating Agreement for the construction of an oil platform in Nigeria.",
+    text: "Advised a Brazilian construction company and its American subsidiary regarding a Joint Operating Agreement for the construction of an oil platform in Nigeria.",
     categories: ["construction"],
   },
   {
@@ -105,11 +105,11 @@ const mattersAsCounsel: CaseItem[] = [
     categories: ["deal-structure"],
   },
   {
-    text: "Advise a Brazilian company and its American subsidiary regarding a Joint Operating Agreement for the construction of an oil platform in Nigeria.",
+    text: "Advised a Brazilian company and its American subsidiary regarding a Joint Operating Agreement for the construction of an oil platform in Nigeria.",
     categories: ["deal-structure"],
   },
   {
-    text: "Advise a Dutch investor on financing and corporate governance issues connected to a joint venture agreement for the development of a startup energy project in a Latin American country.",
+    text: "Advised a Dutch investor on financing and corporate governance issues connected to a joint venture agreement for the development of a startup energy project in a Latin American country.",
     categories: ["deal-structure"],
   },
   {
@@ -141,11 +141,11 @@ const mattersAsCounsel: CaseItem[] = [
     categories: ["deal-structure"],
   },
   {
-    text: "Advise a Brazilian company and its American subsidiary regarding a Joint Operating Agreement for the construction of an oil platform in Nigeria.",
+    text: "Advised a Brazilian company and its American subsidiary regarding a Joint Operating Agreement for the construction of an oil platform in Nigeria.",
     categories: ["energy"],
   },
   {
-    text: "Advise a Dutch investor on financing and corporate governance issues connected to the development of a startup energy project in a Latin American country.",
+    text: "Advised a Dutch investor on financing and corporate governance issues connected to the development of a startup energy project in a Latin American country.",
     categories: ["energy"],
   },
   {
@@ -193,11 +193,11 @@ const mattersAsCounsel: CaseItem[] = [
     categories: ["energy"],
   },
   {
-    text: "Advise an American landowner in Albania regarding investment protection rights.",
+    text: "Advised an American landowner in Albania regarding investment protection rights.",
     categories: ["investor-state"],
   },
   {
-    text: "Represent the Claimant in Quanta Services Netherlands B.V. v. Republic of Peru (ICSID Case No. ARB/21/1), a dispute under the Netherlands-Peru Bilateral Investment Treaty (BIT) arising from measures related to concessions to build and operate fiber-optic networks.",
+    text: "Represented the Claimant in Quanta Services Netherlands B.V. v. Republic of Peru (ICSID Case No. ARB/21/1), a dispute under the Netherlands-Peru Bilateral Investment Treaty (BIT) arising from measures related to concessions to build and operate fiber-optic networks.",
     categories: ["investor-state"],
   },
   {
