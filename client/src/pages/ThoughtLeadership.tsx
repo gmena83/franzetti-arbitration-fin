@@ -370,14 +370,14 @@ export default function ThoughtLeadership() {
 
             {/* Speaking Engagements Tab - WITHOUT bullet points */}
             {activeTab === "speaking" && (
-              <div className="space-y-4">
+              <div className="space-y-8">
                 {speakingEngagements.map((item, index) => (
-                  <div key={index} className="pb-4 border-b border-gray-100">
+                  <div key={index} className="pb-6 border-b border-gray-100">
                     <div className="flex-1">
-                      <h3 className="text-base font-semibold text-charcoal mb-1">
+                      <h3 className="text-xl font-semibold text-charcoal mb-3">
                         {item.title}
                       </h3>
-                      <p className="text-gray-600 text-sm">
+                      <p className="text-gray-700">
                         {item.event}, <em className="text-gray-400">{item.date}</em>
                       </p>
                     </div>
@@ -388,14 +388,14 @@ export default function ThoughtLeadership() {
 
             {/* Publications Tab - WITHOUT bullet points */}
             {activeTab === "publications" && (
-              <div className="space-y-4">
+              <div className="space-y-8">
                 {publications.map((item, index) => (
-                  <div key={index} className="pb-4 border-b border-gray-100">
+                  <div key={index} className="pb-6 border-b border-gray-100">
                     <div className="flex-1">
-                      <h3 className="text-base font-semibold text-charcoal mb-1">
+                      <h3 className="text-xl font-semibold text-charcoal mb-3">
                         {item.title}
                       </h3>
-                      <p className="text-gray-600 text-sm">
+                      <p className="text-gray-700">
                         {item.publication}, <em className="text-gray-400">{item.year}</em>
                       </p>
                     </div>
@@ -413,7 +413,7 @@ export default function ThoughtLeadership() {
                       <img src={item.logo} alt={item.institution} className="max-w-full max-h-full object-contain" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-charcoal mb-1">
+                      <h3 className="text-xl font-semibold text-charcoal mb-3">
                         <a 
                           href={item.url} 
                           target="_blank" 
