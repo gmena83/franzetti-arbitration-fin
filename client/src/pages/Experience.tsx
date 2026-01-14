@@ -98,7 +98,6 @@ const professionalAssociations = [
   "Panel of Arbitrators of the Capital Market Chamber of B3 S.A – Brasil, Bolsa, Balcão (CAM)",
   "Arbitration & Mediation Committee of the International Court of Commerce (ICC) Brazil",
   "International Bar Association – Dispute Resolution Section",
-  "Rising Arbitrators Initiative (RAI)",
   "Arbitral Women",
   "Miami International Arbitration Society (MIAS)",
   "Brazilian Arbitration Committee (CBAR)",

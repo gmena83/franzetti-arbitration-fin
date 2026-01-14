@@ -97,7 +97,7 @@ const education = [
   {
     degree: "LL.M.",
     institution: "Georgetown University Law Center",
-    note: "High Honor, Dean's List",
+    note: "High Honors, Dean's List",
     year: "2008",
     logo: "/images/georgetown-logo-new.png",
     url: "https://www.law.georgetown.edu",
@@ -157,11 +157,7 @@ const professionalAssociations = [
     logo: "/images/logos/iba.png", 
     url: "https://www.ibanet.org" 
   },
-  { 
-    name: "Rising Arbitrators Initiative (RAI)", 
-    logo: "/images/rai-logo.png", 
-    url: "https://risingarbitrators.com/" 
-  },
+
   { 
     name: "Arbitral Women", 
     logo: "/images/logos/arbitralwomen.jpg", 
@@ -388,7 +384,7 @@ export default function Home() {
               </p>
 
               <p>
-                She has extensive experience in international commercial and investor-state arbitration across a wide range of industries, including energy, natural resources, infrastructure, manufacturing, financial services, and technology. Her practice is dedicated primarily to arbitral decision-making, while also providing selective counsel on dispute strategy, enforcement, and investment treaty protection. She manages disputes connected to North America, Latin America, the Lusophone jurisdictions, and beyond, across civil and common law systems, with the linguistic and cultural fluency required to manage proceedings involving multinational parties and cross-border evidence.
+                She has extensive experience in international commercial and investor-state arbitration across a wide range of industries. Her practice is dedicated to arbitral decision-making and providing bespoke counsel on dispute strategy, enforcement, and investment treaty protection. She manages disputes connected to North America, Latin America, the Lusophone jurisdictions, and beyond, across civil and common law systems, with the linguistic and cultural fluency required to manage cross-border proceedings.
               </p>
 
               {/* Embedded Quote 1 - The Legal 500 */}
@@ -409,7 +405,7 @@ export default function Home() {
               </ul>
 
               <p className="mt-6">
-                She provides select counsel services, including targeted legal assessments and strategic advice at critical stages of cross-border disputes. Counsel services include:
+                Her counsel services include:
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Early-stage dispute prevention and risk assessment</li>
@@ -427,12 +423,8 @@ export default function Home() {
               </div>
 
               <p>
-                Erica has been involved in arbitration proceedings spanning numerous jurisdictions, including Argentina, Brazil, Canada, Chile, Colombia, Croatia, the Dominican Republic, Ghana, Hungary, Mexico, Peru, the Philippines, and the United States, advising and adjudicating disputes involving cross-border investments, multinational parties, and sovereign interests.
+                Erica has been involved in arbitration proceedings spanning numerous jurisdictions, including Argentina, Brazil, Canada, Chile, Colombia, Croatia, the Dominican Republic, Ghana, Hungary, Mexico, Peru, the Philippines, and the United States.
               </p>
-              <p>
-                Her experience encompasses both international commercial arbitration and investor-state arbitration, with matters seated across multiple jurisdictions and administered under leading institutional and ad hoc rules.
-              </p>
-
               <p>She has deep knowledge across a broad range of sectors and complex disputes, including:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Commercial contracts, such as hotel management, distribution, intellectual property and matters under the Convention on Contracts for the International Sale of Goods (CISG)</li>
@@ -621,11 +613,11 @@ export default function Home() {
                     )}
                   </div>
                   {item.url ? (
-                    <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-aquamarine transition-colors text-sm">
+                    <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-aquamarine transition-colors">
                       {item.name}
                     </a>
                   ) : (
-                    <span className="text-gray-700 text-sm">{item.name}</span>
+                    <span className="text-gray-700">{item.name}</span>
                   )}
                 </div>
               ))}
