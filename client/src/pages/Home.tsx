@@ -380,9 +380,7 @@ export default function Home() {
 
             <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
               <p>
-                Erica Franzetti is a trusted arbitrator and globally recognized international disputes counsel. With a 25-year career at market-leading law firms, she has extensive experience in commercial and investor-state arbitration across a wide range of industries and jurisdictions. She now focuses her practice on serving as an independent arbitrator in complex cross-border disputes and on advising clients on dispute strategy, enforcement, and investment protection.
-                <br />
-                Her work has particular emphasis on energy and infrastructure matters connected to North America, Latin America, and Lusophone jurisdictions.
+                Erica Franzetti is a trusted arbitrator and globally recognized international disputes counsel. With a 25-year career at market-leading law firms, she has extensive experience in commercial and investor-state arbitration across a wide range of industries and jurisdictions. She now focuses her practice on serving as an independent arbitrator in complex cross-border disputes and on advising clients on dispute strategy, enforcement, and investment protection. Her work has particular emphasis on energy and infrastructure matters connected to North America, Latin America, and Lusophone jurisdictions.
               </p>
 
               {/* Embedded Quote 1 - The Legal 500 */}
