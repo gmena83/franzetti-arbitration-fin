@@ -27,7 +27,7 @@ const professionalBackground = [
     title: "King & Spalding LLP",
     location: "Washington, DC and Miami",
     role: "Partner",
-    period: "Sept. 2021 – Dec. 2025",
+    period: "Sept. 2021 – Jan. 2026",
     logo: "/images/king-spalding-logo.png",
     url: "https://www.kslaw.com",
   },
@@ -380,11 +380,11 @@ export default function Home() {
 
             <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
               <p>
-                Erica Franzetti is a globally recognized international arbitrator and trusted disputes counsel for high-stakes cross-border matters—bringing disciplined judgment, procedural command, and seasoned advocacy experience to every engagement.
+                Erica Franzetti is a trusted arbitrator and globally recognized international disputes counsel. With a 25-year career at market-leading law firms, she has extensive experience in commercial and investor-state arbitration across a wide range of industries and jurisdictions. She now focuses her practice primarily on serving as an independent arbitrator in complex cross-border disputes and on advising clients on dispute strategy, enforcement, and investment protection.
               </p>
 
               <p>
-                She has extensive experience in international commercial and investor-state arbitration across a wide range of industries. Her practice is dedicated to arbitral decision-making and providing bespoke counsel on dispute strategy, enforcement, and investment treaty protection. She manages disputes connected to North America, Latin America, the Lusophone jurisdictions, and beyond, with the linguistic and cultural fluency required to manage cross-border proceedings.
+                Her work has particular emphasis on energy and infrastructure matters connected to North America, Latin America, and Lusophone jurisdictions.
               </p>
 
               {/* Embedded Quote 1 - The Legal 500 */}
@@ -396,12 +396,13 @@ export default function Home() {
               </div>
 
               <p>
-                Erica serves as arbitrator in U.S. and international disputes, including as chair of arbitral tribunals. She draws on extensive experience to manage proceedings efficiently, fairly, and with procedural rigor.
+                Erica serves as arbitrator in U.S. and international disputes, including as chair of arbitral tribunals. She draws on extensive experience across civil and common law traditions to manage proceedings efficiently, fairly, and with procedural rigor.
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Experience under ICC, AAA, ICDR, LCIA, ICSID, and UNCITRAL rules</li>
                 <li>Extensive familiarity with arbitral procedure, tribunal management, and decision-writing</li>
-                <li>Practical case management informed by decades as lead counsel in complex, high-value disputes</li>
+                <li>Practical case management informed by decades as counsel in complex, high-value disputes</li>
+                <li>Linguistic and cultural fluency required to manage cross-border proceedings</li>
               </ul>
 
               <p className="mt-6">
@@ -423,13 +424,12 @@ export default function Home() {
               </div>
 
               <p>
-                Erica has been involved in arbitration proceedings spanning numerous jurisdictions, including Argentina, Brazil, Canada, Chile, Colombia, Croatia, the Dominican Republic, Ghana, Hungary, Mexico, Peru, the Philippines, and the United States.
+                Erica has been involved in arbitration proceedings spanning jurisdictions including Argentina, Brazil, Canada, Chile, Colombia, Croatia, the Dominican Republic, Ghana, Hungary, Mexico, Peru, the Philippines, and the United States. Her deep experience covers a wide range of disputes across sectors such as:
               </p>
-              <p>She has deep knowledge across a broad range of sectors and complex disputes, including:</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Commercial contracts, such as hotel management, distribution, intellectual property and matters under the Convention on Contracts for the International Sale of Goods (CISG)</li>
+                <li>Commercial contracts, including hotel management, distribution, intellectual property and matters under the Convention on Contracts for the International Sale of Goods (CISG)</li>
                 <li>Construction, concessions and infrastructure, including telecommunications, power generation and highways</li>
-                <li>Corporate governance & accountability, mergers and acquisitions (M&A), shareholding disputes, joint ventures and venture capital investments</li>
+                <li>Corporate governance and accountability, mergers and acquisitions (M&A), shareholder and joint venture disputes, and venture capital investments</li>
                 <li>Energy and natural resources, including mining, oil and gas, LNG pricing, electricity generation and nuclear energy</li>
               </ul>
 
@@ -450,11 +450,7 @@ export default function Home() {
               </p>
 
               <p>
-                Before founding her own practice, Erica built a 25-year career at market-leading law firms. She began her career as a litigator in Brazil, relocated to the United States in 2006, and spent nearly 20 years in Big Law, including almost a decade as a partner in globally recognized international arbitration teams.
-              </p>
-
-              <p>
-                She is admitted to practice in Washington, D.C., New York, and Brazil, and works fluently in English, Spanish, and Portuguese.
+                Before founding her own practice, Erica spent nearly 20 years in Big Law, including almost a decade as a partner in globally recognized international arbitration teams. She is admitted to practice in Washington, D.C., New York, and Brazil, and works fluently in English, Spanish, and Portuguese.
               </p>
             </div>
           </motion.div>
