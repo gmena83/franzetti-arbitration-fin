@@ -1,8 +1,11 @@
 # Robots.txt for Franzetti Arbitration
-# https://franzettiarb.com
+# https://franzettiarbitration.com
 
 User-agent: *
 Allow: /
 
+# Disallow admin or private paths (if any)
+Disallow: /api/
+
 # Sitemap location
-Sitemap: https://franzettiarb.com/sitemap.xml
+Sitemap: https://franzettiarbitration.com/sitemap.xml
