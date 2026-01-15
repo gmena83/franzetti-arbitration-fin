@@ -20,7 +20,7 @@ export const translations: Translations = {
   
   // Hero Section
   "hero.title": { 
-    EN: "International Arbitrator & Counsel.", 
+    EN: "Independent Arbitrator & Counsel", 
     ES: "Árbitro Internacional y Abogada.", 
     PT: "Árbitro Internacional e Advogada." 
   },

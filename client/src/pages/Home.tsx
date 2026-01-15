@@ -291,7 +291,7 @@ export default function Home() {
   
   // SEO Meta Tags - Reset to default on home page
   useEffect(() => {
-    document.title = "Franzetti Arbitration | International Arbitrator & Counsel";
+    document.title = "Franzetti Arbitration | Independent Arbitrator & Counsel";
     
     let metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
@@ -304,7 +304,7 @@ export default function Home() {
     }
     
     let ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) ogTitle.setAttribute('content', 'Franzetti Arbitration | International Arbitrator & Counsel');
+    if (ogTitle) ogTitle.setAttribute('content', 'Franzetti Arbitration | Independent Arbitrator & Counsel');
     
     let ogDescription = document.querySelector('meta[property="og:description"]');
     if (ogDescription) ogDescription.setAttribute('content', 'Erica Franzetti is a leading international arbitrator and counsel with extensive experience in international commercial and investor-state arbitration.');
@@ -315,7 +315,7 @@ export default function Home() {
     ? "Árbitro Internacional y Abogada." 
     : language === "PT" 
     ? "Árbitro Internacional e Advogada." 
-    : "International Arbitrator & Counsel.";
+    : "Independent Arbitrator & Counsel";
     
   const heroSubtitle = language === "ES"
     ? "Resolución independiente de disputas con integridad, eficiencia y rigor."
@@ -406,7 +406,7 @@ export default function Home() {
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Early-stage dispute prevention and risk assessment</li>
-                <li>Strategic advice on arbitration strategy and procedural posture</li>
+                <li>Strategic guidance on dispute management and procedural positioning</li>
                 <li>Investment treaty analysis and protection</li>
                 <li>Post-award and enforcement strategy across jurisdictions</li>
               </ul>
