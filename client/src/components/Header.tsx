@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SearchBar from "@/components/SearchBar";
 
 export default function Header() {
   const [location] = useLocation();
@@ -49,8 +50,9 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-
-
+            
+            {/* Search Bar */}
+            <SearchBar />
           </nav>
 
           {/* Mobile Menu Button */}
@@ -85,7 +87,11 @@ export default function Header() {
                   {item.label}
                 </Link>
               ))}
-
+              
+              {/* Mobile Search Bar */}
+              <div className="pt-2 border-t border-gray-100 mt-2">
+                <SearchBar />
+              </div>
             </div>
           </nav>
         )}

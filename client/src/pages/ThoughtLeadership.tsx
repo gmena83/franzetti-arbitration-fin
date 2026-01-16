@@ -323,7 +323,7 @@ export default function ThoughtLeadership() {
           >
             {/* Recognition Tab */}
             {activeTab === "recognition" && (
-              <div className="space-y-12">
+              <div id="recognition" className="space-y-12">
                 {/* Recognition List - WITHOUT bullet points */}
                 <div className="space-y-8">
                   {recognitions.map((item, index) => (
@@ -370,7 +370,7 @@ export default function ThoughtLeadership() {
 
             {/* Speaking Engagements Tab - WITHOUT bullet points */}
             {activeTab === "speaking" && (
-              <div className="space-y-8">
+              <div id="speaking" className="space-y-8">
                 {speakingEngagements.map((item, index) => (
                   <div key={index} className="pb-6 border-b border-gray-100">
                     <div className="flex-1">
@@ -388,7 +388,7 @@ export default function ThoughtLeadership() {
 
             {/* Publications Tab - WITHOUT bullet points */}
             {activeTab === "publications" && (
-              <div className="space-y-8">
+              <div id="publications" className="space-y-8">
                 {publications.map((item, index) => (
                   <div key={index} className="pb-6 border-b border-gray-100">
                     <div className="flex-1">
@@ -406,7 +406,7 @@ export default function ThoughtLeadership() {
 
             {/* Academic Experience Tab */}
             {activeTab === "academia" && (
-              <div className="space-y-6">
+              <div id="academic" className="space-y-6">
                 {academia.map((item, index) => (
                   <div key={index} className="flex items-start gap-6 pb-6 border-b border-gray-100">
                     <div className="w-20 h-20 flex-shrink-0 flex items-center justify-center">

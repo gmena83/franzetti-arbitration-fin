@@ -364,7 +364,7 @@ export default function Home() {
       </section>
 
       {/* About Section with Symmetric Testimonials */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section id="about" className="py-16 lg:py-24 bg-white">
         <div className="container">
           {/* About Text - Justified as per client request */}
           <motion.div
@@ -466,7 +466,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
+            <h3 id="professional-background" className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
               {language === "ES" ? "Trayectoria Profesional" : language === "PT" ? "Trajetória Profissional" : "Professional Background"}
             </h3>
             <div className="space-y-4">
@@ -507,7 +507,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
+            <h3 id="academia" className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
               {language === "ES" ? "Academia" : language === "PT" ? "Academia" : "Academia"}
             </h3>
             <div className="space-y-4">
@@ -548,7 +548,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
+            <h3 id="education" className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
               {language === "ES" ? "Educación" : language === "PT" ? "Educação" : "Education"}
             </h3>
             <div className="space-y-4">
@@ -590,7 +590,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
+            <h3 id="professional-associations" className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
               {language === "ES" ? "Asociaciones Profesionales" : language === "PT" ? "Associações Profissionais" : "Professional Associations"}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -624,7 +624,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
+              <h3 id="bar-admissions" className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
                 {language === "ES" ? "Colegiaturas" : language === "PT" ? "Inscrições na Ordem" : "Bar Admissions"}
               </h3>
               <ul className="space-y-3">
@@ -650,7 +650,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
+              <h3 id="languages" className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
                 {language === "ES" ? "Idiomas" : language === "PT" ? "Idiomas" : "Languages"}
               </h3>
               <ul className="space-y-3">
