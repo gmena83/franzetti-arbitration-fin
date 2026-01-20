@@ -86,6 +86,14 @@ export const translations: Translations = {
   "lang.english": { EN: "English", ES: "Inglés", PT: "Inglês" },
   "lang.spanish": { EN: "Spanish", ES: "Español", PT: "Espanhol" },
   "lang.portuguese": { EN: "Portuguese", ES: "Portugués", PT: "Português" },
+  
+  // CV Links
+  "footer.cvEnglish": { EN: "CV (English)", ES: "CV (Inglés)", PT: "CV (Inglês)" },
+  "footer.cvSpanish": { EN: "CV (Spanish)", ES: "CV (Español)", PT: "CV (Espanhol)" },
+  "footer.cvPortuguese": { EN: "CV (Portuguese)", ES: "CV (Portugués)", PT: "CV (Português)" },
+  "footer.cvEnglishUnavailable": { EN: "English CV unavailable", ES: "CV en inglés no disponible", PT: "CV em inglês indisponível" },
+  "footer.cvSpanishUnavailable": { EN: "Spanish CV unavailable", ES: "CV en español no disponible", PT: "CV em espanhol indisponível" },
+  "footer.cvPortugueseUnavailable": { EN: "Portuguese CV unavailable", ES: "CV en portugués no disponible", PT: "CV em português indisponível" },
 };
 
 interface LanguageContextType {

@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Mail, Phone } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useEffect, useState } from "react";
 
 /* Footer Component - Franzetti Arbitration
  * Design: Professional Legal Minimalism with client's requested changes
@@ -13,8 +14,35 @@ import { useLanguage } from "@/contexts/LanguageContext";
  * - Disclaimer, Privacy Policy, Cookies Policy
  */
 
+type CvLinks = {
+  english?: string;
+  spanish?: string;
+  portuguese?: string;
+};
+
 export default function Footer() {
   const { t, language } = useLanguage();
+
+  const [cv, setCv] = useState<CvLinks | null>(null);
+
+  useEffect(() => {
+    // Load CV links from CMS-managed JSON in public
+    fetch("/cv/cv.json", { cache: "no-store" })
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (data && typeof data === "object") {
+          setCv({
+            english: data.english || "",
+            spanish: data.spanish || "",
+            portuguese: data.portuguese || "",
+          });
+        }
+      })
+      .catch(() => {
+        // fail silently; footer will just not render CV links
+        setCv(null);
+      });
+  }, []);
   
   const navLinks = [
     { label: t("nav.profile"), href: "/" },
@@ -23,7 +51,10 @@ export default function Footer() {
     { label: t("nav.contact"), href: "/contact" },
   ];
 
-
+  const hasAnyCv =
+    !!(cv?.english && cv.english.length) ||
+    !!(cv?.spanish && cv.spanish.length) ||
+    !!(cv?.portuguese && cv.portuguese.length);
 
   return (
     <footer className="bg-black text-white">
@@ -52,6 +83,58 @@ export default function Footer() {
                 ? "Serviços de arbitragem internacional e consultoria focados em disputas comerciais e investidor-Estado."
                 : "International arbitration and counsel services focused on commercial and investor-state disputes."}
             </p>
+
+            {/* CV Downloads (from CMS) */}
+            {hasAnyCv && (
+              <div className="mt-4">
+                <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-2">
+                  {t("footer.downloadCV")}
+                </h4>
+                <div className="flex flex-wrap gap-3">
+                  {/* English */}
+                  {cv?.english ? (
+                    <a
+                      href={cv.english}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-200 hover:text-aquamarine transition-colors text-sm underline"
+                    >
+                      {t("footer.cvEnglish")}
+                    </a>
+                  ) : (
+                    <span className="text-gray-500 text-sm">{t("footer.cvEnglishUnavailable")}</span>
+                  )}
+
+                  {/* Spanish */}
+                  {cv?.spanish ? (
+                    <a
+                      href={cv.spanish}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-200 hover:text-aquamarine transition-colors text-sm underline"
+                    >
+                      {t("footer.cvSpanish")}
+                    </a>
+                  ) : (
+                    <span className="text-gray-500 text-sm">{t("footer.cvSpanishUnavailable")}</span>
+                  )}
+
+                  {/* Portuguese */}
+                  {cv?.portuguese ? (
+                    <a
+                      href={cv.portuguese}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-200 hover:text-aquamarine transition-colors text-sm underline"
+                    >
+                      {t("footer.cvPortuguese")}
+                    </a>
+                  ) : (
+                    <span className="text-gray-500 text-sm">{t("footer.cvPortugueseUnavailable")}</span>
+                  )}
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Navigation Links */}
