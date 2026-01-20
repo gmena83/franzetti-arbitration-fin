@@ -20,9 +20,12 @@ const storage = multer.diskStorage({
     }
   },
   filename: (_req, file, cb) => {
-    // Sanitize filename
-    const sanitized = file.originalname.replace(/[^a-zA-Z0-9.-]/g, "_");
-    cb(null, sanitized);
+    // Generate safe filename with timestamp to avoid conflicts and security issues
+    const timestamp = Date.now();
+    const ext = path.extname(file.originalname);
+    const baseName = path.basename(file.originalname, ext).replace(/[^a-zA-Z0-9-]/g, "_");
+    const safeFilename = `${baseName}-${timestamp}${ext}`;
+    cb(null, safeFilename);
   },
 });
 
@@ -69,7 +72,8 @@ async function startServer() {
         const content = await fs.readFile(cvJsonPath, "utf-8");
         cvData = JSON.parse(content);
       } catch (error) {
-        // If file doesn't exist or is invalid, use default
+        // File doesn't exist or is invalid JSON - use default empty values
+        console.warn("cv.json not found or invalid, using defaults");
       }
 
       // Update the language entry with new file path

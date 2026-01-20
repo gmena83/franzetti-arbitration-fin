@@ -11,7 +11,7 @@ interface UploadState {
 }
 
 export default function CVUpload() {
-  const { t, language } = useLanguage();
+  const { language } = useLanguage();
   const [uploadState, setUploadState] = useState<UploadState>({
     english: "idle",
     spanish: "idle",
