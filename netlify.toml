@@ -1,10 +1,14 @@
 [build]
   command = "corepack enable && pnpm install && pnpm build"
   publish = "dist/public"
+  functions = "netlify/functions"
 
 [build.environment]
   NODE_VERSION = "22"
   PNPM_VERSION = "10"
+
+[functions]
+  node_bundler = "esbuild"
 
 [[redirects]]
   from = "/*"

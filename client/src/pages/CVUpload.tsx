@@ -40,7 +40,7 @@ export default function CVUpload() {
     formData.append("language", lang);
 
     try {
-      const response = await fetch("/api/upload-cv", {
+      const response = await fetch("/.netlify/functions/upload-cv", {
         method: "POST",
         body: formData,
       });
