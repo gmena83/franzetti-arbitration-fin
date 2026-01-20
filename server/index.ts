@@ -4,6 +4,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import fs from "fs/promises";
 import multer from "multer";
+import rateLimit from "express-rate-limit";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -47,8 +48,17 @@ async function startServer() {
 
   app.use(express.json());
 
-  // API endpoint for CV upload
-  app.post("/api/upload-cv", upload.single("file"), async (req, res) => {
+  // Rate limiting for upload endpoint
+  const uploadLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 10, // Limit each IP to 10 upload requests per windowMs
+    message: "Too many upload requests, please try again later.",
+    standardHeaders: true,
+    legacyHeaders: false,
+  });
+
+  // API endpoint for CV upload with rate limiting
+  app.post("/api/upload-cv", uploadLimiter, upload.single("file"), async (req, res) => {
     try {
       if (!req.file) {
         return res.status(400).json({ error: "No file uploaded" });
