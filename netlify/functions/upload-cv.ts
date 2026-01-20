@@ -40,7 +40,7 @@ export const handler: Handler = async (event: HandlerEvent, context: HandlerCont
   }
 
   // Check rate limiting - require valid IP
-  const ip = event.headers["x-forwarded-for"]?.split(",")[0];
+  const ip = event.headers["x-forwarded-for"]?.split(",")[0] || event.headers["x-nf-client-connection-ip"];
   if (!ip) {
     return {
       statusCode: 400,
@@ -58,6 +58,15 @@ export const handler: Handler = async (event: HandlerEvent, context: HandlerCont
   return new Promise((resolve) => {
     try {
       const contentType = event.headers["content-type"] || "";
+      
+      // Validate Content-Type
+      if (!contentType.includes("multipart/form-data")) {
+        resolve({
+          statusCode: 400,
+          body: JSON.stringify({ error: "Content-Type must be multipart/form-data" }),
+        });
+        return;
+      }
       
       // Parse multipart form data
       const bb = busboy({ 
@@ -81,6 +90,10 @@ export const handler: Handler = async (event: HandlerEvent, context: HandlerCont
         
         file.on("end", () => {
           fileData = Buffer.concat(chunks);
+        });
+        
+        file.on("error", (err) => {
+          console.error("File stream error:", err);
         });
       });
 
@@ -176,7 +189,10 @@ export const handler: Handler = async (event: HandlerEvent, context: HandlerCont
           console.error("Upload error:", error);
           resolve({
             statusCode: 500,
-            body: JSON.stringify({ error: "Upload failed" }),
+            body: JSON.stringify({ 
+              error: "Upload failed",
+              details: error instanceof Error ? error.message : String(error)
+            }),
           });
         }
       });
@@ -185,12 +201,24 @@ export const handler: Handler = async (event: HandlerEvent, context: HandlerCont
         console.error("Busboy error:", error);
         resolve({
           statusCode: 500,
-          body: JSON.stringify({ error: "Upload processing failed" }),
+          body: JSON.stringify({ 
+            error: "Upload processing failed",
+            details: error instanceof Error ? error.message : String(error)
+          }),
         });
       });
 
-      // Convert base64 body to buffer and pipe to busboy
-      const bodyBuffer = Buffer.from(event.body || "", event.isBase64Encoded ? "base64" : "utf8");
+      // Convert body to buffer and pipe to busboy
+      // Use "binary" encoding for non-base64 bodies to prevent corruption of binary data
+      if (!event.body) {
+        resolve({
+          statusCode: 400,
+          body: JSON.stringify({ error: "Empty request body" }),
+        });
+        return;
+      }
+      
+      const bodyBuffer = Buffer.from(event.body, event.isBase64Encoded ? "base64" : "binary");
       const readable = Readable.from(bodyBuffer);
       readable.pipe(bb);
 
@@ -198,7 +226,10 @@ export const handler: Handler = async (event: HandlerEvent, context: HandlerCont
       console.error("Handler error:", error);
       resolve({
         statusCode: 500,
-        body: JSON.stringify({ error: "Internal server error" }),
+        body: JSON.stringify({ 
+          error: "Internal server error",
+          details: error instanceof Error ? error.message : String(error)
+        }),
       });
     }
   });
