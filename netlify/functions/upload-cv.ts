@@ -210,15 +210,7 @@ export const handler: Handler = async (event: HandlerEvent, context: HandlerCont
 
       // Convert body to buffer and pipe to busboy
       // Use "binary" encoding for non-base64 bodies to prevent corruption of binary data
-      if (!event.body) {
-        resolve({
-          statusCode: 400,
-          body: JSON.stringify({ error: "Empty request body" }),
-        });
-        return;
-      }
-      
-      const bodyBuffer = Buffer.from(event.body, event.isBase64Encoded ? "base64" : "binary");
+      const bodyBuffer = Buffer.from(event.body || "", event.isBase64Encoded ? "base64" : "binary");
       const readable = Readable.from(bodyBuffer);
       readable.pipe(bb);
 
