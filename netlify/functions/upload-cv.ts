@@ -25,13 +25,13 @@ function checkRateLimit(ip: string): boolean {
 }
 
 function getClientIp(event: HandlerEvent): string | null {
-  const h = event.headers || {} as Record<string, string>;
+  const headers = event.headers || {} as Record<string, string>;
   return (
-    h["x-nf-client-connection-ip"] ||
-    (h["x-forwarded-for"] && h["x-forwarded-for"].split(",")[0]) ||
-    h["x-real-ip"] ||
-    h["client-ip"] ||
-    h["remote-addr"] ||
+    headers["x-nf-client-connection-ip"] ||
+    (headers["x-forwarded-for"] && headers["x-forwarded-for"].split(",")[0]) ||
+    headers["x-real-ip"] ||
+    headers["client-ip"] ||
+    headers["remote-addr"] ||
     null
   );
 }
@@ -133,7 +133,7 @@ export const handler: Handler = async (event: HandlerEvent, _context: HandlerCon
 
           await filesStore.set(safeFilename, toArrayBuffer(fileData), { contentType: "application/pdf" });
 
-          const cvData =
+          const cvData: Record<string, string> =
             (await configStore.get("cv.json", { type: "json" })) || {
               english: "",
               spanish: "",
