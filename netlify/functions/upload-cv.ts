@@ -1,10 +1,13 @@
-import type { Handler, HandlerEvent } from "@netlify/functions";
+import type { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
+import { getStore } from "@netlify/blobs";
 import busboy from "busboy";
-import fs from "fs/promises";
 import path from "path";
 import { Readable } from "stream";
 
 // Rate limiting storage (in-memory, resets on cold start)
+// Note: In serverless environments, functions can be cold-started frequently,
+// which means rate limiting may reset. For production, consider using a persistent
+// store like Redis or DynamoDB for more reliable rate limiting.
 const uploadCounts = new Map<string, { count: number; resetTime: number }>();
 
 const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes
@@ -27,7 +30,7 @@ function checkRateLimit(ip: string): boolean {
   return true;
 }
 
-export const handler: Handler = async (event: HandlerEvent) => {
+export const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
   // Only allow POST
   if (event.httpMethod !== "POST") {
     return {
@@ -36,8 +39,15 @@ export const handler: Handler = async (event: HandlerEvent) => {
     };
   }
 
-  // Check rate limiting
-  const ip = event.headers["x-forwarded-for"]?.split(",")[0] || "unknown";
+  // Check rate limiting - require valid IP
+  const ip = event.headers["x-forwarded-for"]?.split(",")[0];
+  if (!ip) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ error: "Unable to identify request source" }),
+    };
+  }
+  
   if (!checkRateLimit(ip)) {
     return {
       statusCode: 429,
@@ -113,15 +123,28 @@ export const handler: Handler = async (event: HandlerEvent) => {
           const baseName = path.basename(filename, ext).replace(/[^a-zA-Z0-9-]/g, "_");
           const safeFilename = `${baseName}-${timestamp}${ext}`;
 
-          // Save file to the cv directory
-          const uploadDir = path.join(process.cwd(), "client", "public", "cv");
-          await fs.mkdir(uploadDir, { recursive: true });
-          
-          const filePath = path.join(uploadDir, safeFilename);
-          await fs.writeFile(filePath, fileData);
+          // Store file in Netlify Blobs (persistent storage)
+          const store = getStore({
+            name: "cv-files",
+            siteID: context.site?.id || process.env.SITE_ID,
+            token: process.env.NETLIFY_TOKEN || context.token,
+          });
 
-          // Update cv.json
-          const cvJsonPath = path.join(uploadDir, "cv.json");
+          await store.set(safeFilename, fileData, {
+            metadata: {
+              contentType: "application/pdf",
+              language,
+              uploadedAt: new Date().toISOString(),
+            },
+          });
+
+          // Update cv.json in blobs
+          const cvConfigStore = getStore({
+            name: "cv-config",
+            siteID: context.site?.id || process.env.SITE_ID,
+            token: process.env.NETLIFY_TOKEN || context.token,
+          });
+
           let cvData: Record<string, string> = {
             english: "",
             spanish: "",
@@ -129,21 +152,24 @@ export const handler: Handler = async (event: HandlerEvent) => {
           };
 
           try {
-            const content = await fs.readFile(cvJsonPath, "utf-8");
-            cvData = JSON.parse(content);
+            const existingData = await cvConfigStore.get("cv.json", { type: "json" });
+            if (existingData) {
+              cvData = existingData as Record<string, string>;
+            }
           } catch (error) {
-            console.warn("cv.json not found or invalid, using defaults");
+            console.warn("cv.json not found in blobs, using defaults");
           }
 
-          cvData[language] = `/cv/${safeFilename}`;
-          await fs.writeFile(cvJsonPath, JSON.stringify(cvData, null, 2));
+          // Store the blob URL
+          cvData[language] = `/.netlify/blobs/cv-files/${safeFilename}`;
+          await cvConfigStore.setJSON("cv.json", cvData);
 
           resolve({
             statusCode: 200,
             body: JSON.stringify({
               success: true,
               filename: safeFilename,
-              path: `/cv/${safeFilename}`,
+              path: `/.netlify/blobs/cv-files/${safeFilename}`,
             }),
           });
         } catch (error) {

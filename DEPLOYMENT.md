@@ -1,6 +1,13 @@
 # CV Upload System - Netlify Deployment Guide
 
-This CV upload system has been converted to use Netlify Functions for seamless deployment on Netlify.
+This CV upload system uses Netlify Functions and Netlify Blobs for seamless serverless deployment.
+
+## Features
+
+- **Persistent Storage**: Uses Netlify Blobs for permanent file storage
+- **Serverless Architecture**: No server maintenance required
+- **Automatic Scaling**: Handles traffic spikes automatically
+- **Secure**: Rate limiting and file validation built-in
 
 ## Deployment Instructions
 
@@ -56,11 +63,28 @@ netlify deploy --prod
 
 ## Technical Details
 
-### Netlify Function
-- Location: `netlify/functions/upload-cv.ts`
-- Endpoint: `/.netlify/functions/upload-cv`
-- Method: POST
-- Handles: File uploads, rate limiting, cv.json updates
+### Netlify Functions
+1. **upload-cv**: `/.netlify/functions/upload-cv`
+   - Handles file uploads
+   - Stores files in Netlify Blobs (persistent storage)
+   - Updates cv.json configuration
+   - Rate limiting: 10 uploads per 15 minutes per IP
+
+2. **get-cv**: `/cv/:filename`
+   - Serves PDF files from Netlify Blobs
+   - Proxied through redirect rules
+
+3. **cv-config**: `/cv/cv.json`
+   - Serves current CV configuration
+   - Lists available CVs for each language
+   - Proxied through redirect rules
+
+### Netlify Blobs
+The system uses two Netlify Blob stores:
+- `cv-files`: Stores the actual PDF files
+- `cv-config`: Stores the cv.json configuration
+
+Files are automatically cached and served through Netlify's CDN.
 
 ### Configuration
 - `netlify.toml`: Configured for static site with functions
@@ -72,13 +96,19 @@ netlify deploy --prod
 
 ### If uploads fail:
 1. Check Netlify function logs in your dashboard
-2. Verify the `client/public/cv` directory exists
-3. Ensure `cv.json` is properly formatted
-
-### If the page doesn't load:
-1. Check build logs in Netlify
-2. Verify all dependencies are installed
+2. Verify Netlify Blobs are enabled for your site
 3. Check browser console for errors
+4. Ensure you're using a supported file type (PDF only)
+
+### If files don't download:
+1. Check that the file was uploaded successfully
+2. Verify the redirect rules are working in netlify.toml
+3. Check Netlify function logs for the get-cv function
+
+### If cv.json doesn't update:
+1. Check the cv-config function logs
+2. Verify Netlify Blobs permissions
+3. Try uploading a file again to trigger an update
 
 ## Alternative: Decap CMS
 
