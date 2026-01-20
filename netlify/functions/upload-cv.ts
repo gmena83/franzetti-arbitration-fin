@@ -2,14 +2,8 @@ import type { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
 import { getStore } from "@netlify/blobs";
 import busboy from "busboy";
 import path from "path";
-import { Readable } from "stream";
 
-// Rate limiting storage (in-memory, resets on cold start)
-// Note: In serverless environments, functions can be cold-started frequently,
-// which means rate limiting may reset. For production, consider using a persistent
-// store like Redis or DynamoDB for more reliable rate limiting.
 const uploadCounts = new Map<string, { count: number; resetTime: number }>();
-
 const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes
 const RATE_LIMIT_MAX = 10;
 
@@ -30,72 +24,83 @@ function checkRateLimit(ip: string): boolean {
   return true;
 }
 
-export const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
-  // Only allow POST
-  if (event.httpMethod !== "POST") {
-    return {
-      statusCode: 405,
-      body: JSON.stringify({ error: "Method not allowed" }),
-    };
-  }
+function getClientIp(event: HandlerEvent): string | null {
+  const h = event.headers || {} as Record<string, string>;
+  return (
+    h["x-nf-client-connection-ip"] ||
+    (h["x-forwarded-for"] && h["x-forwarded-for"].split(",")[0]) ||
+    h["x-real-ip"] ||
+    h["client-ip"] ||
+    h["remote-addr"] ||
+    null
+  );
+}
 
-  // Check rate limiting - require valid IP
-  const ip = event.headers["x-forwarded-for"]?.split(",")[0];
-  if (!ip) {
-    return {
-      statusCode: 400,
-      body: JSON.stringify({ error: "Unable to identify request source" }),
-    };
-  }
-  
-  if (!checkRateLimit(ip)) {
-    return {
-      statusCode: 429,
-      body: JSON.stringify({ error: "Too many upload requests, please try again later." }),
-    };
-  }
+function toArrayBuffer(buf: Buffer): ArrayBuffer {
+  return buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.byteLength);
+}
 
-  return new Promise((resolve) => {
-    try {
-      const contentType = event.headers["content-type"] || "";
-      
-      // Parse multipart form data
-      const bb = busboy({ 
-        headers: { "content-type": contentType },
-        limits: { fileSize: 10 * 1024 * 1024 } // 10MB
+export const handler: Handler = async (event: HandlerEvent, _context: HandlerContext) => {
+  try {
+    if (event.httpMethod !== "POST") {
+      return {
+        statusCode: 405,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ error: "Method not allowed" }),
+      };
+    }
+
+    const ip = getClientIp(event);
+    if (ip && !checkRateLimit(ip)) {
+      return {
+        statusCode: 429,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ error: "Too many upload requests, please try again later." }),
+      };
+    }
+
+    const contentType = event.headers["content-type"] || "";
+    if (!contentType.startsWith("multipart/form-data")) {
+      return {
+        statusCode: 400,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ error: "Invalid content type" }),
+      };
+    }
+
+    const bb = busboy({
+      headers: { "content-type": contentType },
+      limits: { fileSize: 10 * 1024 * 1024 }, // 10MB
+    });
+
+    let fileData: Buffer | null = null;
+    let filename = "";
+    let mimeType = "";
+    let language = "";
+
+    bb.on("file", (_fieldname, file, info) => {
+      filename = info.filename;
+      mimeType = info.mimeType;
+      const chunks: Buffer[] = [];
+      file.on("data", (chunk) => chunks.push(chunk));
+      file.on("end", () => {
+        fileData = Buffer.concat(chunks);
       });
+    });
 
-      let fileData: Buffer | null = null;
-      let filename = "";
-      let mimeType = "";
-      let language = "";
+    bb.on("field", (fieldname, val) => {
+      if (fieldname === "language") language = val;
+    });
 
-      bb.on("file", (fieldname, file, info) => {
-        filename = info.filename;
-        mimeType = info.mimeType;
-        
-        const chunks: Buffer[] = [];
-        file.on("data", (chunk) => {
-          chunks.push(chunk);
-        });
-        
-        file.on("end", () => {
-          fileData = Buffer.concat(chunks);
-        });
-      });
+    const bodyBuffer = Buffer.from(event.body || "", event.isBase64Encoded ? "base64" : "utf8");
 
-      bb.on("field", (fieldname, val) => {
-        if (fieldname === "language") {
-          language = val;
-        }
-      });
-
+    const result = await new Promise<{ statusCode: number; headers?: Record<string, string>; body: string }>((resolve) => {
       bb.on("finish", async () => {
         try {
-          // Validate inputs
           if (!fileData) {
             resolve({
               statusCode: 400,
+              headers: { "Content-Type": "application/json" },
               body: JSON.stringify({ error: "No file uploaded" }),
             });
             return;
@@ -104,6 +109,7 @@ export const handler: Handler = async (event: HandlerEvent, context: HandlerCont
           if (mimeType !== "application/pdf") {
             resolve({
               statusCode: 400,
+              headers: { "Content-Type": "application/json" },
               body: JSON.stringify({ error: "Only PDF files are allowed" }),
             });
             return;
@@ -112,94 +118,66 @@ export const handler: Handler = async (event: HandlerEvent, context: HandlerCont
           if (!["english", "spanish", "portuguese"].includes(language)) {
             resolve({
               statusCode: 400,
+              headers: { "Content-Type": "application/json" },
               body: JSON.stringify({ error: "Invalid language" }),
             });
             return;
           }
 
-          // Generate safe filename
-          const timestamp = Date.now();
-          const ext = path.extname(filename);
+          const filesStore = getStore({ name: "cv-files" });
+          const configStore = getStore({ name: "cv-config" });
+
+          const ext = path.extname(filename) || ".pdf";
           const baseName = path.basename(filename, ext).replace(/[^a-zA-Z0-9-]/g, "_");
-          const safeFilename = `${baseName}-${timestamp}${ext}`;
+          const safeFilename = `${baseName}-${Date.now()}${ext}`;
 
-          // Store file in Netlify Blobs (persistent storage)
-          const store = getStore({
-            name: "cv-files",
-            siteID: context.site?.id || process.env.SITE_ID,
-            token: process.env.NETLIFY_TOKEN || context.token,
-          });
+          await filesStore.set(safeFilename, toArrayBuffer(fileData), { contentType: "application/pdf" });
 
-          await store.set(safeFilename, fileData, {
-            metadata: {
-              contentType: "application/pdf",
-              language,
-              uploadedAt: new Date().toISOString(),
-            },
-          });
+          const cvData =
+            (await configStore.get("cv.json", { type: "json" })) || {
+              english: "",
+              spanish: "",
+              portuguese: "",
+            };
 
-          // Update cv.json in blobs
-          const cvConfigStore = getStore({
-            name: "cv-config",
-            siteID: context.site?.id || process.env.SITE_ID,
-            token: process.env.NETLIFY_TOKEN || context.token,
-          });
+          cvData[language] = `/cv/${safeFilename}`;
 
-          let cvData: Record<string, string> = {
-            english: "",
-            spanish: "",
-            portuguese: "",
-          };
-
-          try {
-            const existingData = await cvConfigStore.get("cv.json", { type: "json" });
-            if (existingData) {
-              cvData = existingData as Record<string, string>;
-            }
-          } catch (error) {
-            console.warn("cv.json not found in blobs, using defaults");
-          }
-
-          // Store the blob URL
-          cvData[language] = `/.netlify/blobs/cv-files/${safeFilename}`;
-          await cvConfigStore.setJSON("cv.json", cvData);
+          await configStore.set("cv.json", JSON.stringify(cvData), { contentType: "application/json" });
 
           resolve({
             statusCode: 200,
-            body: JSON.stringify({
-              success: true,
-              filename: safeFilename,
-              path: `/.netlify/blobs/cv-files/${safeFilename}`,
-            }),
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ filename: safeFilename, path: `/cv/${safeFilename}` }),
           });
         } catch (error) {
           console.error("Upload error:", error);
           resolve({
             statusCode: 500,
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ error: "Upload failed" }),
           });
         }
       });
 
-      bb.on("error", (error) => {
-        console.error("Busboy error:", error);
+      try {
+        bb.end(bodyBuffer); // Feed decoded bytes into Busboy
+      } catch (e) {
+        console.error("Busboy error:", e);
         resolve({
           statusCode: 500,
-          body: JSON.stringify({ error: "Upload processing failed" }),
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ error: "Failed to parse upload" }),
         });
-      });
+      }
+    });
 
-      // Convert base64 body to buffer and pipe to busboy
-      const bodyBuffer = Buffer.from(event.body || "", event.isBase64Encoded ? "base64" : "utf8");
-      const readable = Readable.from(bodyBuffer);
-      readable.pipe(bb);
-
-    } catch (error) {
-      console.error("Handler error:", error);
-      resolve({
-        statusCode: 500,
-        body: JSON.stringify({ error: "Internal server error" }),
-      });
-    }
-  });
+    return result;
+  } catch (err) {
+    console.error("Handler error:", err);
+    return {
+      statusCode: 500,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ error: "Internal server error" }),
+    };
+  }
 };
