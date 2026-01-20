@@ -27,14 +27,14 @@ export default function Footer() {
 
   useEffect(() => {
     // Load CV links from CMS-managed JSON in public
-    fetch("/cv/cv.json", { cache: "no-store" })
+    fetch("/cv/cv.json", { cache: "no-cache" })
       .then((res) => (res.ok ? res.json() : null))
       .then((data) => {
         if (data && typeof data === "object") {
           setCv({
-            english: data.english || "",
-            spanish: data.spanish || "",
-            portuguese: data.portuguese || "",
+            english: data.english || undefined,
+            spanish: data.spanish || undefined,
+            portuguese: data.portuguese || undefined,
           });
         }
       })
@@ -52,9 +52,9 @@ export default function Footer() {
   ];
 
   const hasAnyCv =
-    !!(cv?.english && cv.english.length) ||
-    !!(cv?.spanish && cv.spanish.length) ||
-    !!(cv?.portuguese && cv.portuguese.length);
+    Boolean(cv?.english?.trim()) ||
+    Boolean(cv?.spanish?.trim()) ||
+    Boolean(cv?.portuguese?.trim());
 
   return (
     <footer className="bg-black text-white">
