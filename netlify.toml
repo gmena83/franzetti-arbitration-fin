@@ -1,10 +1,24 @@
 [build]
   command = "corepack enable && pnpm install && pnpm build"
   publish = "dist/public"
+  functions = "netlify/functions"
 
 [build.environment]
   NODE_VERSION = "22"
   PNPM_VERSION = "10"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/cv/cv.json"
+  to = "/.netlify/functions/cv-config"
+  status = 200
+
+[[redirects]]
+  from = "/cv/:filename"
+  to = "/.netlify/functions/get-cv/:filename"
+  status = 200
 
 [[redirects]]
   from = "/*"
