@@ -34,7 +34,7 @@ const arbitratorAppointments: CaseItem[] = [
     categories: ["commercial"],
   },
   {
-    text: "Co-arbitrator in an ICDR arbitration between a food producer in the United States and a Peruvian company concerning a supply contract governed by Peruvian law.",
+    text: "Co-arbitrator in an ICDR arbitration between a food producer in the United States and a Peruvian company concerning a supply contract governed by Peruvian law; seated in Lima.",
     categories: ["commercial"],
   },
   {
@@ -66,7 +66,7 @@ const arbitratorAppointments: CaseItem[] = [
     categories: ["construction"],
   },
   {
-    text: "Co-arbitrator in a CAM arbitration concerning the challenge of an arbitrator in a shareholder dispute involving a major oil and gas corporation.",
+    text: "Co-arbitrator in a CAM arbitration concerning the challenge of an arbitrator in a shareholder dispute involving a major oil and gas corporation; proceedings in Portuguese.",
     categories: ["deal-structure"],
   },
 ];
@@ -89,7 +89,7 @@ const mattersAsCounsel: CaseItem[] = [
     categories: ["commercial"],
   },
   {
-    text: "Counsel to an Argentine firm in an ICDR arbitration against a Chilean gas company in connection with a services agreement governed by Argentine law.",
+    text: "Counsel to an Argentine firm in an ICDR arbitration against a Chilean gas company in connection with a services agreement governed by Argentine law; seated in Santiago, proceedings in Spanish and English.",
     categories: ["commercial"],
   },
   {
@@ -101,7 +101,7 @@ const mattersAsCounsel: CaseItem[] = [
     categories: ["construction"],
   },
   {
-    text: "Counsel to a multinational company in three ICC arbitrations concerning a multibillion-dollar shareholder dispute over the control of a Brazilian company arising out of a share purchase agreement governed by the laws of Brazil.",
+    text: "Counsel to a multinational company in three ICC arbitrations concerning a multibillion-dollar shareholder dispute over the control of a Brazilian company arising out of a share purchase agreement governed by the laws of Brazil; proceedings in Portuguese and English.",
     categories: ["deal-structure"],
   },
   {
@@ -177,7 +177,7 @@ const mattersAsCounsel: CaseItem[] = [
     categories: ["energy"],
   },
   {
-    text: "Counsel to the Claimants in Pluspetrol Perú et al. v. Perúpetro (ICSID Case No. ARB/12/28), a dispute arising out of a gas supply contract regarding royalty payments and the sale of liquified natural gas (LNG).",
+    text: "Counsel to the Claimants in Pluspetrol Perú et al. v. Perupetro (ICSID Case No. ARB/12/28), a dispute arising out of a gas supply contract regarding royalty payments and the sale of liquified natural gas (LNG); proceedings in Spanish.",
     categories: ["energy"],
   },
   {
@@ -217,7 +217,7 @@ const mattersAsCounsel: CaseItem[] = [
     categories: ["investor-state"],
   },
   {
-    text: "Counsel to the Claimants in Pluspetrol Perú et al. v. Perúpetro (ICSID Case No. ARB/12/28), a dispute arising out of a gas supply contract regarding royalty payments and the sale of liquified natural gas (LNG).",
+    text: "Counsel to the Claimants in Pluspetrol Perú et al. v. Perupetro (ICSID Case No. ARB/12/28), a dispute arising out of a gas supply contract regarding royalty payments and the sale of liquified natural gas (LNG); proceedings in Spanish.",
     categories: ["investor-state"],
   },
   {

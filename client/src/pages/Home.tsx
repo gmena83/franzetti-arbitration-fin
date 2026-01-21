@@ -76,7 +76,7 @@ const professionalBackground = [
 // Academia: "Professor" without "Adjunct" prefix as per client request
 const academia = [
   {
-    institution: "University of Miami",
+    institution: "University of Miami Law School",
     role: "Adjunct Professor",
     course: "International Arbitration in the Energy Sector",
     period: "2024-2025",
@@ -97,23 +97,26 @@ const education = [
   {
     degree: "LL.M.",
     institution: "Georgetown University Law Center",
-    note: "High Honors, Dean's List",
+    note: "International Studies, Distinction and Dean's List",
+    location: "Washington D.C.",
     year: "2008",
     logo: "/images/georgetown-logo-new.png",
     url: "https://www.law.georgetown.edu",
   },
   {
-    degree: "Postgraduate Specialization in Business and Economic Law",
+    degree: "Postgraduate Specialization",
     institution: "Getúlio Vargas Foundation",
-    note: "",
+    note: "Business and Economics Law",
+    location: "São Paulo, Brazil",
     year: "2006",
     logo: "/images/fgv-logo.png",
     url: "https://portal.fgv.br",
   },
   {
     degree: "LL.B.",
-    institution: "University of São Paulo, Law School",
-    note: "",
+    institution: "University of São Paulo Law School",
+    note: "(J.D. Equivalent)",
+    location: "São Paulo, Brazil",
     year: "2000",
     logo: "/images/usp-logo.png",
     url: "https://www.direito.usp.br",
@@ -380,7 +383,7 @@ export default function Home() {
 
             <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
               <p>
-                Erica Franzetti is a trusted arbitrator and globally recognized international disputes counsel. With a 25-year career at market-leading law firms, she has extensive experience in commercial and investor-state arbitration across a wide range of industries and jurisdictions. She now focuses her practice on serving as an independent arbitrator in complex cross-border disputes and on advising clients on dispute strategy, enforcement, and investment protection. Her work has particular emphasis on energy and infrastructure matters connected to North America, Latin America, and Lusophone jurisdictions.
+                Erica Franzetti is an independent arbitrator and international disputes counsel. With a 25-year career at market-leading law firms, she has a long standing track record in commercial and investor-state arbitration across a wide range of industries and jurisdictions. She focuses her practice on serving as an independent arbitrator in complex cross-border disputes and on advising clients on dispute strategy, enforcement, and investment protection. Her work has particular emphasis on energy and infrastructure matters connected to North America, Latin America, and Lusophone jurisdictions.
               </p>
 
               {/* Embedded Quote 1 - The Legal 500 */}
@@ -446,7 +449,7 @@ export default function Home() {
               </p>
 
               <p>
-                Before founding her own practice, Erica spent nearly 20 years in Big Law, including almost a decade as a partner in globally recognized international arbitration teams. She is admitted to practice in Washington, D.C., New York, and Brazil, and works fluently in English, Spanish, and Portuguese.
+                Before founding her own practice, Erica spent 17 years in major U.S. law firms, eight as partner in globally recognized international arbitration teams. She is admitted to practice in Washington, D.C., New York, and Brazil, and works fluently in English, Spanish, and Portuguese.
               </p>
             </div>
           </motion.div>
