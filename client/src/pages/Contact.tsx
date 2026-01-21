@@ -277,7 +277,9 @@ export default function Contact() {
               {/* V-Card Download */}
               <div className="pt-4">
                 <a
-                  href="#"
+                  href="https://qrco.de/bgZDuV"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center text-charcoal hover:text-aquamarine transition-colors text-sm"
                 >
                   <svg

@@ -105,8 +105,8 @@ const speakingEngagements = [
   { title: "Hot Topics Related To Arbitration", event: "Brazilian-American Chamber of Commerce, New York City", date: "November 30, 2021" },
   { title: "Key Types of Privileges and Their Application in International Disputes", event: "Dechert LLP Webinar Series", date: "March 17, April 5, April 28, 2021" },
   { title: "Virtual Hearings in International Arbitration", event: "Vancouver International Arbitration Centre Webinar", date: "October 5, 2020" },
-  { title: "From NAFTA to USMCA: A Discussion on Key Changes to Trade and Investment", event: "Dechert LLP Webinar", date: "July 29, 2020" },
   { title: "Key Considerations for Legal Positions on Force Majeure: Practical Steps if Disputes are Inevitable", event: "Nairobi Centre For International Arbitration Webinar", date: "August 13, 2020" },
+  { title: "From NAFTA to USMCA: A Discussion on Key Changes to Trade and Investment", event: "Dechert LLP Webinar", date: "July 29, 2020" },
   { title: "Procedimentos Virtuais e Táticas de Guerrilha em Arbitragem", event: "INOVARB AmCham Brazil Webinar", date: "June 4, 2020" },
   { title: "Arbitrajes Virtuales: Ventajas e Inconvenientes", event: "IPA Instituto Peruano de Arbitraje", date: "May 14, 2020" },
   { title: "Tribunal's Power to Sanction Misconduct", event: "ILA American Branch Investment Law Committee and Georgetown International Arbitration Society, Washington, D.C.", date: "February 28, 2020" },
@@ -134,7 +134,7 @@ const speakingEngagements = [
   { title: "O Papel do Árbitro na Avaliação de Danos", event: "XI Congresso do Comitê Brasileiro de Arbitragem--CBAr: Aspectos Econômicos da Arbitragem, Porto Alegre", date: "September 2012" },
   { title: "How to Handle a BIT Arbitration", event: "Ninth Annual Seminar on International Commercial Arbitration at American University's Washington College of Law, Washington, DC", date: "October 3, 2012" },
   { title: "Documentary Evidence and the Use of Discovery, Evidence in International Arbitration", event: "ICDR Young & International e ICC Young Arbitrators Forum, Bogotá", date: "September 2010" },
-  { title: "Jurisdictional Issues in ICSID Arbitration", event: "Seminário sobre questões jurídicas internacionais apresentado ao governo da República da Colômbia, Bogotá", date: "June 2009" },
+  { title: "Jurisdictional Issues in ICSID Arbitration", event: "Seminar on International Legal Issues Presented to the Government of the Republic of Colombia, Bogota", date: "June 2009" },
 ];
 
 const publications = [
@@ -143,8 +143,8 @@ const publications = [
   { title: "Litigation Alternatives for COVID-19 Hospitality Disputes", publication: "Law360", year: "May 11, 2020" },
   { title: "Navigating Investors' Rights under the USMCA", publication: "Transnational Dispute Management, Vol. 17, Issue 3", year: "March 2020" },
   { title: "Mining Arbitration in Latin America: Social and Environmental Issues in Investment Arbitration Cases", publication: "Global Arbitration Review: The Guide to Mining Arbitrations", year: "July 2019" },
-  { title: "Construction contracts in Brazil", publication: "Lexology Q&A", year: "March 2019" },
-  { title: "A structured guide to arbitration law and practice in Brazil", publication: "Lexology Q&A", year: "September 2014, updated March 2019" },
+  { title: "Construction Contracts in Brazil", publication: "Lexology Q&A", year: "March 2019" },
+  { title: "A Structured Guide to Arbitration Law and Practice in Brazil", publication: "Lexology Q&A", year: "September 2014, updated March 2019" },
   { title: "United States: Arbitration Q&A", publication: "The In-House Lawyer", year: "October 2018" },
   { title: "Arbitragem Comercial Envolvendo Administração Pública: uma Realidade na América Latina?", publication: "Revista Visão Jurídica", year: "April 2017" },
   { title: "Lições a Respeito de Decisões Vinculantes e Não Finais Proferidas por Dispute Adjudication Boards: o Caso CRW Joint Operation v. PT Perusahaan Gas Negara (PERSERO)", publication: "Revista de Arbitragem e Mediação – RArb, nº 48", year: "April 2016" },
@@ -156,7 +156,7 @@ type TabType = "recognition" | "speaking" | "publications" | "academia";
 
 const academia = [
   {
-    institution: "University of Miami",
+    institution: "University of Miami Law School",
     role: "Adjunct Professor",
     course: "International Arbitration in the Energy Sector",
     period: "2024-2025",

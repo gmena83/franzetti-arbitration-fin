@@ -133,6 +133,15 @@ export default function Footer() {
                     <span className="text-gray-500 text-sm">{t("footer.cvPortugueseUnavailable")}</span>
                   )}
                 </div>
+                {/* V-Card Download */}
+                <a
+                  href="https://qrco.de/bgZDuV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-gray-200 hover:text-aquamarine transition-colors text-sm underline mt-2"
+                >
+                  {language === "ES" ? "Descargar V-Card" : language === "PT" ? "Baixar V-Card" : "Download V-Card"}
+                </a>
               </div>
             )}
           </div>
