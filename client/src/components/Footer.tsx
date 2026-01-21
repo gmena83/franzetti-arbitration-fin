@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
  * - Gray background (#888888)
  * - White logo version matching header logo size and position
  * - Links to other pages
- * - CV downloads (EN, ES, PT) - reordered
+ * - CV downloads (EN, EN-Mini) and V-Card
  * - Correct LinkedIn URL
  * - Email and phone icons
  * - Disclaimer, Privacy Policy, Cookies Policy
@@ -16,8 +16,8 @@ import { useEffect, useState } from "react";
 
 type CvLinks = {
   english?: string;
-  spanish?: string;
-  portuguese?: string;
+  englishMini?: string;
+  vcard?: string;
 };
 
 export default function Footer() {
@@ -33,8 +33,8 @@ export default function Footer() {
         if (data && typeof data === "object") {
           setCv({
             english: data.english || undefined,
-            spanish: data.spanish || undefined,
-            portuguese: data.portuguese || undefined,
+            englishMini: data.englishMini || undefined,
+            vcard: data.vcard || undefined,
           });
         }
       })
@@ -53,8 +53,9 @@ export default function Footer() {
 
   const hasAnyCv =
     Boolean(cv?.english?.trim()) ||
-    Boolean(cv?.spanish?.trim()) ||
-    Boolean(cv?.portuguese?.trim());
+    Boolean(cv?.englishMini?.trim());
+
+  const hasVcard = Boolean(cv?.vcard?.trim());
 
   return (
     <footer className="bg-black text-white">
@@ -90,9 +91,9 @@ export default function Footer() {
                 <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-2">
                   {t("footer.downloadCV")}
                 </h4>
-                <div className="flex flex-wrap gap-3">
-                  {/* English */}
-                  {cv?.english ? (
+                <div className="flex flex-col gap-2">
+                  {/* English CV */}
+                  {cv?.english && (
                     <a
                       href={cv.english}
                       target="_blank"
@@ -101,38 +102,37 @@ export default function Footer() {
                     >
                       {t("footer.cvEnglish")}
                     </a>
-                  ) : (
-                    <span className="text-gray-500 text-sm">{t("footer.cvEnglishUnavailable")}</span>
                   )}
 
-                  {/* Spanish */}
-                  {cv?.spanish ? (
+                  {/* English Mini CV */}
+                  {cv?.englishMini && (
                     <a
-                      href={cv.spanish}
+                      href={cv.englishMini}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-200 hover:text-aquamarine transition-colors text-sm underline"
                     >
-                      {t("footer.cvSpanish")}
+                      {t("footer.cvEnglishMini")}
                     </a>
-                  ) : (
-                    <span className="text-gray-500 text-sm">{t("footer.cvSpanishUnavailable")}</span>
-                  )}
-
-                  {/* Portuguese */}
-                  {cv?.portuguese ? (
-                    <a
-                      href={cv.portuguese}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-200 hover:text-aquamarine transition-colors text-sm underline"
-                    >
-                      {t("footer.cvPortuguese")}
-                    </a>
-                  ) : (
-                    <span className="text-gray-500 text-sm">{t("footer.cvPortugueseUnavailable")}</span>
                   )}
                 </div>
+              </div>
+            )}
+
+            {/* V-Card Download */}
+            {hasVcard && (
+              <div className="mt-4">
+                <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-2">
+                  {t("footer.downloadVCard")}
+                </h4>
+                <a
+                  href={cv.vcard}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-200 hover:text-aquamarine transition-colors text-sm underline"
+                >
+                  {t("footer.vcard")}
+                </a>
               </div>
             )}
           </div>
