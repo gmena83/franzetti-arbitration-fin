@@ -70,18 +70,21 @@ const education = [
     degree: "LL.M.",
     institution: "Georgetown University Law Center",
     note: "International Studies, Distinction and Dean's List",
+    location: "Washington D.C.",
     year: "2008",
   },
   {
     degree: "Postgraduate Specialization",
     institution: "Getúlio Vargas Foundation",
     note: "Business and Economics Law",
+    location: "São Paulo, Brazil",
     year: "2006",
   },
   {
     degree: "LL.B.",
     institution: "University of São Paulo Law School",
     note: "(J.D. Equivalent)",
+    location: "São Paulo, Brazil",
     year: "2000",
   },
 ];

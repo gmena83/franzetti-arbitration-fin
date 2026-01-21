@@ -78,6 +78,7 @@ export const translations: Translations = {
   // Footer
   "footer.downloadCV": { EN: "Download CV", ES: "Descargar CV", PT: "Baixar CV" },
   "footer.downloadVCard": { EN: "Download V-Card", ES: "Descargar V-Card", PT: "Baixar V-Card" },
+  "footer.vcardUrl": { EN: "https://qrco.de/bgZDuV", ES: "https://qrco.de/bgZDuV", PT: "https://qrco.de/bgZDuV" },
   "footer.disclaimer": { EN: "Disclaimer", ES: "Aviso Legal", PT: "Aviso Legal" },
   "footer.privacy": { EN: "Privacy Policy", ES: "Política de Privacidad", PT: "Política de Privacidade" },
   "footer.cookies": { EN: "Cookies Policy", ES: "Política de Cookies", PT: "Política de Cookies" },
