@@ -1,41 +1,22 @@
-const homeData = {
-  // About Section
-  about: {
-    paragraph1: "Erica Franzetti is an independent arbitrator and international disputes counsel. She now focuses her practice on serving as an independent arbitrator in complex cross-border disputes and on advising clients on dispute strategy, enforcement, and investment protection.",
-    experience: "long standing track record",
-    academia: [
-      { institution: "University of Miami Law School", ... },
-      { institution: "University of Miami Law School", ... },
-    ],
-    lawFirmsExperience: "17 years in major U.S. law firms",
-    partnerExperience: "eight as partner",
-  },
+import React from 'react';
 
-  // Education Array Updated
-  education: [
-    {
-      degree: "LL.M.",
-      institution: "Georgetown University Law Center",
-      note: "International Studies, Distinction and Dean's List",
-      year: "2008",
-      logo: "/images/georgetown-logo-new.png",
-      url: "https://www.law.georgetown.edu",
-    },
-    {
-      degree: "Postgraduate Specialization",
-      institution: "Getúlio Vargas Foundation",
-      note: "Business and Economics Law",
-      year: "2006",
-      logo: "/images/fgv-logo.png",
-      url: "https://portal.fgv.br",
-    },
-    {
-      degree: "LL.B.",
-      institution: "University of São Paulo Law School",
-      note: "(J.D. Equivalent)",
-      year: "2000",
-      logo: "/images/usp-logo.png",
-      url: "https://www.direito.usp.br",
-    },
-  ],
+const Home = () => {
+  return (
+    <div>
+      <h1>Welcome to the Arbitration Page</h1>
+      <p>Erica Franzetti is an independent arbitrator and international disputes counsel. She now focuses her practice on serving as an independent arbitrator in complex cross-border disputes and on advising clients on dispute strategy, enforcement, and investment protection.</p>
+      <h2>Academia</h2>
+      <p>University of Miami Law School</p>
+      <h2>Professional Background</h2>
+      <p>17 years in major U.S. law firms, including eight as partner.</p>
+      <h2>Education</h2>
+      <ul>
+        <li>Georgetown University Law Center</li>
+        <li>Getúlio Vargas Foundation</li>
+        <li>University of São Paulo Law School</li>
+      </ul>
+    </div>
+  );
 };
+
+export default Home;
