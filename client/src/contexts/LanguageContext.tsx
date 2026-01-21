@@ -33,9 +33,9 @@ export const translations: Translations = {
   // About Section
   "about.title": { EN: "About", ES: "Sobre", PT: "Sobre" },
   "about.description": {
-    EN: "Erica Franzetti is an international arbitrator and counsel with extensive experience in international commercial and investor-state arbitration. She has been involved in more than 100 international arbitrations under the rules of major arbitral institutions, including ICSID, ICC, ICDR, LCIA, SCC, CAM-CCBC, and CAM Santiago, as well as ad hoc arbitrations. Her practice focuses on disputes in the energy, infrastructure, construction, and mining sectors, with particular expertise in Latin America.",
-    ES: "Erica Franzetti es árbitro internacional y abogada con amplia experiencia en arbitraje comercial internacional y arbitraje inversionista-Estado. Ha participado en más de 100 arbitrajes internacionales bajo las reglas de las principales instituciones arbitrales, incluyendo CIADI, CCI, ICDR, LCIA, SCC, CAM-CCBC y CAM Santiago, así como arbitrajes ad hoc. Su práctica se centra en disputas en los sectores de energía, infraestructura, construcción y minería, con especial experiencia en América Latina.",
-    PT: "Erica Franzetti é árbitro internacional e advogada com vasta experiência em arbitragem comercial internacional e arbitragem investidor-Estado. Ela participou de mais de 100 arbitragens internacionais sob as regras das principais instituições arbitrais, incluindo ICSID, ICC, ICDR, LCIA, SCC, CAM-CCBC e CAM Santiago, bem como arbitragens ad hoc. Sua prática concentra-se em disputas nos setores de energia, infraestrutura, construção e mineração, com especial experiência na América Latina."
+    EN: "Erica Franzetti is an international arbitrator and counsel with extensive experience in international commercial and investor-state arbitration. She has been involved in more than 100 international arbitrations under various rules (ICC, ICSID, UNCITRAL, AAA/ICDR, SCC, LCIA) and has served as counsel, co-arbitrator, and sole arbitrator in disputes involving parties from Latin America, Europe, Africa, and Asia.",
+    ES: "Erica Franzetti es árbitro internacional y abogada con amplia experiencia en arbitraje comercial internacional y arbitraje inversionista-Estado. Ha participado en más de 100 arbitrajes internacionales bajo diversas reglas (ICC, ICSID, UNCITRAL, AAA/ICDR, SCC, LCIA) y ha actuado como abogada, co-árbitro y árbitro único en disputas que involucran partes de América Latina, Europa, África y Asia.",
+    PT: "Erica Franzetti é árbitro internacional e advogada com vasta experiência em arbitragem comercial internacional e arbitragem investidor-Estado. Ela participou de mais de 100 arbitragens internacionais sob várias regras (ICC, ICSID, UNCITRAL, AAA/ICDR, SCC, LCIA) e atuou como advogada, co-árbitro e árbitro único em disputas envolvendo partes da América Latina, Europa, África e Ásia."
   },
   
   // Section Titles
@@ -77,6 +77,7 @@ export const translations: Translations = {
   
   // Footer
   "footer.downloadCV": { EN: "Download CV", ES: "Descargar CV", PT: "Baixar CV" },
+  "footer.downloadVCard": { EN: "Download V-Card", ES: "Descargar V-Card", PT: "Baixar V-Card" },
   "footer.disclaimer": { EN: "Disclaimer", ES: "Aviso Legal", PT: "Aviso Legal" },
   "footer.privacy": { EN: "Privacy Policy", ES: "Política de Privacidad", PT: "Política de Privacidade" },
   "footer.cookies": { EN: "Cookies Policy", ES: "Política de Cookies", PT: "Política de Cookies" },
@@ -89,11 +90,8 @@ export const translations: Translations = {
   
   // CV Links
   "footer.cvEnglish": { EN: "CV-English", ES: "CV-Inglés", PT: "CV-Inglês" },
-  "footer.cvSpanish": { EN: "CV-Spanish", ES: "CV-Español", PT: "CV-Espanhol" },
-  "footer.cvPortuguese": { EN: "CV-Portuguese", ES: "CV-Portugués", PT: "CV-Português" },
-  "footer.cvEnglishUnavailable": { EN: "English CV unavailable", ES: "CV en inglés no disponible", PT: "CV em inglês indisponível" },
-  "footer.cvSpanishUnavailable": { EN: "Spanish CV unavailable", ES: "CV en español no disponible", PT: "CV em espanhol indisponível" },
-  "footer.cvPortugueseUnavailable": { EN: "Portuguese CV unavailable", ES: "CV en portugués no disponible", PT: "CV em português indisponível" },
+  "footer.cvEnglishMini": { EN: "CV-English-Mini", ES: "CV-Inglés-Mini", PT: "CV-Inglês-Mini" },
+  "footer.vcard": { EN: "V-Card", ES: "V-Card", PT: "V-Card" },
 };
 
 interface LanguageContextType {
