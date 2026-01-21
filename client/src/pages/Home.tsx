@@ -8,30 +8,9 @@ const Home = () => {
         <Col>
           <h1>Education</h1>
           <ul>
-            <li>
-              <strong>Georgetown University</strong> - 
-              LL.M., International Studies, Distinction and Dean's List
-              <br />
-              Washington, D.C. • 2021
-              <br />
-              <a href="https://www.georgetown.edu">Website</a>
-            </li>
-            <li>
-              <strong>FGV</strong> - 
-              Postgraduate Specialization in Business and Economics Law
-              <br />
-              São Paulo, Brazil • 2020
-              <br />
-              <a href="https://www.fgv.br">Website</a>
-            </li>
-            <li>
-              <strong>Universidade de São Paulo (USP)</strong> - 
-              LL.B. (J.D. Equivalent)
-              <br />
-              São Paulo, Brazil • 2018
-              <br />
-              <a href="https://www.usp.br">Website</a>
-            </li>
+            <li>Georgetown University Law Center, LL.M. International Studies, Distinction and Dean's List, Washington D.C. (2008)</li>
+            <li>Getúlio Vargas Foundation, Postgraduate Specialization in Business and Economics Law, São Paulo, Brazil (2006)</li>
+            <li>University of São Paulo Law School, LL.B. (J.D. Equivalent), São Paulo, Brazil (2000)</li>
           </ul>
         </Col>
       </Row>
