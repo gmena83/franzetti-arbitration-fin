@@ -52,7 +52,7 @@ const professionalBackground = [
 
 const teachingExperience = [
   {
-    institution: "University of Miami",
+    institution: "University of Miami Law School",
     role: "Adjunct Professor",
     course: "International Arbitration in the Energy Sector",
     period: "2024-2025",
@@ -69,19 +69,19 @@ const education = [
   {
     degree: "LL.M.",
     institution: "Georgetown University Law Center",
-    note: "Dean's List",
+    note: "International Studies, Distinction and Dean's List",
     year: "2008",
   },
   {
-    degree: "Specialization",
+    degree: "Postgraduate Specialization",
     institution: "Getúlio Vargas Foundation",
     note: "Business and Economics Law",
     year: "2006",
   },
   {
     degree: "LL.B.",
-    institution: "University of São Paulo, Law School",
-    note: "",
+    institution: "University of São Paulo Law School",
+    note: "(J.D. Equivalent)",
     year: "2000",
   },
 ];
