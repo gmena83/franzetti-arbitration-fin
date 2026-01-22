@@ -14,6 +14,8 @@ import Disclaimer from "./pages/Disclaimer";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CookiesPolicy from "./pages/CookiesPolicy";
 import CVUpload from "./pages/CVUpload";
+import Admin from "./pages/Admin";
+import ProtectedRoute from "./components/ProtectedRoute";
 import Layout from "./components/Layout";
 
 function Router() {
@@ -26,6 +28,11 @@ function Router() {
         <Route path="/thought-leadership" component={ThoughtLeadership} />
         <Route path="/contact" component={Contact} />
         <Route path="/cv-upload" component={CVUpload} />
+        <Route path="/admin">
+          <ProtectedRoute>
+            <Admin />
+          </ProtectedRoute>
+        </Route>
         <Route path="/disclaimer" component={Disclaimer} />
         <Route path="/privacy-policy" component={PrivacyPolicy} />
         <Route path="/cookies-policy" component={CookiesPolicy} />

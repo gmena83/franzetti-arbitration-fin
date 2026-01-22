@@ -1,0 +1,449 @@
+{
+    "translations": {
+        "nav.profile": {
+            "EN": "PROFILE",
+            "ES": "PERFIL",
+            "PT": "PERFIL"
+        },
+        "nav.expertise": {
+            "EN": "EXPERIENCE",
+            "ES": "EXPERIENCIA",
+            "PT": "EXPERIÊNCIA"
+        },
+        "nav.thoughtLeadership": {
+            "EN": "THOUGHT LEADERSHIP",
+            "ES": "LIDERAZGO INTELECTUAL",
+            "PT": "LIDERANÇA INTELECTUAL"
+        },
+        "nav.contact": {
+            "EN": "CONTACT",
+            "ES": "CONTACTO",
+            "PT": "CONTATO"
+        },
+        "hero.title": {
+            "EN": "Independent Arbitrator & Counsel",
+            "ES": "Árbitro Internacional y Abogada.",
+            "PT": "Árbitro Internacional e Advogada."
+        },
+        "hero.subtitle": {
+            "EN": "Resolving and preventing disputes with integrity, efficiency, and rigor.",
+            "ES": "Resolviendo y previniendo disputas con integridad, eficiencia y rigor.",
+            "PT": "Resolvendo e prevenindo disputas com integridade, eficiência e rigor."
+        },
+        "about.title": {
+            "EN": "About",
+            "ES": "Sobre",
+            "PT": "Sobre"
+        },
+        "about.description": {
+            "EN": "Erica Franzetti is an independent arbitrator and international disputes counsel. She now focuses her practice on serving as an independent arbitrator in complex cross-border disputes and on advising clients on dispute strategy, enforcement, and investment protection.",
+            "ES": "Erica Franzetti es árbitro internacional y abogada de disputas internacionales. Ahora enfoca su práctica en servir como árbitro independiente en disputas transfronterizas complejas y en asesorar a clientes sobre estrategia de disputas, ejecución y protección de inversiones.",
+            "PT": "Erica Franzetti é árbitro internacional e advogada de disputas internacionais. Ela agora foca sua prática em servir como árbitro independiente em disputas transfronteiriças complexas e em aconselhar clientes sobre estratégia de disputas, execução e proteção de investimentos."
+        },
+        "section.professionalBackground": {
+            "EN": "Professional Background",
+            "ES": "Trayectoria Profesional",
+            "PT": "Trajetória Profissional"
+        },
+        "section.academia": {
+            "EN": "Academia",
+            "ES": "Academia",
+            "PT": "Academia"
+        },
+        "section.education": {
+            "EN": "Education",
+            "ES": "Educación",
+            "PT": "Educação"
+        },
+        "section.professionalAssociations": {
+            "EN": "Professional Associations",
+            "ES": "Asociaciones Profesionales",
+            "PT": "Associações Profissionais"
+        },
+        "section.barAdmissions": {
+            "EN": "Bar Admissions",
+            "ES": "Colegiaturas",
+            "PT": "Inscrições na Ordem"
+        },
+        "section.languages": {
+            "EN": "Languages",
+            "ES": "Idiomas",
+            "PT": "Idiomas"
+        },
+        "section.whatOthersSay": {
+            "EN": "What Others Say",
+            "ES": "Lo Que Dicen Otros",
+            "PT": "O Que Outros Dizem"
+        },
+        "expertise.title": {
+            "EN": "Experience",
+            "ES": "Experiencia",
+            "PT": "Experiência"
+        },
+        "expertise.subtitle": {
+            "EN": "Proven track record across diverse sectors and dispute types",
+            "ES": "Trayectoria comprobada en diversos sectores y tipos de disputas",
+            "PT": "Trajetória comprovada em diversos setores e tipos de disputas"
+        },
+        "thoughtLeadership.title": {
+            "EN": "Thought Leadership",
+            "ES": "Liderazgo Intelectual",
+            "PT": "Liderança Intelectual"
+        },
+        "thoughtLeadership.recognition": {
+            "EN": "Recognition",
+            "ES": "Reconocimientos",
+            "PT": "Reconhecimentos"
+        },
+        "thoughtLeadership.speaking": {
+            "EN": "Speaking Engagements",
+            "ES": "Conferencias",
+            "PT": "Palestras"
+        },
+        "thoughtLeadership.publications": {
+            "EN": "Publications",
+            "ES": "Publicaciones",
+            "PT": "Publicações"
+        },
+        "contact.title": {
+            "EN": "Contact",
+            "ES": "Contacto",
+            "PT": "Contato"
+        },
+        "contact.subtitle": {
+            "EN": "Get in touch to discuss how I can assist with your arbitration needs.",
+            "ES": "Póngase en contacto para discutir cómo puedo ayudarle con sus necesidades de arbitraje.",
+            "PT": "Entre em contato para discutir como posso ajudá-lo com suas necessidades de arbitragem."
+        },
+        "contact.name": {
+            "EN": "Name",
+            "ES": "Nombre",
+            "PT": "Nome"
+        },
+        "contact.email": {
+            "EN": "Email",
+            "ES": "Correo Electrónico",
+            "PT": "E-mail"
+        },
+        "contact.role": {
+            "EN": "Role / Organization",
+            "ES": "Cargo / Organización",
+            "PT": "Cargo / Organização"
+        },
+        "contact.message": {
+            "EN": "Message",
+            "ES": "Mensaje",
+            "PT": "Mensagem"
+        },
+        "contact.send": {
+            "EN": "Send Message",
+            "ES": "Enviar Mensaje",
+            "PT": "Enviar Mensagem"
+        },
+        "contact.sending": {
+            "EN": "Sending...",
+            "ES": "Enviando...",
+            "PT": "Enviando..."
+        },
+        "footer.downloadCV": {
+            "EN": "Download CV",
+            "ES": "Descargar CV",
+            "PT": "Baixar CV"
+        },
+        "footer.downloadVCard": {
+            "EN": "Download V-Card",
+            "ES": "Descargar V-Card",
+            "PT": "Baixar V-Card"
+        },
+        "footer.vcardUrl": {
+            "EN": "https://qrco.de/bgZDuV",
+            "ES": "https://qrco.de/bgZDuV",
+            "PT": "https://qrco.de/bgZDuV"
+        },
+        "footer.disclaimer": {
+            "EN": "Disclaimer",
+            "ES": "Aviso Legal",
+            "PT": "Aviso Legal"
+        },
+        "footer.privacy": {
+            "EN": "Privacy Policy",
+            "ES": "Política de Privacidad",
+            "PT": "Política de Privacidade"
+        },
+        "footer.cookies": {
+            "EN": "Cookies Policy",
+            "ES": "Política de Cookies",
+            "PT": "Política de Cookies"
+        },
+        "footer.rights": {
+            "EN": "All rights reserved.",
+            "ES": "Todos los derechos reservados.",
+            "PT": "Todos os direitos reservados."
+        },
+        "lang.english": {
+            "EN": "English",
+            "ES": "Inglés",
+            "PT": "Inglês"
+        },
+        "lang.spanish": {
+            "EN": "Spanish",
+            "ES": "Español",
+            "PT": "Espanhol"
+        },
+        "lang.portuguese": {
+            "EN": "Portuguese",
+            "ES": "Portugués",
+            "PT": "Português"
+        },
+        "footer.cvEnglish": {
+            "EN": "CV-English",
+            "ES": "CV-Inglés",
+            "PT": "CV-Inglês"
+        },
+        "footer.cvEnglishMini": {
+            "EN": "CV-English-Mini",
+            "ES": "CV-Inglés-Mini",
+            "PT": "CV-Inglês-Mini"
+        },
+        "footer.vcard": {
+            "EN": "V-Card",
+            "ES": "V-Card",
+            "PT": "V-Card"
+        }
+    },
+    "content": {
+        "professionalBackground": [
+            {
+                "title": "Franzetti Arbitration",
+                "location": "Washington, DC",
+                "role": "Founder and Principal",
+                "period": "Jan. 2026 – Present",
+                "logo": "/images/Franzetti-vertical-dark.png",
+                "url": "https://www.franzettiarbitration.com"
+            },
+            {
+                "title": "King & Spalding LLP",
+                "location": "Washington, DC and Miami",
+                "role": "Partner",
+                "period": "Sept. 2021 – Jan. 2026",
+                "logo": "/images/king-spalding-logo.png",
+                "url": "https://www.kslaw.com"
+            },
+            {
+                "title": "Dechert LLP",
+                "location": "Washington, DC",
+                "role": "Partner / Counsel",
+                "period": "Sept. 2015 – Sept. 2021",
+                "logo": "/images/dechert-logo-new.png",
+                "url": "https://www.dechert.com"
+            },
+            {
+                "title": "Weil, Gotshal & Manges LLP",
+                "location": "Washington, DC",
+                "role": "Associate",
+                "period": "Jul. 2012 – Sept. 2015",
+                "logo": "/images/weil-logo-new.png",
+                "url": "https://www.weil.com"
+            },
+            {
+                "title": "Crowell & Moring LLP",
+                "location": "Washington, DC",
+                "role": "Associate",
+                "period": "Sept. 2008 – Jul. 2012",
+                "logo": "/images/crowell-logo-new.png",
+                "url": "https://www.crowell.com"
+            },
+            {
+                "title": "Wald & Advogados Associados",
+                "location": "São Paulo, Brazil",
+                "role": "Associate",
+                "period": "Jul. 2001 – Sept. 2006",
+                "logo": "/images/wald-logo-new.png",
+                "url": "https://www.wald.com.br"
+            },
+            {
+                "title": "Dinamarco & Rossi Advocacia",
+                "location": "São Paulo, Brazil",
+                "role": "Associate / Intern",
+                "period": "Jul. 1997 – Jul. 2001",
+                "logo": "/images/dinamarco-logo-new.png",
+                "url": "https://www.dinamarco.com.br/"
+            }
+        ],
+        "academia": [
+            {
+                "institution": "University of Miami Law School",
+                "role": "Adjunct Professor",
+                "course": "International Arbitration in the Energy Sector",
+                "period": "2024-2025",
+                "logo": "/images/miami-logo-new.png",
+                "url": "https://www.law.miami.edu"
+            },
+            {
+                "institution": "Georgetown University Law Center",
+                "role": "Adjunct Professor",
+                "course": "Investor-State Dispute Resolution",
+                "period": "2017-2022",
+                "logo": "/images/georgetown-logo-new.png",
+                "url": "https://www.law.georgetown.edu"
+            }
+        ],
+        "education": [
+            {
+                "degree": "LL.M.",
+                "institution": "Georgetown University Law Center",
+                "note": "International Studies, Distinction and Dean’s List",
+                "location": "Washington D.C.",
+                "year": "2008",
+                "logo": "/images/georgetown-logo-new.png",
+                "url": "https://www.law.georgetown.edu"
+            },
+            {
+                "degree": "Postgraduate Specialization",
+                "institution": "Getúlio Vargas Foundation",
+                "note": "in Business and Economics Law",
+                "location": "São Paulo, Brazil",
+                "year": "2006",
+                "logo": "/images/fgv-logo.png",
+                "url": "https://portal.fgv.br"
+            },
+            {
+                "degree": "LL.B.",
+                "institution": "University of São Paulo Law School",
+                "note": "(J.D. Equivalent)",
+                "location": "São Paulo, Brazil",
+                "year": "2000",
+                "logo": "/images/usp-logo.png",
+                "url": "https://www.direito.usp.br"
+            }
+        ],
+        "professionalAssociations": [
+            {
+                "name": "Panel of Arbitrators of the International Centre of Dispute Resolution (ICDR)",
+                "logo": "/images/logos/aaa-icdr.jpg",
+                "url": "https://www.icdr.org"
+            },
+            {
+                "name": "Panel of Arbitrators of the American Arbitration Association (AAA)",
+                "logo": "/images/logos/aaa-icdr.jpg",
+                "url": "https://www.adr.org"
+            },
+            {
+                "name": "Panel of Arbitrators of the Hong Kong International Arbitration Centre (HKIAC)",
+                "logo": "/images/cam-b3-logo.png",
+                "url": "https://www.hkiac.org"
+            },
+            {
+                "name": "Panel of Arbitrators of the Brazil-Canada Chamber of Commerce (CAM-CCBC)",
+                "logo": "/images/logos/cam-ccbc.png",
+                "url": "https://ccbc.org.br/cam-ccbc-centro-arbitragem-mediacao"
+            },
+            {
+                "name": "Panel of Arbitrators of the Capital Market Chamber of B3 S.A – Brasil, Bolsa, Balcão (CAM)",
+                "logo": "/images/hkiac-logo.png",
+                "url": "https://www.b3.com.br"
+            },
+            {
+                "name": "Arbitration & Mediation Committee of the International Court of Commerce (ICC) Brazil",
+                "logo": "/images/logos/icc.png",
+                "url": "https://www.iccbrasil.org/en/dispute-resolution/"
+            },
+            {
+                "name": "International Bar Association – Dispute Resolution Section",
+                "logo": "/images/logos/iba.png",
+                "url": "https://www.ibanet.org"
+            },
+            {
+                "name": "Arbitral Women",
+                "logo": "/images/logos/arbitralwomen.jpg",
+                "url": "https://www.arbitralwomen.org"
+            },
+            {
+                "name": "Brazilian Arbitration Committee (CBAR)",
+                "logo": "/images/logos/cbar.jpg",
+                "url": "https://cbar.org.br"
+            },
+            {
+                "name": "Miami International Arbitration Society (MIAS)",
+                "logo": "/images/logos/mias.jpg",
+                "url": "https://www.mias.org/arbitration-in-miami"
+            }
+        ],
+        "barAdmissions": [
+            {
+                "name": "District of Columbia",
+                "logo": "/images/logos/dcbar.jpg",
+                "url": "https://www.dcbar.org"
+            },
+            {
+                "name": "New York",
+                "logo": "/images/logos/nysba.jpg",
+                "url": "https://nysba.org"
+            },
+            {
+                "name": "Brazil",
+                "logo": "/images/logos/oab.jpg",
+                "url": "https://www.oab.org.br"
+            }
+        ],
+        "carouselQuotes": [
+            {
+                "quote": "Erica is a superb cross-examiner and a fantastic lawyer. She's also very detail-oriented and thorough.",
+                "source": "Chambers USA"
+            },
+            {
+                "quote": "Érica was very impressive in handling a complex case.",
+                "source": "Chambers USA"
+            },
+            {
+                "quote": "Brazilian lawyer Érica Franzetti is much admired by the market for her sound record and expertise advising international clients in Brazil on complex demands, including sophisticated M&A-related arbitration cases, counsel on claiming damages and the chairing of arbitral tribunals.",
+                "source": "Chambers Brazil"
+            },
+            {
+                "quote": "Erica is a superstar who stands out for her extremely well-versed approach in high-stakes international disputes.",
+                "source": "The Legal 500"
+            },
+            {
+                "quote": "I think really highly of her, she's fabulous. She comes across as very intelligent and capable, and she's always really professional and personable.",
+                "source": "Chambers USA"
+            },
+            {
+                "quote": "Her technical skills, experience in the field, relentless dedication to client service and commercial mindset are really impressive.",
+                "source": "Lexology"
+            }
+        ],
+        "about": {
+            "p1": "Erica Franzetti is an independent arbitrator and international disputes counsel. With a 25-year career at market-leading law firms, she has a long standing track record in commercial and investor-state arbitration across a wide range of industries and jurisdictions. She focuses her practice on serving as an independent arbitrator in complex cross-border disputes and on advising clients on dispute strategy, enforcement, and investment protection. Her work has particular emphasis on energy and infrastructure matters connected to North America, Latin America, and Lusophone jurisdictions.",
+            "quote1": "Erica is a superstar who stands out for her extremely well-versed approach in high-stakes international disputes.",
+            "quoteSource1": "The Legal 500",
+            "p2": "Erica serves as arbitrator in U.S. and international disputes, including as chair of arbitral tribunals. She draws on extensive experience across civil and common law traditions to manage proceedings efficiently, fairly, and with procedural rigor.",
+            "serviceList1": [
+                "Experience under ICC, AAA, ICDR, LCIA, ICSID, and UNCITRAL rules",
+                "Extensive familiarity with arbitral procedure, tribunal management, and decision-writing",
+                "Practical case management informed by decades as counsel in complex, high-value disputes",
+                "Linguistic and cultural fluency required to manage cross-border proceedings"
+            ],
+            "p3": "Her counsel services include:",
+            "serviceList2": [
+                "Early-stage dispute prevention and risk assessment",
+                "Strategic guidance on dispute management and procedural positioning",
+                "Investment treaty analysis and protection",
+                "Post-award and enforcement strategy across jurisdictions"
+            ],
+            "quote2": "I think really highly of her, she's fabulous. She comes across as very intelligent and capable, and she's always really professional and personable.",
+            "quoteSource2": "Chambers USA",
+            "p4": "Erica has been involved in arbitration proceedings spanning jurisdictions including Argentina, Brazil, Canada, Chile, Colombia, Croatia, the Dominican Republic, Ghana, Hungary, Mexico, Peru, the Philippines, and the United States. Her deep experience covers a wide range of disputes across sectors such as:",
+            "sectorList": [
+                "Commercial contracts, including hotel management, distribution, intellectual property and matters under the Convention on Contracts for the International Sale of Goods (CISG)",
+                "Construction, concessions and infrastructure, including telecommunications, power generation and highways",
+                "Corporate governance and accountability, mergers and acquisitions (M&A), shareholder and joint venture disputes, and venture capital investments",
+                "Energy and natural resources, including mining, oil and gas, LNG pricing, electricity generation and nuclear energy"
+            ],
+            "quote3": "Her technical skills, experience in the field, relentless dedication to client service and commercial mindset are really impressive.",
+            "quoteSource3": "Lexology",
+            "p5": "Erica has received top-tier recognition from leading legal directories, including Chambers & Partners, The Legal 500, Lexology (formerly known as Who's Who Legal), Latin Lawyer, and Best Lawyers, and has been named one of Latin America's Top 100 Female Lawyers by Latinvex.",
+            "p6": "She regularly publishes and speaks on international commercial arbitration, investor-state arbitration, and dispute resolution strategy at international conferences and professional forums, and has teaching experience at leading academic institutions, such as the Georgetown University Law Center and the University of Miami Law School.",
+            "p7": "Before founding her own practice, Erica spent 17 years in major U.S. law firms, eight as partner in globally recognized international arbitration teams. She is admitted to practice in Washington, D.C., New York, and Brazil, and works fluently in English, Spanish, and Portuguese."
+        }
+    }
+}

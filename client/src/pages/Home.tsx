@@ -14,227 +14,23 @@ import { useLanguage } from "@/contexts/LanguageContext";
  * - Languages ordered: English, Spanish, Portuguese
  */
 
-const professionalBackground = [
-  {
-    title: "Franzetti Arbitration",
-    location: "Washington, DC",
-    role: "Founder and Principal",
-    period: "Jan. 2026 – Present",
-    logo: "/images/Franzetti-vertical-dark.png",
-    url: "https://www.franzettiarbitration.com",
-  },
-  {
-    title: "King & Spalding LLP",
-    location: "Washington, DC and Miami",
-    role: "Partner",
-    period: "Sept. 2021 – Jan. 2026",
-    logo: "/images/king-spalding-logo.png",
-    url: "https://www.kslaw.com",
-  },
-  {
-    title: "Dechert LLP",
-    location: "Washington, DC",
-    role: "Partner / Counsel",
-    period: "Sept. 2015 – Sept. 2021",
-    logo: "/images/dechert-logo-new.png",
-    url: "https://www.dechert.com",
-  },
-  {
-    title: "Weil, Gotshal & Manges LLP",
-    location: "Washington, DC",
-    role: "Associate",
-    period: "Jul. 2012 – Sept. 2015",
-    logo: "/images/weil-logo-new.png",
-    url: "https://www.weil.com",
-  },
-  {
-    title: "Crowell & Moring LLP",
-    location: "Washington, DC",
-    role: "Associate",
-    period: "Sept. 2008 – Jul. 2012",
-    logo: "/images/crowell-logo-new.png",
-    url: "https://www.crowell.com",
-  },
-  {
-    title: "Wald & Advogados Associados",
-    location: "São Paulo, Brazil",
-    role: "Associate",
-    period: "Jul. 2001 – Sept. 2006",
-    logo: "/images/wald-logo-new.png",
-    url: "https://www.wald.com.br",
-  },
-  {
-    title: "Dinamarco & Rossi Advocacia",
-    location: "São Paulo, Brazil",
-    role: "Associate / Intern",
-    period: "Jul. 1997 – Jul. 2001",
-    logo: "/images/dinamarco-logo-new.png",
-    url: "https://www.dinamarco.com.br/",
-  },
-];
+import siteContent from "@/data/siteContent.json";
 
-// Academia: "Professor" without "Adjunct" prefix as per client request
-const academia = [
-  {
-    institution: "University of Miami Law School",
-    role: "Adjunct Professor",
-    course: "International Arbitration in the Energy Sector",
-    period: "2024-2025",
-    logo: "/images/miami-logo-new.png",
-    url: "https://www.law.miami.edu",
-  },
-  {
-    institution: "Georgetown University Law Center",
-    role: "Adjunct Professor",
-    course: "Investor-State Dispute Resolution",
-    period: "2017-2022",
-    logo: "/images/georgetown-logo-new.png",
-    url: "https://www.law.georgetown.edu",
-  },
-];
+const {
+  professionalBackground,
+  academia,
+  education,
+  professionalAssociations,
+  barAdmissions,
+  carouselQuotes,
+  about
+} = siteContent.content;
 
-const education = [
-  {
-    degree: "LL.M.",
-    institution: "Georgetown University Law Center",
-    note: "International Studies, Distinction and Dean’s List",
-    location: "Washington D.C.",
-    year: "2008",
-    logo: "/images/georgetown-logo-new.png",
-    url: "https://www.law.georgetown.edu",
-  },
-  {
-    degree: "Postgraduate Specialization",
-    institution: "Getúlio Vargas Foundation",
-    note: "in Business and Economics Law",
-    location: "São Paulo, Brazil",
-    year: "2006",
-    logo: "/images/fgv-logo.png",
-    url: "https://portal.fgv.br",
-  },
-  {
-    degree: "LL.B.",
-    institution: "University of São Paulo Law School",
-    note: "(J.D. Equivalent)",
-    location: "São Paulo, Brazil",
-    year: "2000",
-    logo: "/images/usp-logo.png",
-    url: "https://www.direito.usp.br",
-  },
-];
+/* Home Page - Franzetti Arbitration
+ * Uses content from siteContent.json
+ */
 
-// Professional Associations with LinkedIn-style logos and URLs
-const professionalAssociations = [
-  {
-    name: "Panel of Arbitrators of the International Centre of Dispute Resolution (ICDR)",
-    logo: "/images/logos/aaa-icdr.jpg",
-    url: "https://www.icdr.org"
-  },
-  {
-    name: "Panel of Arbitrators of the American Arbitration Association (AAA)",
-    logo: "/images/logos/aaa-icdr.jpg",
-    url: "https://www.adr.org"
-  },
-  {
-    name: "Panel of Arbitrators of the Hong Kong International Arbitration Centre (HKIAC)",
-    logo: "/images/cam-b3-logo.png",
-    url: "https://www.hkiac.org"
-  },
-  {
-    name: "Panel of Arbitrators of the Brazil-Canada Chamber of Commerce (CAM-CCBC)",
-    logo: "/images/logos/cam-ccbc.png",
-    url: "https://ccbc.org.br/cam-ccbc-centro-arbitragem-mediacao"
-  },
-  {
-    name: "Panel of Arbitrators of the Capital Market Chamber of B3 S.A – Brasil, Bolsa, Balcão (CAM)",
-    logo: "/images/hkiac-logo.png",
-    url: "https://www.b3.com.br"
-  },
-  {
-    name: "Arbitration & Mediation Committee of the International Court of Commerce (ICC) Brazil",
-    logo: "/images/logos/icc.png",
-    url: "https://www.iccbrasil.org/en/dispute-resolution/"
-  },
-  {
-    name: "International Bar Association – Dispute Resolution Section",
-    logo: "/images/logos/iba.png",
-    url: "https://www.ibanet.org"
-  },
-
-  {
-    name: "Arbitral Women",
-    logo: "/images/logos/arbitralwomen.jpg",
-    url: "https://www.arbitralwomen.org"
-  },
-  {
-    name: "Brazilian Arbitration Committee (CBAR)",
-    logo: "/images/logos/cbar.jpg",
-    url: "https://cbar.org.br"
-  },
-  {
-    name: "Miami International Arbitration Society (MIAS)",
-    logo: "/images/logos/mias.jpg",
-    url: "https://www.mias.org/arbitration-in-miami"
-  },
-];
-
-const barAdmissions = [
-  { name: "District of Columbia", logo: "/images/logos/dcbar.jpg", url: "https://www.dcbar.org" },
-  { name: "New York", logo: "/images/logos/nysba.jpg", url: "https://nysba.org" },
-  { name: "Brazil", logo: "/images/logos/oab.jpg", url: "https://www.oab.org.br" },
-];
-
-// Languages reordered: English, Spanish, Portuguese as per client request
 const languages = ["English", "Spanish", "Portuguese"];
-
-// Testimonials - three quote cards with institution logos
-// Carousel quotes - now includes ALL quotes (original carousel + embedded quotes from About section)
-const carouselQuotes = [
-  // Original carousel quotes
-  {
-    quote: "Erica is a superb cross-examiner and a fantastic lawyer. She's also very detail-oriented and thorough.",
-    source: "Chambers USA",
-  },
-  {
-    quote: "Érica was very impressive in handling a complex case.",
-    source: "Chambers USA",
-  },
-  {
-    quote: "Brazilian lawyer Érica Franzetti is much admired by the market for her sound record and expertise advising international clients in Brazil on complex demands, including sophisticated M&A-related arbitration cases, counsel on claiming damages and the chairing of arbitral tribunals.",
-    source: "Chambers Brazil",
-  },
-  // Previously embedded quotes from About section
-  {
-    quote: "Erica is a superstar who stands out for her extremely well-versed approach in high-stakes international disputes.",
-    source: "The Legal 500",
-  },
-  {
-    quote: "I think really highly of her, she's fabulous. She comes across as very intelligent and capable, and she's always really professional and personable.",
-    source: "Chambers USA",
-  },
-  {
-    quote: "Her technical skills, experience in the field, relentless dedication to client service and commercial mindset are really impressive.",
-    source: "Lexology",
-  },
-];
-
-const testimonials = [
-  {
-    quote: "Erica is a superstar who stands out for her extremely well-versed approach in high-stakes international disputes.",
-    source: "The Legal 500",
-    logo: "/images/logos/legal500-logo.png",
-  },
-  {
-    quote: "I think really highly of her, she's fabulous. She comes across as very intelligent and capable, and she's always really professional and personable.",
-    source: "Chambers USA",
-    logo: "/images/logos/chambers-usa.png",
-  },
-  {
-    quote: "Her technical skills, experience in the field, relentless dedication to client service and commercial mindset are really impressive.",
-    source: "Lexology",
-    logo: "/images/logos/lexology-logo.png",
-  },
-];
 
 // Hero Quotes Carousel Component - Compact with fixed height for hero section
 function HeroQuotesCarousel({ quotes }: { quotes: { quote: string; source: string }[] }) {
@@ -381,75 +177,51 @@ export default function Home() {
             </h2>
 
             <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
-              <p>
-                Erica Franzetti is an independent arbitrator and international disputes counsel. With a 25-year career at market-leading law firms, she has a long standing track record in commercial and investor-state arbitration across a wide range of industries and jurisdictions. She focuses her practice on serving as an independent arbitrator in complex cross-border disputes and on advising clients on dispute strategy, enforcement, and investment protection. Her work has particular emphasis on energy and infrastructure matters connected to North America, Latin America, and Lusophone jurisdictions.
-              </p>
-
+              <p>{about.p1}</p>
               {/* Embedded Quote 1 - The Legal 500 */}
               <div className="my-8 ml-[12.5%] mr-[12.5%] pl-6 border-l-4 border-aquamarine">
-                <p className="text-gray-700 italic text-lg">
-                  "Erica is a superstar who stands out for her extremely well-versed approach in high-stakes international disputes."
-                </p>
-                <p className="text-sm text-gray-500 font-medium mt-2">– <em>The Legal 500</em></p>
+                <p className="text-gray-700 italic text-lg">"{about.quote1}"</p>
+                <p className="text-sm text-gray-500 font-medium mt-2">– <em>{about.quoteSource1}</em></p>
               </div>
 
-              <p>
-                Erica serves as arbitrator in U.S. and international disputes, including as chair of arbitral tribunals. She draws on extensive experience across civil and common law traditions to manage proceedings efficiently, fairly, and with procedural rigor.
-              </p>
+              <p>{about.p2}</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Experience under ICC, AAA, ICDR, LCIA, ICSID, and UNCITRAL rules</li>
-                <li>Extensive familiarity with arbitral procedure, tribunal management, and decision-writing</li>
-                <li>Practical case management informed by decades as counsel in complex, high-value disputes</li>
-                <li>Linguistic and cultural fluency required to manage cross-border proceedings</li>
+                {about.serviceList1.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
               </ul>
 
-              <p className="mt-6">
-                Her counsel services include:
-              </p>
+              <p className="mt-6">{about.p3}</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Early-stage dispute prevention and risk assessment</li>
-                <li>Strategic guidance on dispute management and procedural positioning</li>
-                <li>Investment treaty analysis and protection</li>
-                <li>Post-award and enforcement strategy across jurisdictions</li>
+                {about.serviceList2.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
               </ul>
 
               {/* Embedded Quote 2 - Chambers USA */}
               <div className="my-8 ml-[12.5%] mr-[12.5%] pl-6 border-l-4 border-aquamarine">
-                <p className="text-gray-700 italic text-lg">
-                  "I think really highly of her, she's fabulous. She comes across as very intelligent and capable, and she's always really professional and personable."
-                </p>
-                <p className="text-sm text-gray-500 font-medium mt-2">– <em>Chambers USA</em></p>
+                <p className="text-gray-700 italic text-lg">"{about.quote2}"</p>
+                <p className="text-sm text-gray-500 font-medium mt-2">– <em>{about.quoteSource2}</em></p>
               </div>
 
-              <p>
-                Erica has been involved in arbitration proceedings spanning jurisdictions including Argentina, Brazil, Canada, Chile, Colombia, Croatia, the Dominican Republic, Ghana, Hungary, Mexico, Peru, the Philippines, and the United States. Her deep experience covers a wide range of disputes across sectors such as:
-              </p>
+              <p>{about.p4}</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Commercial contracts, including hotel management, distribution, intellectual property and matters under the Convention on Contracts for the International Sale of Goods (CISG)</li>
-                <li>Construction, concessions and infrastructure, including telecommunications, power generation and highways</li>
-                <li>Corporate governance and accountability, mergers and acquisitions (M&A), shareholder and joint venture disputes, and venture capital investments</li>
-                <li>Energy and natural resources, including mining, oil and gas, LNG pricing, electricity generation and nuclear energy</li>
+                {about.sectorList.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
               </ul>
 
               {/* Embedded Quote 3 - Lexology */}
               <div className="my-8 ml-[12.5%] mr-[12.5%] pl-6 border-l-4 border-aquamarine">
-                <p className="text-gray-700 italic text-lg">
-                  "Her technical skills, experience in the field, relentless dedication to client service and commercial mindset are really impressive."
-                </p>
-                <p className="text-sm text-gray-500 font-medium mt-2">– <em>Lexology</em></p>
+                <p className="text-gray-700 italic text-lg">"{about.quote3}"</p>
+                <p className="text-sm text-gray-500 font-medium mt-2">– <em>{about.quoteSource3}</em></p>
               </div>
 
-              <p>
-                Erica has received top-tier recognition from leading legal directories, including <em>Chambers & Partners</em>, <em>The Legal 500</em>, <em>Lexology</em> (formerly known as Who's Who Legal), <em>Latin Lawyer</em>, and <em>Best Lawyers</em>, and has been named one of Latin America's Top 100 Female Lawyers by <em>Latinvex</em>.
-              </p>
+              <p>{about.p5}</p>
 
-              <p>
-                She regularly publishes and speaks on international commercial arbitration, investor-state arbitration, and dispute resolution strategy at international conferences and professional forums, and has teaching experience at leading academic institutions, such as the Georgetown University Law Center and the University of Miami Law School.
-              </p>
+              <p>{about.p6}</p>
 
-              <p>
-                Before founding her own practice, Erica spent 17 years in major U.S. law firms, eight as partner in globally recognized international arbitration teams. She is admitted to practice in Washington, D.C., New York, and Brazil, and works fluently in English, Spanish, and Portuguese.
-              </p>
+              <p>{about.p7}</p>
             </div>
           </motion.div>
 
@@ -677,4 +449,4 @@ export default function Home() {
     </div>
   );
 }
- 
+

@@ -1,205 +1,121 @@
-import type { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
-import { getStore } from "@netlify/blobs";
-import busboy from "busboy";
-import path from "path";
-import { Readable } from "stream";
+import { Handler } from "@netlify/functions";
+import Busboy from "busboy";
+import axios from "axios";
 
-// Rate limiting storage (in-memory, resets on cold start)
-// Note: In serverless environments, functions can be cold-started frequently,
-// which means rate limiting may reset. For production, consider using a persistent
-// store like Redis or DynamoDB for more reliable rate limiting.
-const uploadCounts = new Map<string, { count: number; resetTime: number }>();
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const REPO_OWNER = process.env.REPO_OWNER;
+const REPO_NAME = process.env.REPO_NAME;
+const BRANCH = process.env.BRANCH || "main";
 
-const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes
-const RATE_LIMIT_MAX = 10;
+function parseMultipart(event: any): Promise<{ buffer: Buffer; filename: string }> {
+  return new Promise((resolve, reject) => {
+    const busboy = Busboy({
+      headers: event.headers,
+    });
 
-function checkRateLimit(ip: string): boolean {
-  const now = Date.now();
-  const record = uploadCounts.get(ip);
+    let fileBuffer: Buffer[] = [];
+    let fileName = "";
 
-  if (!record || now > record.resetTime) {
-    uploadCounts.set(ip, { count: 1, resetTime: now + RATE_LIMIT_WINDOW });
-    return true;
-  }
+    busboy.on("file", (fieldname, file, info) => {
+      const { filename } = info;
+      // If the client provided a target filename in a field, strictly we should use that, 
+      // but busboy event order isn't guaranteed (field vs file). 
+      // Admin.tsx sends "filename" as a field.
+      // However, for simplicity/robustness, we might rely on the client sending the file *with* the correct name 
+      // or just the fieldname.
+      // Let's capture the file content first.
 
-  if (record.count >= RATE_LIMIT_MAX) {
-    return false;
-  }
+      file.on("data", (data) => {
+        fileBuffer.push(data);
+      });
+    });
 
-  record.count++;
-  return true;
+    busboy.on("field", (fieldname, val) => {
+      if (fieldname === "filename") {
+        fileName = val;
+      }
+    });
+
+    busboy.on("finish", () => {
+      if (!fileName && !fileBuffer.length) {
+        reject(new Error("No file uploaded"));
+        return;
+      }
+      resolve({
+        buffer: Buffer.concat(fileBuffer),
+        filename: fileName,
+      });
+    });
+
+    busboy.on("error", (error: any) => reject(error));
+
+    busboy.write(event.body, event.isBase64Encoded ? "base64" : "binary");
+    busboy.end();
+  });
 }
 
-export const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
-  // Only allow POST
+const handler: Handler = async (event, context) => {
   if (event.httpMethod !== "POST") {
+    return { statusCode: 405, body: "Method Not Allowed" };
+  }
+
+  if (!GITHUB_TOKEN || !REPO_OWNER || !REPO_NAME) {
     return {
-      statusCode: 405,
-      body: JSON.stringify({ error: "Method not allowed" }),
+      statusCode: 500,
+      body: JSON.stringify({ error: "Server configuration error" }),
     };
   }
 
-  // Check rate limiting - require valid IP
-  const ip = event.headers["x-forwarded-for"]?.split(",")[0];
-  if (!ip) {
-    return {
-      statusCode: 400,
-      body: JSON.stringify({ error: "Unable to identify request source" }),
-    };
-  }
-  
-  if (!checkRateLimit(ip)) {
-    return {
-      statusCode: 429,
-      body: JSON.stringify({ error: "Too many upload requests, please try again later." }),
-    };
-  }
+  try {
+    const { buffer, filename } = await parseMultipart(event);
 
-  return new Promise((resolve) => {
-    try {
-      const contentType = event.headers["content-type"] || "";
-      
-      // Parse multipart form data
-      const bb = busboy({ 
-        headers: { "content-type": contentType },
-        limits: { fileSize: 10 * 1024 * 1024 } // 10MB
-      });
-
-      let fileData: Buffer | null = null;
-      let filename = "";
-      let mimeType = "";
-      let language = "";
-
-      bb.on("file", (fieldname, file, info) => {
-        filename = info.filename;
-        mimeType = info.mimeType;
-        
-        const chunks: Buffer[] = [];
-        file.on("data", (chunk) => {
-          chunks.push(chunk);
-        });
-        
-        file.on("end", () => {
-          fileData = Buffer.concat(chunks);
-        });
-      });
-
-      bb.on("field", (fieldname, val) => {
-        if (fieldname === "language") {
-          language = val;
-        }
-      });
-
-      bb.on("finish", async () => {
-        try {
-          // Validate inputs
-          if (!fileData) {
-            resolve({
-              statusCode: 400,
-              body: JSON.stringify({ error: "No file uploaded" }),
-            });
-            return;
-          }
-
-          if (mimeType !== "application/pdf") {
-            resolve({
-              statusCode: 400,
-              body: JSON.stringify({ error: "Only PDF files are allowed" }),
-            });
-            return;
-          }
-
-          if (!["english", "spanish", "portuguese"].includes(language)) {
-            resolve({
-              statusCode: 400,
-              body: JSON.stringify({ error: "Invalid language" }),
-            });
-            return;
-          }
-
-          // Generate safe filename
-          const timestamp = Date.now();
-          const ext = path.extname(filename);
-          const baseName = path.basename(filename, ext).replace(/[^a-zA-Z0-9-]/g, "_");
-          const safeFilename = `${baseName}-${timestamp}${ext}`;
-
-          // Store file in Netlify Blobs (persistent storage)
-          const store = getStore({
-            name: "cv-files",
-            siteID: context.site?.id || process.env.SITE_ID,
-            token: process.env.NETLIFY_TOKEN || context.token,
-          });
-
-          await store.set(safeFilename, fileData, {
-            metadata: {
-              contentType: "application/pdf",
-              language,
-              uploadedAt: new Date().toISOString(),
-            },
-          });
-
-          // Update cv.json in blobs
-          const cvConfigStore = getStore({
-            name: "cv-config",
-            siteID: context.site?.id || process.env.SITE_ID,
-            token: process.env.NETLIFY_TOKEN || context.token,
-          });
-
-          let cvData: Record<string, string> = {
-            english: "",
-            spanish: "",
-            portuguese: "",
-          };
-
-          try {
-            const existingData = await cvConfigStore.get("cv.json", { type: "json" });
-            if (existingData) {
-              cvData = existingData as Record<string, string>;
-            }
-          } catch (error) {
-            console.warn("cv.json not found in blobs, using defaults");
-          }
-
-          // Store the blob URL
-          cvData[language] = `/.netlify/blobs/cv-files/${safeFilename}`;
-          await cvConfigStore.setJSON("cv.json", cvData);
-
-          resolve({
-            statusCode: 200,
-            body: JSON.stringify({
-              success: true,
-              filename: safeFilename,
-              path: `/.netlify/blobs/cv-files/${safeFilename}`,
-            }),
-          });
-        } catch (error) {
-          console.error("Upload error:", error);
-          resolve({
-            statusCode: 500,
-            body: JSON.stringify({ error: "Upload failed" }),
-          });
-        }
-      });
-
-      bb.on("error", (error) => {
-        console.error("Busboy error:", error);
-        resolve({
-          statusCode: 500,
-          body: JSON.stringify({ error: "Upload processing failed" }),
-        });
-      });
-
-      // Convert base64 body to buffer and pipe to busboy
-      const bodyBuffer = Buffer.from(event.body || "", event.isBase64Encoded ? "base64" : "utf8");
-      const readable = Readable.from(bodyBuffer);
-      readable.pipe(bb);
-
-    } catch (error) {
-      console.error("Handler error:", error);
-      resolve({
-        statusCode: 500,
-        body: JSON.stringify({ error: "Internal server error" }),
-      });
+    if (!buffer || !filename) {
+      return { statusCode: 400, body: "Missing file or filename" };
     }
-  });
+
+    const filePath = `client/public/cv/${filename}`;
+
+    // 1. Get SHA if exists
+    const getFileUrl = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${filePath}?ref=${BRANCH}`;
+    let sha = "";
+
+    try {
+      const { data } = await axios.get(getFileUrl, {
+        headers: { Authorization: `Bearer ${GITHUB_TOKEN}` },
+      });
+      sha = data.sha;
+    } catch (e: any) {
+      // Ignore 404 (new file)
+      if (e.response?.status !== 404) throw e;
+    }
+
+    // 2. Commit file
+    const putUrl = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${filePath}`;
+    await axios.put(
+      putUrl,
+      {
+        message: `Update CV: ${filename} [${new Date().toISOString()}]`,
+        content: buffer.toString("base64"),
+        sha: sha || undefined,
+        branch: BRANCH,
+      },
+      {
+        headers: { Authorization: `Bearer ${GITHUB_TOKEN}` },
+      }
+    );
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ message: "CV uploaded successfully" }),
+    };
+
+  } catch (error: any) {
+    console.error("Upload error:", error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: "Failed to upload CV" }),
+    };
+  }
 };
+
+export { handler };
