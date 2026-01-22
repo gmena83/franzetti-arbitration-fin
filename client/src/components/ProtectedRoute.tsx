@@ -14,6 +14,7 @@ export default function ProtectedRoute({ children }: ProtectedRouteProps) {
     const [isAuthenticated, setIsAuthenticated] = useState(() => {
         return localStorage.getItem("adminAuth") === "true";
     });
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const [, setLocation] = useLocation();
@@ -23,12 +24,13 @@ export default function ProtectedRoute({ children }: ProtectedRouteProps) {
         // Using environment variable for password or fallback to a default for initial setup
         const correctPassword = import.meta.env.VITE_ADMIN_PASSWORD || "admin123";
 
-        if (password === correctPassword) {
+        // Simple check: Password must match. Email just needs to be present (or we could enforce a specific one)
+        if (password === correctPassword && email.trim() !== "") {
             localStorage.setItem("adminAuth", "true");
             setIsAuthenticated(true);
             setError("");
         } else {
-            setError("Incorrect password");
+            setError("Invalid credentials");
         }
     };
 
@@ -67,11 +69,22 @@ export default function ProtectedRoute({ children }: ProtectedRouteProps) {
                     </div>
                     <CardTitle className="text-2xl text-center font-serif text-charcoal">Admin Access</CardTitle>
                     <CardDescription className="text-center">
-                        Enter the password to access the content management dashboard.
+                        Sign in to manage the website content.
                     </CardDescription>
                 </CardHeader>
                 <form onSubmit={handleLogin}>
                     <CardContent className="space-y-4">
+                        <div className="space-y-2">
+                            <Label htmlFor="email">Email Address</Label>
+                            <Input
+                                id="email"
+                                type="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                placeholder="name@company.com"
+                                required
+                            />
+                        </div>
                         <div className="space-y-2">
                             <Label htmlFor="password">Password</Label>
                             <Input
@@ -87,7 +100,7 @@ export default function ProtectedRoute({ children }: ProtectedRouteProps) {
                     </CardContent>
                     <CardFooter>
                         <Button type="submit" className="w-full bg-charcoal hover:bg-gray-800 text-white">
-                            Login
+                            Sign In
                         </Button>
                     </CardFooter>
                 </form>
