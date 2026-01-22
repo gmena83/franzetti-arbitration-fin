@@ -14,6 +14,8 @@ import { useEffect, useState } from "react";
  * - Disclaimer, Privacy Policy, Cookies Policy
  */
 
+import siteContent from "@/data/siteContent.json";
+
 type CvLinks = {
   english?: string;
   englishMini?: string;
@@ -43,7 +45,9 @@ export default function Footer() {
         setCv(null);
       });
   }, []);
-  
+
+  const { contactInfo } = siteContent.content;
+
   const navLinks = [
     { label: t("nav.profile"), href: "/" },
     { label: t("nav.expertise"), href: "/cases" },
@@ -72,17 +76,17 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-      
+
       <div className="container py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Description */}
           <div className="lg:col-span-1">
             <p className="text-gray-200 text-sm leading-relaxed">
-              {language === "ES" 
+              {language === "ES"
                 ? "Servicios de arbitraje internacional y asesoría enfocados en disputas comerciales e inversionista-Estado."
                 : language === "PT"
-                ? "Serviços de arbitragem internacional e consultoria focados em disputas comerciais e investidor-Estado."
-                : "International arbitration and counsel services focused on commercial and investor-state disputes."}
+                  ? "Serviços de arbitragem internacional e consultoria focados em disputas comerciais e investidor-Estado."
+                  : "International arbitration and counsel services focused on commercial and investor-state disputes."}
             </p>
 
             {/* CV Downloads (from CMS) */}
@@ -164,7 +168,7 @@ export default function Footer() {
             <div className="space-y-3">
               {/* LinkedIn Personal Profile */}
               <a
-                href="https://www.linkedin.com/in/erica-franzetti-48a7b1a/"
+                href={contactInfo.linkedinPersonal}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-gray-200 hover:text-aquamarine transition-colors text-sm"
@@ -181,7 +185,7 @@ export default function Footer() {
               </a>
               {/* LinkedIn Business Profile */}
               <a
-                href="http://linkedin.com/company/franzettiarbitration"
+                href={contactInfo.linkedinCompany}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-gray-200 hover:text-aquamarine transition-colors text-sm"
@@ -198,19 +202,19 @@ export default function Footer() {
               </a>
               {/* Email with icon */}
               <a
-                href="mailto:efranzetti@franzettiarb.com"
+                href={`mailto:${contactInfo.email}`}
                 className="flex items-center gap-2 text-gray-200 hover:text-aquamarine transition-colors text-sm"
               >
                 <Mail className="w-5 h-5" />
-                efranzetti@franzettiarb.com
+                {contactInfo.email}
               </a>
               {/* Phone with icon */}
               <a
-                href="tel:+12027431132"
+                href={`tel:${contactInfo.phone.replace(/\s+/g, '')}`}
                 className="flex items-center gap-2 text-gray-200 hover:text-aquamarine transition-colors text-sm"
               >
                 <Phone className="w-5 h-5" />
-                +1 202 743 1132
+                {contactInfo.phone}
               </a>
             </div>
           </div>
