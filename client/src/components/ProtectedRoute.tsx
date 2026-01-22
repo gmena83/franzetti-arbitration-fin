@@ -21,16 +21,26 @@ export default function ProtectedRoute({ children }: ProtectedRouteProps) {
 
     const handleLogin = (e: React.FormEvent) => {
         e.preventDefault();
-        // Using environment variable for password or fallback to a default for initial setup
-        const correctPassword = import.meta.env.VITE_ADMIN_PASSWORD || "admin123";
 
-        // Simple check: Password must match. Email just needs to be present (or we could enforce a specific one)
-        if (password === correctPassword && email.trim() !== "") {
+        // Credentials hardcoded as per specific user request
+        // In a production app with sensitive data, these should be environment variables or server-side auth.
+        const allowedUsers = [
+            { email: "erica@franzettiarbitration.com", password: "FranArb26#" },
+            { email: "gonzalo@menatech.cloud", password: "FranArb26#" },
+            // Fallback for dev/existing env var if needed, or remove if strict strictness is required
+            // { email: "admin@franzettiarb.com", password: import.meta.env.VITE_ADMIN_PASSWORD || "admin123" }
+        ];
+
+        const validUser = allowedUsers.find(
+            u => u.email.toLowerCase() === email.toLowerCase() && u.password === password
+        );
+
+        if (validUser) {
             localStorage.setItem("adminAuth", "true");
             setIsAuthenticated(true);
             setError("");
         } else {
-            setError("Invalid credentials");
+            setError("Invalid email or password");
         }
     };
 
