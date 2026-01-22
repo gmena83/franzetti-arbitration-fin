@@ -374,12 +374,12 @@ export default function Cases() {
       <section className="py-16 lg:py-24">
         <div className="container">
           {/* Context sentence */}
-          <p className="text-gray-600 text-left mb-12 max-w-4xl">
+          <p className="text-gray-600 text-left mb-12 w-full">
             {language === "ES"
               ? "Los asuntos descritos a continuación reflejan la experiencia adquirida en roles anteriores en firmas de abogados internacionales líderes."
               : language === "PT"
                 ? "Os assuntos descritos abaixo refletem a experiência adquirida em funções anteriores em escritórios de advocacia internacionais líderes."
-                : "The matters below include experience gained at leading international law firms and were conducted in English unless otherwise indicated. Selected matters may be referenced in more than one section"}
+                : "The matters below include experience gained at leading international law firms and were conducted in English unless otherwise indicated. Selected matters may be referenced in more than one section."}
           </p>
           {subjectMatters.map((matter) => {
             const { arbitratorCases, counselCases } = getFilteredCases(matter.id);
