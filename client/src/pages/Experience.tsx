@@ -67,22 +67,22 @@ const teachingExperience = [
 
 const education = [
   {
-    degree: "LL.M.",
     institution: "Georgetown University Law Center",
+    degree: "LL.M.",
     note: "International Studies, Distinction and Dean's List",
     location: "Washington D.C.",
     year: "2008",
   },
   {
-    degree: "Postgraduate Specialization",
     institution: "Getúlio Vargas Foundation",
+    degree: "Postgraduate Specialization",
     note: "in Business and Economics Law",
     location: "São Paulo, Brazil",
     year: "2006",
   },
   {
-    degree: "LL.B.",
     institution: "University of São Paulo Law School",
+    degree: "LL.B.",
     note: "(J.D. Equivalent)",
     location: "São Paulo, Brazil",
     year: "2000",
