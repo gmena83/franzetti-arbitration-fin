@@ -1,0 +1,256 @@
+ÉRICA FRANZETTI
+Árbitra Independiente y Abogada
+
+PERFIL
+SOBRE
+Érica Franzetti es una árbitra independiente y abogada de prestigio global, reconocida mundialmente por su destreza en la resolución de disputas de alta complejidad. Con una carrera de 25 años en despachos de abogados líderes del mercado, cuenta con una vasta experiencia en arbitraje comercial internacional e inversionista-Estado en diversas industrias y jurisdicciones. Actualmente, se especializa en la función decisoria y en la asesoría estratégica en disputas internacionales, con énfasis en disputas relativas a la energía, recursos naturales e infraestructura.
+“Érica sobresalta por su capacidad para gestionar disputas internacionales críticas con precisión técnica”. (cita original en inglés)
+– The Legal 500
+Servicios
+Árbitra Independiente:
+Érica actúa como coárbitra, árbitra única y presidenta en tribunales domésticos (EE. UU.) e internacionales. Su fluidez lingüística y sensibilidad cultural, así como su dominio tanto del derecho civil como del common law, le permite dirigir procedimientos con eficiencia operativa, equidad y rigor procesal.
+• Actuación bajo Diversos Reglamentos Arbitrales – Sólida trayectoria en arbitrajes internacionales bajo diversos reglamentos arbitrales y administrados por las principales instituciones arbitrales como la ICC, AAA, ICDR, LCIA, CIADI y CNUDMI.
+• Excelencia en la Conducción Procesal – Amplia experiencia en la gestión integral de tribunales arbitrales y en la redacción de laudos, asegurando decisiones técnicamente robustas y ejecutables bajo diversos marcos normativos.
+• Liderazgo en Disputas de Alto Valor – Vasta experiencia dirigiendo litigios transnacionales y arbitrajes complejos, con especial enfoque en casos de alto valor económico y riesgo reputacional.
+Asesoría Estratégica y Consultoría:
+• Mitigación Preventiva y Gestión de Riesgos – Evaluación temprana de contingencias y diseño de estructuras preventivas de litigios.
+• Dirección Táctica en Disputas Internacionales – Consultoría estratégica sobre el diseño de la postura procesal y la selección de tácticas procesales óptimas para maximizar las probabilidades de éxito.
+• Protección de Inversiones Internacionales – Análisis especializado de la arquitectura de tratados de inversión, evaluación de riesgos, y diseño de estrategias de blindaje jurídico transnacional.
+• Ingeniería de Ejecución y Fase Post-Laudo – Planificación estrategia para el reconocimiento y ejecución de laudos, así como defensa en procesos de anulación en múltiples jurisdicciones.
+“La tengo en la más alta estima profesional. [Érica] es una colaboradora sumamente perspicaz e idónea, cuya eficacia solo es igualada por su calidad humana y cortesía constante”. (cita original en inglés)
+– Chambers USA
+Experiencia Multijurisdiccional y Multisectorial:
+Érica cuenta con una trayectoria global en arbitraje internacional, habiendo intervenido en procedimientos que abarcan jurisdicciones claves en las Américas, Europa, África y Asia (incluyendo Estados Unidos, Argentina, Brasil, Canadá, Chile, Colombia, Croacia, República Dominicana, Ghana, Hungría, México, Perú y Filipinas). Su peritaje técnico se extiende a sectores estratégicos y disputas de alta complejidad, incluyendo:
+• Contratos Comerciales – Gestión hotelera, contratos de distribución, contratos financieros, propiedad intelectual, y transacciones bajo la Convención de las Naciones Unidas sobre los Contratos de Compraventa Internacional de Mercaderías (CISG, por sus siglas en inglés).
+• Infraestructura y Construcción – Concesiones, telecomunicaciones, y proyectos de transporte.
+• Corporativo y M&A – Especialista en gobernanza corporativa, fusiones y adquisiciones, joint ventures, y operaciones de capital de riesgo.
+• Energía y Recursos Naturales – Minería, hidrocarburos (petróleo, gas y líquidos de gas natural (LGN)), así como generación de energía eléctrica y nuclear.
+“[Érica] posee una combinación excepcional de solvencia técnica y experiencia. Su enfoque incansable en la experiencia del cliente, sumado a una aguda visión comercial, la distingue como una profesional de alto nivel”.
+– Lexology
+Liderazgo Intelectual y Trayectoria Profesional
+Érica es distinguida consistentemente por los directorios legales más prestigiosos del mundo, incluidos Chambers & Partners, The Legal 500, Lexology (anteriormente Who's Who Legal), Latin Lawyer y Best Lawyers. Ha sido destacada por Latinvex como una de las 100 Mejores Abogadas de América Latina.
+Ponente habitual en foros internacionales sobre arbitraje comercial y de inversión, Érica también aporta una sólida vertiente académica como docente en instituciones de élite como Georgetown University Law Center y la University of Miami School of Law.
+Antes de fundar su práctica independiente, Érica acumuló 17 años de experiencia en firmas de prestigio en los Estados Unidos, incluidos ocho años como socia en equipos de arbitraje internacional de primer nivel. Anteriormente, trabajó como litigante en reconocidas firmas de abogados en Brasil. Está autorizada para ejercer como abogada en Washington, DC, Nueva York y Brasil, con fluidez profesional y jurídica en inglés, español y portugués.
+EXPERIENCIA PROFESIONAL
+King & Spalding LLP, Washington, DC y Miami
+Socia
+Sept. 2021 – Dic. 2025
+Dechert LLP, Washington, DC
+Socia/Consejera Jurídica
+Sept. 2015 – Sept. 2021
+Weil, Gotshal & Manges LLP, Washington, DC
+Asociada Senior
+Jul. 2012 – Sept. 2015
+Crowell & Moring LLP, Washington, DC
+Asociada
+Sept. 2008 – Jul. 2012
+Wald & Advogados Associados, São Paulo, Brasil
+Asociada
+Jul. 2001 – Sept. 2006
+Dinamarco & Rossi Advocacia, São Paulo, Brasil
+Asociada/Pasante
+Jul. 1997 – Jul. 2001
+EXPERIENCIA ACADÉMICA
+University of Miami School of Law
+Profesora Adjunta, Arbitraje Internacional en el Sector Energético
+2024 – 2025
+Georgetown University Law Center
+Profesora Adjunta, Resolución de Controversias Inversionista-Estado
+2017 – 2022
+FORMACIÓN
+Georgetown University Law Center, Master of Laws (LL.M.), Washington, DC, 2008
+Mención: Graduada con Alta Distinción (High Distinction) y miembro de la Lista del Decano (Dean’s List)
+Fundação Getulio Vargas (FGV), Especialización de Posgrado en Derecho Empresarial y Económico, São Paulo, Brasil, 2006
+Universidade de São Paulo (USP), Facultad de Derecho, Licenciatura en Derecho (Juris Doctor equivalente), São Paulo, Brasil, 2000
+ASOCIACIONES PROFESIONALES
+• Panel de Árbitros del Centro Internacional para la Resolución de Disputas (ICDR, por sus siglas en inglés)
+• Panel de Árbitros de la Asociación Americana de Arbitraje (AAA)
+• Panel de Árbitros del Centro de Arbitraje Internacional de Hong Kong (HKIAC, por sus siglas en inglés)
+• Panel de Árbitros del Centro de Arbitraje y Mediación de la Cámara de Comercio Brasil-Canadá (CAM-CCBC)
+• Panel de Árbitros de la Cámara del Mercado de Capitales de B3 S.A – Brasil, Bolsa, Balcão (CAM)
+• Comité de Arbitraje y Mediación de la Cámara de Comercio Internacional (ICC) Brasil
+• Asociación Internacional de Abogados – Sección de Resolución de Disputas
+• Mujeres en Arbitraje (ArbitralWomen)
+• Comité Brasileño de Arbitraje (CBAR)
+• Sociedad Internacional de Arbitraje de Miami (MIAS, por sus siglas en inglés)
+COLEGIACIONES
+• Distrito de Columbia
+• Nueva York
+• Brasil
+IDIOMAS
+• Inglés
+• Español
+• Portugués
+NACIONALIDADES
+• Estados Unidos
+• Brasil
+CASOS REPRESENTATIVOS
+Trayectoria destacada en diversos sectores y tipos de disputas 
+Los casos representativos descritos a continuación detallan la experiencia adquirida en roles previos en firmas internacionales de primer nivel. Salvo indicación en contrario, los trabajos se llevaron a cabo en inglés. Los casos que abarcan múltiples áreas de actuación se mencionan en más de una sección.
+Contratos Comerciales
+Como Árbitra
+• Coárbitra en un arbitraje ICDR entre multinacionales relativo a la adquisición de infraestructura de carga para vehículos eléctricos, regido por la ley del Estado de Delaware.
+• Árbitra única en un procedimiento ICDR entre una entidad estadounidense y una tailandesa relativo a un contrato de distribución, regido por la ley del Estado de Maryland.
+• Coárbitra en un arbitraje ICDR entre un productor de alimentos estadounidense y una empresa peruana relativo a un contrato de suministro, regido por la ley peruana.
+• Coárbitra en un arbitraje ICDR entre una empresa mexicana y una estadounidense relativo a la venta de un equipo para campo petrolero, regido por la ley del Estado de Texas.
+• Presidenta de tribunal en un arbitraje CIESP-FIESP entre una empresa brasileña y una norteamericana relativo al incumplimiento de un contrato de distribución, regido por la ley del Estado de Florida.
+• Coárbitra en un arbitraje ICDR entre una empresa suiza y una estadounidense relativo al incumplimiento de un contrato de compraventa, regido por la ley del Estado de Florida.
+• Árbitra única en varios arbitrajes AAA relativos a incumplimientos de contrato en la industria hotelera.
+• Árbitra única en varios arbitrajes AAA relativos a incumplimientos de contrato en la industria de servicios financieros.
+Como Abogada
+• Abogada de una empresa brasileña en un arbitraje ICDR contra una empresa estadounidense relativo a un contrato de distribución, regido por la ley del Estado de Nueva York.
+• Asesora de una empresa química multinacional en negociaciones previas a una disputa en relación con un contrato de suministro de vapor, regido por la ley brasileña.
+• Abogada de una empresa estadounidense en un arbitraje ICDR contra una empresa estadounidense relativo a un contrato de servicios, regido por la ley del Estado de California.
+• Abogada de una empresa de logística multinacional en un arbitraje ICC contra una empresa colombiana relativo a un contrato de representación comercial, regido por la ley del Estado de Texas.
+• Abogada de una empresa argentina en un arbitraje ICDR contra una empresa de gas chilena relativo a un contrato de servicios, regido por la ley argentina (llevado a cabo en español e inglés).
+Construcción e Infraestructura
+Como Árbitra
+• Coárbitra en un arbitraje ICDR relativo a un contrato de concesión para el desarrollo de un proyecto de autopista en un Estado latinoamericano (llevado a cabo en español).
+• Coárbitra en un arbitraje ICDR relativo a un contrato de concesión para el desarrollo de un proyecto de infraestructura en un Estado latinoamericano (llevado a cabo en español).
+Como Abogada
+• Asesora de una empresa constructora brasileña y su subsidiaria estadounidense respecto a un acuerdo joint venture para la construcción de una plataforma petrolera en Nigeria.
+• Abogada de una empresa estadounidense contra un conglomerado de construcción brasileño en un arbitraje ICC relativo a un acuerdo de indemnización, regido por la ley brasileña.
+• Abogada de la demandante en el caso Quanta Services Netherlands B.V. v. República del Perú (Caso CIADI No. ARB/21/1), un arbitraje bajo el TBI Países Bajos-Perú, relativo a medidas estatales relacionadas con las concesiones para la construcción y operación de redes de fibra óptica para el suministro de servicios de telecomunicaciones e internet.
+Estructura de Acuerdo, Post-Transacción, Gobernanza y Responsabilidad
+Como Árbitra
+• Coárbitra en un arbitraje CAM relativo a la impugnación de un árbitro en una disputa societaria involucrando una empresa líder en el sector energético (llevado a cabo en portugués).
+Como Abogada
+• Abogada de una empresa multinacional en tres arbitrajes ICC relacionados con una disputa societaria multimillonaria sobre el control de una empresa brasileña bajo un contrato de compraventa de acciones, regidos por la ley brasileña (llevado a cabo en portugués e inglés).
+• Asesora de una empresa constructora brasileña y su subsidiaria estadounidense respecto a un acuerdo joint venture para la construcción de una plataforma petrolera en Nigeria.
+• Asesora de un inversionista holandés en cuestiones de financiación y gobernanza corporativa relativos a un acuerdo de joint venture para el desarrollo de un proyecto de energía nuclear en un Estado latinoamericano.
+• Abogada de la Demandada en el caso República de Croacia v. MOL Hungarian Oil and Gas PLC (Caso CPA No. 2014-15), un arbitraje CNUDMI administrado por la CPA relativo a los derechos de accionistas y gobernanza corporativa de una empresa de petróleo y gas croata, la validez de un acuerdo marco de gas, y alegaciones de corrupción y sobordo.
+• Abogada de una empresa multinacional contra una empresa griega en un arbitraje JAMS relativo a un contrato de compraventa de acciones, regido por la ley del Estado de Nueva York.
+• Abogada de Dotgay LLC en una disputa relativa a los mecanismos internos de gobernanza y rendición de cuentas de la ICANN con respecto a la asignación de un dominio de nivel superior.
+• Abogada de Dotmusic LLC en una disputa relativa a los mecanismos internos de gobernanza y rendición de cuentas de la ICANN con respecto a la asignación de un dominio de nivel superior.
+• Abogada de la Demandante en el caso Amazon.com, Inc. v. ICANN (Caso ICDR No. 01-16-0000-7056) relativo a los mecanismos internos de gobernanza y responsabilidad de la ICANN respecto a la asignación de un dominio de nivel superior.
+• Abogada del Demandante en el caso DotConnectAfrica Trust v. ICANN (Caso ICDR No. 50-117-T-1083-13) relativo a los mecanismos internos de gobernanza y rendición de cuentas de la ICANN con respecto a la asignación de un dominio de nivel superior.
+• Abogada del Demandante en el caso ICM Registry v. ICANN (Caso ICDR No. 50-117-T-00224-08) relativo a los mecanismos internos de gobernanza y rendición de cuentas de la ICANN con respecto a la asignación de un dominio de nivel superior.
+Energía y Recursos Naturales
+Como Abogada
+• Asesora de una empresa constructora brasileña y su subsidiaria estadounidense respecto a un acuerdo joint venture para la construcción de una plataforma petrolera en Nigeria.
+• Asesora de un inversionista holandés en cuestiones de financiación y gobernanza corporativa relativos a un acuerdo de joint venture para el desarrollo de un proyecto de energía nuclear en un Estado latinoamericano.
+• Asesora de una importante empresa de petróleo y gas en relación con un arbitraje LCIA relativo a un contrato de servicios, regido por la ley del Reino Unido.
+• Abogada de una empresa guineana en un arbitraje ICC relativo a un contrato de servicios mineros, regido por la ley del Reino Unido.
+• Abogada de un fondo estatal de la República Dominicana en un arbitraje ICC relativo a las operaciones de una empresa eléctrica, regido por la ley de la República Dominicana.
+• Asesora de una subsidiaria de Shell, BG Overseas Limited, en un arbitraje de inversión contra la República de Bolivia bajo el TBI Reino Unido-Bolivia relativo a las medidas regulatorias y sus impactos en los contratos de operación para la extracción de hidrocarburos.
+• Abogada del Demandante en el caso Gasoducto Sur Peruano S.A. En Liquidación v. República del Perú (Caso CIADI No. ARB/24/29), un arbitraje relativo a un contrato para un proyecto de gasoducto afectado por el escándalo de corrupción Odebrecht.
+• Abogada de la Demandante en el caso MOL Hungarian Oil and Gas Company v. República de Croacia (Caso CIADI No. ARB/13/32), un arbitraje bajo el TCE relativo a medidas relacionadas con la privatización de una empresa de petróleo y gas croata, el suministro de gas y el enjuiciamiento penal del Director Ejecutivo de la Demandante por acusaciones de soborno.
+• Abogada de la Demandada en el caso República de Croacia v. MOL Hungarian Oil and Gas PLC (Caso CPA No. 2014-15), un arbitraje CNUDMI administrado por la CPA relativo a los derechos de accionistas y gobernanza corporativa de una empresa de petróleo y gas croata, la validez de un acuerdo marco de gas, y alegaciones de corrupción y sobordo.
+• Abogada de los Demandantes en el caso Pluspetrol Perú Corporation S.A. et al. v. Perúpetro S.A. (Caso CIADI No. ARB/12/28), un arbitraje relativo a un contrato de suministro de gas con respecto a pagos de regalías y la venta de líquidos de gas natural (LGN) (llevado a cabo en español).
+• Abogada de la Demandante en el caso Pac Rim Cayman LLC v. República de El Salvador (Caso CIADI No. ARB/09/12), un arbitraje bajo el CAFTA-DR relativo a la denegación por parte del gobierno a emitir licencias de explotación minera.
+• Abogada de la Demandada en el caso Chevron Overseas Finance GmbH v. República de Filipinas (Caso CPA No. 2019-25), un arbitraje bajo el TBI Filipinas-Suiza y las Reglas de Arbitraje de la CNUDMI relativo al yacimiento de gas Malampaya.
+• Asesora de un inversionista canadiense en el sector energético en Colombia respecto a las protecciones bajo los tratados de inversión.
+Controversias Inversionista-Estado
+Como Abogada
+• Asesora de un propietario estadounidense en Albania respecto a los derechos de protección de inversiones.
+• Abogada de la demandante en el caso Quanta Services Netherlands B.V. v. República del Perú (Caso CIADI No. ARB/21/1), un arbitraje bajo el TBI Países Bajos-Perú, relativo a medidas estatales relacionadas con las concesiones para la construcción y operación de redes de fibra óptica para el suministro de servicios de telecomunicaciones e internet.
+• Asesora de una subsidiaria de Shell, BG Overseas Limited, en un arbitraje de inversión contra la República de Bolivia bajo el TBI Reino Unido-Bolivia relativo a las medidas regulatorias y sus impactos en los contratos de operación para la extracción de hidrocarburos.
+• Abogada del Demandante en el caso Gasoducto Sur Peruano S.A. En Liquidación v. República del Perú (Caso CIADI No. ARB/24/29), un arbitraje relativo a un contrato para un proyecto de gasoducto afectado por el escándalo de corrupción Odebrecht.
+• Abogada de la Demandante en el caso MOL Hungarian Oil and Gas Company v. República de Croacia (Caso CIADI No. ARB/13/32), un arbitraje bajo el TCE relativo a medidas relacionadas con la privatización de una empresa de petróleo y gas croata, el suministro de gas y el enjuiciamiento penal del Director Ejecutivo de la Demandante por acusaciones de soborno.
+• Abogada de la Demandada en el caso República de Croacia v. MOL Hungarian Oil and Gas PLC (Caso CPA No. 2014-15), un arbitraje CNUDMI administrado por la CPA relativo a los derechos de accionistas y gobernanza corporativa de una empresa de petróleo y gas croata, la validez de un acuerdo marco de gas, y alegaciones de corrupción y sobordo.
+• Abogada de los Demandantes en el caso Pluspetrol Perú Corporation S.A. et al. v. Perúpetro S.A. (Caso CIADI No. ARB/12/28), un arbitraje relativo a un contrato de suministro de gas con respecto a pagos de regalías y la venta de líquidos de gas natural (LGN) (llevado a cabo en español).
+• Abogada de la Demandante en el caso Pac Rim Cayman LLC v. República de El Salvador (Caso CIADI No. ARB/09/12), un arbitraje bajo el CAFTA-DR relativo a la denegación por parte del gobierno a emitir licencias de explotación minera.
+• Abogada de la Demandada en el caso Chevron Overseas Finance GmbH v. República de las Filipinas (Caso CPA No. 2019-25), un arbitraje bajo el TBI Filipinas-Suiza y las Reglas de Arbitraje de la CNUDMI relativo al yacimiento de gas Malampaya.
+• Asesora de un inversionista turco en Turkmenistán respecto a las protecciones establecidas en tratados de inversión.
+• Asesora de un inversionista canadiense en el sector de infraestructura en Perú respecto a las protecciones establecidas en tratados de inversión.
+• Asesora de un inversionista canadiense en el sector energético en Colombia respecto a las protecciones bajo los tratados de inversión.
+Reconocimiento y Ejecución de Laudos Arbitrales
+• Abogada del Demandante en el caso Redes Andinas de Comunicaciones S.R.L. v. República del Perú, et al. (Corte Federal de Distrito del Distrito de Columbia, Caso No. 22-3631), relativo a un procedimiento de reconocimiento y ejecución de dos laudos arbitrales emitidos por un Tribunal ICC.
+Análisis de Riesgos y Evaluación de Casos
+• Asesora de financiadores terceros y fondos de inversión en la evaluación, valoración y estrategia de disputas de inversionista-Estado y disputas comerciales.
+RECONOCIMIENTOS
+Chambers & Partners
+• Global, Arbitraje Internacional, ocho años clasificada.
+• EE.UU., Arbitraje Internacional: Abogados, Banda 6.
+• Brasil, Arbitraje Internacional: Banda 3.
+The Legal 500
+• EE.UU., América Latina: Arbitraje Internacional
+Lexology (anteriormente Who's Who Legal)
+• Arbitraje Internacional
+Latin Lawyer
+• Arbitraje Internacional Aprobada por LACCA
+Latinvex
+• Las 100 Mejores Abogadas de América Latina (2024)
+Best Lawyers
+• Los Mejores Abogados en América: Arbitraje Internacional – Comercial (2026)
+Lawdragon 500
+• Principales Litigantes Globales (2024)
+PUBLICACIONES
+"The Role of Counsel in International Arbitration: Set-Aside Steps ", capítulo (coautora) en International Arbitration in Practice, editado por Courtney Lotfi, Alicja Zielinska-Eisen y Veronica Sandler Obregon, Kluwer International Law, 2024.
+"Lei de Arbitragem Comentada: Lei No. 9.307/1996", coautora, Comentarios al Artículo 12, Revista dos Tribunais, 2023.
+"Litigation Alternatives for COVID-19 Hospitality Disputes", Law360, 11 de mayo de 2020
+"Navigating Investors’ Rights under the USMCA", coautora, Transnational Dispute Management, vol. 17, nº 3, marzo de 2020.
+"Mining Arbitration in Latin America: Social and Environmental Issues in Investment Arbitration Cases ", coautora, Global Arbitration Review: The Guide to Mining Arbitrations, julio de 2019.
+"Construction Contracts in Brazil", Lexology Q&A, marzo de 2019.
+"A Structured Guide to Arbitration Law and Practice in Brazil", Lexology Q&A, septiembre 2014, actualizado marzo 2019
+"United States: Arbitration Q&A", The In-House Lawyer, octubre de 2018.
+"Arbitragem Comercial Envolvendo Administraçao Pública: uma Realidade na América Latina?", coautora, Revista Visão Jurídica, abril de 2017.
+"Liçoes a Respeito de Decisoes Vinculantes e Nao Finais Proferidas por Dispute Adjudication Boards: o CasoCRW Joint Operation v. PT Perusahaan Gas Negara (PERSERO)", coautora, Revista de Arbitraje y Mediación – RArb, nº 48, abril de 2016.
+"Directrices Prácticas Para la Redacción del Acuerdo Arbitral", coautora, Tratado de Derecho Arbitral, vol. 2, coautora, marzo de 2011.
+"US Judicial Discovery in Private International Arbitration: Outlook Remains Uncertain", Miami Arbitration Reports, vol. 1, nº 5, octubre de 2009.
+CONFERENCIAS Y PONENCIAS
+"Corruption in Arbitration: Tackling Fraud and Bribery in Latin America’s Commercial Landscape", HardTalk Miami, Miami, 4 de diciembre de 2025.
+"Energy Infrastructure Disputes", AIEN/ICC: Dispute Resolution in the Energy Business, Río de Janeiro, 3 de octubre de 2025.
+"Parallel Arbitration and Criminal Proceedings Involving Corruption Allegations", Sovereign & States Litigation Summit USA, Washington, DC, 24 de septiembre de 2025.
+"International Construction Arbitration: Infrastructure Projects with Sovereigns", iLaw2025 TheILS Forum on International Law AAA-ICDR International Arbitration Track, 7 de febrero de 2025.
+"Increase in Disputes in Oil & Gas Industry", HardTalk Miami, Miami, 4 de diciembre de 2024.
+"Arbitragem no Setor de Aviação Comercial com Partes Brasileiras", Arbitration Channel Webinar, 29 de octubre de 2024.
+"The Future of International Arbitration", Georgetown University Law Centre, Washington, DC, 29 de febrero de 2024.
+"So You’re an International Arbitrator, How to Approach and Handle Some of the Issues that May Arise", iLaw2024, The ILS Global Forum on International Law AAA-ICDR International Arbitration Track, Miami, 16 de febrero de 2024.
+"Considerations About the Seat of Arbitration", Georgetown Brazilian Arbitration Day, Georgetown University Law Center, Washington, DC, 24 de enero de 2024.
+"Greener Grass or Scorched Earth: The Impact of Legislation and Court Reform on Arbitration Friendliness in the Americas", Chartered Institute – North America Branch y JAMS, Miami, 8 de noviembre de 2023.
+Roundtable on Enforcement Proceedings, Asset Tracing and Funding to Enforce and Collect, Miami International Arbitration Society, Miami, 18 de octubre de 2023.
+"Contratos Comerciais e Arbitragem em Setores Regulados: Autonomia das Partes e Heretomia Regulatória", 22a Conferência Internacional de Arbitragem do CBAR, Río de Janeiro, 14 de septiembre de 2023.
+"The Arbitration Proceedings", Escola de Verão em Arbitragem Internacional, NOVA School of Law, Lisboa, julio de 2023.
+"Corruption in International Arbitration and Enforcement Proceedings", Annual Conference of the Penn Carey Law International Arbitration Association, Filadelfia, 24 de marzo de 2023.
+"Discovery em Arbitragem Internacional", Mesa Redonda del Grupo de Estudio del Comité Brasileño de Arbitraje (CBAR), Río de Janeiro, 16 de marzo de 2023.
+"The Practical Impacts of the Supreme Court’s Ruling on Section 1782 Discovery", II Brazilian Arbitration Day, Georgetown University Law Center y Canal Arbitragem, Washington, DC, 26 de enero de 2023.
+"Practical Issues on Producing Evidence in International Arbitration", New York University, Columbia University, y la Cámara de Comercio Brasil-Estados Unidos, Nueva York, 26 de agosto de 2022.
+Closing Remarks, I Brazilian Arbitration Day, Georgetown University Law Center y Arbitration Channel, 8 de abril de 2022.
+"Corruption in International Arbitration", I Brazilian Arbitration Day Congress, Georgetown University y Arbitration Channel, 8 de abril de 2022.
+"Supply Chain Disputes", AAA-ICDR International Arbitration Track of the Florida Bar’s International Law Sectional Annual Event, Miami, 1 de abril de 2022.
+"ICDR Rules on International Dispute Resolution Procedures", The Chartered Institute of Arbitrators (CIArb) Brazil Branch, Webinar, 8 de diciembre de 2021.
+"Hot Topics Related to Arbitration", Cámara de Comercio Brasil-Estados Unidos, Nueva York, 30 de noviembre de 2021.
+"Key Types of Privileges and Their Application in International Disputes", Serie de Seminarios Web de Dechert LLP, 17 de marzo, 5 de abril, 28 de abril de 2021.
+"Virtual Hearings in International Arbitration", Vancouver International Arbitration Centre, Webinar, 5 de octubre de 2020.
+"Key Considerations for Legal Positions on Force Majeure: Practical Steps if Disputes are Inevitable", Nairobi Centre for International Arbitration, Webinar, 13 de agosto de 2020.
+"From NAFTA to USMCA: Discussion on Key Changes to Trade and Investment", Serie de Seminarios Web de Dechert LLP, 29 de julio de 2020.
+"Procedimentos Virtuais e Táticas de Gerrilha em Arbitragem", INOVARB AmCham Brazil, Webinar, 4 de junio de 2020.
+"Arbitrajes Virtuales: Ventajas e Inconvenientes", Instituto Peruano de Arbitraje (IPA), Webinar, 14 de mayo de 2020.
+"Tribunal’s Power to Sanction Misconduct", ILA American Branch Investment Law Committee y Georgetown International Arbitration Society, Washington, DC, 28 de febrero de 2020.
+"Investor-State Disputes – A New Dawn in Treaty Reform?", Who's Who Legal Future Leaders: Arbitration Conference USA, Washington, DC, 14 de noviembre de 2019.
+"Arbitragem, Cibersegurança e Proteção de Dados", VI Congreso de Arbitraje CAM-CCBC, São Paulo, 22 de octubre de 2019.
+"Social Media, Internet and BIT Protections", Evento de Apertura del FDI Pre-Moot, Mattos Filho, Veiga Filho, y Marrey Jr e Quiroga Advogados, São Paulo, 18 de octubre de 2019.
+"This House Believes that the Current Format of Investment Treaty Awards Undermines the Legitimacy of an Investor-State Arbitral Dispute Settlement", Fifth Annual GAR Live BITs, Washington, DC, 16 de mayo de 2019.
+"La Jurisprudencia Como Arma: ¿Es Urgente y Necesaria La Fijación de Criterios Jurisprudenciales Predecibles Por Las Cortes Nacionales Sobre Los Cuestionamientos a Los Laudos Arbitrales?", XII Congreso Internacional de Arbitraje, IPA, Lima, 24 de abril de 2019.
+"Ongoing Challenges to International Investment Arbitration", 3rd Annual IAA Conference, Filadelfia, 22 de marzo de 2019.
+"¿Ha Llegado el Invierno al Arbitraje? ¿Crisis, Ética y Corrupción?", Conferencia Internacional de Mujeres en Arbitraje, IPA, Lima, 31 de enero de 2019.
+"¿Cómo Afrontar un Arbitraje Nacional o Internacional de Asociación Público-Privada?", IPA, Lima, 30 de enero de 2019.
+"HIALSA Arbitration Workshop: Evidence in International Arbitration", Harvard University, Cambridge, 2 de octubre de 2018.
+"Introduction to International Commercial & Investment Arbitration", American University Washington College of Law, Washington, DC, 27 de septiembre de 2018.
+"Duty to Disclose and Brazilian Arbitration Culture", CCMA CIESP/FIESP Congress Arbitration Day, Nueva York, 17 de abril de 2018.
+"Energy Across Borders: Geopolitics, Conflict and International Arbitration", Energy Days Conference, Pennsylvania State University, University Park, 22 de mayo de 2017.
+"Visión de los Árbitros y Abogados Sobre el Desarrollo del Arbitraje Internacional", Congreso de Arbitraje Nacional e Internacional, Centro de Arbitraje y Conciliación, Bogotá, 2 de abril de 2017.
+"Arbitragem e Administração Pública: Uma Realidade nos Países da América Latina? Jurisprudência e Posição do Poder Judiciário", III Congreso Panamericano de Arbitraje CAM-CCBC, São Paulo, 24 de octubre de 2016.
+"Aspectos Prácticos del Arbitraje Internacional", International Centre for Dispute Resolution (ICDR), International Arbitration Symposium, Nueva York, 27 de mayo de 2016.
+"Strategies for Faster and Cheaper Cross-Border Disputes", GNY Signature CLE Program, New York Corporate Counsel Association (ACC GNY), Nueva York, 14 de enero de 2016.
+"Is International Arbitration Really Open to New Faces?", 27th Annual ITA Workshop: Subconscious Influences of International Arbitration, Dallas 17 de junio de 2015.
+"Dispute Resolution Current Trends Involving Arbitration and Compliance Issues in Brazil", Georgetown University Law Center, Washington, DC, 15 de septiembre de 2014.
+"Specific Themes of Doing Business in Latin America", Sección de Derecho Internacional de la American Bar Association (ABA), Nuevas Perspectivas para Proyectos de Infraestructura en América Latina, São Paulo, 24 de agosto de 2013.
+"Budgeting and Managing an International Arbitration: How to Keep Arbitration Cost Efficient and Effective", ABA Section of International Law Spring Meeting, Washington, DC, 24 de abril de 2013.
+"U.S. Judicial Discovery for Use in the International Commercial Arbitration", Ponente, Clase de Arbitraje Comercial Internacional, Georgetown University Law Center, Washington, DC, 19 de noviembre de 2012.
+"O Papel do Árbitro na Avaliação de Danos", XI Congreso del Comité Brasileño de Arbitraje (CBAr): Aspectos Económicos del Arbitraje, Porto Alegre, septiembre de 2012.
+"How to Handle a BIT Arbitration", Ninth Annual Seminar on International Commercial Arbitration, American University Washington College of Law, Washington, DC, 3 de octubre de 2012.
+"Documentary Evidence and the Use of Discovery, Evidence in International Arbitration", ICDR Young & International y ICC Young Arbitrators Forum, Bogotá, septiembre de 2010.
+"Jurisdiccional Issues in ICSID Arbitration", Seminario sobre cuestiones jurídicas internacionales, presentado al gobierno de la República de Colombia, Bogotá, junio de 2009.
+
+Add the following quotes at the carousel and Thought Leadership Page
+
+Chambers Brazil: “Érica Franzetti es una profesional dinámica, muy involucrada en los asuntos y con una gran visión estratégica. Tiene una experiencia profunda en temas relacionados con Brasil y una notable dedicación al servicio de sus clientes.”
+
+Chambers Brazil: “Es una abogada sumamente experimentada y muy enfocada en su trabajo. Érica tiene amplia trayectoria en América Latina y habla inglés, portugués y español. Es muy difícil encontrar a una profesional como ella.”
+
+Chambers Brazil: “Las principales cualidades de Érica son su espíritu de equipo, una disponibilidad fuera de lo común y un asesoramiento jurídico técnicamente impecable, que transmite con seguridad y en un lenguaje accesible para el negocio.”
+
+Legal 500: “He tenido el privilegio de trabajar bastante con Érica Franzetti durante los últimos nueve meses y la experiencia ha sido excelente. En asuntos muy urgentes, pudo incorporarse de inmediato, entender rápidamente el contexto y brindar una orientación precisa y muy valiosa. Sin duda la recomendaría a otros.”
+

@@ -18,7 +18,7 @@ import siteContent from "@/data/siteContent.json";
 
 const {
   professionalBackground,
-  academia,
+  teachingExperience,
   education,
   professionalAssociations,
   barAdmissions,
@@ -33,7 +33,8 @@ const {
 const languages = ["English", "Spanish", "Portuguese"];
 
 // Hero Quotes Carousel Component - Compact with fixed height for hero section
-function HeroQuotesCarousel({ quotes }: { quotes: { quote: string; source: string }[] }) {
+function HeroQuotesCarousel({ quotes }: { quotes: any[] }) {
+  const { getLocalized } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -59,7 +60,7 @@ function HeroQuotesCarousel({ quotes }: { quotes: { quote: string; source: strin
             <div className="w-1 bg-aquamarine self-stretch flex-shrink-0 min-h-[60px]"></div>
             <div>
               <p className="text-base lg:text-lg text-gray-600 italic leading-relaxed line-clamp-3">
-                "{quotes[currentIndex].quote}"
+                "{getLocalized(quotes[currentIndex].quote)}"
               </p>
               <p className="text-sm text-gray-500 font-medium mt-2">
                 — {quotes[currentIndex].source}
@@ -85,15 +86,16 @@ function HeroQuotesCarousel({ quotes }: { quotes: { quote: string; source: strin
 }
 
 export default function Home() {
-  const { t, language } = useLanguage();
+  const { t, getLocalized } = useLanguage();
+  const content = siteContent.content;
 
   // SEO Meta Tags - Reset to default on home page
   useEffect(() => {
-    document.title = "Franzetti Arbitration | Independent Arbitrator & Counsel";
+    document.title = "Home | Franzetti Arbitration - International Arbitrator & Counsel";
 
     let metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Erica Franzetti is a leading international arbitrator and counsel with extensive experience in international commercial and investor-state arbitration.');
+      metaDescription.setAttribute('content', t("about.description"));
     }
 
     let metaKeywords = document.querySelector('meta[name="keywords"]');
@@ -108,18 +110,6 @@ export default function Home() {
     if (ogDescription) ogDescription.setAttribute('content', 'Erica Franzetti is a leading international arbitrator and counsel with extensive experience in international commercial and investor-state arbitration.');
   }, []);
 
-  // Get translated content
-  const heroTitle = language === "ES"
-    ? "Árbitro Internacional y Abogada."
-    : language === "PT"
-      ? "Árbitro Internacional e Advogada."
-      : "Independent Arbitrator & Counsel";
-
-  const heroSubtitle = language === "ES"
-    ? "Resolución independiente de disputas con integridad, eficiencia y rigor."
-    : language === "PT"
-      ? "Resolução independente de disputas com integridade, eficiência e rigor."
-      : "Independent dispute resolution with integrity, efficiency, and rigor.";
 
   return (
     <div className="bg-white">
@@ -137,7 +127,7 @@ export default function Home() {
 
               {/* Bigger/bolder text as per client request */}
               <h1 className="text-4xl lg:text-5xl font-serif font-bold text-charcoal mb-4">
-                {heroTitle}
+                {t("hero.title")}
               </h1>
               {/* Quote carousel replaces the static subtitle */}
               <HeroQuotesCarousel quotes={carouselQuotes} />
@@ -153,8 +143,7 @@ export default function Home() {
               <img
                 src="/images/EricaFranzetti39057-RT.jpg"
                 alt="Erica Franzetti"
-                className="w-full h-full object-cover rounded-sm shadow-xl"
-                style={{ minHeight: "400px" }}
+                className="w-full h-full object-cover rounded-sm shadow-xl min-h-[400px]"
               />
             </motion.div>
           </div>
@@ -173,55 +162,63 @@ export default function Home() {
             className="mb-12"
           >
             <h2 className="text-3xl lg:text-4xl font-serif font-semibold text-charcoal mb-8">
-              {language === "ES" ? "SOBRE" : language === "PT" ? "SOBRE" : "ABOUT"}
+              {t("about.title").toUpperCase()}
             </h2>
 
             <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
-              <p>{about.p1}</p>
+              <p>{getLocalized(about.p1)}</p>
               {/* Embedded Quote 1 - The Legal 500 */}
               <div className="my-8 ml-[12.5%] mr-[12.5%] pl-6 border-l-4 border-aquamarine">
-                <p className="text-gray-700 italic text-lg">"{about.quote1}"</p>
-                <p className="text-sm text-gray-500 font-medium mt-2">– <em>{about.quoteSource1}</em></p>
+                <p className="text-gray-700 italic text-lg">"{getLocalized(about.quote1)}"</p>
+                <p className="text-sm text-gray-500 font-medium mt-2">– <em>{getLocalized(about.quoteSource1)}</em></p>
               </div>
 
-              <p>{about.p2}</p>
+              <p>{getLocalized(about.p2)}</p>
               <ul className="list-disc pl-6 space-y-2">
-                {about.serviceList1.map((item, i) => (
+                {getLocalized(about.serviceList1).map((item: string, i: number) => (
                   <li key={i}>{item}</li>
                 ))}
               </ul>
 
-              <p className="mt-6">{about.p3}</p>
+              <p className="mt-6">{getLocalized(about.p3)}</p>
               <ul className="list-disc pl-6 space-y-2">
-                {about.serviceList2.map((item, i) => (
+                {getLocalized(about.serviceList2).map((item: string, i: number) => (
                   <li key={i}>{item}</li>
                 ))}
               </ul>
 
               {/* Embedded Quote 2 - Chambers USA */}
               <div className="my-8 ml-[12.5%] mr-[12.5%] pl-6 border-l-4 border-aquamarine">
-                <p className="text-gray-700 italic text-lg">"{about.quote2}"</p>
-                <p className="text-sm text-gray-500 font-medium mt-2">– <em>{about.quoteSource2}</em></p>
+                <p className="text-gray-700 italic text-lg">"{getLocalized(about.quote2)}"</p>
+                <p className="text-sm text-gray-500 font-medium mt-2">– <em>{getLocalized(about.quoteSource2)}</em></p>
               </div>
 
-              <p>{about.p4}</p>
+              <h3 className="text-2xl font-serif font-semibold text-charcoal mt-10 mb-6">
+                {t("section.multijurisdictional")}
+              </h3>
+
+              <p>{getLocalized(about.p4)}</p>
               <ul className="list-disc pl-6 space-y-2">
-                {about.sectorList.map((item, i) => (
+                {getLocalized(about.sectorList).map((item: string, i: number) => (
                   <li key={i}>{item}</li>
                 ))}
               </ul>
 
               {/* Embedded Quote 3 - Lexology */}
               <div className="my-8 ml-[12.5%] mr-[12.5%] pl-6 border-l-4 border-aquamarine">
-                <p className="text-gray-700 italic text-lg">"{about.quote3}"</p>
-                <p className="text-sm text-gray-500 font-medium mt-2">– <em>{about.quoteSource3}</em></p>
+                <p className="text-gray-700 italic text-lg">"{getLocalized(about.quote3)}"</p>
+                <p className="text-sm text-gray-500 font-medium mt-2">– <em>{getLocalized(about.quoteSource3)}</em></p>
               </div>
 
-              <p>{about.p5}</p>
+              <h3 className="text-2xl font-serif font-semibold text-charcoal mt-10 mb-6">
+                {t("section.thoughtLeadershipTrajectory")}
+              </h3>
 
-              <p>{about.p6}</p>
+              <p>{getLocalized(about.p5)}</p>
 
-              <p>{about.p7}</p>
+              <p>{getLocalized(about.p6)}</p>
+
+              <p>{getLocalized(about.p7)}</p>
             </div>
           </motion.div>
 
@@ -241,7 +238,7 @@ export default function Home() {
             className="mb-16"
           >
             <h3 id="professional-background" className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
-              {language === "ES" ? "Trayectoria Profesional" : language === "PT" ? "Trajetória Profissional" : "Professional Background"}
+              {t("section.professionalBackground")}
             </h3>
             <div className="space-y-4">
               {professionalBackground.map((item, index) => (
@@ -261,8 +258,8 @@ export default function Home() {
                         ) : (
                           <span className="font-semibold text-charcoal">{item.title}</span>
                         )}
-                        <span className="text-gray-600">, {item.location}</span>
-                        <span className="text-gray-600">, {item.role}</span>
+                        <span className="text-gray-600">, {getLocalized(item, 'location')}</span>
+                        <span className="text-gray-600">, {getLocalized(item, 'role')}</span>
                       </div>
                       <span className="text-gray-400 text-sm block sm:hidden mt-1">{item.period}</span>
                     </div>
@@ -273,7 +270,7 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Academia - "Professor" without "Adjunct" prefix */}
+          {/* Teaching Experience - "Professor" without "Adjunct" prefix */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -281,11 +278,11 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <h3 id="academia" className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
-              {language === "ES" ? "Academia" : language === "PT" ? "Academia" : "Academia"}
+            <h3 id="teaching-experience" className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
+              {t("section.teachingExperience")}
             </h3>
             <div className="space-y-4">
-              {academia.map((item, index) => (
+              {teachingExperience.map((item, index) => (
                 <div key={index} className="flex flex-col sm:flex-row sm:justify-between py-3 items-start sm:items-center">
                   <div className="flex items-start gap-4 w-full sm:w-auto">
                     <div className="w-12 sm:w-32 flex-shrink-0 flex items-center justify-start pt-1">
@@ -302,8 +299,8 @@ export default function Home() {
                         ) : (
                           <span className="font-semibold text-charcoal">{item.institution}</span>
                         )}
-                        <span className="text-gray-600">, {item.role}</span>
-                        <span className="text-gray-600">, {item.course}</span>
+                        <span className="text-gray-600">, {getLocalized(item, 'role')}</span>
+                        <span className="text-gray-600">, {getLocalized(item, 'course')}</span>
                       </div>
                       <span className="text-gray-400 text-sm block sm:hidden mt-1">{item.period}</span>
                     </div>
@@ -323,7 +320,7 @@ export default function Home() {
             className="mb-16"
           >
             <h3 id="education" className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
-              {language === "ES" ? "Educación" : language === "PT" ? "Educação" : "Education"}
+              {t("section.education")}
             </h3>
             <div className="space-y-4">
               {education.map((item, index) => (
@@ -344,9 +341,9 @@ export default function Home() {
                           <span className="font-semibold text-charcoal">{item.institution}</span>
                         )}
                         <span className="text-gray-600">, </span>
-                        <span className="text-charcoal">{item.degree}</span>
-                        {item.note && <span className="text-gray-600"> {item.note}</span>}
-                        {item.location && <span className="text-gray-600">, {item.location}</span>}
+                        <span className="text-charcoal">{getLocalized(item, 'degree')}</span>
+                        {getLocalized(item, 'note') && <span className="text-gray-600"> {getLocalized(item, 'note')}</span>}
+                        {getLocalized(item, 'location') && <span className="text-gray-600">, {getLocalized(item, 'location')}</span>}
                       </div>
                       <span className="text-gray-400 text-sm block sm:hidden mt-1">{item.year}</span>
                     </div>
@@ -366,7 +363,7 @@ export default function Home() {
             className="mb-16"
           >
             <h3 id="professional-associations" className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
-              {language === "ES" ? "Asociaciones Profesionales" : language === "PT" ? "Associações Profissionais" : "Professional Associations"}
+              {t("section.professionalAssociations")}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {professionalAssociations.map((item, index) => (
@@ -381,10 +378,10 @@ export default function Home() {
                   </div>
                   {item.url ? (
                     <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-aquamarine transition-colors">
-                      {item.name}
+                      {getLocalized(item, 'name')}
                     </a>
                   ) : (
-                    <span className="text-gray-700">{item.name}</span>
+                    <span className="text-gray-700">{getLocalized(item, 'name')}</span>
                   )}
                 </div>
               ))}
@@ -400,7 +397,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
             >
               <h3 id="bar-admissions" className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
-                {language === "ES" ? "Colegiaturas" : language === "PT" ? "Inscrições na Ordem" : "Bar Admissions"}
+                {t("section.barAdmissions")}
               </h3>
               <ul className="space-y-3">
                 {barAdmissions.map((item, index) => (
@@ -408,10 +405,10 @@ export default function Home() {
                     <span className="inline-block w-2 h-2 rounded-full bg-aquamarine flex-shrink-0"></span>
                     {item.url ? (
                       <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-aquamarine transition-colors">
-                        {item.name}
+                        {getLocalized(item, 'name')}
                       </a>
                     ) : (
-                      <span className="text-gray-700">{item.name}</span>
+                      <span className="text-gray-700">{getLocalized(item, 'name')}</span>
                     )}
                   </li>
                 ))}
@@ -426,18 +423,14 @@ export default function Home() {
               transition={{ duration: 0.6 }}
             >
               <h3 id="languages" className="text-2xl font-serif font-semibold text-charcoal mb-8 pb-2 border-b border-gray-300">
-                {language === "ES" ? "Idiomas" : language === "PT" ? "Idiomas" : "Languages"}
+                {t("section.languages")}
               </h3>
               <ul className="space-y-3">
                 {languages.map((item, index) => (
                   <li key={index} className="flex items-center gap-3">
                     <span className="inline-block w-2 h-2 rounded-full bg-aquamarine flex-shrink-0"></span>
                     <span className="text-gray-700">
-                      {language === "ES"
-                        ? (item === "English" ? "Inglés" : item === "Spanish" ? "Español" : "Portugués")
-                        : language === "PT"
-                          ? (item === "English" ? "Inglês" : item === "Spanish" ? "Espanhol" : "Português")
-                          : item}
+                      {t(`lang.${item.toLowerCase()}`)}
                     </span>
                   </li>
                 ))}

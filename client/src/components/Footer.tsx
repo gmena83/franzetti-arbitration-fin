@@ -19,6 +19,10 @@ import siteContent from "@/data/siteContent.json";
 type CvLinks = {
   english?: string;
   englishMini?: string;
+  spanish?: string;
+  spanishMini?: string;
+  portuguese?: string;
+  portugueseMini?: string;
   vcard?: string;
 };
 
@@ -36,6 +40,10 @@ export default function Footer() {
           setCv({
             english: data.english || undefined,
             englishMini: data.englishMini || undefined,
+            spanish: data.spanish || undefined,
+            spanishMini: data.spanishMini || undefined,
+            portuguese: data.portuguese || undefined,
+            portugueseMini: data.portugueseMini || undefined,
             vcard: data.vcard || undefined,
           });
         }
@@ -57,7 +65,11 @@ export default function Footer() {
 
   const hasAnyCv =
     Boolean(cv?.english?.trim()) ||
-    Boolean(cv?.englishMini?.trim());
+    Boolean(cv?.englishMini?.trim()) ||
+    Boolean(cv?.spanish?.trim()) ||
+    Boolean(cv?.spanishMini?.trim()) ||
+    Boolean(cv?.portuguese?.trim()) ||
+    Boolean(cv?.portugueseMini?.trim());
 
   const hasVcard = Boolean(cv?.vcard?.trim());
 
@@ -79,15 +91,7 @@ export default function Footer() {
 
       <div className="container py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* Description */}
           <div className="lg:col-span-1">
-            <p className="text-gray-200 text-sm leading-relaxed">
-              {language === "ES"
-                ? "Servicios de arbitraje internacional y asesoría enfocados en disputas comerciales e inversionista-Estado."
-                : language === "PT"
-                  ? "Serviços de arbitragem internacional e consultoria focados em disputas comerciais e investidor-Estado."
-                  : "International arbitration and counsel services focused on commercial and investor-state disputes."}
-            </p>
 
             {/* CV Downloads (from CMS) */}
             {hasAnyCv && (
@@ -95,50 +99,60 @@ export default function Footer() {
                 <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-2">
                   {t("footer.downloadCV")}
                 </h4>
-                <div className="flex flex-col gap-2">
-                  {/* English CV */}
-                  {cv?.english && (
-                    <a
-                      href={cv.english}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-200 hover:text-aquamarine transition-colors text-sm underline"
-                    >
-                      {t("footer.cvEnglish")}
-                    </a>
-                  )}
+                <div className="flex flex-col gap-3">
+                  {/* Full CVs Row */}
+                  <div className="flex flex-wrap gap-3 text-sm">
+                    {cv?.english && (
+                      <a href={cv.english} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
+                        English
+                      </a>
+                    )}
+                    {cv?.spanish && (
+                      <>
+                        <span className="text-gray-500">|</span>
+                        <a href={cv.spanish} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
+                          Español
+                        </a>
+                      </>
+                    )}
+                    {cv?.portuguese && (
+                      <>
+                        <span className="text-gray-500">|</span>
+                        <a href={cv.portuguese} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
+                          Português
+                        </a>
+                      </>
+                    )}
+                  </div>
 
-                  {/* English Mini CV */}
-                  {cv?.englishMini && (
-                    <a
-                      href={cv.englishMini}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-200 hover:text-aquamarine transition-colors text-sm underline"
-                    >
-                      {t("footer.cvEnglishMini")}
-                    </a>
-                  )}
+                  {/* Mini CVs Row */}
+                  <div className="flex flex-wrap gap-3 text-sm">
+                    {cv?.englishMini && (
+                      <a href={cv.englishMini} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
+                        One-Page CV
+                      </a>
+                    )}
+                    {cv?.spanishMini && (
+                      <>
+                        <span className="text-gray-500">|</span>
+                        <a href={cv.spanishMini} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
+                          1-Page (ES)
+                        </a>
+                      </>
+                    )}
+                    {cv?.portugueseMini && (
+                      <>
+                        <span className="text-gray-500">|</span>
+                        <a href={cv.portugueseMini} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
+                          1-Page (PT)
+                        </a>
+                      </>
+                    )}
+                  </div>
                 </div>
               </div>
             )}
 
-            {/* V-Card Download */}
-            {hasVcard && (
-              <div className="mt-4">
-                <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-2">
-                  {t("footer.downloadVCard")}
-                </h4>
-                <a
-                  href={cv.vcard}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-200 hover:text-aquamarine transition-colors text-sm underline"
-                >
-                  {t("footer.vcard")}
-                </a>
-              </div>
-            )}
           </div>
 
           {/* Navigation Links */}
@@ -216,6 +230,20 @@ export default function Footer() {
                 <Phone className="w-5 h-5" />
                 {contactInfo.phone}
               </a>
+              {/* V-Card Download - Moved to Connect section */}
+              {hasVcard && (
+                <a
+                  href={cv?.vcard}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-gray-200 hover:text-aquamarine transition-colors text-sm"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z" />
+                  </svg>
+                  {t("footer.vcard")}
+                </a>
+              )}
             </div>
           </div>
         </div>

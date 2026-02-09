@@ -64,42 +64,51 @@ async function startServer() {
         return res.status(400).json({ error: "No file uploaded" });
       }
 
-      const { language } = req.body;
-      if (!["english", "spanish", "portuguese"].includes(language)) {
-        return res.status(400).json({ error: "Invalid language" });
+      // If a specific filename is requested, rename the file to be stable
+      // This allows the client to control the final path like /cv/Franzetti-CV-English.pdf
+      const { filename } = req.body;
+      let finalFilename = req.file.filename;
+
+      if (filename) {
+        const safeName = filename.replace(/[^a-zA-Z0-9.-]/g, "_");
+        const uploadDir = path.resolve(__dirname, "../client/public/cv");
+        const newPath = path.join(uploadDir, safeName);
+
+        // Overwrite existing file with same name
+        await fs.rename(req.file.path, newPath);
+        finalFilename = safeName;
       }
-
-      const cvJsonPath = path.resolve(__dirname, "../client/public/cv/cv.json");
-      
-      // Read current cv.json
-      let cvData: Record<string, string> = {
-        english: "",
-        spanish: "",
-        portuguese: "",
-      };
-
-      try {
-        const content = await fs.readFile(cvJsonPath, "utf-8");
-        cvData = JSON.parse(content);
-      } catch (error) {
-        // File doesn't exist or is invalid JSON - use default empty values
-        console.warn("cv.json not found or invalid, using defaults");
-      }
-
-      // Update the language entry with new file path
-      cvData[language] = `/cv/${req.file.filename}`;
-
-      // Write updated cv.json
-      await fs.writeFile(cvJsonPath, JSON.stringify(cvData, null, 2));
 
       res.json({
         success: true,
-        filename: req.file.filename,
-        path: `/cv/${req.file.filename}`,
+        filename: finalFilename,
+        path: `/cv/${finalFilename}`,
       });
     } catch (error) {
       console.error("Upload error:", error);
       res.status(500).json({ error: "Upload failed" });
+    }
+  });
+
+  // API endpoint to save site content JSON
+  app.post("/api/save-content", async (req, res) => {
+    try {
+      const { content } = req.body;
+      if (!content) {
+        return res.status(400).json({ error: "No content provided" });
+      }
+
+      // Determine path to siteContent.json
+      // In dev, it's usually in src/data. In prod, we might need to handle it differently 
+      // but for this implementation we target the source file for rebuilds or persistence.
+      const contentPath = path.resolve(__dirname, "../client/src/data/siteContent.json");
+
+      await fs.writeFile(contentPath, JSON.stringify(content, null, 4), "utf-8");
+
+      res.json({ success: true, message: "Content saved successfully" });
+    } catch (error) {
+      console.error("Save content error:", error);
+      res.status(500).json({ error: "Failed to save content" });
     }
   });
 

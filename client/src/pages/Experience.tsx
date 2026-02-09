@@ -1,112 +1,23 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
+import siteContent from "@/data/siteContent.json";
 
 /* Experience Page - Franzetti Arbitration
  * Design: Professional Legal Minimalism
  * Sections: Professional Background, Teaching, Education, Admissions, Languages, Professional Associations
  */
 
-const professionalBackground = [
-  {
-    title: "Franzetti Arbitration",
-    location: "Washington, DC",
-    role: "Founder and Principal",
-    period: "Jan. 2026 – Present",
-  },
-  {
-    title: "King & Spalding LLP",
-    location: "Washington, DC and Miami",
-    role: "Partner",
-    period: "Sept. 2021 – Dec. 2025",
-  },
-  {
-    title: "Dechert LLP",
-    location: "Washington, DC",
-    role: "Partner",
-    period: "Sept. 2015 – Sept. 2021",
-  },
-  {
-    title: "Weil, Gotshal & Manges LLP",
-    location: "Washington, DC",
-    role: "Associate",
-    period: "Jul. 2012 – Sept. 2015",
-  },
-  {
-    title: "Crowell & Moring LLP",
-    location: "Washington, DC",
-    role: "Associate",
-    period: "Sept. 2008 – Jul. 2012",
-  },
-  {
-    title: "Wald & Advogados Associados",
-    location: "São Paulo, Brazil",
-    role: "Associate",
-    period: "Jul. 2001 – Sept. 2006",
-  },
-  {
-    title: "Dinamarco & Rossi Advocacia",
-    location: "São Paulo, Brazil",
-    role: "Associate / Intern",
-    period: "Jul. 1997 – Jul. 2001",
-  },
-];
-
-const teachingExperience = [
-  {
-    institution: "University of Miami Law School",
-    role: "Adjunct Professor",
-    course: "International Arbitration in the Energy Sector",
-    period: "2024-2025",
-  },
-  {
-    institution: "Georgetown University Law Center",
-    role: "Adjunct Professor",
-    course: "Investor-State Dispute Resolution",
-    period: "2017-2022",
-  },
-];
-
-const education = [
-  {
-    institution: "Georgetown University Law Center",
-    degree: "LL.M.",
-    note: "International Studies, Distinction and Dean's List",
-    location: "Washington D.C.",
-    year: "2008",
-  },
-  {
-    institution: "Getúlio Vargas Foundation",
-    degree: "Postgraduate Specialization",
-    note: "in Business and Economics Law",
-    location: "São Paulo, Brazil",
-    year: "2006",
-  },
-  {
-    institution: "University of São Paulo Law School",
-    degree: "LL.B.",
-    note: "(J.D. Equivalent)",
-    location: "São Paulo, Brazil",
-    year: "2000",
-  },
-];
-
-const admissions = ["District of Columbia", "New York", "Brazil"];
-
-const languages = ["English", "Portuguese", "Spanish"];
-
-const professionalAssociations = [
-  "Panel of Arbitrators of the International Centre of Dispute Resolution (ICDR)",
-  "Panel of Arbitrators of the American Arbitration Association (AAA)",
-  "Panel of Arbitrators of the Hong Kong International Arbitration Centre (HKIAC)",
-  "Panel of Arbitrators of the Brazil-Canada Chamber of Commerce (CAM-CCBC)",
-  "Panel of Arbitrators of the Capital Market Chamber of B3 S.A – Brasil, Bolsa, Balcão (CAM)",
-  "Arbitration & Mediation Committee of the International Court of Commerce (ICC) Brazil",
-  "International Bar Association – Dispute Resolution Section",
-  "Arbitral Women",
-  "Miami International Arbitration Society (MIAS)",
-  "Brazilian Arbitration Committee (CBAR)",
-];
-
 export default function Experience() {
+  const { t, getLocalized } = useLanguage();
+  const {
+    professionalBackground,
+    teachingExperience,
+    education,
+    barAdmissions,
+    professionalAssociations,
+    languages
+  } = siteContent.content;
+
   return (
     <div className="py-16 lg:py-24">
       <div className="container">
@@ -117,7 +28,7 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
           className="text-4xl lg:text-5xl font-serif font-semibold text-charcoal mb-16"
         >
-          EXPERIENCE
+          {t("nav.expertise")}
         </motion.h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
@@ -145,15 +56,15 @@ export default function Experience() {
             {/* Professional Background */}
             <section>
               <h2 className="text-2xl font-serif font-semibold text-charcoal mb-6 pb-2 border-b border-gray-200">
-                Professional Background
+                {t("section.professionalBackground")}
               </h2>
               <div className="space-y-4">
-                {professionalBackground.map((item, index) => (
+                {professionalBackground.map((item: any, index: number) => (
                   <div key={index} className="flex flex-col sm:flex-row sm:justify-between">
                     <div>
                       <span className="font-semibold text-charcoal">{item.title}</span>
-                      <span className="text-gray-600">, {item.location}</span>
-                      <span className="text-gray-600">, {item.role}</span>
+                      <span className="text-gray-600">, {getLocalized(item, 'location')}</span>
+                      <span className="text-gray-600">, {getLocalized(item, 'role')}</span>
                     </div>
                     <span className="text-gray-500 text-sm sm:text-base">{item.period}</span>
                   </div>
@@ -164,15 +75,15 @@ export default function Experience() {
             {/* Teaching Experience */}
             <section>
               <h2 className="text-2xl font-serif font-semibold text-charcoal mb-6 pb-2 border-b border-gray-200">
-                Teaching Experience
+                {t("section.teachingExperience")}
               </h2>
               <div className="space-y-4">
-                {teachingExperience.map((item, index) => (
+                {teachingExperience.map((item: any, index: number) => (
                   <div key={index} className="flex flex-col sm:flex-row sm:justify-between">
                     <div>
-                      <span className="font-semibold text-charcoal">{item.institution}</span>
-                      <span className="text-gray-600">, {item.role}</span>
-                      <span className="text-gray-600">, {item.course}</span>
+                      <span className="font-semibold text-charcoal">{getLocalized(item, 'institution')}</span>
+                      <span className="text-gray-600">, {getLocalized(item, 'role')}</span>
+                      <span className="text-gray-600">, {getLocalized(item, 'course')}</span>
                     </div>
                     <span className="text-gray-500 text-sm sm:text-base">{item.period}</span>
                   </div>
@@ -183,16 +94,16 @@ export default function Experience() {
             {/* Education */}
             <section>
               <h2 className="text-2xl font-serif font-semibold text-charcoal mb-6 pb-2 border-b border-gray-200">
-                Education
+                {t("section.education")}
               </h2>
               <div className="space-y-3">
-                {education.map((item, index) => (
+                {education.map((item: any, index: number) => (
                   <div key={index} className="flex flex-col sm:flex-row sm:justify-between">
                     <div>
-                      <span className="font-semibold text-charcoal">{item.institution}</span>
-                      <span className="text-gray-600">, {item.degree}</span>
-                      {item.note && <span className="text-gray-600"> {item.note}</span>}
-                      {item.location && <span className="text-gray-600">, {item.location}</span>}
+                      <span className="font-semibold text-charcoal">{getLocalized(item, 'institution')}</span>
+                      <span className="text-gray-600">, {getLocalized(item, 'degree')}</span>
+                      {getLocalized(item, 'note') && <span className="text-gray-600"> {getLocalized(item, 'note')}</span>}
+                      {getLocalized(item, 'location') && <span className="text-gray-600">, {getLocalized(item, 'location')}</span>}
                     </div>
                     <span className="text-gray-500 text-sm sm:text-base">{item.year}</span>
                   </div>
@@ -203,11 +114,11 @@ export default function Experience() {
             {/* Bar Admissions */}
             <section>
               <h2 className="text-2xl font-serif font-semibold text-charcoal mb-6 pb-2 border-b border-gray-200">
-                Bar Admissions
+                {t("section.barAdmissions")}
               </h2>
               <ul className="bullet-aquamarine list-disc list-inside space-y-1">
-                {admissions.map((item, index) => (
-                  <li key={index} className="text-gray-700">{item}</li>
+                {barAdmissions.map((item: any, index: number) => (
+                  <li key={index} className="text-gray-700">{getLocalized(item, 'name')}</li>
                 ))}
               </ul>
             </section>
@@ -215,11 +126,11 @@ export default function Experience() {
             {/* Languages */}
             <section>
               <h2 className="text-2xl font-serif font-semibold text-charcoal mb-6 pb-2 border-b border-gray-200">
-                Languages
+                {t("section.languages")}
               </h2>
               <ul className="bullet-aquamarine list-disc list-inside space-y-1">
-                {languages.map((item, index) => (
-                  <li key={index} className="text-gray-700">{item}</li>
+                {(languages || ["English", "Spanish", "Portuguese"]).map((item: any, index: number) => (
+                  <li key={index} className="text-gray-700">{t(`lang.${item.toLowerCase()}`)}</li>
                 ))}
               </ul>
             </section>
@@ -227,18 +138,16 @@ export default function Experience() {
             {/* Professional Associations */}
             <section>
               <h2 className="text-2xl font-serif font-semibold text-charcoal mb-6 pb-2 border-b border-gray-200">
-                Professional Associations
+                {t("section.professionalAssociations")}
               </h2>
               <ul className="bullet-aquamarine list-disc list-inside space-y-2">
-                {professionalAssociations.map((item, index) => (
-                  <li key={index} className="text-gray-700">{item}</li>
+                {professionalAssociations.map((item: any, index: number) => (
+                  <li key={index} className="text-gray-700">{getLocalized(item, 'name')}</li>
                 ))}
               </ul>
             </section>
           </motion.div>
         </div>
-
-
       </div>
     </div>
   );

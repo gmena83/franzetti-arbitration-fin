@@ -15,7 +15,10 @@ import { Mail, Phone, MapPin } from "lucide-react";
  * - CV downloads
  */
 
+import { useLanguage } from "@/contexts/LanguageContext";
+
 export default function Contact() {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     surname: "",
@@ -27,21 +30,21 @@ export default function Contact() {
 
   // SEO Meta Tags
   useEffect(() => {
-    document.title = "Contact | Franzetti Arbitration - Get in Touch";
-    
+    document.title = `${t("nav.contact")} | Franzetti Arbitration - Get in Touch`;
+
     let metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Contact Erica Franzetti for international arbitration services. Based in Washington, DC with global reach. Available for arbitrator appointments and counsel services.');
     }
-    
+
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (metaKeywords) {
       metaKeywords.setAttribute('content', 'contact arbitrator, international arbitration services, Washington DC arbitrator, arbitrator appointment, legal counsel contact');
     }
-    
+
     let ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) ogTitle.setAttribute('content', 'Contact | Franzetti Arbitration');
-    
+
     let ogDescription = document.querySelector('meta[property="og:description"]');
     if (ogDescription) ogDescription.setAttribute('content', 'Contact Erica Franzetti for international arbitration services. Based in Washington, DC.');
   }, []);
@@ -49,11 +52,11 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    toast.success("Message sent successfully! We will get back to you soon.");
+
+    toast.success(t("contact.success") || "Message sent successfully! We will get back to you soon.");
     setFormData({ name: "", surname: "", email: "", role: "", message: "" });
     setIsSubmitting(false);
   };
@@ -79,10 +82,10 @@ export default function Contact() {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-4xl lg:text-5xl font-serif font-semibold text-charcoal mb-4">
-                CONTACT
+                {t("nav.contact")}
               </h1>
               <p className="text-lg text-gray-600">
-                For inquiries, please use the contact form below or reach out directly.
+                {t("contact.subtitle")}
               </p>
             </motion.div>
 
@@ -113,12 +116,12 @@ export default function Contact() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <h2 className="text-2xl font-serif font-semibold text-charcoal mb-8">
-                Send a Message
+                {t("contact.send")}
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Name *</Label>
+                    <Label htmlFor="name">{t("contact.name")} *</Label>
                     <Input
                       id="name"
                       name="name"
@@ -130,7 +133,7 @@ export default function Contact() {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="surname">Surname *</Label>
+                    <Label htmlFor="surname">{t("contact.surname") || "Surname"} *</Label>
                     <Input
                       id="surname"
                       name="surname"
@@ -144,7 +147,7 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email *</Label>
+                  <Label htmlFor="email">{t("contact.email")} *</Label>
                   <Input
                     id="email"
                     name="email"
@@ -157,7 +160,7 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="role">Role / Organization</Label>
+                  <Label htmlFor="role">{t("contact.role")}</Label>
                   <Input
                     id="role"
                     name="role"
@@ -169,7 +172,7 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Message *</Label>
+                  <Label htmlFor="message">{t("contact.message")} *</Label>
                   <Textarea
                     id="message"
                     name="message"
@@ -186,7 +189,7 @@ export default function Contact() {
                   disabled={isSubmitting}
                   className="w-full sm:w-auto bg-aquamarine hover:bg-aquamarine/90 text-white px-8 py-3"
                 >
-                  {isSubmitting ? "Sending..." : "SUBMIT"}
+                  {isSubmitting ? t("contact.sending") : t("contact.send").toUpperCase()}
                 </Button>
               </form>
             </motion.div>
@@ -202,7 +205,7 @@ export default function Contact() {
                 <h2 className="text-2xl font-serif font-semibold text-charcoal mb-8">
                   Erica Franzetti
                 </h2>
-                
+
                 {/* Contact Details with Icons */}
                 <div className="space-y-4">
                   <a
@@ -212,7 +215,7 @@ export default function Contact() {
                     <Mail className="w-5 h-5 text-aquamarine" />
                     <span>efranzetti@franzettiarb.com</span>
                   </a>
-                  
+
                   <a
                     href="tel:+12027431132"
                     className="flex items-center gap-3 text-charcoal hover:text-aquamarine transition-colors"
@@ -220,7 +223,7 @@ export default function Contact() {
                     <Phone className="w-5 h-5 text-aquamarine" />
                     <span>+1 202 743 1132</span>
                   </a>
-                  
+
                   <a
                     href="https://maps.google.com/?q=1701+Pennsylvania+Ave+NW,+Suite+200,+Washington,+DC+20006"
                     target="_blank"
@@ -235,7 +238,7 @@ export default function Contact() {
 
               {/* Social Links */}
               <div className="pt-6 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-charcoal mb-4">Connect</h3>
+                <h3 className="text-lg font-semibold text-charcoal mb-4">{t("footer.connect") || "Connect"}</h3>
                 <div className="flex items-center gap-6">
                   <a
                     href="https://www.linkedin.com/in/erica-franzetti-48a7b1a/"
@@ -251,7 +254,7 @@ export default function Contact() {
                     >
                       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                     </svg>
-                    <span>Personal Profile</span>
+                    <span>{t("footer.personalProfile") || "Personal Profile"}</span>
                   </a>
                   <a
                     href="http://linkedin.com/company/franzettiarbitration"
@@ -267,7 +270,7 @@ export default function Contact() {
                     >
                       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                     </svg>
-                    <span>Business Profile</span>
+                    <span>{t("footer.businessProfile") || "Business Profile"}</span>
                   </a>
                 </div>
               </div>
@@ -295,7 +298,7 @@ export default function Contact() {
                       d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                     />
                   </svg>
-                  Download V-Card
+                  {t("footer.downloadVCard")}
                 </a>
               </div>
             </motion.div>

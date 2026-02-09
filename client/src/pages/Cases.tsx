@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import siteContent from "@/data/siteContent.json";
 
 /* Expertise Page (formerly Cases) - Franzetti Arbitration
  * Design: Professional Legal Minimalism with client's requested changes
@@ -19,256 +20,15 @@ const subjectMatters = [
   { id: "risk", label: "Risk Analysis & Case Assessment", labelES: "Análisis de Riesgo y Evaluación de Casos", labelPT: "Análise de Risco e Avaliação de Casos" },
 ];
 
-type CaseItem = {
-  text: string;
-  categories: string[];
-};
-
-const arbitratorAppointments: CaseItem[] = [
-  {
-    text: "Co-arbitrator in an ICDR arbitration between two multinational companies concerning the purchase of electric vehicle charging equipment governed by the laws of the State of Delaware.",
-    categories: ["commercial"],
-  },
-  {
-    text: "Sole arbitrator in an ICDR arbitration between an American company and a Thai company involving a distribution agreement governed by the laws of the State of Maryland.",
-    categories: ["commercial"],
-  },
-  {
-    text: "Co-arbitrator in an ICDR arbitration between a food producer in the United States and a Peruvian company concerning a supply contract governed by Peruvian law; seated in Lima.",
-    categories: ["commercial"],
-  },
-  {
-    text: "Co-arbitrator in an ICDR arbitration between a Mexican and an American company concerning the sale of oilfield equipment governed by the laws of the State of Texas.",
-    categories: ["commercial"],
-  },
-  {
-    text: "President of an arbitral tribunal in a CAM arbitration between a Brazilian company and a North American company concerning the breach of a distribution agreement governed by the laws of the State of Florida; seated in São Paulo, proceedings in Portuguese.",
-    categories: ["commercial"],
-  },
-  {
-    text: "Co-arbitrator in an ICDR arbitration between a Swiss and an American company concerning the breach of a sales agreement governed by the laws of the State of Florida.",
-    categories: ["commercial"],
-  },
-  {
-    text: "Sole arbitrator in an arbitration under the AAA Commercial Rules concerning a claim for breach of a hotel management agreement in the hospitality industry.",
-    categories: ["commercial"],
-  },
-  {
-    text: "Sole arbitrator in an arbitration under the AAA Commercial Rules concerning a claim for breach of a franchise agreement in the hospitality industry.",
-    categories: ["commercial"],
-  },
-  {
-    text: "Sole arbitrator in an arbitration under the AAA Commercial Rules concerning a claim for breach of a services agreement in the financial services industry.",
-    categories: ["commercial"],
-  },
-  {
-    text: "Sole arbitrator in an arbitration under the AAA Commercial Rules concerning a claim for breach of a loan agreement in the financial services industry.",
-    categories: ["commercial"],
-  },
-  {
-    text: "Co-arbitrator in an ICDR construction dispute concerning a concession agreement for the development of a highway project in Latin America; seated in Bogotá, proceedings in Spanish.",
-    categories: ["construction"],
-  },
-  {
-    text: "Co-arbitrator in an ICDR construction dispute concerning a concession agreement for a large-scale infrastructure project in Latin America; seated in Bogotá, proceedings in Spanish.",
-    categories: ["construction"],
-  },
-  {
-    text: "Co-arbitrator in a CAM arbitration concerning the challenge of an arbitrator in a shareholder dispute involving a major oil and gas corporation; proceedings in Portuguese.",
-    categories: ["deal-structure"],
-  },
-];
-
-const mattersAsCounsel: CaseItem[] = [
-  {
-    text: "Counsel to a Brazilian company in an ICDR arbitration against an American company in connection with a distribution agreement governed by the laws of the State of New York.",
-    categories: ["commercial"],
-  },
-  {
-    text: "Advisor to a multinational chemical company in pre-dispute negotiations involving a steam supply agreement governed by the laws of Brazil.",
-    categories: ["commercial"],
-  },
-  {
-    text: "Counsel to an American company in an ICDR dispute involving a services agreement governed by the laws of the State of California.",
-    categories: ["commercial"],
-  },
-  {
-    text: "Counsel to a logistics multinational company in an ICC arbitration against a Colombian company in connection with a commercial representation agreement governed by the laws of the State of Texas.",
-    categories: ["commercial"],
-  },
-  {
-    text: "Counsel to an Argentine firm in an ICDR arbitration against a Chilean gas company in connection with a services agreement governed by Argentine law; seated in Santiago, proceedings in Spanish and English.",
-    categories: ["commercial"],
-  },
-  {
-    text: "Advisor to a Brazilian construction company and its American subsidiary regarding a Joint Operating Agreement for the construction of an oil platform in Nigeria.",
-    categories: ["construction"],
-  },
-  {
-    text: "Counsel to an American company against a construction Brazilian conglomerate in an ICC arbitration concerning an indemnity agreement governed by the laws of Brazil.",
-    categories: ["construction"],
-  },
-  {
-    text: "Counsel to a multinational company in three ICC arbitrations concerning a multibillion-dollar shareholder dispute over the control of a Brazilian company arising out of a share purchase agreement governed by the laws of Brazil; proceedings in Portuguese and English.",
-    categories: ["deal-structure"],
-  },
-  {
-    text: "Advisor to a Brazilian company and its American subsidiary regarding a Joint Operating Agreement for the construction of an oil platform in Nigeria.",
-    categories: ["deal-structure"],
-  },
-  {
-    text: "Advisor to a Dutch investor on financing and corporate governance issues connected to a joint venture agreement for the development of a startup energy project in a Latin American country.",
-    categories: ["deal-structure"],
-  },
-  {
-    text: "Counsel to the Respondent in Croatia v. MOL Hungarian Oil and Gas PLC (PCA Case No. 2014-15), a contractual dispute under the UNCITRAL rules regarding shareholders' rights and the corporate governance of a Croatian oil and gas company, the validity of a gas master agreement, and corruption allegations.",
-    categories: ["deal-structure"],
-  },
-  {
-    text: "Counsel to a multinational company against a Greek company in a JAMS arbitration arising out of a share purchase agreement governed by the laws of the State of New York.",
-    categories: ["deal-structure"],
-  },
-  {
-    text: "Counsel to Dotgay LLC in a dispute concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
-    categories: ["deal-structure"],
-  },
-  {
-    text: "Counsel to Dotmusic LLC in a dispute concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
-    categories: ["deal-structure"],
-  },
-  {
-    text: "Counsel to Claimant in Amazon.com, Inc. v. ICANN (ICDR Case No. 01-16-0000-7056) concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
-    categories: ["deal-structure"],
-  },
-  {
-    text: "Counsel to Claimant in DotConnectAfrica Trust v. ICANN (ICDR Case No. 50-117-T-1083-13) concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
-    categories: ["deal-structure"],
-  },
-  {
-    text: "Counsel to Claimant in ICM Registry v. ICANN (ICDR Case No. 50-117-T-00224-08) concerning ICANN's internal governance and accountability mechanisms with respect to the assignment of a top-level domain.",
-    categories: ["deal-structure"],
-  },
-  {
-    text: "Advisor to a Brazilian company and its American subsidiary regarding a Joint Operating Agreement for the construction of an oil platform in Nigeria.",
-    categories: ["energy"],
-  },
-  {
-    text: "Advisor to a Dutch investor on financing and corporate governance issues connected to the development of a startup nuclear energy project in Latin America.",
-    categories: ["energy"],
-  },
-  {
-    text: "Advisor to a major oil and gas company regarding an LCIA dispute arising out of a services agreement governed by the laws of the United Kingdom.",
-    categories: ["energy"],
-  },
-  {
-    text: "Counsel to a Guinean company in an ICC arbitration arising out of a mining services contract governed by the laws of the United Kingdom.",
-    categories: ["energy"],
-  },
-  {
-    text: "Counsel to a state-owned Dominican Republic fund in an ICC arbitration involving the operations of a power company.",
-    categories: ["energy"],
-  },
-  {
-    text: "Advisor to Shell's subsidiary BG Overseas Limited with respect to an investment dispute against the Republic of Bolivia under the UK-Bolivia BIT involving regulatory measures affecting operation contracts for the extraction of hydrocarbons in Bolivia.",
-    categories: ["energy"],
-  },
-  {
-    text: "Counsel to the Claimant in Gasoducto Sur Peruano S.A. En Liquidación v. Republic of Peru (ICSID Case No. ARB/24/29), a contractual dispute over a gas pipeline project that collapsed in the wake of the Odebrecht corruption scandal.",
-    categories: ["energy"],
-  },
-  {
-    text: "Counsel to the Claimant in MOL Hungarian Oil and Gas Company v. Republic of Croatia (ICSID Case No. ARB/13/32), a dispute under the Energy Charter Treaty for measures related to the privatization of a Croatian oil and gas company, the supply of gas, and the criminal prosecution of Claimant's CEO for bribery accusations.",
-    categories: ["energy"],
-  },
-  {
-    text: "Counsel to the Respondent in Croatia v. MOL Hungarian Oil and Gas PLC (PCA Case No. 2014-15), a contractual dispute under the UNCITRAL rules regarding shareholders' rights and the corporate governance of a Croatian oil and gas company, the validity of a gas master agreement, and corruption allegations.",
-    categories: ["energy"],
-  },
-  {
-    text: "Counsel to the Claimants in Pluspetrol Perú et al. v. Perupetro (ICSID Case No. ARB/12/28), a dispute arising out of a gas supply contract regarding royalty payments and the sale of liquified natural gas (LNG); proceedings in Spanish.",
-    categories: ["energy"],
-  },
-  {
-    text: "Counsel to the Claimant in Pac Rim Cayman LLC v. Republic of El Salvador (ICSID Case No. ARB/09/12), a dispute under the Central America-Dominican Republic-United States Free Trade Agreement regarding the government's refusal to issue mining exploitation licenses.",
-    categories: ["energy"],
-  },
-  {
-    text: "Counsel to the Respondent in Chevron Overseas Finance GmbH v. The Republic of the Philippines (PCA Case No. 2019-25), a dispute under the Philippines-Switzerland BIT and the UNCITRAL rules involving the Malampaya gas field.",
-    categories: ["energy"],
-  },
-  {
-    text: "Advisor to a Canadian investor in the energy sector in Colombia regarding investment treaty protections.",
-    categories: ["energy"],
-  },
-  {
-    text: "Advisor to an American landowner in Albania regarding investment protection rights.",
-    categories: ["investor-state"],
-  },
-  {
-    text: "Counsel to the Claimant in Quanta Services Netherlands B.V. v. Republic of Peru (ICSID Case No. ARB/21/1), a dispute under the Netherlands-Peru Bilateral Investment Treaty (BIT) arising from measures related to concessions to build and operate fiber-optic networks.",
-    categories: ["investor-state"],
-  },
-  {
-    text: "Advisor to Shell's subsidiary BG Overseas Limited with respect to an investment dispute against the Republic of Bolivia under the UK-Bolivia BIT involving regulatory measures affecting operation contracts for the extraction of hydrocarbons in Bolivia.",
-    categories: ["investor-state"],
-  },
-  {
-    text: "Counsel to the Claimant in Gasoducto Sur Peruano S.A. En Liquidación v. Republic of Peru (ICSID Case No. ARB/24/29), a contractual dispute over a gas pipeline project that collapsed in the wake of the Odebrecht corruption scandal.",
-    categories: ["investor-state"],
-  },
-  {
-    text: "Counsel to the Claimant in MOL Hungarian Oil and Gas Company v. Republic of Croatia (ICSID Case No. ARB/13/32), a dispute under the Energy Charter Treaty for measures related to the privatization of a Croatian oil and gas company, the supply of gas, and the criminal prosecution of Claimant's CEO for bribery accusations.",
-    categories: ["investor-state"],
-  },
-  {
-    text: "Counsel to the Respondent in Croatia v. MOL Hungarian Oil and Gas PLC (PCA Case No. 2014-15), a contractual dispute under the UNCITRAL rules regarding shareholders' rights and the corporate governance of a Croatian oil and gas company, the validity of a gas master agreement, and corruption allegations.",
-    categories: ["investor-state"],
-  },
-  {
-    text: "Counsel to the Claimants in Pluspetrol Perú et al. v. Perupetro (ICSID Case No. ARB/12/28), a dispute arising out of a gas supply contract regarding royalty payments and the sale of liquified natural gas (LNG); proceedings in Spanish.",
-    categories: ["investor-state"],
-  },
-  {
-    text: "Counsel to the Claimant in Pac Rim Cayman LLC v. Republic of El Salvador (ICSID Case No. ARB/09/12), a dispute under the Central America-Dominican Republic-United States Free Trade Agreement regarding the government's refusal to issue mining exploitation licenses.",
-    categories: ["investor-state"],
-  },
-  {
-    text: "Counsel to the Respondent in Chevron Overseas Finance GmbH v. The Republic of the Philippines (PCA Case No. 2019-25), a dispute under the Philippines-Switzerland BIT and the UNCITRAL rules involving the Malampaya gas field.",
-    categories: ["investor-state"],
-  },
-  {
-    text: "Advisor to a Turkish investor in Turkmenistan regarding investment treaty protections.",
-    categories: ["investor-state"],
-  },
-  {
-    text: "Advisor to a Canadian investor in the infrastructure sector in Peru regarding investment treaty protections.",
-    categories: ["investor-state"],
-  },
-  {
-    text: "Advisor to a Canadian investor in the energy sector in Colombia regarding investment treaty protections.",
-    categories: ["investor-state"],
-  },
-  {
-    text: "Counsel to Petitioner Redes Andinas de Comunicaciones S.R.L. v. Republic of Peru, et al (US District Court for the District of Columbia Civil Action No. 22-3631), a proceeding to recognize and enforce two ICC arbitral awards.",
-    categories: ["recognition"],
-  },
-  {
-    text: "Advisor to third‑party funders and investment funds on the assessment, valuation, and strategy of investor-State and commercial disputes.",
-    categories: ["risk"],
-  },
-];
-
-// 4 images for the symmetric grid layout
-const expertiseImages = [
-  "/images/EricaFranzettiWhatsAppImage2025-12-26at14.55.54(1)-2.png",
-  "/images/EricaFranzettiWhatsAppImage2025-12-18at19.20.56.png",
-  "/images/EricaFranzettiWhatsAppImage2025-12-26at14.55.54(1).png",
-  "/images/Erica1WhatsAppImage2025-12-26at14.55.53-topaz-3.png",
-];
-
 export default function Cases() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const { language } = useLanguage();
+  const { t, getLocalized } = useLanguage();
+  const { cases } = siteContent.content;
+
+  // Helper to get localized text for a case item
+  const getCaseText = (item: any) => {
+    return getLocalized(item.text);
+  };
 
   // SEO Meta Tags
   useEffect(() => {
@@ -300,19 +60,19 @@ export default function Cases() {
   };
 
   const getFilteredCases = (categoryId: string) => {
-    const arbitratorCases = arbitratorAppointments.filter((c) =>
-      c.categories.includes(categoryId)
-    );
-    const counselCases = mattersAsCounsel.filter((c) =>
-      c.categories.includes(categoryId)
-    );
+    const arbitratorCases = cases.arbitratorAppointments
+      .filter((c: any) => c.categories.includes(categoryId))
+      .map((c: any) => ({ ...c, text: getCaseText(c) }));
+
+    const counselCases = cases.mattersAsCounsel
+      .filter((c: any) => c.categories.includes(categoryId))
+      .map((c: any) => ({ ...c, text: getCaseText(c) }));
+
     return { arbitratorCases, counselCases };
   };
 
   const getLabel = (matter: typeof subjectMatters[0]) => {
-    if (language === "ES") return matter.labelES;
-    if (language === "PT") return matter.labelPT;
-    return matter.label;
+    return getLocalized(matter, 'label');
   };
 
   // Check if section should show role headings (only for commercial, construction, deal-structure)
@@ -332,14 +92,10 @@ export default function Cases() {
             className="text-center mb-12"
           >
             <h1 className="text-4xl lg:text-5xl font-serif font-semibold text-charcoal mb-4">
-              {language === "ES" ? "EXPERIENCIA" : language === "PT" ? "EXPERIÊNCIA" : "EXPERIENCE"}
+              {t("expertise.title").toUpperCase()}
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {language === "ES"
-                ? "Trayectoria comprobada en diversos sectores y tipos de disputas"
-                : language === "PT"
-                  ? "Trajetória comprovada em diversos setores e tipos de disputas"
-                  : "Proven track record across diverse sectors and dispute types"}
+              {t("expertise.subtitle")}
             </p>
           </motion.div>
 
@@ -375,11 +131,7 @@ export default function Cases() {
         <div className="container">
           {/* Context sentence */}
           <p className="text-gray-600 text-left mb-12 w-full">
-            {language === "ES"
-              ? "Los asuntos descritos a continuación reflejan la experiencia adquirida en roles anteriores en firmas de abogados internacionales líderes."
-              : language === "PT"
-                ? "Os assuntos descritos abaixo refletem a experiência adquirida em funções anteriores em escritórios de advocacia internacionais líderes."
-                : <>The matters below include experience gained at leading international law firms and were conducted in English unless otherwise indicated.<br />Selected matters spanning multiple areas of practice may be referenced in more than one section.</>}
+            {t("cases.intro")}
           </p>
           {subjectMatters.map((matter) => {
             const { arbitratorCases, counselCases } = getFilteredCases(matter.id);
@@ -407,10 +159,10 @@ export default function Cases() {
                     {arbitratorCases.length > 0 && (
                       <div className="mb-8">
                         <h3 className="text-2xl font-semibold text-charcoal mb-4">
-                          {language === "ES" ? "Como Árbitro" : language === "PT" ? "Como Árbitro" : "As Arbitrator"}
+                          {t("section.asArbitrator")}
                         </h3>
                         <ul className="space-y-3">
-                          {arbitratorCases.map((item, index) => (
+                          {arbitratorCases.map((item: any, index: number) => (
                             <li key={index} className="flex items-start">
                               <span className="inline-block w-2 h-2 rounded-full bg-aquamarine mt-2 mr-3 flex-shrink-0"></span>
                               <span className="text-gray-700 leading-relaxed">
@@ -425,10 +177,10 @@ export default function Cases() {
                     {counselCases.length > 0 && (
                       <div>
                         <h3 className="text-2xl font-semibold text-charcoal mb-4">
-                          {language === "ES" ? "Como Abogada" : language === "PT" ? "Como Advogada" : "As Counsel"}
+                          {t("section.asCounsel")}
                         </h3>
                         <ul className="space-y-3">
-                          {counselCases.map((item, index) => (
+                          {counselCases.map((item: any, index: number) => (
                             <li key={index} className="flex items-start">
                               <span className="inline-block w-2 h-2 rounded-full bg-aquamarine mt-2 mr-3 flex-shrink-0"></span>
                               <span className="text-gray-700 leading-relaxed">
@@ -442,7 +194,7 @@ export default function Cases() {
                   </>
                 ) : (
                   <ul className="space-y-3">
-                    {[...arbitratorCases, ...counselCases].map((item, index) => (
+                    {[...arbitratorCases, ...counselCases].map((item: any, index: number) => (
                       <li key={index} className="flex items-start">
                         <span className="inline-block w-2 h-2 rounded-full bg-aquamarine mt-2 mr-3 flex-shrink-0"></span>
                         <span className="text-gray-700 leading-relaxed">

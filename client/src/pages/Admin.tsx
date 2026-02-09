@@ -90,6 +90,7 @@ export default function Admin() {
     const sections = [
         { value: "profile", label: "Profile (About)" },
         { value: "experience", label: "Experience (Lists)" },
+        { value: "cases", label: "Cases (Arbitrator/Counsel)" },
         { value: "thoughtLeadership", label: "Thought Leadership" },
         { value: "contact", label: "Contact Info" },
         { value: "cv", label: "CV Management" },
@@ -149,82 +150,93 @@ export default function Admin() {
                         </CardHeader>
                         <CardContent className="space-y-6">
                             <div className="grid gap-6">
-                                <div className="space-y-2">
-                                    <Label>Intro Paragraph</Label>
-                                    <Textarea
-                                        value={content.content.about.p1}
-                                        onChange={(e) => handleContentChange(["content", "about", "p1"], e.target.value)}
-                                        className="min-h-[120px]"
-                                    />
-                                </div>
-                                <Separator />
                                 <div className="space-y-4">
-                                    <h4 className="font-medium">Quote 1 (The Legal 500)</h4>
-                                    <div className="grid gap-4 md:grid-cols-2">
-                                        <div className="space-y-2">
-                                            <Label>Text</Label>
-                                            <Textarea value={content.content.about.quote1} onChange={(e) => handleContentChange(["content", "about", "quote1"], e.target.value)} />
-                                        </div>
-                                        <div className="space-y-2">
-                                            <Label>Source</Label>
-                                            <Input value={content.content.about.quoteSource1} onChange={(e) => handleContentChange(["content", "about", "quoteSource1"], e.target.value)} />
-                                        </div>
+                                    <Label className="text-lg font-semibold">Intro Paragraph (p1)</Label>
+                                    <div className="grid gap-4 md:grid-cols-3">
+                                        <div className="space-y-2"><Label>English</Label><Textarea value={content.content.about.p1.EN} onChange={(e) => handleContentChange(["content", "about", "p1", "EN"], e.target.value)} className="min-h-[100px]" /></div>
+                                        <div className="space-y-2"><Label>Español</Label><Textarea value={content.content.about.p1.ES} onChange={(e) => handleContentChange(["content", "about", "p1", "ES"], e.target.value)} className="min-h-[100px]" /></div>
+                                        <div className="space-y-2"><Label>Português</Label><Textarea value={content.content.about.p1.PT} onChange={(e) => handleContentChange(["content", "about", "p1", "PT"], e.target.value)} className="min-h-[100px]" /></div>
                                     </div>
                                 </div>
                                 <Separator />
-                                <div className="space-y-2">
-                                    <Label>Arbitrator Experience Paragraph</Label>
-                                    <Textarea value={content.content.about.p2} onChange={(e) => handleContentChange(["content", "about", "p2"], e.target.value)} className="min-h-[100px]" />
-                                </div>
-                                <div className="space-y-2">
-                                    <Label>Arbitrator Services List (One per line)</Label>
-                                    <Textarea
-                                        value={content.content.about.serviceList1.join("\n")}
-                                        onChange={(e) => handleListChange(["content", "about", "serviceList1"], e.target.value.split("\n").filter(l => l.trim() !== ""))}
-                                        className="min-h-[100px] font-mono text-sm"
-                                    />
-                                </div>
-                                <Separator />
-                                <div className="space-y-2">
-                                    <Label>Counsel Services Header</Label>
-                                    <Input value={content.content.about.p3} onChange={(e) => handleContentChange(["content", "about", "p3"], e.target.value)} />
-                                </div>
-                                <div className="space-y-2">
-                                    <Label>Counsel Services List (One per line)</Label>
-                                    <Textarea
-                                        value={content.content.about.serviceList2.join("\n")}
-                                        onChange={(e) => handleListChange(["content", "about", "serviceList2"], e.target.value.split("\n").filter(l => l.trim() !== ""))}
-                                        className="min-h-[100px] font-mono text-sm"
-                                    />
-                                </div>
-                                <Separator />
-                                <div className="space-y-2">
-                                    <Label>Jurisdictions Paragraph</Label>
-                                    <Textarea value={content.content.about.p4} onChange={(e) => handleContentChange(["content", "about", "p4"], e.target.value)} className="min-h-[100px]" />
-                                </div>
-                                <div className="space-y-2">
-                                    <Label>Sectors List (One per line)</Label>
-                                    <Textarea
-                                        value={content.content.about.sectorList.join("\n")}
-                                        onChange={(e) => handleListChange(["content", "about", "sectorList"], e.target.value.split("\n").filter(l => l.trim() !== ""))}
-                                        className="min-h-[100px] font-mono text-sm"
-                                    />
+                                <div className="space-y-4">
+                                    <Label className="text-lg font-semibold">Quote 1 (The Legal 500)</Label>
+                                    <div className="grid gap-4 md:grid-cols-3">
+                                        <div className="space-y-2"><Label>English</Label><Textarea value={content.content.about.quote1.EN} onChange={(e) => handleContentChange(["content", "about", "quote1", "EN"], e.target.value)} /></div>
+                                        <div className="space-y-2"><Label>Español</Label><Textarea value={content.content.about.quote1.ES} onChange={(e) => handleContentChange(["content", "about", "quote1", "ES"], e.target.value)} /></div>
+                                        <div className="space-y-2"><Label>Português</Label><Textarea value={content.content.about.quote1.PT} onChange={(e) => handleContentChange(["content", "about", "quote1", "PT"], e.target.value)} /></div>
+                                    </div>
                                 </div>
                                 <Separator />
                                 <div className="space-y-4">
-                                    <h4 className="font-medium">Recognition & Background</h4>
-                                    <div className="space-y-4">
-                                        <div className="space-y-2">
-                                            <Label>Recognition Paragraph</Label>
-                                            <Textarea value={content.content.about.p5} onChange={(e) => handleContentChange(["content", "about", "p5"], e.target.value)} />
+                                    <Label className="text-lg font-semibold">Arbitrator Experience (p2)</Label>
+                                    <div className="grid gap-4 md:grid-cols-3">
+                                        <div className="space-y-2"><Label>English</Label><Textarea value={content.content.about.p2.EN} onChange={(e) => handleContentChange(["content", "about", "p2", "EN"], e.target.value)} /></div>
+                                        <div className="space-y-2"><Label>Español</Label><Textarea value={content.content.about.p2.ES} onChange={(e) => handleContentChange(["content", "about", "p2", "ES"], e.target.value)} /></div>
+                                        <div className="space-y-2"><Label>Português</Label><Textarea value={content.content.about.p2.PT} onChange={(e) => handleContentChange(["content", "about", "p2", "PT"], e.target.value)} /></div>
+                                    </div>
+                                </div>
+                                <div className="space-y-4">
+                                    <Label className="font-medium">Arbitrator Services List</Label>
+                                    <div className="grid gap-4 md:grid-cols-3">
+                                        <div className="space-y-2"><Label>English</Label><Textarea value={(content.content.about.serviceList1.EN || []).join("\n")} onChange={(e) => handleListChange(["content", "about", "serviceList1", "EN"], e.target.value.split("\n").filter(l => l.trim() !== ""))} className="min-h-[120px] font-mono text-sm" /></div>
+                                        <div className="space-y-2"><Label>Español</Label><Textarea value={(content.content.about.serviceList1.ES || []).join("\n")} onChange={(e) => handleListChange(["content", "about", "serviceList1", "ES"], e.target.value.split("\n").filter(l => l.trim() !== ""))} className="min-h-[120px] font-mono text-sm" /></div>
+                                        <div className="space-y-2"><Label>Português</Label><Textarea value={(content.content.about.serviceList1.PT || []).join("\n")} onChange={(e) => handleListChange(["content", "about", "serviceList1", "PT"], e.target.value.split("\n").filter(l => l.trim() !== ""))} className="min-h-[120px] font-mono text-sm" /></div>
+                                    </div>
+                                </div>
+                                <Separator />
+                                <div className="space-y-4">
+                                    <Label className="text-lg font-semibold">Counsel Services (p3 & List)</Label>
+                                    <div className="grid gap-4 md:grid-cols-3">
+                                        <div className="space-y-2"><Label>EN Header</Label><Input value={content.content.about.p3.EN} onChange={(e) => handleContentChange(["content", "about", "p3", "EN"], e.target.value)} /></div>
+                                        <div className="space-y-2"><Label>ES Header</Label><Input value={content.content.about.p3.ES} onChange={(e) => handleContentChange(["content", "about", "p3", "ES"], e.target.value)} /></div>
+                                        <div className="space-y-2"><Label>PT Header</Label><Input value={content.content.about.p3.PT} onChange={(e) => handleContentChange(["content", "about", "p3", "PT"], e.target.value)} /></div>
+                                    </div>
+                                    <div className="grid gap-4 md:grid-cols-3 border-t pt-4">
+                                        <div className="space-y-2"><Label>EN List</Label><Textarea value={(content.content.about.serviceList2.EN || []).join("\n")} onChange={(e) => handleListChange(["content", "about", "serviceList2", "EN"], e.target.value.split("\n").filter(l => l.trim() !== ""))} className="min-h-[120px] font-mono text-sm" /></div>
+                                        <div className="space-y-2"><Label>ES List</Label><Textarea value={(content.content.about.serviceList2.ES || []).join("\n")} onChange={(e) => handleListChange(["content", "about", "serviceList2", "ES"], e.target.value.split("\n").filter(l => l.trim() !== ""))} className="min-h-[120px] font-mono text-sm" /></div>
+                                        <div className="space-y-2"><Label>PT List</Label><Textarea value={(content.content.about.serviceList2.PT || []).join("\n")} onChange={(e) => handleListChange(["content", "about", "serviceList2", "PT"], e.target.value.split("\n").filter(l => l.trim() !== ""))} className="min-h-[120px] font-mono text-sm" /></div>
+                                    </div>
+                                </div>
+                                <Separator />
+                                <div className="space-y-4">
+                                    <Label className="text-lg font-semibold">Jurisdictions & Sectors (p4 & List)</Label>
+                                    <div className="grid gap-4 md:grid-cols-3">
+                                        <div className="space-y-2"><Label>EN Summary</Label><Textarea value={content.content.about.p4.EN} onChange={(e) => handleContentChange(["content", "about", "p4", "EN"], e.target.value)} /></div>
+                                        <div className="space-y-2"><Label>ES Summary</Label><Textarea value={content.content.about.p4.ES} onChange={(e) => handleContentChange(["content", "about", "p4", "ES"], e.target.value)} /></div>
+                                        <div className="space-y-2"><Label>PT Summary</Label><Textarea value={content.content.about.p4.PT} onChange={(e) => handleContentChange(["content", "about", "p4", "PT"], e.target.value)} /></div>
+                                    </div>
+                                    <div className="grid gap-4 md:grid-cols-3 border-t pt-4">
+                                        <div className="space-y-2"><Label>EN Sectors</Label><Textarea value={(content.content.about.sectorList.EN || []).join("\n")} onChange={(e) => handleListChange(["content", "about", "sectorList", "EN"], e.target.value.split("\n").filter(l => l.trim() !== ""))} className="min-h-[120px] font-mono text-sm" /></div>
+                                        <div className="space-y-2"><Label>ES Sectors</Label><Textarea value={(content.content.about.sectorList.ES || []).join("\n")} onChange={(e) => handleListChange(["content", "about", "sectorList", "ES"], e.target.value.split("\n").filter(l => l.trim() !== ""))} className="min-h-[120px] font-mono text-sm" /></div>
+                                        <div className="space-y-2"><Label>PT Sectors</Label><Textarea value={(content.content.about.sectorList.PT || []).join("\n")} onChange={(e) => handleListChange(["content", "about", "sectorList", "PT"], e.target.value.split("\n").filter(l => l.trim() !== ""))} className="min-h-[120px] font-mono text-sm" /></div>
+                                    </div>
+                                </div>
+                                <Separator />
+                                <div className="space-y-6">
+                                    <Label className="text-lg font-semibold">Final Paragraphs (p5, p6, p7)</Label>
+                                    <div className="space-y-4 border-l-4 border-charcoal/20 pl-4">
+                                        <Label className="text-sm text-gray-500 uppercase tracking-wider">Recognition (p5)</Label>
+                                        <div className="grid gap-4 md:grid-cols-3">
+                                            <div className="space-y-2"><Label>EN</Label><Textarea value={content.content.about.p5.EN} onChange={(e) => handleContentChange(["content", "about", "p5", "EN"], e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>ES</Label><Textarea value={content.content.about.p5.ES} onChange={(e) => handleContentChange(["content", "about", "p5", "ES"], e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>PT</Label><Textarea value={content.content.about.p5.PT} onChange={(e) => handleContentChange(["content", "about", "p5", "PT"], e.target.value)} /></div>
                                         </div>
-                                        <div className="space-y-2">
-                                            <Label>Speaking/Teaching Paragraph</Label>
-                                            <Textarea value={content.content.about.p6} onChange={(e) => handleContentChange(["content", "about", "p6"], e.target.value)} />
+                                    </div>
+                                    <div className="space-y-4 border-l-4 border-charcoal/20 pl-4">
+                                        <Label className="text-sm text-gray-500 uppercase tracking-wider">Academic/Speaking (p6)</Label>
+                                        <div className="grid gap-4 md:grid-cols-3">
+                                            <div className="space-y-2"><Label>EN</Label><Textarea value={content.content.about.p6.EN} onChange={(e) => handleContentChange(["content", "about", "p6", "EN"], e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>ES</Label><Textarea value={content.content.about.p6.ES} onChange={(e) => handleContentChange(["content", "about", "p6", "ES"], e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>PT</Label><Textarea value={content.content.about.p6.PT} onChange={(e) => handleContentChange(["content", "about", "p6", "PT"], e.target.value)} /></div>
                                         </div>
-                                        <div className="space-y-2">
-                                            <Label>Background/Admissions Paragraph</Label>
-                                            <Textarea value={content.content.about.p7} onChange={(e) => handleContentChange(["content", "about", "p7"], e.target.value)} />
+                                    </div>
+                                    <div className="space-y-4 border-l-4 border-charcoal/20 pl-4">
+                                        <Label className="text-sm text-gray-500 uppercase tracking-wider">Experience Summary (p7)</Label>
+                                        <div className="grid gap-4 md:grid-cols-3">
+                                            <div className="space-y-2"><Label>EN</Label><Textarea value={content.content.about.p7.EN} onChange={(e) => handleContentChange(["content", "about", "p7", "EN"], e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>ES</Label><Textarea value={content.content.about.p7.ES} onChange={(e) => handleContentChange(["content", "about", "p7", "ES"], e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>PT</Label><Textarea value={content.content.about.p7.PT} onChange={(e) => handleContentChange(["content", "about", "p7", "PT"], e.target.value)} /></div>
                                         </div>
                                     </div>
                                 </div>
@@ -241,12 +253,22 @@ export default function Admin() {
                             <CardHeader><CardTitle>Professional Background</CardTitle><CardDescription>Edit roles and history.</CardDescription></CardHeader>
                             <CardContent className="space-y-6">
                                 {content.content.professionalBackground.map((item, index) => (
-                                    <div key={index} className="grid md:grid-cols-2 gap-4 p-4 border rounded bg-gray-50">
-                                        <div className="space-y-2"><Label>Title/Firm</Label><Input value={item.title} onChange={(e) => handleArrayItemChange(["content", "professionalBackground"], index, "title", e.target.value)} /></div>
-                                        <div className="space-y-2"><Label>Role</Label><Input value={item.role} onChange={(e) => handleArrayItemChange(["content", "professionalBackground"], index, "role", e.target.value)} /></div>
-                                        <div className="space-y-2"><Label>Location</Label><Input value={item.location} onChange={(e) => handleArrayItemChange(["content", "professionalBackground"], index, "location", e.target.value)} /></div>
-                                        <div className="space-y-2"><Label>Period</Label><Input value={item.period} onChange={(e) => handleArrayItemChange(["content", "professionalBackground"], index, "period", e.target.value)} /></div>
-                                        <div className="space-y-2 md:col-span-2"><Label>URL</Label><Input value={item.url} onChange={(e) => handleArrayItemChange(["content", "professionalBackground"], index, "url", e.target.value)} /></div>
+                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50">
+                                        <div className="grid md:grid-cols-2 gap-4">
+                                            <div className="space-y-2"><Label>Title/Firm</Label><Input value={item.title} onChange={(e) => handleArrayItemChange(["content", "professionalBackground"], index, "title", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Period</Label><Input value={item.period} onChange={(e) => handleArrayItemChange(["content", "professionalBackground"], index, "period", e.target.value)} /></div>
+                                        </div>
+                                        <div className="grid md:grid-cols-3 gap-4">
+                                            <div className="space-y-2"><Label>Role (EN)</Label><Input value={item.role} onChange={(e) => handleArrayItemChange(["content", "professionalBackground"], index, "role", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Role (ES)</Label><Input value={item.roleES || ""} onChange={(e) => handleArrayItemChange(["content", "professionalBackground"], index, "roleES", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Role (PT)</Label><Input value={item.rolePT || ""} onChange={(e) => handleArrayItemChange(["content", "professionalBackground"], index, "rolePT", e.target.value)} /></div>
+                                        </div>
+                                        <div className="grid md:grid-cols-3 gap-4">
+                                            <div className="space-y-2"><Label>Location (EN)</Label><Input value={item.location} onChange={(e) => handleArrayItemChange(["content", "professionalBackground"], index, "location", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Location (ES)</Label><Input value={item.locationES || ""} onChange={(e) => handleArrayItemChange(["content", "professionalBackground"], index, "locationES", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Location (PT)</Label><Input value={item.locationPT || ""} onChange={(e) => handleArrayItemChange(["content", "professionalBackground"], index, "locationPT", e.target.value)} /></div>
+                                        </div>
+                                        <div className="space-y-2"><Label>URL</Label><Input value={item.url} onChange={(e) => handleArrayItemChange(["content", "professionalBackground"], index, "url", e.target.value)} /></div>
                                     </div>
                                 ))}
                             </CardContent>
@@ -257,12 +279,22 @@ export default function Admin() {
                             <CardHeader><CardTitle>Education</CardTitle></CardHeader>
                             <CardContent className="space-y-6">
                                 {content.content.education.map((item, index) => (
-                                    <div key={index} className="grid md:grid-cols-2 gap-4 p-4 border rounded bg-gray-50">
-                                        <div className="space-y-2"><Label>Institution</Label><Input value={item.institution} onChange={(e) => handleArrayItemChange(["content", "education"], index, "institution", e.target.value)} /></div>
-                                        <div className="space-y-2"><Label>Degree</Label><Input value={item.degree} onChange={(e) => handleArrayItemChange(["content", "education"], index, "degree", e.target.value)} /></div>
-                                        <div className="space-y-2"><Label>Location</Label><Input value={item.location} onChange={(e) => handleArrayItemChange(["content", "education"], index, "location", e.target.value)} /></div>
-                                        <div className="space-y-2"><Label>Year</Label><Input value={item.year} onChange={(e) => handleArrayItemChange(["content", "education"], index, "year", e.target.value)} /></div>
-                                        <div className="space-y-2 md:col-span-2"><Label>Note</Label><Input value={item.note || ""} onChange={(e) => handleArrayItemChange(["content", "education"], index, "note", e.target.value)} /></div>
+                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50">
+                                        <div className="grid md:grid-cols-2 gap-4">
+                                            <div className="space-y-2"><Label>Institution (EN)</Label><Input value={item.institution} onChange={(e) => handleArrayItemChange(["content", "education"], index, "institution", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Institution (PT/ES if diff)</Label><Input value={item.institutionPT || ""} onChange={(e) => handleArrayItemChange(["content", "education"], index, "institutionPT", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Year</Label><Input value={item.year} onChange={(e) => handleArrayItemChange(["content", "education"], index, "year", e.target.value)} /></div>
+                                        </div>
+                                        <div className="grid md:grid-cols-3 gap-4">
+                                            <div className="space-y-2"><Label>Degree (EN)</Label><Input value={item.degree} onChange={(e) => handleArrayItemChange(["content", "education"], index, "degree", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Degree (ES)</Label><Input value={item.degreeES || ""} onChange={(e) => handleArrayItemChange(["content", "education"], index, "degreeES", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Degree (PT)</Label><Input value={item.degreePT || ""} onChange={(e) => handleArrayItemChange(["content", "education"], index, "degreePT", e.target.value)} /></div>
+                                        </div>
+                                        <div className="grid md:grid-cols-3 gap-4">
+                                            <div className="space-y-2"><Label>Note (EN)</Label><Input value={item.note || ""} onChange={(e) => handleArrayItemChange(["content", "education"], index, "note", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Note (ES)</Label><Input value={item.noteES || ""} onChange={(e) => handleArrayItemChange(["content", "education"], index, "noteES", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Note (PT)</Label><Input value={item.notePT || ""} onChange={(e) => handleArrayItemChange(["content", "education"], index, "notePT", e.target.value)} /></div>
+                                        </div>
                                     </div>
                                 ))}
                             </CardContent>
@@ -273,8 +305,12 @@ export default function Admin() {
                             <CardHeader><CardTitle>Professional Associations</CardTitle></CardHeader>
                             <CardContent className="space-y-6">
                                 {content.content.professionalAssociations.map((item, index) => (
-                                    <div key={index} className="grid gap-4 p-4 border rounded bg-gray-50">
-                                        <div className="space-y-2"><Label>Name</Label><Input value={item.name} onChange={(e) => handleArrayItemChange(["content", "professionalAssociations"], index, "name", e.target.value)} /></div>
+                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50">
+                                        <div className="grid md:grid-cols-3 gap-4">
+                                            <div className="space-y-2"><Label>Name (EN)</Label><Input value={item.name} onChange={(e) => handleArrayItemChange(["content", "professionalAssociations"], index, "name", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Name (ES)</Label><Input value={item.nameES || ""} onChange={(e) => handleArrayItemChange(["content", "professionalAssociations"], index, "nameES", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Name (PT)</Label><Input value={item.namePT || ""} onChange={(e) => handleArrayItemChange(["content", "professionalAssociations"], index, "namePT", e.target.value)} /></div>
+                                        </div>
                                         <div className="space-y-2"><Label>URL</Label><Input value={item.url} onChange={(e) => handleArrayItemChange(["content", "professionalAssociations"], index, "url", e.target.value)} /></div>
                                     </div>
                                 ))}
@@ -286,8 +322,12 @@ export default function Admin() {
                             <CardHeader><CardTitle>Bar Admissions</CardTitle></CardHeader>
                             <CardContent className="space-y-6">
                                 {content.content.barAdmissions.map((item, index) => (
-                                    <div key={index} className="grid gap-4 p-4 border rounded bg-gray-50">
-                                        <div className="space-y-2"><Label>Name</Label><Input value={item.name} onChange={(e) => handleArrayItemChange(["content", "barAdmissions"], index, "name", e.target.value)} /></div>
+                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50">
+                                        <div className="grid md:grid-cols-3 gap-4">
+                                            <div className="space-y-2"><Label>Name (EN)</Label><Input value={item.name} onChange={(e) => handleArrayItemChange(["content", "barAdmissions"], index, "name", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Name (ES)</Label><Input value={item.nameES || ""} onChange={(e) => handleArrayItemChange(["content", "barAdmissions"], index, "nameES", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Name (PT)</Label><Input value={item.namePT || ""} onChange={(e) => handleArrayItemChange(["content", "barAdmissions"], index, "namePT", e.target.value)} /></div>
+                                        </div>
                                         <div className="space-y-2"><Label>URL</Label><Input value={item.url} onChange={(e) => handleArrayItemChange(["content", "barAdmissions"], index, "url", e.target.value)} /></div>
                                     </div>
                                 ))}
@@ -298,21 +338,166 @@ export default function Admin() {
 
                 {/* Thought Leadership */}
                 {currentSection === "thoughtLeadership" && (
-                    <Card>
-                        <CardHeader><CardTitle>Academia</CardTitle></CardHeader>
-                        <CardContent className="space-y-6">
-                            {content.content.academia.map((item, index) => (
-                                <div key={index} className="grid md:grid-cols-2 gap-4 p-4 border rounded bg-gray-50">
-                                    <div className="space-y-2"><Label>Institution</Label><Input value={item.institution} onChange={(e) => handleArrayItemChange(["content", "academia"], index, "institution", e.target.value)} /></div>
-                                    <div className="space-y-2"><Label>Role</Label><Input value={item.role} onChange={(e) => handleArrayItemChange(["content", "academia"], index, "role", e.target.value)} /></div>
-                                    <div className="space-y-2"><Label>Course</Label><Input value={item.course} onChange={(e) => handleArrayItemChange(["content", "academia"], index, "course", e.target.value)} /></div>
-                                    <div className="space-y-2"><Label>Period</Label><Input value={item.period} onChange={(e) => handleArrayItemChange(["content", "academia"], index, "period", e.target.value)} /></div>
-                                    <div className="space-y-2 md:col-span-2"><Label>URL</Label><Input value={item.url} onChange={(e) => handleArrayItemChange(["content", "academia"], index, "url", e.target.value)} /></div>
-                                </div>
-                            ))}
-                        </CardContent>
-                        {/* Note: Publications/Speaking are currently static paragraphs in "About", or not fully implemented as lists. Leaving as is for minimal scope unless requested. */}
-                    </Card>
+                    <div className="space-y-8">
+                        {/* Academia / Teaching */}
+                        <Card>
+                            <CardHeader><CardTitle>Teaching Experience</CardTitle></CardHeader>
+                            <CardContent className="space-y-6">
+                                {content.content.teachingExperience.map((item, index) => (
+                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50">
+                                        <div className="grid md:grid-cols-2 gap-4">
+                                            <div className="space-y-2"><Label>Institution</Label><Input value={item.institution} onChange={(e) => handleArrayItemChange(["content", "teachingExperience"], index, "institution", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Period</Label><Input value={item.period} onChange={(e) => handleArrayItemChange(["content", "teachingExperience"], index, "period", e.target.value)} /></div>
+                                        </div>
+                                        <div className="grid md:grid-cols-3 gap-4">
+                                            <div className="space-y-2"><Label>Role (EN)</Label><Input value={item.role} onChange={(e) => handleArrayItemChange(["content", "teachingExperience"], index, "role", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Role (ES)</Label><Input value={item.roleES || ""} onChange={(e) => handleArrayItemChange(["content", "teachingExperience"], index, "roleES", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Role (PT)</Label><Input value={item.rolePT || ""} onChange={(e) => handleArrayItemChange(["content", "teachingExperience"], index, "rolePT", e.target.value)} /></div>
+                                        </div>
+                                        <div className="grid md:grid-cols-3 gap-4">
+                                            <div className="space-y-2"><Label>Course (EN)</Label><Input value={item.course} onChange={(e) => handleArrayItemChange(["content", "teachingExperience"], index, "course", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Course (ES)</Label><Input value={item.courseES || ""} onChange={(e) => handleArrayItemChange(["content", "teachingExperience"], index, "courseES", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Course (PT)</Label><Input value={item.coursePT || ""} onChange={(e) => handleArrayItemChange(["content", "teachingExperience"], index, "coursePT", e.target.value)} /></div>
+                                        </div>
+                                        <div className="space-y-2"><Label>URL</Label><Input value={item.url} onChange={(e) => handleArrayItemChange(["content", "teachingExperience"], index, "url", e.target.value)} /></div>
+                                    </div>
+                                ))}
+                            </CardContent>
+                        </Card>
+
+                        {/* Recognitions */}
+                        <Card>
+                            <CardHeader><CardTitle>Recognitions</CardTitle></CardHeader>
+                            <CardContent className="space-y-6">
+                                {content.content.thoughtLeadership.recognitions.map((item, index) => (
+                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50">
+                                        <div className="grid md:grid-cols-3 gap-4">
+                                            <div className="space-y-2 md:col-span-2"><Label>Name</Label><Input value={item.name} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "recognitions"], index, "name", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Year</Label><Input value={item.year} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "recognitions"], index, "year", e.target.value)} /></div>
+                                        </div>
+                                        <div className="grid md:grid-cols-3 gap-4">
+                                            <div className="space-y-2"><Label>Details (EN)</Label><Input value={item.details} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "recognitions"], index, "details", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Details (ES)</Label><Input value={item.detailsES || ""} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "recognitions"], index, "detailsES", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>Details (PT)</Label><Input value={item.detailsPT || ""} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "recognitions"], index, "detailsPT", e.target.value)} /></div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </CardContent>
+                        </Card>
+
+                        {/* Speaking */}
+                        <Card>
+                            <CardHeader><CardTitle>Speaking Engagements</CardTitle></CardHeader>
+                            <CardContent className="space-y-6">
+                                {content.content.thoughtLeadership.speakingEngagements.map((item, index) => (
+                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50">
+                                        <div className="space-y-4">
+                                            <Label className="font-semibold">Title</Label>
+                                            <div className="grid md:grid-cols-3 gap-4">
+                                                <div className="space-y-2"><Label>EN</Label><Textarea value={item.title.EN} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "speakingEngagements"], index, "title", { ...item.title, EN: e.target.value })} /></div>
+                                                <div className="space-y-2"><Label>ES</Label><Textarea value={item.title.ES} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "speakingEngagements"], index, "title", { ...item.title, ES: e.target.value })} /></div>
+                                                <div className="space-y-2"><Label>PT</Label><Textarea value={item.title.PT} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "speakingEngagements"], index, "title", { ...item.title, PT: e.target.value })} /></div>
+                                            </div>
+                                        </div>
+                                        <div className="space-y-4">
+                                            <Label className="font-semibold">Event / Location</Label>
+                                            <div className="grid md:grid-cols-3 gap-4">
+                                                <div className="space-y-2"><Label>EN</Label><Input value={item.event.EN} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "speakingEngagements"], index, "event", { ...item.event, EN: e.target.value })} /></div>
+                                                <div className="space-y-2"><Label>ES</Label><Input value={item.event.ES} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "speakingEngagements"], index, "event", { ...item.event, ES: e.target.value })} /></div>
+                                                <div className="space-y-2"><Label>PT</Label><Input value={item.event.PT} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "speakingEngagements"], index, "event", { ...item.event, PT: e.target.value })} /></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </CardContent>
+                        </Card>
+
+                        {/* Publications */}
+                        <Card>
+                            <CardHeader><CardTitle>Publications</CardTitle></CardHeader>
+                            <CardContent className="space-y-6">
+                                {content.content.thoughtLeadership.publications.map((item, index) => (
+                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50">
+                                        <div className="space-y-4">
+                                            <Label className="font-semibold">Title</Label>
+                                            <div className="grid md:grid-cols-3 gap-4">
+                                                <div className="space-y-2"><Label>EN</Label><Textarea value={item.title.EN} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "publications"], index, "title", { ...item.title, EN: e.target.value })} /></div>
+                                                <div className="space-y-2"><Label>ES</Label><Textarea value={item.title.ES} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "publications"], index, "title", { ...item.title, ES: e.target.value })} /></div>
+                                                <div className="space-y-2"><Label>PT</Label><Textarea value={item.title.PT} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "publications"], index, "title", { ...item.title, PT: e.target.value })} /></div>
+                                            </div>
+                                        </div>
+                                        <div className="space-y-4">
+                                            <Label className="font-semibold">Publication Details</Label>
+                                            <div className="grid md:grid-cols-3 gap-4">
+                                                <div className="space-y-2"><Label>EN</Label><Input value={item.publication.EN} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "publications"], index, "publication", { ...item.publication, EN: e.target.value })} /></div>
+                                                <div className="space-y-2"><Label>ES</Label><Input value={item.publication.ES} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "publications"], index, "publication", { ...item.publication, ES: e.target.value })} /></div>
+                                                <div className="space-y-2"><Label>PT</Label><Input value={item.publication.PT} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "publications"], index, "publication", { ...item.publication, PT: e.target.value })} /></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </CardContent>
+                        </Card>
+                    </div>
+                )}
+
+                {/* Cases Section */}
+                {currentSection === "cases" && (
+                    <div className="space-y-8">
+                        {/* Arbitrator Appointments */}
+                        <Card>
+                            <CardHeader><CardTitle>Arbitrator Appointments</CardTitle></CardHeader>
+                            <CardContent className="space-y-6">
+                                {content.content.cases.arbitratorAppointments.map((item, index) => (
+                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50">
+                                        <div className="space-y-4">
+                                            <Label className="font-semibold">Description</Label>
+                                            <div className="grid md:grid-cols-3 gap-4">
+                                                <div className="space-y-2"><Label>EN</Label><Textarea value={item.text.EN} onChange={(e) => handleArrayItemChange(["content", "cases", "arbitratorAppointments"], index, "text", { ...item.text, EN: e.target.value })} /></div>
+                                                <div className="space-y-2"><Label>ES</Label><Textarea value={item.text.ES} onChange={(e) => handleArrayItemChange(["content", "cases", "arbitratorAppointments"], index, "text", { ...item.text, ES: e.target.value })} /></div>
+                                                <div className="space-y-2"><Label>PT</Label><Textarea value={item.text.PT} onChange={(e) => handleArrayItemChange(["content", "cases", "arbitratorAppointments"], index, "text", { ...item.text, PT: e.target.value })} /></div>
+                                            </div>
+                                        </div>
+                                        <div className="space-y-2">
+                                            <Label>Categories (One per line)</Label>
+                                            <Textarea
+                                                value={(item.categories || []).join("\n")}
+                                                onChange={(e) => handleArrayItemChange(["content", "cases", "arbitratorAppointments"], index, "categories", e.target.value.split("\n").filter(l => l.trim() !== ""))}
+                                                className="min-h-[80px] font-mono text-xs"
+                                            />
+                                        </div>
+                                    </div>
+                                ))}
+                            </CardContent>
+                        </Card>
+
+                        {/* Matters as Counsel */}
+                        <Card>
+                            <CardHeader><CardTitle>Matters as Counsel</CardTitle></CardHeader>
+                            <CardContent className="space-y-6">
+                                {content.content.cases.mattersAsCounsel.map((item, index) => (
+                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50">
+                                        <div className="space-y-4">
+                                            <Label className="font-semibold">Description</Label>
+                                            <div className="grid md:grid-cols-3 gap-4">
+                                                <div className="space-y-2"><Label>EN</Label><Textarea value={item.text.EN} onChange={(e) => handleArrayItemChange(["content", "cases", "mattersAsCounsel"], index, "text", { ...item.text, EN: e.target.value })} /></div>
+                                                <div className="space-y-2"><Label>ES</Label><Textarea value={item.text.ES} onChange={(e) => handleArrayItemChange(["content", "cases", "mattersAsCounsel"], index, "text", { ...item.text, ES: e.target.value })} /></div>
+                                                <div className="space-y-2"><Label>PT</Label><Textarea value={item.text.PT} onChange={(e) => handleArrayItemChange(["content", "cases", "mattersAsCounsel"], index, "text", { ...item.text, PT: e.target.value })} /></div>
+                                            </div>
+                                        </div>
+                                        <div className="space-y-2">
+                                            <Label>Categories (One per line)</Label>
+                                            <Textarea
+                                                value={(item.categories || []).join("\n")}
+                                                onChange={(e) => handleArrayItemChange(["content", "cases", "mattersAsCounsel"], index, "categories", e.target.value.split("\n").filter(l => l.trim() !== ""))}
+                                                className="min-h-[80px] font-mono text-xs"
+                                            />
+                                        </div>
+                                    </div>
+                                ))}
+                            </CardContent>
+                        </Card>
+                    </div>
                 )}
 
                 {/* Contact Section */}
@@ -342,19 +527,23 @@ export default function Admin() {
                     </Card>
                 )}
 
-                {/* Translations / UI Labels */}
+                {/* Translations & UI Section */}
                 {currentSection === "translations" && (
                     <Card>
-                        <CardHeader><CardTitle>UI Labels & Translations</CardTitle></CardHeader>
+                        <CardHeader><CardTitle>UI Translations</CardTitle><CardDescription>Edit buttons, labels, and navigation text.</CardDescription></CardHeader>
                         <CardContent className="space-y-6">
-                            {Object.entries(content.translations).map(([key, trans]) => (
-                                <div key={key} className="p-4 bg-gray-50 rounded border">
-                                    <h4 className="font-mono text-xs text-gray-500 mb-2">{key.replace(/\./g, " > ")}</h4>
-                                    <div className="grid gap-3 md:grid-cols-3">
-                                        <div className="space-y-1"><Label className="text-xs">English</Label><Input value={trans.EN} onChange={(e) => handleContentChange(["translations", key, "EN"], e.target.value)} /></div>
-                                        <div className="space-y-1"><Label className="text-xs">Español</Label><Input value={trans.ES} onChange={(e) => handleContentChange(["translations", key, "ES"], e.target.value)} /></div>
-                                        <div className="space-y-1"><Label className="text-xs">Português</Label><Input value={trans.PT} onChange={(e) => handleContentChange(["translations", key, "PT"], e.target.value)} /></div>
-                                    </div>
+                            <div className="grid md:grid-cols-4 gap-4 font-bold border-b pb-2">
+                                <div>Label / Key</div>
+                                <div>English</div>
+                                <div>Español</div>
+                                <div>Português</div>
+                            </div>
+                            {Object.entries(content.translations).map(([key, langs]: [string, any]) => (
+                                <div key={key} className="grid md:grid-cols-4 gap-4 items-center py-2 border-b last:border-0">
+                                    <div className="font-mono text-xs text-gray-500">{key}</div>
+                                    <div><Input value={langs.EN || ""} onChange={(e) => handleContentChange(["translations", key, "EN"], e.target.value)} /></div>
+                                    <div><Input value={langs.ES || ""} onChange={(e) => handleContentChange(["translations", key, "ES"], e.target.value)} /></div>
+                                    <div><Input value={langs.PT || ""} onChange={(e) => handleContentChange(["translations", key, "PT"], e.target.value)} /></div>
                                 </div>
                             ))}
                         </CardContent>
@@ -375,11 +564,11 @@ function CVManager() {
     // Updated list with Mini CVs in other languages
     const cvFiles = [
         { name: "English CV", filename: "Franzetti-CV-English.pdf", lang: "EN" },
-        { name: "English Mini CV", filename: "cv-english-mini.pdf", lang: "EN (Mini)" },
+        { name: "English Mini CV", filename: "Franzetti-Mini-CV-English.pdf", lang: "EN (Mini)" },
         { name: "Spanish CV", filename: "Franzetti-CV-Spanish.pdf", lang: "ES" },
-        { name: "Spanish Mini CV", filename: "cv-spanish-mini.pdf", lang: "ES (Mini)" },
+        { name: "Spanish Mini CV", filename: "Franzetti-Mini-CV-Spanish.pdf", lang: "ES (Mini)" },
         { name: "Portuguese CV", filename: "Franzetti-CV-Portuguese.pdf", lang: "PT" },
-        { name: "Portuguese Mini CV", filename: "cv-portuguese-mini.pdf", lang: "PT (Mini)" },
+        { name: "Portuguese Mini CV", filename: "Franzetti-Mini-CV-Portuguese.pdf", lang: "PT (Mini)" },
     ];
 
     const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>, targetFilename: string) => {
@@ -455,9 +644,10 @@ function CVManager() {
                                         Replace File
                                     </label>
                                 </Button>
-                                <Button asChild variant="ghost" size="icon" title="View Current">
+                                <Button asChild variant="ghost" size="icon" title={`View current ${file.name}`}>
                                     <a href={`/cv/${file.filename}`} target="_blank" rel="noopener noreferrer">
                                         <FileText className="h-4 w-4" />
+                                        <span className="sr-only">View current {file.name}</span>
                                     </a>
                                 </Button>
                             </div>
