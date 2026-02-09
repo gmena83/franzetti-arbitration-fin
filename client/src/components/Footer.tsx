@@ -100,53 +100,37 @@ export default function Footer() {
                   {t("footer.downloadCV")}
                 </h4>
                 <div className="flex flex-col gap-3">
-                  {/* Full CVs Row */}
-                  <div className="flex flex-wrap gap-3 text-sm">
+                  {/* CV Links - Vertical Stack */}
+                  <div className="flex flex-col gap-2 text-sm">
                     {cv?.english && (
                       <a href={cv.english} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
-                        English
+                        Full CV (EN)
+                      </a>
+                    )}
+                    {cv?.englishMini && (
+                      <a href={cv.englishMini} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
+                        One-page CV (EN)
                       </a>
                     )}
                     {cv?.spanish && (
-                      <>
-                        <span className="text-gray-500">|</span>
-                        <a href={cv.spanish} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
-                          Español
-                        </a>
-                      </>
-                    )}
-                    {cv?.portuguese && (
-                      <>
-                        <span className="text-gray-500">|</span>
-                        <a href={cv.portuguese} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
-                          Português
-                        </a>
-                      </>
-                    )}
-                  </div>
-
-                  {/* Mini CVs Row */}
-                  <div className="flex flex-wrap gap-3 text-sm">
-                    {cv?.englishMini && (
-                      <a href={cv.englishMini} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
-                        One-Page CV
+                      <a href={cv.spanish} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
+                        CV Completo (ES)
                       </a>
                     )}
                     {cv?.spanishMini && (
-                      <>
-                        <span className="text-gray-500">|</span>
-                        <a href={cv.spanishMini} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
-                          1-Page (ES)
-                        </a>
-                      </>
+                      <a href={cv.spanishMini} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
+                        One-page CV (ES)
+                      </a>
+                    )}
+                    {cv?.portuguese && (
+                      <a href={cv.portuguese} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
+                        CV Completo (PT)
+                      </a>
                     )}
                     {cv?.portugueseMini && (
-                      <>
-                        <span className="text-gray-500">|</span>
-                        <a href={cv.portugueseMini} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
-                          1-Page (PT)
-                        </a>
-                      </>
+                      <a href={cv.portugueseMini} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
+                        One-page CV (PT)
+                      </a>
                     )}
                   </div>
                 </div>
