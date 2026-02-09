@@ -26,7 +26,7 @@ export default function ProtectedRoute({ children }: ProtectedRouteProps) {
         // In a production app with sensitive data, these should be environment variables or server-side auth.
         const allowedUsers = [
             { email: "gonzalo@menatech.cloud", password: "Franzarb123" },
-            { email: "erica@franzettiabritration.com", password: "Franzarb123" },
+            { email: "erica@franzettiarbitration.com", password: "Franzarb123" },
         ];
 
         const validUser = allowedUsers.find(

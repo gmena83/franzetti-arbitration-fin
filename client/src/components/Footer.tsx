@@ -95,8 +95,8 @@ export default function Footer() {
 
             {/* CV Downloads (from CMS) */}
             {hasAnyCv && (
-              <div className="mt-4">
-                <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-2">
+              <div>
+                <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">
                   {t("footer.downloadCV")}
                 </h4>
                 <div className="flex flex-col gap-3">
