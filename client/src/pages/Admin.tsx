@@ -71,16 +71,17 @@ export default function Admin() {
             });
 
             if (!response.ok) {
-                throw new Error("Failed to save content");
+                const errorData = await response.json();
+                throw new Error(errorData.error || errorData.message || "Failed to save content");
             }
 
             toast.success("Content saved successfully!", {
                 description: "Changes will be live in a few minutes after the site rebuilds.",
             });
-        } catch (error) {
+        } catch (error: any) {
             console.error("Save error:", error);
             toast.error("Error saving content", {
-                description: "Please try again later.",
+                description: error.message || "Please try again later.",
             });
         } finally {
             setIsSaving(false);
