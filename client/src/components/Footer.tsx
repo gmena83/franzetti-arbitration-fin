@@ -29,30 +29,9 @@ type CvLinks = {
 export default function Footer() {
   const { t, language } = useLanguage();
 
-  const [cv, setCv] = useState<CvLinks | null>(null);
-
-  useEffect(() => {
-    // Load CV links from CMS-managed JSON in public
-    fetch("/cv/cv.json", { cache: "no-cache" })
-      .then((res) => (res.ok ? res.json() : null))
-      .then((data) => {
-        if (data && typeof data === "object") {
-          setCv({
-            english: data.english || undefined,
-            englishMini: data.englishMini || undefined,
-            spanish: data.spanish || undefined,
-            spanishMini: data.spanishMini || undefined,
-            portuguese: data.portuguese || undefined,
-            portugueseMini: data.portugueseMini || undefined,
-            vcard: data.vcard || undefined,
-          });
-        }
-      })
-      .catch(() => {
-        // fail silently; footer will just not render CV links
-        setCv(null);
-      });
-  }, []);
+  // Load CV links directly from bundled JSON
+  // This avoids runtime fetch issues and 404s
+  const cv = siteContent.cv;
 
   const { contactInfo } = siteContent.content;
 
