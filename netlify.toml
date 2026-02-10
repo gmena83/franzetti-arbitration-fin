@@ -11,6 +11,11 @@
   node_bundler = "esbuild"
 
 [[redirects]]
+  from = "/api/save-content"
+  to = "/.netlify/functions/save-content"
+  status = 200
+
+[[redirects]]
   from = "/cv/cv.json"
   to = "/.netlify/functions/cv-config"
   status = 200
