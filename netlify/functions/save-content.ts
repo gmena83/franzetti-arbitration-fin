@@ -14,10 +14,23 @@ const handler: Handler = async (event, context) => {
     }
 
     if (!GITHUB_TOKEN || !REPO_OWNER || !REPO_NAME) {
-        console.error("Missing environment variables");
+        console.error("Missing environment variables:", {
+            hasToken: !!GITHUB_TOKEN,
+            hasOwner: !!REPO_OWNER,
+            owner: REPO_OWNER,
+            hasName: !!REPO_NAME,
+            name: REPO_NAME,
+        });
         return {
             statusCode: 500,
-            body: JSON.stringify({ error: "Server configuration error" }),
+            body: JSON.stringify({
+                error: "Server configuration error",
+                details: `Missing: ${[
+                    !GITHUB_TOKEN && "GITHUB_TOKEN",
+                    !REPO_OWNER && "REPO_OWNER",
+                    !REPO_NAME && "REPO_NAME"
+                ].filter(Boolean).join(", ")}`
+            }),
         };
     }
 
