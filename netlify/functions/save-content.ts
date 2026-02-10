@@ -1,14 +1,15 @@
 import { Handler } from "@netlify/functions";
 import axios from "axios";
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const REPO_OWNER = process.env.REPO_OWNER;
-const REPO_NAME = process.env.REPO_NAME;
 const FILE_PATH = "client/src/data/siteContent.json";
-// Ensure the branch is correct, default to main
-const BRANCH = process.env.BRANCH || "main";
 
 const handler: Handler = async (event, context) => {
+    // Read env vars inside handler, not at module scope
+    const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+    const REPO_OWNER = process.env.REPO_OWNER;
+    const REPO_NAME = process.env.REPO_NAME;
+    const BRANCH = process.env.BRANCH || "main";
+
     if (event.httpMethod !== "POST") {
         return { statusCode: 405, body: "Method Not Allowed" };
     }
