@@ -476,7 +476,7 @@
       },
       {
         "name": "Arbitral Women",
-        "namePT": "Arbitral Women",
+        "namePT": "ArbitralWomen",
         "logo": "/images/logos/arbitralwomen.jpg",
         "url": "https://www.arbitralwomen.org"
       },
@@ -484,8 +484,7 @@
         "name": "Brazilian Arbitration Committee (CBAR)",
         "namePT": "Comitê Brasileiro de Arbitragem (CBAr)",
         "logo": "/images/logos/cbar.jpg",
-        "url": "https://cbar.org.br",
-        "nameES": "Comitê Brasileiro de Arbitragem (CBAr)"
+        "url": "https://cbar.org.br"
       },
       {
         "name": "Miami International Arbitration Society (MIAS)",
