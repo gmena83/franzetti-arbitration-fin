@@ -474,21 +474,24 @@
     "barAdmissions": [
       {
         "name": "District of Columbia",
-        "namePT": "Distrito de Colúmbia",
+        "namePT": "Distrito de Columbia",
         "logo": "/images/logos/dcbar.jpg",
-        "url": "https://www.dcbar.org"
+        "url": "https://www.dcbar.org",
+        "nameES": "Distrito de Columbia"
       },
       {
         "name": "New York",
         "namePT": "Nova York",
         "logo": "/images/logos/nysba.jpg",
-        "url": "https://nysba.org"
+        "url": "https://nysba.org",
+        "nameES": "Nueva York"
       },
       {
         "name": "Brazil",
         "namePT": "Brasil (OAB)",
         "logo": "/images/logos/oab.jpg",
-        "url": "https://www.oab.org.br"
+        "url": "https://www.oab.org.br",
+        "nameES": "Brasil"
       }
     ],
     "carouselQuotes": [
