@@ -299,16 +299,22 @@
         "rolePT": "Sócia",
         "period": "Sept. 2021 – Jan. 2026",
         "logo": "/images/king-spalding-logo.png",
-        "url": "https://www.kslaw.com"
+        "url": "https://www.kslaw.com",
+        "roleES": "Socia",
+        "locationES": "Washington, DC y Miami",
+        "locationPT": "Washington, DC e Miami"
       },
       {
         "title": "Dechert LLP",
         "location": "Washington, DC",
         "role": "Partner / Counsel",
-        "rolePT": "Sócia/Advogada",
+        "rolePT": "Sócia / Counsel",
         "period": "Sept. 2015 – Sept. 2021",
         "logo": "/images/dechert-logo-new.png",
-        "url": "https://www.dechert.com"
+        "url": "https://www.dechert.com",
+        "roleES": "Socia / Consejera Jurídica",
+        "locationES": "Washington, DC",
+        "locationPT": "Washington, DC"
       },
       {
         "title": "Weil, Gotshal & Manges LLP",
@@ -317,7 +323,8 @@
         "rolePT": "Associada Sênior",
         "period": "Jul. 2012 – Sept. 2015",
         "logo": "/images/weil-logo-new.png",
-        "url": "https://www.weil.com"
+        "url": "https://www.weil.com",
+        "roleES": "Asociada Senior"
       },
       {
         "title": "Crowell & Moring LLP",
@@ -326,7 +333,8 @@
         "rolePT": "Associada",
         "period": "Sept. 2008 – Jul. 2012",
         "logo": "/images/crowell-logo-new.png",
-        "url": "https://www.crowell.com"
+        "url": "https://www.crowell.com",
+        "roleES": "Asociada"
       },
       {
         "title": "Wald & Advogados Associados",
@@ -336,17 +344,21 @@
         "rolePT": "Associada",
         "period": "Jul. 2001 – Sept. 2006",
         "logo": "/images/wald-logo-new.png",
-        "url": "https://www.wald.com.br"
+        "url": "https://www.wald.com.br",
+        "roleES": "Asociada",
+        "locationES": "São Paulo, Brasil"
       },
       {
         "title": "Dinamarco & Rossi Advocacia",
         "location": "São Paulo, Brazil",
         "locationPT": "São Paulo, Brasil",
         "role": "Associate / Intern",
-        "rolePT": "Associada/Estagiária",
+        "rolePT": "Associada / Estagiária",
         "period": "Jul. 1997 – Jul. 2001",
         "logo": "/images/dinamarco-logo-new.png",
-        "url": "https://www.dinamarco.com.br/"
+        "url": "https://www.dinamarco.com.br/",
+        "locationES": "São Paulo, Brasil",
+        "roleES": "Asociada / Pasante"
       }
     ],
     "teachingExperience": [
