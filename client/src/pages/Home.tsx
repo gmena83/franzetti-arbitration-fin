@@ -64,6 +64,7 @@ function HeroQuotesCarousel({ quotes }: { quotes: any[] }) {
               </p>
               <p className="text-sm text-gray-500 font-medium mt-2">
                 — {quotes[currentIndex].source}
+                {getLocalized({ EN: "", ES: " (original en inglés)", PT: " (original em inglês)" })}
               </p>
             </div>
           </div>

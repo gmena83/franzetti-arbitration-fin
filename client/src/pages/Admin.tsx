@@ -47,7 +47,7 @@ export default function Admin() {
     }
 
     // Generic logic for updating an item in an array of objects (like professionalBackground)
-    const handleArrayItemChange = (arrayPath: string[], index: number, field: string, value: string) => {
+    const handleArrayItemChange = (arrayPath: string[], index: number, field: string, value: string | any) => {
         setContent((prev) => {
             const newContent = JSON.parse(JSON.stringify(prev));
             let currentArray = newContent;
@@ -57,6 +57,59 @@ export default function Admin() {
             currentArray[index][field] = value;
             return newContent;
         });
+    };
+
+    const handleAddArrayItem = (arrayPath: string[], emptyItem: any) => {
+        setContent((prev) => {
+            const newContent = JSON.parse(JSON.stringify(prev));
+            let currentArray = newContent;
+            for (let i = 0; i < arrayPath.length; i++) {
+                currentArray = currentArray[arrayPath[i]];
+            }
+            currentArray.push(emptyItem);
+            return newContent;
+        });
+    };
+
+    const handleRemoveArrayItem = (arrayPath: string[], index: number) => {
+        if (!confirm("Are you sure you want to remove this item?")) return;
+        setContent((prev) => {
+            const newContent = JSON.parse(JSON.stringify(prev));
+            let currentArray = newContent;
+            for (let i = 0; i < arrayPath.length; i++) {
+                currentArray = currentArray[arrayPath[i]];
+            }
+            currentArray.splice(index, 1);
+            return newContent;
+        });
+    };
+
+    const handleUndoChanges = async () => {
+        if (!confirm("Are you sure you want to undo recent changes? This will revert the content to the previous commit on GitHub.")) return;
+        setIsSaving(true);
+        try {
+            const response = await fetch("/api/revert-content", {
+                method: "POST",
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.error || errorData.message || "Failed to revert content");
+            }
+
+            toast.success("Changes reverted successfully!", {
+                description: "The site has been rolled back to the previous version.",
+            });
+            // Reload to get the reverted content
+            window.location.reload();
+        } catch (error: any) {
+            console.error("Revert error:", error);
+            toast.error("Error reverting content", {
+                description: error.message || "Please try again later.",
+            });
+        } finally {
+            setIsSaving(false);
+        }
     };
 
     const handleSaveContent = async () => {
@@ -106,19 +159,24 @@ export default function Admin() {
                     <p className="text-gray-600">Select a section to edit.</p>
                 </div>
                 {currentSection !== "cv" && (
-                    <Button onClick={handleSaveContent} disabled={isSaving} className="bg-aquamarine text-charcoal hover:bg-aquamarine/90">
-                        {isSaving ? (
-                            <>
-                                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                                Saving...
-                            </>
-                        ) : (
-                            <>
-                                <Save className="mr-2 h-4 w-4" />
-                                Save Changes
-                            </>
-                        )}
-                    </Button>
+                    <div className="flex gap-2">
+                        <Button onClick={handleUndoChanges} disabled={isSaving} variant="outline" className="text-red-600 border-red-200 hover:bg-red-50 hover:text-red-700">
+                            <span className="mr-2">↺</span> Undo Changes
+                        </Button>
+                        <Button onClick={handleSaveContent} disabled={isSaving} className="bg-aquamarine text-charcoal hover:bg-aquamarine/90">
+                            {isSaving ? (
+                                <>
+                                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                                    Saving...
+                                </>
+                            ) : (
+                                <>
+                                    <Save className="mr-2 h-4 w-4" />
+                                    Save Changes
+                                </>
+                            )}
+                        </Button>
+                    </div>
                 )}
             </div>
 
@@ -251,11 +309,39 @@ export default function Admin() {
                     <div className="space-y-8">
                         {/* Professional Background */}
                         <Card>
-                            <CardHeader><CardTitle>Professional Background</CardTitle><CardDescription>Edit roles and history.</CardDescription></CardHeader>
+                            <CardHeader>
+                                <div className="flex justify-between items-center">
+                                    <div className="space-y-1">
+                                        <CardTitle>Professional Background</CardTitle>
+                                        <CardDescription>Edit roles and history.</CardDescription>
+                                    </div>
+                                    <Button onClick={() => handleAddArrayItem(["content", "professionalBackground"], {
+                                        title: "New Role",
+                                        period: "2024-Present",
+                                        role: "Role",
+                                        roleES: "Rol",
+                                        rolePT: "Papel",
+                                        location: "City, Country",
+                                        locationES: "Ciudad, País",
+                                        locationPT: "Cidade, País",
+                                        url: ""
+                                    })} size="sm" className="bg-aquamarine text-charcoal hover:bg-aquamarine/90">
+                                        <Plus className="mr-2 h-4 w-4" /> Add Role
+                                    </Button>
+                                </div>
+                            </CardHeader>
                             <CardContent className="space-y-6">
                                 {content.content.professionalBackground.map((item, index) => (
-                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50">
-                                        <div className="grid md:grid-cols-2 gap-4">
+                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50 relative">
+                                        <Button
+                                            variant="ghost"
+                                            size="icon"
+                                            className="absolute top-2 right-2 text-gray-400 hover:text-red-500"
+                                            onClick={() => handleRemoveArrayItem(["content", "professionalBackground"], index)}
+                                        >
+                                            <Trash2 className="h-4 w-4" />
+                                        </Button>
+                                        <div className="grid md:grid-cols-2 gap-4 mr-8">
                                             <div className="space-y-2"><Label>Title/Firm</Label><Input value={item.title} onChange={(e) => handleArrayItemChange(["content", "professionalBackground"], index, "title", e.target.value)} /></div>
                                             <div className="space-y-2"><Label>Period</Label><Input value={item.period} onChange={(e) => handleArrayItemChange(["content", "professionalBackground"], index, "period", e.target.value)} /></div>
                                         </div>
@@ -277,11 +363,36 @@ export default function Admin() {
 
                         {/* Education */}
                         <Card>
-                            <CardHeader><CardTitle>Education</CardTitle></CardHeader>
+                            <CardHeader>
+                                <div className="flex justify-between items-center">
+                                    <CardTitle>Education</CardTitle>
+                                    <Button onClick={() => handleAddArrayItem(["content", "education"], {
+                                        institution: "University",
+                                        institutionPT: "",
+                                        year: "2024",
+                                        degree: "Degree",
+                                        degreeES: "Titulo",
+                                        degreePT: "Grau",
+                                        note: "",
+                                        noteES: "",
+                                        notePT: ""
+                                    })} size="sm" className="bg-aquamarine text-charcoal hover:bg-aquamarine/90">
+                                        <Plus className="mr-2 h-4 w-4" /> Add Education
+                                    </Button>
+                                </div>
+                            </CardHeader>
                             <CardContent className="space-y-6">
                                 {content.content.education.map((item, index) => (
-                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50">
-                                        <div className="grid md:grid-cols-2 gap-4">
+                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50 relative">
+                                        <Button
+                                            variant="ghost"
+                                            size="icon"
+                                            className="absolute top-2 right-2 text-gray-400 hover:text-red-500"
+                                            onClick={() => handleRemoveArrayItem(["content", "education"], index)}
+                                        >
+                                            <Trash2 className="h-4 w-4" />
+                                        </Button>
+                                        <div className="grid md:grid-cols-2 gap-4 mr-8">
                                             <div className="space-y-2"><Label>Institution (EN)</Label><Input value={item.institution} onChange={(e) => handleArrayItemChange(["content", "education"], index, "institution", e.target.value)} /></div>
                                             <div className="space-y-2"><Label>Institution (PT/ES if diff)</Label><Input value={item.institutionPT || ""} onChange={(e) => handleArrayItemChange(["content", "education"], index, "institutionPT", e.target.value)} /></div>
                                             <div className="space-y-2"><Label>Year</Label><Input value={item.year} onChange={(e) => handleArrayItemChange(["content", "education"], index, "year", e.target.value)} /></div>
@@ -303,11 +414,31 @@ export default function Admin() {
 
                         {/* Professional Associations */}
                         <Card>
-                            <CardHeader><CardTitle>Professional Associations</CardTitle></CardHeader>
+                            <CardHeader>
+                                <div className="flex justify-between items-center">
+                                    <CardTitle>Professional Associations</CardTitle>
+                                    <Button onClick={() => handleAddArrayItem(["content", "professionalAssociations"], {
+                                        name: "Association Name",
+                                        nameES: "",
+                                        namePT: "",
+                                        url: ""
+                                    })} size="sm" className="bg-aquamarine text-charcoal hover:bg-aquamarine/90">
+                                        <Plus className="mr-2 h-4 w-4" /> Add Association
+                                    </Button>
+                                </div>
+                            </CardHeader>
                             <CardContent className="space-y-6">
                                 {content.content.professionalAssociations.map((item, index) => (
-                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50">
-                                        <div className="grid md:grid-cols-3 gap-4">
+                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50 relative">
+                                        <Button
+                                            variant="ghost"
+                                            size="icon"
+                                            className="absolute top-2 right-2 text-gray-400 hover:text-red-500"
+                                            onClick={() => handleRemoveArrayItem(["content", "professionalAssociations"], index)}
+                                        >
+                                            <Trash2 className="h-4 w-4" />
+                                        </Button>
+                                        <div className="grid md:grid-cols-3 gap-4 mr-8">
                                             <div className="space-y-2"><Label>Name (EN)</Label><Input value={item.name} onChange={(e) => handleArrayItemChange(["content", "professionalAssociations"], index, "name", e.target.value)} /></div>
                                             <div className="space-y-2"><Label>Name (ES)</Label><Input value={item.nameES || ""} onChange={(e) => handleArrayItemChange(["content", "professionalAssociations"], index, "nameES", e.target.value)} /></div>
                                             <div className="space-y-2"><Label>Name (PT)</Label><Input value={item.namePT || ""} onChange={(e) => handleArrayItemChange(["content", "professionalAssociations"], index, "namePT", e.target.value)} /></div>
@@ -320,11 +451,31 @@ export default function Admin() {
 
                         {/* Bar Admissions */}
                         <Card>
-                            <CardHeader><CardTitle>Bar Admissions</CardTitle></CardHeader>
+                            <CardHeader>
+                                <div className="flex justify-between items-center">
+                                    <CardTitle>Bar Admissions</CardTitle>
+                                    <Button onClick={() => handleAddArrayItem(["content", "barAdmissions"], {
+                                        name: "Bar Admission",
+                                        nameES: "",
+                                        namePT: "",
+                                        url: ""
+                                    })} size="sm" className="bg-aquamarine text-charcoal hover:bg-aquamarine/90">
+                                        <Plus className="mr-2 h-4 w-4" /> Add Admission
+                                    </Button>
+                                </div>
+                            </CardHeader>
                             <CardContent className="space-y-6">
                                 {content.content.barAdmissions.map((item, index) => (
-                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50">
-                                        <div className="grid md:grid-cols-3 gap-4">
+                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50 relative">
+                                        <Button
+                                            variant="ghost"
+                                            size="icon"
+                                            className="absolute top-2 right-2 text-gray-400 hover:text-red-500"
+                                            onClick={() => handleRemoveArrayItem(["content", "barAdmissions"], index)}
+                                        >
+                                            <Trash2 className="h-4 w-4" />
+                                        </Button>
+                                        <div className="grid md:grid-cols-3 gap-4 mr-8">
                                             <div className="space-y-2"><Label>Name (EN)</Label><Input value={item.name} onChange={(e) => handleArrayItemChange(["content", "barAdmissions"], index, "name", e.target.value)} /></div>
                                             <div className="space-y-2"><Label>Name (ES)</Label><Input value={item.nameES || ""} onChange={(e) => handleArrayItemChange(["content", "barAdmissions"], index, "nameES", e.target.value)} /></div>
                                             <div className="space-y-2"><Label>Name (PT)</Label><Input value={item.namePT || ""} onChange={(e) => handleArrayItemChange(["content", "barAdmissions"], index, "namePT", e.target.value)} /></div>
@@ -342,11 +493,36 @@ export default function Admin() {
                     <div className="space-y-8">
                         {/* Academia / Teaching */}
                         <Card>
-                            <CardHeader><CardTitle>Teaching Experience</CardTitle></CardHeader>
+                            <CardHeader>
+                                <div className="flex justify-between items-center">
+                                    <CardTitle>Teaching Experience</CardTitle>
+                                    <Button onClick={() => handleAddArrayItem(["content", "teachingExperience"], {
+                                        institution: "Univeristy",
+                                        period: "2024",
+                                        role: "Role",
+                                        roleES: "",
+                                        rolePT: "",
+                                        course: "Course Name",
+                                        courseES: "",
+                                        coursePT: "",
+                                        url: ""
+                                    })} size="sm" className="bg-aquamarine text-charcoal hover:bg-aquamarine/90">
+                                        <Plus className="mr-2 h-4 w-4" /> Add Teaching Exp
+                                    </Button>
+                                </div>
+                            </CardHeader>
                             <CardContent className="space-y-6">
                                 {content.content.teachingExperience.map((item, index) => (
-                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50">
-                                        <div className="grid md:grid-cols-2 gap-4">
+                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50 relative">
+                                        <Button
+                                            variant="ghost"
+                                            size="icon"
+                                            className="absolute top-2 right-2 text-gray-400 hover:text-red-500"
+                                            onClick={() => handleRemoveArrayItem(["content", "teachingExperience"], index)}
+                                        >
+                                            <Trash2 className="h-4 w-4" />
+                                        </Button>
+                                        <div className="grid md:grid-cols-2 gap-4 mr-8">
                                             <div className="space-y-2"><Label>Institution</Label><Input value={item.institution} onChange={(e) => handleArrayItemChange(["content", "teachingExperience"], index, "institution", e.target.value)} /></div>
                                             <div className="space-y-2"><Label>Period</Label><Input value={item.period} onChange={(e) => handleArrayItemChange(["content", "teachingExperience"], index, "period", e.target.value)} /></div>
                                         </div>
@@ -368,18 +544,84 @@ export default function Admin() {
 
                         {/* Recognitions */}
                         <Card>
-                            <CardHeader><CardTitle>Recognitions</CardTitle></CardHeader>
+                            <CardHeader>
+                                <div className="flex justify-between items-center">
+                                    <div className="space-y-1">
+                                        <CardTitle>Recognitions</CardTitle>
+                                        <CardDescription>Add or edit recognitions.</CardDescription>
+                                    </div>
+                                    <Button onClick={() => handleAddArrayItem(["content", "thoughtLeadership", "recognitions"], {
+                                        source: "New Recognition",
+                                        url: "",
+                                        details: [{ EN: "Detail EN", ES: "Detail ES", PT: "Detail PT" }]
+                                    })} size="sm" className="bg-aquamarine text-charcoal hover:bg-aquamarine/90">
+                                        <Plus className="mr-2 h-4 w-4" /> Add Recognition
+                                    </Button>
+                                </div>
+                            </CardHeader>
                             <CardContent className="space-y-6">
                                 {content.content.thoughtLeadership.recognitions.map((item, index) => (
-                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50">
-                                        <div className="grid md:grid-cols-3 gap-4">
-                                            <div className="space-y-2 md:col-span-2"><Label>Name</Label><Input value={item.name} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "recognitions"], index, "name", e.target.value)} /></div>
-                                            <div className="space-y-2"><Label>Year</Label><Input value={item.year} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "recognitions"], index, "year", e.target.value)} /></div>
+                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50 relative">
+                                        <Button
+                                            variant="ghost"
+                                            size="icon"
+                                            className="absolute top-2 right-2 text-gray-400 hover:text-red-500"
+                                            onClick={() => handleRemoveArrayItem(["content", "thoughtLeadership", "recognitions"], index)}
+                                        >
+                                            <Trash2 className="h-4 w-4" />
+                                        </Button>
+                                        <div className="grid md:grid-cols-2 gap-4 mr-8">
+                                            <div className="space-y-2"><Label>Source / Name</Label><Input value={item.source} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "recognitions"], index, "source", e.target.value)} /></div>
+                                            <div className="space-y-2"><Label>URL</Label><Input value={item.url} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "recognitions"], index, "url", e.target.value)} /></div>
                                         </div>
-                                        <div className="grid md:grid-cols-3 gap-4">
-                                            <div className="space-y-2"><Label>Details (EN)</Label><Input value={item.details} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "recognitions"], index, "details", e.target.value)} /></div>
-                                            <div className="space-y-2"><Label>Details (ES)</Label><Input value={item.detailsES || ""} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "recognitions"], index, "detailsES", e.target.value)} /></div>
-                                            <div className="space-y-2"><Label>Details (PT)</Label><Input value={item.detailsPT || ""} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "recognitions"], index, "detailsPT", e.target.value)} /></div>
+
+                                        <div className="space-y-2">
+                                            <div className="flex justify-between items-center">
+                                                <Label className="font-medium">Details (Localized)</Label>
+                                                <Button
+                                                    variant="outline"
+                                                    size="sm"
+                                                    onClick={() => {
+                                                        const newDetails = [...item.details, { EN: "", ES: "", PT: "" }];
+                                                        handleArrayItemChange(["content", "thoughtLeadership", "recognitions"], index, "details", newDetails);
+                                                    }}
+                                                >
+                                                    <Plus className="mr-2 h-3 w-3" /> Add Detail
+                                                </Button>
+                                            </div>
+                                            <div className="space-y-3 pl-4 border-l-2 border-gray-200">
+                                                {item.details.map((detail, dIndex) => (
+                                                    <div key={dIndex} className="grid grid-cols-1 md:grid-cols-[1fr_1fr_1fr_auto] gap-2 items-start">
+                                                        <div className="space-y-1"><Label className="text-xs text-gray-500">EN</Label><Input value={detail.EN} onChange={(e) => {
+                                                            const newDetails = [...item.details];
+                                                            newDetails[dIndex] = { ...detail, EN: e.target.value };
+                                                            handleArrayItemChange(["content", "thoughtLeadership", "recognitions"], index, "details", newDetails);
+                                                        }} /></div>
+                                                        <div className="space-y-1"><Label className="text-xs text-gray-500">ES</Label><Input value={detail.ES} onChange={(e) => {
+                                                            const newDetails = [...item.details];
+                                                            newDetails[dIndex] = { ...detail, ES: e.target.value };
+                                                            handleArrayItemChange(["content", "thoughtLeadership", "recognitions"], index, "details", newDetails);
+                                                        }} /></div>
+                                                        <div className="space-y-1"><Label className="text-xs text-gray-500">PT</Label><Input value={detail.PT} onChange={(e) => {
+                                                            const newDetails = [...item.details];
+                                                            newDetails[dIndex] = { ...detail, PT: e.target.value };
+                                                            handleArrayItemChange(["content", "thoughtLeadership", "recognitions"], index, "details", newDetails);
+                                                        }} /></div>
+                                                        <Button
+                                                            variant="ghost"
+                                                            size="icon"
+                                                            className="mt-6 h-8 w-8 text-gray-400 hover:text-red-500"
+                                                            onClick={() => {
+                                                                const newDetails = [...item.details];
+                                                                newDetails.splice(dIndex, 1);
+                                                                handleArrayItemChange(["content", "thoughtLeadership", "recognitions"], index, "details", newDetails);
+                                                            }}
+                                                        >
+                                                            <Trash2 className="h-3 w-3" />
+                                                        </Button>
+                                                    </div>
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
                                 ))}
@@ -388,11 +630,29 @@ export default function Admin() {
 
                         {/* Speaking */}
                         <Card>
-                            <CardHeader><CardTitle>Speaking Engagements</CardTitle></CardHeader>
+                            <CardHeader>
+                                <div className="flex justify-between items-center">
+                                    <CardTitle>Speaking Engagements</CardTitle>
+                                    <Button onClick={() => handleAddArrayItem(["content", "thoughtLeadership", "speakingEngagements"], {
+                                        title: { EN: "Title", ES: "", PT: "" },
+                                        event: { EN: "Event", ES: "", PT: "" }
+                                    })} size="sm" className="bg-aquamarine text-charcoal hover:bg-aquamarine/90">
+                                        <Plus className="mr-2 h-4 w-4" /> Add Engagement
+                                    </Button>
+                                </div>
+                            </CardHeader>
                             <CardContent className="space-y-6">
                                 {content.content.thoughtLeadership.speakingEngagements.map((item, index) => (
-                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50">
-                                        <div className="space-y-4">
+                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50 relative">
+                                        <Button
+                                            variant="ghost"
+                                            size="icon"
+                                            className="absolute top-2 right-2 text-gray-400 hover:text-red-500"
+                                            onClick={() => handleRemoveArrayItem(["content", "thoughtLeadership", "speakingEngagements"], index)}
+                                        >
+                                            <Trash2 className="h-4 w-4" />
+                                        </Button>
+                                        <div className="space-y-4 mr-8">
                                             <Label className="font-semibold">Title</Label>
                                             <div className="grid md:grid-cols-3 gap-4">
                                                 <div className="space-y-2"><Label>EN</Label><Textarea value={item.title.EN} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "speakingEngagements"], index, "title", { ...item.title, EN: e.target.value })} /></div>
@@ -415,11 +675,33 @@ export default function Admin() {
 
                         {/* Publications */}
                         <Card>
-                            <CardHeader><CardTitle>Publications</CardTitle></CardHeader>
+                            <CardHeader>
+                                <div className="flex justify-between items-center">
+                                    <div className="space-y-1">
+                                        <CardTitle>Publications</CardTitle>
+                                        <CardDescription>Edit publications.</CardDescription>
+                                    </div>
+                                    <Button onClick={() => handleAddArrayItem(["content", "thoughtLeadership", "publications"], {
+                                        title: { EN: "Title", ES: "", PT: "" },
+                                        publication: { EN: "Publication", ES: "", PT: "" },
+                                        url: ""
+                                    })} size="sm" className="bg-aquamarine text-charcoal hover:bg-aquamarine/90">
+                                        <Plus className="mr-2 h-4 w-4" /> Add Publication
+                                    </Button>
+                                </div>
+                            </CardHeader>
                             <CardContent className="space-y-6">
                                 {content.content.thoughtLeadership.publications.map((item, index) => (
-                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50">
-                                        <div className="space-y-4">
+                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50 relative">
+                                        <Button
+                                            variant="ghost"
+                                            size="icon"
+                                            className="absolute top-2 right-2 text-gray-400 hover:text-red-500"
+                                            onClick={() => handleRemoveArrayItem(["content", "thoughtLeadership", "publications"], index)}
+                                        >
+                                            <Trash2 className="h-4 w-4" />
+                                        </Button>
+                                        <div className="space-y-4 mr-8">
                                             <Label className="font-semibold">Title</Label>
                                             <div className="grid md:grid-cols-3 gap-4">
                                                 <div className="space-y-2"><Label>EN</Label><Textarea value={item.title.EN} onChange={(e) => handleArrayItemChange(["content", "thoughtLeadership", "publications"], index, "title", { ...item.title, EN: e.target.value })} /></div>
@@ -447,11 +729,32 @@ export default function Admin() {
                     <div className="space-y-8">
                         {/* Arbitrator Appointments */}
                         <Card>
-                            <CardHeader><CardTitle>Arbitrator Appointments</CardTitle></CardHeader>
+                            <CardHeader>
+                                <div className="flex justify-between items-center">
+                                    <div className="space-y-1">
+                                        <CardTitle>Arbitrator Appointments</CardTitle>
+                                        <CardDescription>Manage arbitrator cases.</CardDescription>
+                                    </div>
+                                    <Button onClick={() => handleAddArrayItem(["content", "cases", "arbitratorAppointments"], {
+                                        text: { EN: "Case Description", ES: "", PT: "" },
+                                        categories: []
+                                    })} size="sm" className="bg-aquamarine text-charcoal hover:bg-aquamarine/90">
+                                        <Plus className="mr-2 h-4 w-4" /> Add Case
+                                    </Button>
+                                </div>
+                            </CardHeader>
                             <CardContent className="space-y-6">
                                 {content.content.cases.arbitratorAppointments.map((item, index) => (
-                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50">
-                                        <div className="space-y-4">
+                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50 relative">
+                                        <Button
+                                            variant="ghost"
+                                            size="icon"
+                                            className="absolute top-2 right-2 text-gray-400 hover:text-red-500"
+                                            onClick={() => handleRemoveArrayItem(["content", "cases", "arbitratorAppointments"], index)}
+                                        >
+                                            <Trash2 className="h-4 w-4" />
+                                        </Button>
+                                        <div className="space-y-4 mr-8">
                                             <Label className="font-semibold">Description</Label>
                                             <div className="grid md:grid-cols-3 gap-4">
                                                 <div className="space-y-2"><Label>EN</Label><Textarea value={item.text.EN} onChange={(e) => handleArrayItemChange(["content", "cases", "arbitratorAppointments"], index, "text", { ...item.text, EN: e.target.value })} /></div>
@@ -463,7 +766,7 @@ export default function Admin() {
                                             <Label>Categories (One per line)</Label>
                                             <Textarea
                                                 value={(item.categories || []).join("\n")}
-                                                onChange={(e) => handleArrayItemChange(["content", "cases", "arbitratorAppointments"], index, "categories", e.target.value.split("\n").filter(l => l.trim() !== ""))}
+                                                onChange={(e) => handleArrayItemChange(["content", "cases", "arbitratorAppointments"], index, "categories", e.target.value.split("\n").filter((l: string) => l.trim() !== ""))}
                                                 className="min-h-[80px] font-mono text-xs"
                                             />
                                         </div>
@@ -474,11 +777,32 @@ export default function Admin() {
 
                         {/* Matters as Counsel */}
                         <Card>
-                            <CardHeader><CardTitle>Matters as Counsel</CardTitle></CardHeader>
+                            <CardHeader>
+                                <div className="flex justify-between items-center">
+                                    <div className="space-y-1">
+                                        <CardTitle>Matters as Counsel</CardTitle>
+                                        <CardDescription>Manage counsel cases.</CardDescription>
+                                    </div>
+                                    <Button onClick={() => handleAddArrayItem(["content", "cases", "mattersAsCounsel"], {
+                                        text: { EN: "Case Description", ES: "", PT: "" },
+                                        categories: []
+                                    })} size="sm" className="bg-aquamarine text-charcoal hover:bg-aquamarine/90">
+                                        <Plus className="mr-2 h-4 w-4" /> Add Case
+                                    </Button>
+                                </div>
+                            </CardHeader>
                             <CardContent className="space-y-6">
                                 {content.content.cases.mattersAsCounsel.map((item, index) => (
-                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50">
-                                        <div className="space-y-4">
+                                    <div key={index} className="space-y-4 p-4 border rounded bg-gray-50 relative">
+                                        <Button
+                                            variant="ghost"
+                                            size="icon"
+                                            className="absolute top-2 right-2 text-gray-400 hover:text-red-500"
+                                            onClick={() => handleRemoveArrayItem(["content", "cases", "mattersAsCounsel"], index)}
+                                        >
+                                            <Trash2 className="h-4 w-4" />
+                                        </Button>
+                                        <div className="space-y-4 mr-8">
                                             <Label className="font-semibold">Description</Label>
                                             <div className="grid md:grid-cols-3 gap-4">
                                                 <div className="space-y-2"><Label>EN</Label><Textarea value={item.text.EN} onChange={(e) => handleArrayItemChange(["content", "cases", "mattersAsCounsel"], index, "text", { ...item.text, EN: e.target.value })} /></div>
@@ -490,7 +814,7 @@ export default function Admin() {
                                             <Label>Categories (One per line)</Label>
                                             <Textarea
                                                 value={(item.categories || []).join("\n")}
-                                                onChange={(e) => handleArrayItemChange(["content", "cases", "mattersAsCounsel"], index, "categories", e.target.value.split("\n").filter(l => l.trim() !== ""))}
+                                                onChange={(e) => handleArrayItemChange(["content", "cases", "mattersAsCounsel"], index, "categories", e.target.value.split("\n").filter((l: string) => l.trim() !== ""))}
                                                 className="min-h-[80px] font-mono text-xs"
                                             />
                                         </div>

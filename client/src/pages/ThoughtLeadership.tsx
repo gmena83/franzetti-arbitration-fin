@@ -169,6 +169,7 @@ export default function ThoughtLeadership() {
                         </p>
                         <p className="text-sm text-gray-500 font-medium">
                           — {testimonial.source}
+                          {getLocalized({ EN: "", ES: " (original en inglés)", PT: " (original em inglês)" })}
                         </p>
                       </div>
                     ))}

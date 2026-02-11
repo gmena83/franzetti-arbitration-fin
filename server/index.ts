@@ -112,6 +112,46 @@ async function startServer() {
     }
   });
 
+  // API endpoint to revert site content (Local Dev/Git based)
+  app.post("/api/revert-content", async (req, res) => {
+    try {
+      const contentPath = path.resolve(__dirname, "../client/src/data/siteContent.json");
+      // For local dev, we try to grab the version from HEAD^ (previous commit)
+      // This requires git to be available and the repo to have commits.
+      const { exec } = await import("child_process");
+      const { promisify } = await import("util");
+      const execAsync = promisify(exec);
+
+      // We need to resolve the relative path for git
+      // Assuming server is running from root or similar, but let's be safe
+      // valid git path: client/src/data/siteContent.json
+
+      try {
+        // Check if git is available and repo has history
+        await execAsync("git status");
+
+        // Restore file from previous commit
+        // Note: This matches the 'client/src/data/siteContent.json' path relative to repo root
+        await execAsync("git show HEAD~1:client/src/data/siteContent.json > \"" + contentPath + "\"");
+
+        console.log("Locally reverted siteContent.json to HEAD~1");
+        res.json({ success: true, message: "Content reverted successfully to previous commit (Local Git)" });
+      } catch (gitError) {
+        console.warn("Local git revert failed, determining it is likely not a git repo or no history:", gitError);
+        // Fallback: If we can't revert via git, we might just fail or mock success
+        // For now, let's return an error saying local revert requires git history
+        res.status(500).json({
+          error: "Local revert failed. Ensure you are in a git repository with history.",
+          details: (gitError as any).message
+        });
+      }
+
+    } catch (error) {
+      console.error("Revert content error:", error);
+      res.status(500).json({ error: "Failed to revert content" });
+    }
+  });
+
   // Serve static files from dist/public in production
   const staticPath =
     process.env.NODE_ENV === "production"
