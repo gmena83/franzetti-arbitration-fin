@@ -393,32 +393,36 @@
         "location": "Washington D.C.",
         "year": "2008",
         "logo": "/images/georgetown-logo-new.png",
-        "url": "https://www.law.georgetown.edu"
+        "url": "https://www.law.georgetown.edu",
+        "degreeES": "Master of Laws (LL.M.)"
       },
       {
         "degree": "Postgraduate Specialization",
-        "degreePT": "Pós-Graduação (Especialização)",
+        "degreePT": "Pós-Graduação (Especialização) em Direito Empresarial e Econômico",
         "institution": "Getúlio Vargas Foundation",
         "institutionPT": "Fundação Getúlio Vargas",
         "note": "in Business and Economics Law",
-        "notePT": "em Direito Empresarial e Econômico",
+        "notePT": "",
         "location": "São Paulo, Brazil",
         "locationPT": "São Paulo, Brasil",
         "year": "2006",
         "logo": "/images/fgv-logo.png",
-        "url": "https://portal.fgv.br"
+        "url": "https://portal.fgv.br",
+        "degreeES": "Especialización de Posgrado en Derecho Empresarial y Económico",
+        "noteES": ""
       },
       {
-        "degree": "LL.B.",
+        "degree": "LL.B. (J.D. Equivalent)",
         "degreePT": "Bacharelado em Direito",
         "institution": "University of São Paulo Law School",
         "institutionPT": "Faculdade de Direito da Universidade de São Paulo (USP)",
-        "note": "(J.D. Equivalent)",
+        "note": "",
         "location": "São Paulo, Brazil",
         "locationPT": "São Paulo, Brasil",
         "year": "2000",
         "logo": "/images/usp-logo.png",
-        "url": "https://www.direito.usp.br"
+        "url": "https://www.direito.usp.br",
+        "degreeES": "Licenciatura en Derecho"
       }
     ],
     "professionalAssociations": [
@@ -426,37 +430,43 @@
         "name": "Panel of Arbitrators of the International Centre of Dispute Resolution (ICDR)",
         "namePT": "Lista de Árbitros do International Centre for Dispute Resolution (ICDR)",
         "logo": "/images/logos/aaa-icdr.jpg",
-        "url": "https://www.icdr.org"
+        "url": "https://www.icdr.org",
+        "nameES": "Panel de Árbitros del Centro Internacional para la Resolución de Disputas (ICDR)"
       },
       {
         "name": "Panel of Arbitrators of the American Arbitration Association (AAA)",
         "namePT": "Lista de Árbitros da American Arbitration Association (AAA)",
         "logo": "/images/logos/aaa-icdr.jpg",
-        "url": "https://www.adr.org"
+        "url": "https://www.adr.org",
+        "nameES": "Panel de Árbitros de la Asociación Americana de Arbitraje (AAA)"
       },
       {
         "name": "Panel of Arbitrators of the Hong Kong International Arbitration Centre (HKIAC)",
         "namePT": "Lista de Árbitros do Hong Kong International Arbitration Centre (HKIAC)",
         "logo": "/images/hkiac-logo.png",
-        "url": "https://www.hkiac.org"
+        "url": "https://www.hkiac.org",
+        "nameES": "Panel de Árbitros del Centro de Arbitraje Internacional de Hong Kong (HKIAC)"
       },
       {
         "name": "Panel of Arbitrators of the Brazil-Canada Chamber of Commerce (CAM-CCBC)",
         "namePT": "Lista de Árbitros da Câmara de Comércio Brasil-Canadá (CAM-CCBC)",
         "logo": "/images/logos/cam-ccbc.png",
-        "url": "https://ccbc.org.br/cam-ccbc-centro-arbitragem-mediacao"
+        "url": "https://ccbc.org.br/cam-ccbc-centro-arbitragem-mediacao",
+        "nameES": "Panel de Árbitros del Centro de Arbitraje y Mediación de la Cámara de Comercio Brasil-Canadá (CAM-CCBC)"
       },
       {
         "name": "Panel of Arbitrators of the Capital Market Chamber of B3 S.A – Brasil, Bolsa, Balcão (CAM)",
         "namePT": "Lista de Árbitros da Câmara do Mercado da B3 S.A. – Brasil, Bolsa, Balcão (CAM)",
         "logo": "/images/cam-b3-logo.png",
-        "url": "https://www.b3.com.br"
+        "url": "https://www.b3.com.br",
+        "nameES": "Panel de Árbitros de la Cámara del Mercado de Capitales de B3 S.A – Brasil, Bolsa, Balcão (CAM)"
       },
       {
         "name": "Arbitration & Mediation Committee of the International Court of Commerce (ICC) Brazil",
         "namePT": "Comitê de Arbitragem e Mediação da International Chamber of Commerce (ICC) Brasil",
         "logo": "/images/logos/icc.png",
-        "url": "https://www.iccbrasil.org/en/dispute-resolution/"
+        "url": "https://www.iccbrasil.org/en/dispute-resolution/",
+        "nameES": "Panel de Árbitros de la Cámara de Mediación y Arbitraje Empresarial – Brasil (CAMARB)"
       },
       {
         "name": "International Bar Association – Dispute Resolution Section",
