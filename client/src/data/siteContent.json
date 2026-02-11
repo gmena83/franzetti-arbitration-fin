@@ -299,22 +299,16 @@
         "rolePT": "Sócia",
         "period": "Sept. 2021 – Jan. 2026",
         "logo": "/images/king-spalding-logo.png",
-        "url": "https://www.kslaw.com",
-        "roleES": "Socia",
-        "locationES": "Washington, DC y Miami",
-        "locationPT": "Washington, DC e Miami"
+        "url": "https://www.kslaw.com"
       },
       {
         "title": "Dechert LLP",
         "location": "Washington, DC",
         "role": "Partner / Counsel",
-        "rolePT": "Sócia / Counsel",
+        "rolePT": "Sócia/Advogada",
         "period": "Sept. 2015 – Sept. 2021",
         "logo": "/images/dechert-logo-new.png",
-        "url": "https://www.dechert.com",
-        "roleES": "Socia / Consejera Jurídica",
-        "locationES": "Washington, DC",
-        "locationPT": "Washington, DC"
+        "url": "https://www.dechert.com"
       },
       {
         "title": "Weil, Gotshal & Manges LLP",
@@ -323,8 +317,7 @@
         "rolePT": "Associada Sênior",
         "period": "Jul. 2012 – Sept. 2015",
         "logo": "/images/weil-logo-new.png",
-        "url": "https://www.weil.com",
-        "roleES": "Asociada Senior"
+        "url": "https://www.weil.com"
       },
       {
         "title": "Crowell & Moring LLP",
@@ -333,8 +326,7 @@
         "rolePT": "Associada",
         "period": "Sept. 2008 – Jul. 2012",
         "logo": "/images/crowell-logo-new.png",
-        "url": "https://www.crowell.com",
-        "roleES": "Asociada"
+        "url": "https://www.crowell.com"
       },
       {
         "title": "Wald & Advogados Associados",
@@ -344,21 +336,17 @@
         "rolePT": "Associada",
         "period": "Jul. 2001 – Sept. 2006",
         "logo": "/images/wald-logo-new.png",
-        "url": "https://www.wald.com.br",
-        "roleES": "Asociada",
-        "locationES": "São Paulo, Brasil"
+        "url": "https://www.wald.com.br"
       },
       {
         "title": "Dinamarco & Rossi Advocacia",
         "location": "São Paulo, Brazil",
         "locationPT": "São Paulo, Brasil",
         "role": "Associate / Intern",
-        "rolePT": "Associada / Estagiária",
+        "rolePT": "Associada/Estagiária",
         "period": "Jul. 1997 – Jul. 2001",
         "logo": "/images/dinamarco-logo-new.png",
-        "url": "https://www.dinamarco.com.br/",
-        "locationES": "São Paulo, Brasil",
-        "roleES": "Asociada / Pasante"
+        "url": "https://www.dinamarco.com.br/"
       }
     ],
     "teachingExperience": [
@@ -393,36 +381,32 @@
         "location": "Washington D.C.",
         "year": "2008",
         "logo": "/images/georgetown-logo-new.png",
-        "url": "https://www.law.georgetown.edu",
-        "degreeES": "Master of Laws (LL.M.)"
+        "url": "https://www.law.georgetown.edu"
       },
       {
         "degree": "Postgraduate Specialization",
-        "degreePT": "Pós-Graduação (Especialização) em Direito Empresarial e Econômico",
+        "degreePT": "Pós-Graduação (Especialização)",
         "institution": "Getúlio Vargas Foundation",
         "institutionPT": "Fundação Getúlio Vargas",
         "note": "in Business and Economics Law",
-        "notePT": "",
+        "notePT": "em Direito Empresarial e Econômico",
         "location": "São Paulo, Brazil",
         "locationPT": "São Paulo, Brasil",
         "year": "2006",
         "logo": "/images/fgv-logo.png",
-        "url": "https://portal.fgv.br",
-        "degreeES": "Especialización de Posgrado en Derecho Empresarial y Económico",
-        "noteES": ""
+        "url": "https://portal.fgv.br"
       },
       {
-        "degree": "LL.B. (J.D. Equivalent)",
+        "degree": "LL.B.",
         "degreePT": "Bacharelado em Direito",
         "institution": "University of São Paulo Law School",
         "institutionPT": "Faculdade de Direito da Universidade de São Paulo (USP)",
-        "note": "",
+        "note": "(J.D. Equivalent)",
         "location": "São Paulo, Brazil",
         "locationPT": "São Paulo, Brasil",
         "year": "2000",
         "logo": "/images/usp-logo.png",
-        "url": "https://www.direito.usp.br",
-        "degreeES": "Licenciatura en Derecho"
+        "url": "https://www.direito.usp.br"
       }
     ],
     "professionalAssociations": [
@@ -430,43 +414,37 @@
         "name": "Panel of Arbitrators of the International Centre of Dispute Resolution (ICDR)",
         "namePT": "Lista de Árbitros do International Centre for Dispute Resolution (ICDR)",
         "logo": "/images/logos/aaa-icdr.jpg",
-        "url": "https://www.icdr.org",
-        "nameES": "Panel de Árbitros del Centro Internacional para la Resolución de Disputas (ICDR)"
+        "url": "https://www.icdr.org"
       },
       {
         "name": "Panel of Arbitrators of the American Arbitration Association (AAA)",
         "namePT": "Lista de Árbitros da American Arbitration Association (AAA)",
         "logo": "/images/logos/aaa-icdr.jpg",
-        "url": "https://www.adr.org",
-        "nameES": "Panel de Árbitros de la Asociación Americana de Arbitraje (AAA)"
+        "url": "https://www.adr.org"
       },
       {
         "name": "Panel of Arbitrators of the Hong Kong International Arbitration Centre (HKIAC)",
         "namePT": "Lista de Árbitros do Hong Kong International Arbitration Centre (HKIAC)",
         "logo": "/images/hkiac-logo.png",
-        "url": "https://www.hkiac.org",
-        "nameES": "Panel de Árbitros del Centro de Arbitraje Internacional de Hong Kong (HKIAC)"
+        "url": "https://www.hkiac.org"
       },
       {
         "name": "Panel of Arbitrators of the Brazil-Canada Chamber of Commerce (CAM-CCBC)",
         "namePT": "Lista de Árbitros da Câmara de Comércio Brasil-Canadá (CAM-CCBC)",
         "logo": "/images/logos/cam-ccbc.png",
-        "url": "https://ccbc.org.br/cam-ccbc-centro-arbitragem-mediacao",
-        "nameES": "Panel de Árbitros del Centro de Arbitraje y Mediación de la Cámara de Comercio Brasil-Canadá (CAM-CCBC)"
+        "url": "https://ccbc.org.br/cam-ccbc-centro-arbitragem-mediacao"
       },
       {
         "name": "Panel of Arbitrators of the Capital Market Chamber of B3 S.A – Brasil, Bolsa, Balcão (CAM)",
         "namePT": "Lista de Árbitros da Câmara do Mercado da B3 S.A. – Brasil, Bolsa, Balcão (CAM)",
         "logo": "/images/cam-b3-logo.png",
-        "url": "https://www.b3.com.br",
-        "nameES": "Panel de Árbitros de la Cámara del Mercado de Capitales de B3 S.A – Brasil, Bolsa, Balcão (CAM)"
+        "url": "https://www.b3.com.br"
       },
       {
         "name": "Arbitration & Mediation Committee of the International Court of Commerce (ICC) Brazil",
         "namePT": "Comitê de Arbitragem e Mediação da International Chamber of Commerce (ICC) Brasil",
         "logo": "/images/logos/icc.png",
-        "url": "https://www.iccbrasil.org/en/dispute-resolution/",
-        "nameES": "Panel de Árbitros de la Cámara de Mediación y Arbitraje Empresarial – Brasil (CAMARB)"
+        "url": "https://www.iccbrasil.org/en/dispute-resolution/"
       },
       {
         "name": "International Bar Association – Dispute Resolution Section",
@@ -476,7 +454,7 @@
       },
       {
         "name": "Arbitral Women",
-        "namePT": "Arbitral Women",
+        "namePT": "ArbitralWomen",
         "logo": "/images/logos/arbitralwomen.jpg",
         "url": "https://www.arbitralwomen.org"
       },
@@ -484,8 +462,7 @@
         "name": "Brazilian Arbitration Committee (CBAR)",
         "namePT": "Comitê Brasileiro de Arbitragem (CBAr)",
         "logo": "/images/logos/cbar.jpg",
-        "url": "https://cbar.org.br",
-        "nameES": "Comitê Brasileiro de Arbitragem (CBAr)"
+        "url": "https://cbar.org.br"
       },
       {
         "name": "Miami International Arbitration Society (MIAS)",
@@ -497,24 +474,21 @@
     "barAdmissions": [
       {
         "name": "District of Columbia",
-        "namePT": "Distrito de Columbia",
+        "namePT": "Distrito de Colúmbia",
         "logo": "/images/logos/dcbar.jpg",
-        "url": "https://www.dcbar.org",
-        "nameES": "Distrito de Columbia"
+        "url": "https://www.dcbar.org"
       },
       {
         "name": "New York",
         "namePT": "Nova York",
         "logo": "/images/logos/nysba.jpg",
-        "url": "https://nysba.org",
-        "nameES": "Nueva York"
+        "url": "https://nysba.org"
       },
       {
         "name": "Brazil",
         "namePT": "Brasil (OAB)",
         "logo": "/images/logos/oab.jpg",
-        "url": "https://www.oab.org.br",
-        "nameES": "Brasil"
+        "url": "https://www.oab.org.br"
       }
     ],
     "carouselQuotes": [
@@ -2105,9 +2079,9 @@
         },
         {
           "text": {
-            "EN": "Advisor to a Canadian company regarding investment treaty protections in relation to an investment in Colombia’s energy sector.",
-            "PT": "Assessora de uma empresa canadense sobre proteções previstas em tratados de investimento com relação a um investimento no setor de energia da Colômbia.",
-            "ES": "Asesora de una empresa canadiense sobre las protecciones establecidas en tratados de inversión en relación con una inversión en el sector energético de Colombia."
+            "EN": "Advisor to a Canadian investor in the energy sector in Colombia regarding investment treaty protections.",
+            "PT": "Assessora de um investidor canadense no setor de energia na Colômbia quanto às proteções previstas em tratados de investimento.",
+            "ES": "Asesora de un inversionista canadiense en el sector energético en Colombia respecto a las protecciones bajo los tratados de inversión."
           },
           "categories": [
             "energy"
@@ -2115,9 +2089,9 @@
         },
         {
           "text": {
-            "EN": "Advisor to an American landowner in Albania regarding investment treaty protections.",
-            "PT": "Assessora de um cidadão americano, proprietário de terras na Albânia, sobre proteções previstas em tratados de investimento.",
-            "ES": "Asesora de un ciudadano estadounidense, propietario de tierras en Albania, sobre las protecciones establecidas en tratados de inversión."
+            "EN": "Advisor to an American landowner in Albania regarding investment protection rights.",
+            "PT": "Assessora de um proprietário de terras americano na Albânia quanto aos direitos de proteção de investimentos.",
+            "ES": "Asesora de un propietario estadounidense en Albania respecto a los derechos de protección de inversiones."
           },
           "categories": [
             "investor-state"
@@ -2175,9 +2149,9 @@
         },
         {
           "text": {
-            "EN": "Counsel to the Claimant in Ruby Roz Agricol LLP v. the Republic of Kazakhstan, an UNCITRAL investment dispute about a Kazakh poultry farm investment concerning alleged breaches of an investment contract and the Kazakh Foreign Investments Law.",
-            "PT": "Advogada da Requerente no caso Ruby Roz Agricol LLP v. República do Cazaquistão, arbitragem de investimento sob o regulamento UNCITRAL relativa a um investimento em um complexo avícola no Cazaquistão, envolvendo alegadas violações de um contrato de investimento e da Lei de Investimentos Estrangeiros do Cazaquistão.",
-            "ES": "Abogada de la Demandante en el caso Ruby Roz Agricol LLP v. República de Kazajistán, arbitraje de inversión UNCITRAL relativo a una inversión en un complejo avícola en Kazajistán, en el que se alegan incumplimientos de un contrato de inversión y de la Ley de Inversiones Extranjeras de Kazajistán."
+            "EN": "Counsel to the Claimants in Pluspetrol Perú et al. v. Perupetro (ICSID Case No. ARB/12/28), a dispute arising out of a gas supply contract regarding royalty payments and the sale of liquified natural gas (LNG); proceedings in Spanish.",
+            "PT": "Advogada das Requerentes em Pluspetrol Perú Corporation S.A. et al. v. Perúpetro S.A. (Caso ICSID nº ARB/12/28), uma disputa decorrente de um contrato de fornecimento de gás referente a pagamentos de royalties e à venda de gás natural liquefeito (GNL); procedimento em espanhol.",
+            "ES": "Abogada de los Demandantes en el caso Pluspetrol Perú Corporation S.A. et al. v. Perúpetro S.A. (Caso CIADI No. ARB/12/28), un arbitraje relativo a un contrato de suministro de gas con respecto a pagos de regalías y la venta de líquidos de gas natural (LGN) (llevado a cabo en español)."
           },
           "categories": [
             "investor-state"
@@ -2205,9 +2179,9 @@
         },
         {
           "text": {
-            "EN": "Advisor to a Turkish citizen on the protections provided under investment treaties regarding investments in Turkmenistan.",
-            "PT": "Assessora de um cidadão turco sobre proteções previstas em tratados de investimento com relação a investimentos no Turquemenistão.",
-            "ES": "Asesora de ciudadano turco sobre las protecciones establecidas en tratados de inversión en relación con inversiones en Turkmenistán."
+            "EN": "Advisor to a Turkish investor in Turkmenistan regarding investment treaty protections.",
+            "PT": "Assessora de um investidor turco quanto às proteções previstas em tratados de investimento com relação a um investimento no Turquemenistão.",
+            "ES": "Asesora de un inversionista turco en Turkmenistán respecto a las protecciones establecidas en tratados de inversión."
           },
           "categories": [
             "investor-state"
@@ -2215,9 +2189,9 @@
         },
         {
           "text": {
-            "EN": "Advisor to a Canadian company regarding investment treaty protections in relation to an investment in Peru's infrastructure sector.",
-            "PT": "Assessora de uma empresa canadense sobre proteções previstas em tratados de investimento com relação a um investimento no setor de infraestrutura do Peru.",
-            "ES": "Asesora de una empresa canadiense sobre las protecciones establecidas en tratados de inversión en relación con una inversión en el sector de infraestructura de Perú."
+            "EN": "Advisor to a Canadian investor in the infrastructure sector in Peru regarding investment treaty protections.",
+            "PT": "Assessora de um investidor canadense no setor de infraestrutura quanto às proteções previstas em tratados de investimento com relação a um investimento no Peru.",
+            "ES": "Asesora de un inversionista canadiense en el sector de infraestructura en Perú respecto a las protecciones establecidas en tratados de inversión."
           },
           "categories": [
             "investor-state"
@@ -2225,9 +2199,9 @@
         },
         {
           "text": {
-            "EN": "Advisor to a Canadian company regarding investment treaty protections in relation to an investment in Colombia’s energy sector.",
-            "PT": "Assessora de uma empresa canadense sobre proteções previstas em tratados de investimento com relação a um investimento no setor de energia da Colômbia.",
-            "ES": "Asesora de una empresa canadiense sobre las protecciones establecidas en tratados de inversión en relación con una inversión en el sector energético de Colombia."
+            "EN": "Advisor to a Canadian investor in the energy sector in Colombia regarding investment treaty protections.",
+            "PT": "Assessora de um investidor canadense no setor de energia na Colômbia quanto às proteções previstas em tratados de investimento.",
+            "ES": "Asesora de un inversionista canadiense en el sector energético en Colombia respecto a las protecciones bajo los tratados de inversión."
           },
           "categories": [
             "investor-state"
