@@ -115,7 +115,7 @@ export default function Admin() {
     const handleSaveContent = async () => {
         setIsSaving(true);
         try {
-            const response = await fetch("/.netlify/functions/save-content", {
+            const response = await fetch("/api/save-content", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

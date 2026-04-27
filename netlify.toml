@@ -23,12 +23,16 @@
   force = true
 
 [[redirects]]
+  from = "/api/revert-content"
+  to = "/.netlify/functions/revert-content"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/api/ping"
   to = "/.netlify/functions/ping"
   status = 200
   force = true
-
-
 
 [[redirects]]
   from = "/*"

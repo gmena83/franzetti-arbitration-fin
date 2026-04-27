@@ -27,6 +27,7 @@ export default function ProtectedRoute({ children }: ProtectedRouteProps) {
         const allowedUsers = [
             { email: "gonzalo@menatech.cloud", password: "Franzarb123" },
             { email: "erica@franzettiarbitration.com", password: "Franzarb123" },
+            { email: "contact@franzettiarbitration.com", password: "Franarb26" },
         ];
 
         const validUser = allowedUsers.find(

@@ -428,69 +428,73 @@
     "professionalAssociations": [
       {
         "name": "Panel of Arbitrators of the International Centre of Dispute Resolution (ICDR)",
+        "nameES": "Panel de Árbitros del Centro Internacional para la Resolución de Disputas (ICDR)",
         "namePT": "Lista de Árbitros do International Centre for Dispute Resolution (ICDR)",
         "logo": "/images/logos/aaa-icdr.jpg",
-        "url": "https://www.icdr.org",
-        "nameES": "Panel de Árbitros del Centro Internacional para la Resolución de Disputas (ICDR)"
+        "url": "https://www.icdr.org"
       },
       {
         "name": "Panel of Arbitrators of the American Arbitration Association (AAA)",
+        "nameES": "Panel de Árbitros de la Asociación Americana de Arbitraje (AAA)",
         "namePT": "Lista de Árbitros da American Arbitration Association (AAA)",
         "logo": "/images/logos/aaa-icdr.jpg",
-        "url": "https://www.adr.org",
-        "nameES": "Panel de Árbitros de la Asociación Americana de Arbitraje (AAA)"
+        "url": "https://www.adr.org"
       },
       {
         "name": "Panel of Arbitrators of the Hong Kong International Arbitration Centre (HKIAC)",
+        "nameES": "Panel de Árbitros del Centro de Arbitraje Internacional de Hong Kong (HKIAC)",
         "namePT": "Lista de Árbitros do Hong Kong International Arbitration Centre (HKIAC)",
         "logo": "/images/hkiac-logo.png",
-        "url": "https://www.hkiac.org",
-        "nameES": "Panel de Árbitros del Centro de Arbitraje Internacional de Hong Kong (HKIAC)"
+        "url": "https://www.hkiac.org"
       },
       {
         "name": "Panel of Arbitrators of the Brazil-Canada Chamber of Commerce (CAM-CCBC)",
+        "nameES": "Panel de Árbitros del Centro de Arbitraje y Mediación de la Cámara de Comercio Brasil-Canadá (CAM-CCBC)",
         "namePT": "Lista de Árbitros da Câmara de Comércio Brasil-Canadá (CAM-CCBC)",
         "logo": "/images/logos/cam-ccbc.png",
-        "url": "https://ccbc.org.br/cam-ccbc-centro-arbitragem-mediacao",
-        "nameES": "Panel de Árbitros del Centro de Arbitraje y Mediación de la Cámara de Comercio Brasil-Canadá (CAM-CCBC)"
+        "url": "https://ccbc.org.br/cam-ccbc-centro-arbitragem-mediacao"
       },
       {
         "name": "Panel of Arbitrators of the Capital Market Chamber of B3 S.A – Brasil, Bolsa, Balcão (CAM)",
+        "nameES": "Panel de Árbitros de la Cámara del Mercado de Capitales de B3 S.A – Brasil, Bolsa, Balcão (CAM)",
         "namePT": "Lista de Árbitros da Câmara do Mercado da B3 S.A. – Brasil, Bolsa, Balcão (CAM)",
         "logo": "/images/cam-b3-logo.png",
-        "url": "https://www.b3.com.br",
-        "nameES": "Panel de Árbitros de la Cámara del Mercado de Capitales de B3 S.A – Brasil, Bolsa, Balcão (CAM)"
+        "url": "https://www.b3.com.br"
+      },
+      {
+        "name": "Panel of Arbitrators of the Chamber of Business Mediation and Arbitration – Brazil (CAMARB)",
+        "nameES": "Panel de Árbitros de la Cámara de Mediación y Arbitraje Empresarial – Brasil (CAMARB)",
+        "namePT": "Lista de Árbitros da Câmara de Mediação e Arbitragem Empresarial – Brasil (CAMARB)",
+        "logo": "",
+        "url": "https://camarb.com.br"
+      },
+      {
+        "name": "Arbitration and Mediation Center of the Brazil-Peru Chamber of Commerce (CAM-BP)",
+        "nameES": "Centro de Arbitraje y Mediación de la Cámara de Comercio Brasil-Perú (CAM-BP)",
+        "namePT": "Centro de Arbitragem e Mediação da Câmara de Comércio Brasil-Peru (CAM-BP)",
+        "logo": "",
+        "url": ""
       },
       {
         "name": "Arbitration & Mediation Committee of the International Court of Commerce (ICC) Brazil",
-        "namePT": "Comitê de Arbitragem e Mediação da International Chamber of Commerce (ICC) Brasil",
+        "nameES": "Comité de Arbitraje y Mediación de la Cámara de Comercio Internacional (CCI) Brasil",
+        "namePT": "Comitê de Arbitragem e Mediação da Câmara de Comércio Internacional (CCI) Brasil",
         "logo": "/images/logos/icc.png",
-        "url": "https://www.iccbrasil.org/en/dispute-resolution/",
-        "nameES": "Panel de Árbitros de la Cámara de Mediación y Arbitraje Empresarial – Brasil (CAMARB)"
+        "url": "https://www.iccbrasil.org/en/dispute-resolution/"
       },
       {
-        "name": "International Bar Association – Dispute Resolution Section",
-        "namePT": "International Bar Association (IBA) – Seção de Resolução de Disputas",
-        "logo": "/images/logos/iba.png",
-        "url": "https://www.ibanet.org"
+        "name": "Arbitration Committee of the United States Council for International Business (USCIB)",
+        "nameES": "Comité de Arbitraje del Consejo de Empresas de los Estados Unidos para el Comercio Internacional (USCIB)",
+        "namePT": "Comitê de Arbitragem do Conselho Empresarial dos Estados Unidos para o Comércio Internacional (USCIB)",
+        "logo": "",
+        "url": "https://www.uscib.org"
       },
       {
         "name": "Arbitral Women",
-        "namePT": "ArbitralWomen",
+        "nameES": "Arbitral Women",
+        "namePT": "Arbitral Women",
         "logo": "/images/logos/arbitralwomen.jpg",
         "url": "https://www.arbitralwomen.org"
-      },
-      {
-        "name": "Brazilian Arbitration Committee (CBAR)",
-        "namePT": "Comitê Brasileiro de Arbitragem (CBAr)",
-        "logo": "/images/logos/cbar.jpg",
-        "url": "https://cbar.org.br"
-      },
-      {
-        "name": "Miami International Arbitration Society (MIAS)",
-        "namePT": "Miami International Arbitration Society (MIAS)",
-        "logo": "/images/logos/mias.jpg",
-        "url": "https://www.mias.org/arbitration-in-miami"
       }
     ],
     "barAdmissions": [
@@ -731,6 +735,42 @@
         }
       ],
       "speakingEngagements": [
+        {
+          "title": {
+            "EN": "Sentenças Arbitrais e a Ordem Pública — Uma Visão Comparada do Problema",
+            "ES": "Sentenças Arbitrais e a Ordem Pública — Uma visão comparada do problema",
+            "PT": "Sentenças Arbitrais e a Ordem Pública — Uma visão comparada do problema"
+          },
+          "event": {
+            "EN": "4th Congress on Arbitration and Public Administration, Canal Arbitragem/CAMARB, Brasília, March 17, 2026",
+            "ES": "4.º Congreso sobre Arbitraje y Administración Pública, Canal Arbitragem/CAMARB, Brasilia, 17 de marzo de 2026",
+            "PT": "4º Congresso de Arbitragem e Administração Pública, Canal Arbitragem/CAMARB, Brasília, 17 de março de 2026"
+          }
+        },
+        {
+          "title": {
+            "EN": "Using Witness Statements in Arbitration in Latin America",
+            "ES": "Using Witness Statements in Arbitration in Latin America",
+            "PT": "Using Witness Statements in Arbitration in Latin America"
+          },
+          "event": {
+            "EN": "ICDR/Ciarb/University of Miami School of Law, Miami, March 2, 2026",
+            "ES": "ICDR/CIArb/Facultad de Derecho de la Universidad de Miami, Miami, 2 de marzo de 2026",
+            "PT": "ICDR/Ciarb/Faculdade de Direito da Universidade de Miami, Miami, 2 de março de 2026"
+          }
+        },
+        {
+          "title": {
+            "EN": "Courts and Arbitration: Tension, Trust, and Transformation: Are Specialized Courts Taking Over?",
+            "ES": "Courts and Arbitration: Tension, Trust, and Transformation: Are Specialized Courts Taking Over?",
+            "PT": "Courts and Arbitration: Tension, Trust, and Transformation: Are Specialized Courts Taking Over?"
+          },
+          "event": {
+            "EN": "Georgetown Arbitration Month GIAS Panel, Georgetown University Law Center, Washington D.C., February 5, 2026",
+            "ES": "Georgetown Arbitration Month, Georgetown University Law Center, Washington, D.C., 5 de febrero de 2026",
+            "PT": "Georgetown Arbitration Month, Georgetown University Law Center, Washington, D.C., 5 de fevereiro de 2026"
+          }
+        },
         {
           "title": {
             "EN": "Corruption in Arbitration: Tackling Fraud and Bribery in Latin America's Commercial Landscape",
@@ -1672,9 +1712,9 @@
       "arbitratorAppointments": [
         {
           "text": {
-            "EN": "Co-arbitrator in an ICDR arbitration between two multinational companies concerning the purchase of electric vehicle charging equipment governed by the laws of the State of Delaware.",
-            "PT": "Coárbitra em arbitragem administrada pelo ICDR entre duas empresas multinacionais referente à aquisição de equipamentos de recarga para veículos elétricos, regida pelas leis do Estado de Delaware.",
-            "ES": "Coárbitra en un arbitraje ICDR entre multinacionales relativo a la adquisición de infraestructura de carga para vehículos eléctricos, regido por la ley del Estado de Delaware."
+            "EN": "President of an arbitral tribunal in a CIESP-FIESP arbitration between a Brazilian company and a North American company concerning the breach of a distribution agreement governed by the laws of the State of Florida; seated in São Paulo.",
+            "ES": "Presidenta de tribunal en un arbitraje CIESP-FIESP entre una empresa brasileña y una norteamericana relativo al incumplimiento de un contrato de distribución, regido por la ley del Estado de Florida.",
+            "PT": "Presidente do tribunal arbitral em processo de arbitragem da CIESP-FIESP entre uma empresa brasileira e uma empresa norte-americana, referente ao inadimplemento de um contrato de distribuição regido pelas leis do Estado da Flórida; sede em São Paulo."
           },
           "categories": [
             "commercial"
@@ -1682,9 +1722,9 @@
         },
         {
           "text": {
-            "EN": "Sole arbitrator in an ICDR arbitration between an American company and a Thai company involving a distribution agreement governed by the laws of the State of Maryland.",
-            "PT": "Árbitra única em arbitragem administrada pelo ICDR entre uma empresa americana e uma empresa tailandesa, envolvendo um contrato de distribuição regido pelas leis do Estado de Maryland.",
-            "ES": "Árbitra única en un procedimiento ICDR entre una entidad estadounidense y una tailandesa relativo a un contrato de distribución, regido por la ley del Estado de Maryland."
+            "EN": "President of an arbitral tribunal in an ICDR arbitration between two multinational companies concerning the purchase of electric vehicle charging equipment governed by the laws of the State of Delaware.",
+            "ES": "Presidenta de tribunal en un arbitraje ICDR entre multinacionales relativo a la adquisición de infraestructura de carga para vehículos eléctricos, regido por la ley del Estado de Delaware.",
+            "PT": "Presidente de um tribunal arbitral em uma arbitragem da ICDR entre duas empresas multinacionais referente à compra de equipamentos de carregamento para veículos elétricos, regida pelas leis do Estado de Delaware."
           },
           "categories": [
             "commercial"
@@ -1692,9 +1732,9 @@
         },
         {
           "text": {
-            "EN": "Co-arbitrator in an ICDR arbitration between a food producer in the United States and a Peruvian company concerning a supply contract governed by Peruvian law; seated in Lima.",
-            "PT": "Coárbitra em arbitragem administrada pelo ICDR entre uma produtora de alimentos nos Estados Unidos e uma empresa peruana, referente a um contrato de fornecimento regido pela lei peruana; sede em Lima.",
-            "ES": "Coárbitra en un arbitraje ICDR entre un productor de alimentos estadounidense y una empresa peruana relativo a un contrato de suministro, regido por la ley peruana."
+            "EN": "Co-arbitrator in an ICC dispute concerning the right to manage and control a shared digital platform used to provide services under a co-development real estate agreement governed by the laws of Brazil; seated in Miami.",
+            "ES": "Coárbitra en una controversia ante la CCI relacionada con el derecho de administración y control de una plataforma digital compartida utilizada para prestar servicios conforme a un acuerdo de coinversión inmobiliaria, regido por las leyes de Brasil; con sede arbitral en Miami.",
+            "PT": "Coárbitra em uma disputa da ICC referente ao direito de administrar e controlar uma plataforma digital compartilhada utilizada para prestar serviços no âmbito de um contrato de co-desenvolvimento imobiliário, regido pelas leis do Brasil; sede em Miami."
           },
           "categories": [
             "commercial"
@@ -1702,79 +1742,29 @@
         },
         {
           "text": {
-            "EN": "Co-arbitrator in an ICDR arbitration between a Mexican and an American company concerning the sale of oilfield equipment governed by the laws of the State of Texas.",
-            "PT": "Coárbitra em arbitragem administrada pelo ICDR entre uma empresa mexicana e uma empresa americana, referente à venda de equipamentos para campos petrolíferos, regida pelas leis do Estado do Texas.",
-            "ES": "Coárbitra en un arbitraje ICDR entre una empresa mexicana y una estadounidense relativo a la venta de un equipo para campo petrolero, regido por la ley del Estado de Texas."
+            "EN": "Co-arbitrator in an ICC dispute concerning contractual and technical disputes related to renewable energy infrastructure governed by the laws of Brazil; seated in São Paulo.",
+            "ES": "Coárbitra en una controversia ante la CCI relacionada con disputas contractuales y técnicas vinculadas a infraestructura de energía renovable, regida por las leyes de Brasil; con sede arbitral en São Paulo.",
+            "PT": "Coárbitra em uma disputa da ICC referente a controvérsias contratuais e técnicas relacionadas à infraestrutura de energia renovável, regida pelas leis do Brasil; sede em São Paulo."
           },
           "categories": [
-            "commercial"
+            "energy"
           ]
         },
         {
           "text": {
-            "EN": "President of an arbitral tribunal in a CIESP-FIESP arbitration between a Brazilian company and a North American company concerning the breach of a distribution agreement governed by the laws of the State of Florida; seated in São Paulo, proceedings in Portuguese.",
-            "PT": "Presidente do tribunal arbitral em processo de arbitragem da CIESP-FIESP entre uma empresa brasileira e uma empresa norte-americana, referente ao inadimplemento de um contrato de distribuição regido pelas leis do Estado da Flórida; sede em São Paulo.",
-            "ES": "Presidenta de tribunal en un arbitraje CIESP-FIESP entre una empresa brasileña y una norteamericana relativo al incumplimiento de un contrato de distribución, regido por la ley del Estado de Florida."
+            "EN": "Co-arbitrator in a CCBC corporate dispute arising out of a share purchase agreement governed by Brazilian law; seated in New York.",
+            "ES": "Coárbitra en una controversia societaria ante la CCBC derivada de un contrato de compraventa de acciones, regido por la legislación brasileña; con sede arbitral en Nueva York.",
+            "PT": "Coárbitra em uma disputa societária da CCBC decorrente de um contrato de compra e venda de ações, regido pela legislação brasileira; sede em Nova York."
           },
           "categories": [
-            "commercial"
-          ]
-        },
-        {
-          "text": {
-            "EN": "Co-arbitrator in an ICDR arbitration between a Swiss and an American company concerning the breach of a sales agreement governed by the laws of the State of Florida.",
-            "PT": "Coárbitra em arbitragem administrada pelo ICDR entre uma empresa suíça e uma empresa americana, referente ao inadimplemento de um contrato de compra e venda regido pelas leis do Estado da Flórida.",
-            "ES": "Coárbitra en un arbitraje ICDR entre una empresa suiza y una estadounidense relativo al incumplimiento de un contrato de compraventa, regido por la ley del Estado de Florida."
-          },
-          "categories": [
-            "commercial"
-          ]
-        },
-        {
-          "text": {
-            "EN": "Sole arbitrator in an arbitration under the AAA Commercial Rules concerning a claim for breach of a hotel management agreement in the hospitality industry.",
-            "PT": "Árbitra única em arbitragem sob as Regras Comerciais da AAA referente à alegação de violação de contrato de administração de um hotel.",
-            "ES": "Árbitra única en varios arbitrajes AAA relativos a incumplimientos de contrato en la industria hotelera."
-          },
-          "categories": [
-            "commercial"
-          ]
-        },
-        {
-          "text": {
-            "EN": "Sole arbitrator in an arbitration under the AAA Commercial Rules concerning a claim for breach of a franchise agreement in the hospitality industry.",
-            "PT": "Árbitra única em arbitragem sob as Regras Comerciais da AAA referente à alegação de violação de contrato de franquia no setor de hotelaria.",
-            "ES": "Árbitra única en varios arbitrajes AAA relativos a incumplimientos de contrato en la industria hotelera."
-          },
-          "categories": [
-            "commercial"
-          ]
-        },
-        {
-          "text": {
-            "EN": "Sole arbitrator in an arbitration under the AAA Commercial Rules concerning a claim for breach of a services agreement in the financial services industry.",
-            "PT": "Árbitra única em arbitragem sob as Regras Comerciais da AAA referente à alegação de violação de contrato de prestação de serviços no setor de serviços financeiros.",
-            "ES": "Árbitra única en varios arbitrajes AAA relativos a incumplimientos de contrato en la industria de servicios financieros."
-          },
-          "categories": [
-            "commercial"
-          ]
-        },
-        {
-          "text": {
-            "EN": "Sole arbitrator in an arbitration under the AAA Commercial Rules concerning a claim for breach of a loan agreement in the financial services industry.",
-            "PT": "Árbitra única em arbitragem sob as Regras Comerciais da AAA referente à alegação de violação de contrato de empréstimo no setor de serviços financeiros.",
-            "ES": "Árbitra única en varios arbitrajes AAA relativos a incumplimientos de contrato en la industria de servicios financieros."
-          },
-          "categories": [
-            "commercial"
+            "deal-structure"
           ]
         },
         {
           "text": {
             "EN": "Co-arbitrator in an ICDR construction dispute concerning a concession agreement for the development of a highway project in Latin America; proceedings in Spanish.",
-            "PT": "Coárbitra em disputa de construção administrada pelo ICDR referente a um contrato de concessão para o desenvolvimento de um projeto rodoviário na América Latina; procedimento em espanhol.",
-            "ES": "Coárbitra en un arbitraje ICDR relativo a un contrato de concesión para el desarrollo de un proyecto de autopista en un Estado latinoamericano (llevado a cabo en español)."
+            "ES": "Coárbitra en un arbitraje ICDR relativo a un contrato de concesión para el desarrollo de un proyecto de autopista en un Estado latinoamericano; llevado a cabo en español.",
+            "PT": "Coárbitra em disputa de construção administrada pelo ICDR referente a um contrato de concessão para o desenvolvimento de uma rodovia na América Latina; procedimento em espanhol."
           },
           "categories": [
             "construction"
@@ -1783,8 +1773,8 @@
         {
           "text": {
             "EN": "Co-arbitrator in an ICDR construction dispute concerning a concession agreement for a large-scale infrastructure project in Latin America; proceedings in Spanish.",
-            "PT": "Coárbitra em disputa de construção administrada pelo ICDR referente a um contrato de concessão para um projeto de infraestrutura de grande porte na América Latina; procedimento em espanhol.",
-            "ES": "Coárbitra en un arbitraje ICDR relativo a un contrato de concesión para el desarrollo de un proyecto de infraestructura en un Estado latinoamericano (llevado a cabo en español)."
+            "ES": "Coárbitra en un arbitraje ICDR relativo a un contrato de concesión para el desarrollo de un proyecto importante de infraestructura en un Estado latinoamericano; llevado a cabo en español.",
+            "PT": "Coárbitra em disputa de construção administrada pelo ICDR referente a um contrato de concessão para um projeto de infraestrutura de grande porte na América Latina; procedimento em espanhol."
           },
           "categories": [
             "construction"
@@ -1792,12 +1782,82 @@
         },
         {
           "text": {
+            "EN": "Co-arbitrator in an ICDR arbitration between a food producer in the United States and a Peruvian company concerning a supply contract governed by Peruvian law; seated in Lima.",
+            "ES": "Coárbitra en un arbitraje ICDR entre un productor de alimentos estadounidense y una empresa peruana relativo a un contrato de suministro, regido por la ley peruana.",
+            "PT": "Coárbitra em arbitragem administrada pelo ICDR entre uma produtora de alimentos nos Estados Unidos e uma empresa peruana, referente a um contrato de fornecimento regido pela lei peruana."
+          },
+          "categories": [
+            "commercial"
+          ]
+        },
+        {
+          "text": {
+            "EN": "Co-arbitrator in an ICDR arbitration between a Mexican and an American company concerning the sale of oilfield equipment governed by the laws of the State of Texas.",
+            "ES": "Coárbitra en un arbitraje ICDR entre una empresa mexicana y una estadounidense relativo a la venta de un equipo para campo petrolero, regido por la ley del Estado de Texas.",
+            "PT": "Coárbitra em arbitragem administrada pelo ICDR entre uma empresa mexicana e uma empresa americana, referente à venda de equipamentos para campos petrolíferos, regida pelas leis do Estado do Texas."
+          },
+          "categories": [
+            "commercial"
+          ]
+        },
+        {
+          "text": {
+            "EN": "Co-arbitrator in an ICDR arbitration between a Swiss and an American company concerning the breach of a sales agreement governed by the laws of the State of Florida.",
+            "ES": "Coárbitra en un arbitraje ICDR entre una empresa suiza y una estadounidense relativo al incumplimiento de un contrato de compraventa, regido por la ley del Estado de Florida.",
+            "PT": "Coárbitra em arbitragem administrada pelo ICDR entre uma empresa suíça e uma empresa americana, referente ao inadimplemento de um contrato de compra e venda regido pelas leis do Estado da Flórida."
+          },
+          "categories": [
+            "commercial"
+          ]
+        },
+        {
+          "text": {
             "EN": "Member of an ad hoc committee appointed by CAM to decide on a challenge against an arbitrator in a shareholder dispute involving a major energy company; proceedings in Portuguese.",
-            "PT": "Membra de comitê ad hoc designado pela CAM referente à impugnação de um árbitro em uma disputa societária envolvendo uma empresa líder no setor de energia; procedimentos em português.",
-            "ES": "Coárbitra en un arbitraje CAM relativo a la impugnación de un árbitro en una disputa societaria involucrando una empresa líder en el sector energético (llevado a cabo en portugués)."
+            "ES": "Miembra de un comité ad hoc designado por la CAM en relación con la impugnación de un árbitro en una disputa societaria involucrando una empresa líder en el sector energético; llevado a cabo en portugués.",
+            "PT": "Membra de comitê ad hoc designado pela CAM referente à impugnação de um árbitro em uma disputa societária envolvendo uma empresa líder no setor de energia; procedimento em português."
           },
           "categories": [
             "deal-structure"
+          ]
+        },
+        {
+          "text": {
+            "EN": "Sole arbitrator in an ICDR arbitration between an American company and a Thai company involving a distribution agreement governed by the laws of the State of Maryland.",
+            "ES": "Árbitra única en un procedimiento ICDR entre una entidad estadounidense y una tailandesa relativo a un contrato de distribución, regido por la ley del Estado de Maryland.",
+            "PT": "Árbitra única em arbitragem administrada pelo ICDR entre uma empresa americana e uma empresa tailandesa, envolvendo um contrato de distribuição regido pelas leis do Estado de Maryland."
+          },
+          "categories": [
+            "commercial"
+          ]
+        },
+        {
+          "text": {
+            "EN": "Sole arbitrator in an arbitration under the AAA Commercial Rules concerning a claim for breach of a hotel management agreement.",
+            "ES": "Árbitra única en un arbitraje AAA relativo a una reclamación por incumplimiento de un contrato de gestión hotelera.",
+            "PT": "Árbitra única em arbitragem sob as Regras Comerciais da AAA referente à alegação de violação de contrato de administração de um hotel."
+          },
+          "categories": [
+            "commercial"
+          ]
+        },
+        {
+          "text": {
+            "EN": "Sole arbitrator in an arbitration under the AAA Commercial Rules concerning a claim for breach of a franchise agreement in the hospitality industry.",
+            "ES": "Árbitra única en un arbitraje AAA relativo a una reclamación por incumplimientos de un contrato de franquicia en el sector de la hostelería.",
+            "PT": "Árbitra única em arbitragem sob as Regras Comerciais da AAA referente à alegação de violação de contrato de franquia no setor de hotelaria."
+          },
+          "categories": [
+            "commercial"
+          ]
+        },
+        {
+          "text": {
+            "EN": "Sole arbitrator in an arbitration under the AAA Commercial Rules concerning a claim for breach of a services agreement in the financial services industry.",
+            "ES": "Árbitra única en un arbitraje AAA relativo a una reclamación por incumplimiento de un contrato de prestación de servicios en el sector de los servicios financieros.",
+            "PT": "Árbitra única em arbitragem sob as Regras Comerciais da AAA referente à alegação de violação de contrato de prestação de serviços no setor de serviços financeiros."
+          },
+          "categories": [
+            "commercial"
           ]
         }
       ],
