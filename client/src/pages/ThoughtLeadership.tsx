@@ -233,8 +233,8 @@ export default function ThoughtLeadership() {
                           {item.institution}
                         </a>
                       </h3>
-                      <p className="text-gray-700">{getLocalized(item, 'role')}</p>
-                      <p className="text-gray-600 text-sm">{getLocalized(item, 'course')}</p>
+                      <p className="text-gray-700">{getLocalized(item.role)}</p>
+                      <p className="text-gray-600 text-sm">{getLocalized(item.course)}</p>
                       <p className="text-gray-400 text-sm mt-1">{item.period}</p>
                     </div>
                   </div>

@@ -2,662 +2,710 @@
   "speakingEngagements": [
     {
       "title": {
-        "EN": "Corruption in Arbitration: Tackling Fraud and Bribery in Latin America's Commercial Landscape",
-        "PT": "Corruption in Arbitration: Tackling Fraud and Bribery in Latin America's Commercial Landscape",
-        "ES": "Corruption in Arbitration: Tackling Fraud and Bribery in Latin America’s Commercial Landscape"
+        "EN": "AI in the Seat of Justice: Oversight, Transparency, and Human Accountability in High-Risk AI Use",
+        "ES": "La IA en el estrado: supervisión, transparencia y responsabilidad humana en el uso de IA de alto riesgo",
+        "PT": "A IA no banco da justiça: supervisão, transparência e responsabilidade humana no uso de IA de alto risco"
       },
       "event": {
-        "EN": "HardTalk Miami, 4 de dezembro de 2025",
-        "PT": "HardTalk Miami, 4 de dezembro de 2025",
-        "ES": "HardTalk Miami, Miami, 4 de diciembre de 2025"
+        "EN": "ABA International Law Section, 2026 Annual Conference, Washington D.C. (May 12, 2026)",
+        "ES": "Sección de Derecho Internacional de la ABA, Conferencia Anual 2026, Washington D.C. (12 de mayo de 2026)",
+        "PT": "Seção de Direito Internacional da ABA, Conferência Anual 2026, Washington D.C. (12 de maio de 2026)"
+      }
+    },
+    {
+      "title": {
+        "EN": "Sentenças Arbitrais e a Ordem Pública — Uma Visão Comparada do Problema",
+        "ES": "Sentenças Arbitrais e a Ordem Pública — Uma visión comparada do problema",
+        "PT": "Sentenças Arbitrais e a Ordem Pública — Uma visão comparada do problema"
+      },
+      "event": {
+        "EN": "4th Congress on Arbitration and Public Administration, Canal Arbitragem/CAMARB, Brasília (March 17, 2026)",
+        "ES": "4.º Congreso sobre Arbitraje y Administración Pública, Canal Arbitragem/CAMARB, Brasilia (17 de marzo de 2026)",
+        "PT": "4º Congresso de Arbitragem e Administração Pública, Canal Arbitragem/CAMARB, Brasília (17 de março de 2026)"
+      }
+    },
+    {
+      "title": {
+        "EN": "Using Witness Statements in Arbitration in Latin America",
+        "ES": "Using Witness Statements in Arbitration in Latin America",
+        "PT": "Using Witness Statements in Arbitration in Latin America"
+      },
+      "event": {
+        "EN": "ICDR/Ciarb/University of Miami School of Law, Miami (March 2, 2026)",
+        "ES": "ICDR/CIArb/Facultad de Derecho de la Universidad de Miami, Miami (2 de marzo de 2026)",
+        "PT": "ICDR/Ciarb/Faculdade de Direito da Universidade de Miami, Miami (2 de março de 2026)"
+      }
+    },
+    {
+      "title": {
+        "EN": "Courts and Arbitration: Tension, Trust, and Transformation: Are Specialized Courts Taking Over?",
+        "ES": "Courts and Arbitration: Tension, Trust, and Transformation: Are Specialized Courts Taking Over?",
+        "PT": "Courts and Arbitration: Tension, Trust, and Transformation: Are Specialized Courts Taking Over?"
+      },
+      "event": {
+        "EN": "Georgetown Arbitration Month GIAS Panel, Georgetown University Law Center, Washington D.C. (February 5, 2026)",
+        "ES": "Georgetown Arbitration Month, Georgetown University Law Center, Washington, D.C. (5 de febrero de 2026)",
+        "PT": "Georgetown Arbitration Month, Georgetown University Law Center, Washington, D.C. (5 de fevereiro de 2026)"
+      }
+    },
+    {
+      "title": {
+        "EN": "Corruption in Arbitration: Tackling Fraud and Bribery in Latin America’s Commercial Landscape",
+        "ES": "Corrupción en Arbitraje: Abordando el Fraude y el Soborno en el Panorama Comercial de América Latina",
+        "PT": "Corrupção em Arbitragem: Abordando Fraude e Suborno no Cenário Comercial da América Latina"
+      },
+      "event": {
+        "EN": "HardTalk Miami (December 4, 2025)",
+        "ES": "HardTalk Miami (4 de diciembre de 2025)",
+        "PT": "HardTalk Miami (4 de dezembro de 2025)"
       }
     },
     {
       "title": {
         "EN": "Energy Infrastructure Disputes",
-        "PT": "Energy Infrastructure Disputes",
-        "ES": "Energy Infrastructure Disputes"
+        "ES": "Disputas de Infraestructura Energética",
+        "PT": "Disputas de Infraestrutura Energética"
       },
       "event": {
-        "EN": "AIEN/ICC: Resolução de Conflitos no Setor de Energia, Rio de Janeiro, 3 de outubro de 2025",
-        "PT": "AIEN/ICC: Resolução de Conflitos no Setor de Energia, Rio de Janeiro, 3 de outubro de 2025",
-        "ES": "AIEN/ICC: Dispute Resolution in the Energy Business, Río de Janeiro, 3 de octubre de 2025"
+        "EN": "AIEN/ICC: Dispute Resolution in the Energy Business, Rio de Janeiro (October 3, 2025)",
+        "ES": "AIEN/CCI: Resolución de Disputas en el Negocio Energético, Río de Janeiro (3 de octubre de 2025)",
+        "PT": "AIEN/ICC: Resolução de Disputas no Negócio de Energia, Rio de Janeiro (3 de outubro de 2025)"
       }
     },
     {
       "title": {
         "EN": "Parallel Arbitration and Criminal Proceedings Involving Corruption Allegations",
-        "PT": "Parallel Arbitration and Criminal Proceedings Involving Corruption Allegations",
-        "ES": "Parallel Arbitration and Criminal Proceedings Involving Corruption Allegations"
+        "ES": "Procedimientos Arbitrales y Penales Paralelos Relacionados con Alegaciones de Corrupción",
+        "PT": "Procedimentos Arbitrais e Criminais Paralelos Envolvendo Alegações de Corrupção"
       },
       "event": {
-        "EN": "Sovereign & States Litigation Summit USA, Washington, DC, 24 de setembro de 2025",
-        "PT": "Sovereign & States Litigation Summit USA, Washington, DC, 24 de setembro de 2025",
-        "ES": "Sovereign & States Litigation Summit USA, Washington, DC, 24 de septiembre de 2025"
+        "EN": "Sovereign & States Litigation Summit USA, Washington D.C. (September 24, 2025)",
+        "ES": "Cumbre de Litigios Soberanos y Estatales EE.UU., Washington D.C. (24 de septiembre de 2025)",
+        "PT": "Cúpula de Litígios Soberanos e Estatais EUA, Washington D.C. (24 de setembro de 2025)"
       }
     },
     {
       "title": {
         "EN": "International Construction Arbitration: Infrastructure Projects with Sovereigns",
-        "PT": "International Construction Arbitration: Infrastructure Projects with Sovereigns",
-        "ES": "International Construction Arbitration: Infrastructure Projects with Sovereigns"
+        "ES": "Arbitraje de Construcción Internacional: Proyectos de Infraestructura con Soberanos",
+        "PT": "Arbitragem de Construção Internacional: Projetos de Infraestrutura com Soberanos"
       },
       "event": {
-        "EN": "iLaw2025 The ILS Global Forum on International Law AAA-ICDR International Arbitration Track, 7 de fevereiro de 2025",
-        "PT": "iLaw2025 The ILS Global Forum on International Law AAA-ICDR International Arbitration Track, 7 de fevereiro de 2025",
-        "ES": "iLaw2025 TheILS Forum on International Law AAA-ICDR International Arbitration Track, 7 de febrero de 2025"
+        "EN": "iLaw2025 The ILS Global Forum on International Law AAA-ICDR International Arbitration Track (February 7, 2025)",
+        "ES": "iLaw2025 El Foro Global de Derecho Internacional ILS, Pista de Arbitraje Internacional AAA-ICDR (7 de febrero de 2025)",
+        "PT": "iLaw2025 O Fórum Global de Direito Internacional ILS, Trilha de Arbitragem Internacional AAA-ICDR (7 de fevereiro de 2025)"
       }
     },
     {
       "title": {
         "EN": "Increase in Disputes in Oil & Gas Industry",
-        "PT": "Increase in Disputes in Oil & Gas Industry",
-        "ES": "Increase in Disputes in Oil & Gas Industry"
+        "ES": "Aumento de Disputas en la Industria del Petróleo y Gas",
+        "PT": "Aumento de Disputas na Indústria de Petróleo e Gás"
       },
       "event": {
-        "EN": "HardTalk, Miami, 4 de dezembro de 2024",
-        "PT": "HardTalk, Miami, 4 de dezembro de 2024",
-        "ES": "HardTalk Miami, Miami, 4 de diciembre de 2024"
+        "EN": "HardTalk, Miami (December 4, 2024)",
+        "ES": "HardTalk, Miami (4 de diciembre de 2024)",
+        "PT": "HardTalk, Miami (4 de dezembro de 2024)"
       }
     },
     {
       "title": {
-        "EN": "Arbitragem no Setor de Aviação Comercial com Partes Brasileiras",
-        "PT": "Arbitragem no Setor de Aviação Comercial com Partes Brasileiras",
-        "ES": "Arbitragem no Setor de Aviação Comercial com Partes Brasileiras"
+        "EN": "Arbitration in the Commercial Aviation Sector with Brazilian Parties",
+        "ES": "Arbitraje en el Sector de Aviación Comercial con Partes Brasileñas",
+        "PT": "Arbitragem no Setor de Aviação Comercial com Partes Brasileiras"
       },
       "event": {
-        "EN": "Arbitration Channel Webinar, 29 de outubro de 2024",
-        "PT": "Arbitration Channel Webinar, 29 de outubro de 2024",
-        "ES": "Arbitration Channel Webinar, 29 de octubre de 2024"
+        "EN": "Arbitration Channel (October 29, 2024)",
+        "ES": "Canal de Arbitraje (29 de octubre de 2024)",
+        "PT": "Canal de Arbitragem (29 de outubro de 2024)"
       }
     },
     {
       "title": {
         "EN": "The Future of International Arbitration",
-        "PT": "The Future of International Arbitration",
-        "ES": "The Future of International Arbitration"
+        "ES": "El Futuro del Arbitraje Internacional",
+        "PT": "O Futuro da Arbitragem Internacional"
       },
       "event": {
-        "EN": "Georgetown University Law Centre, Washington, DC, 29 de fevereiro de 2024",
-        "PT": "Georgetown University Law Centre, Washington, DC, 29 de fevereiro de 2024",
-        "ES": "Georgetown University Law Centre, Washington, DC, 29 de febrero de 2024"
+        "EN": "Georgetown University Law Centre, Washington D.C. (February 29, 2024)",
+        "ES": "Georgetown University Law Centre, Washington D.C. (29 de febrero de 2024)",
+        "PT": "Georgetown University Law Centre, Washington D.C. (29 de fevereiro de 2024)"
       }
     },
     {
       "title": {
-        "EN": "So You're an International Arbitrator, How to Approach and Handle Some of the Issues That May Arise",
-        "PT": "So You're an International Arbitrator, How to Approach and Handle Some of the Issues That May Arise",
-        "ES": "So You’re an International Arbitrator, How to Approach and Handle Some of the Issues that May Arise"
+        "EN": "So You’re an International Arbitrator, How to Approach and Handle Some of the Issues That May Arise",
+        "ES": "Así que Eres un Árbitro Internacional, Cómo Abordar y Manejar Algunos de los Problemas que Pueden Surgir",
+        "PT": "Então Você é um Árbitro Internacional, Como Abordar e Lidar com Algumas das Questões que Podem Surgir"
       },
       "event": {
-        "EN": "iLaw2024 The ILS Global Forum on International Law AAA-ICDR International Arbitration Track, 16 de fevereiro de 2024",
-        "PT": "iLaw2024 The ILS Global Forum on International Law AAA-ICDR International Arbitration Track, 16 de fevereiro de 2024",
-        "ES": "iLaw2024, The ILS Global Forum on International Law AAA-ICDR International Arbitration Track, Miami, 16 de febrero de 2024"
+        "EN": "iLaw2024 The ILS Global Forum on International Law AAA-ICDR International Arbitration Track (February 16, 2024)",
+        "ES": "iLaw2024 El Foro Global de Derecho Internacional ILS, Pista de Arbitraje Internacional AAA-ICDR (16 de febrero de 2024)",
+        "PT": "iLaw2024 O Fórum Global de Direito Internacional ILS, Trilha de Arbitragem Internacional AAA-ICDR (16 de fevereiro de 2024)"
       }
     },
     {
       "title": {
         "EN": "Considerations About the Seat of Arbitration",
-        "PT": "Considerations About the Seat of Arbitration",
-        "ES": "Considerations About the Seat of Arbitration"
+        "ES": "Consideraciones Sobre la Sede del Arbitraje",
+        "PT": "Considerações Sobre a Sede da Arbitragem"
       },
       "event": {
-        "EN": "III Dia Brasileiro de Arbitragem, organizado pela Georgetown University Law Centre, Washington, DC, 24 de janeiro de 2024",
-        "PT": "III Dia Brasileiro de Arbitragem, organizado pela Georgetown University Law Centre, Washington, DC, 24 de janeiro de 2024",
-        "ES": "Georgetown Brazilian Arbitration Day, Georgetown University Law Center, Washington, DC, 24 de enero de 2024"
+        "EN": "Georgetown Brazilian Arbitration Day, University law Centre, Washington D.C. (January 24, 2024)",
+        "ES": "Día del Arbitraje Brasileño de Georgetown, University Law Centre, Washington D.C. (24 de enero de 2024)",
+        "PT": "Dia da Arbitragem Brasileira de Georgetown, University Law Centre, Washington D.C. (24 de janeiro de 2024)"
       }
     },
     {
       "title": {
-        "EN": "Greener Grass or Scorched Earth: The Impact of Legislation and Court Reform on Arbitration Friendliness in the Americas",
-        "PT": "Greener Grass or Scorched Earth: The Impact of Legislation and Court Reform on Arbitration Friendliness in the Americas",
-        "ES": "Greener Grass or Scorched Earth: The Impact of Legislation and Court Reform on Arbitration Friendliness in the Americas"
+        "EN": "Greener Grass or Scorched Earth: The Impact of Legislation and Court Reform on Arbitration Friendliness in the Americas – Chartered Institute",
+        "ES": "¿Pasto Más Verde o Tierra Quemada?: El Impacto de la Legislación y la Reforma Judicial en la Amigabilidad del Arbitraje en las Américas – Chartered Institute",
+        "PT": "Grama Mais Verde ou Terra Queimada: O Impacto da Legislação e da Reforma Judicial na Amigabilidade da Arbitragem nas Américas – Chartered Institute"
       },
       "event": {
-        "EN": "Chartered Institute – North American Branch e JAMS, Miami, 8 de novembro de 2023",
-        "PT": "Chartered Institute – North American Branch e JAMS, Miami, 8 de novembro de 2023",
-        "ES": "Chartered Institute – North America Branch y JAMS, Miami, 8 de noviembre de 2023"
+        "EN": "North American Branch and JAMS, Miami (November 8, 2023)",
+        "ES": "Rama Norteamericana y JAMS, Miami (8 de noviembre de 2023)",
+        "PT": "Filial Norte-Americana e JAMS, Miami (8 de novembro de 2023)"
       }
     },
     {
       "title": {
-        "EN": "Roundtable on Enforcement Proceedings, Asset Tracing and Funding to Enforce and Collect",
-        "PT": "Roundtable on Enforcement Proceedings, Asset Tracing and Funding to Enforce and Collect",
-        "ES": "Roundtable on Enforcement Proceedings"
+        "EN": "Roundtable on Enforcement Proceedings",
+        "ES": "Mesa Redonda sobre Procedimientos de Ejecución, Rastreo de Activos y Financiamiento para Ejecutar y Cobrar",
+        "PT": "Mesa Redonda sobre Procedimentos de Execução, Rastreamento de Ativos e Financiamento para Executar e Cobrar"
       },
       "event": {
-        "EN": "Miami International Arbitration Society, Miami, 18 de outubro de 2023",
-        "PT": "Miami International Arbitration Society, Miami, 18 de outubro de 2023",
-        "ES": "Asset Tracing and Funding to Enforce and Collect, Miami International Arbitration Society, Miami, 18 de octubre de 2023"
+        "EN": "Asset Tracing and Funding to Enforce and Collect –Miami International Arbitration Society, Miami (October 18, 2023)",
+        "ES": "Sociedad de Arbitraje Internacional de Miami, Miami (18 de octubre de 2023)",
+        "PT": "Sociedade de Arbitragem Internacional de Miami, Miami (18 de outubro de 2023)"
       }
     },
     {
       "title": {
-        "EN": "Contratos Comerciais e Arbitragem em Setores Regulados: Autonomia das Partes e Heteronomia Regulatória",
-        "PT": "Contratos Comerciais e Arbitragem em Setores Regulados: Autonomia das Partes e Heteronomia Regulatória",
-        "ES": "Contratos Comerciais e Arbitragem em Setores Regulados: Autonomia das Partes e Heretomia Regulatória"
+        "EN": "Business Contracts and Arbitration in Regulated Sectors: Party Autonomy and Regulatory Heteronomy",
+        "ES": "Contratos Comerciales y Arbitraje en Sectores Regulados: Autonomía de las Partes y Heteronomía Regulatoria",
+        "PT": "Contratos Comerciais e Arbitragem em Setores Regulados: Autonomia das Partes e Heteronomia Regulatória"
       },
       "event": {
-        "EN": "22ª Conferência Internacional de Arbitragem do CBAR, Rio de Janeiro, 14 de setembro de 2023",
-        "PT": "22ª Conferência Internacional de Arbitragem do CBAR, Rio de Janeiro, 14 de setembro de 2023",
-        "ES": "22a Conferência Internacional de Arbitragem do CBAR, Río de Janeiro, 14 de septiembre de 2023"
+        "EN": "CBAR 22nd International Arbitration Conference, Rio de Janeiro (September 14, 2023)",
+        "ES": "CBAR 22ª Conferencia Internacional de Arbitraje, Río de Janeiro (14 de septiembre de 2023)",
+        "PT": "CBAR 22ª Conferência Internacional de Arbitragem, Rio de Janeiro (14 de setembro de 2023)"
       }
     },
     {
       "title": {
         "EN": "The Arbitration Proceedings",
-        "PT": "The Arbitration Proceedings",
-        "ES": "The Arbitration Proceedings"
+        "ES": "Los Procedimientos Arbitrales",
+        "PT": "Os Procedimentos Arbitrais"
       },
       "event": {
-        "EN": "Escola de Verão em Arbitragem Internacional, NOVA School of Law, Lisboa, julho de 2023",
-        "PT": "Escola de Verão em Arbitragem Internacional, NOVA School of Law, Lisboa, julho de 2023",
-        "ES": "Escola de Verão em Arbitragem Internacional, NOVA School of Law, Lisboa, julio de 2023"
+        "EN": "Summer School on International Arbitration, NOVA School of Law, Lisbon (July 2023)",
+        "ES": "Escuela de Verano sobre Arbitraje Internacional, NOVA School of Law, Lisboa (julio de 2023)",
+        "PT": "Escola de Verão sobre Arbitragem Internacional, NOVA School of Law, Lisboa (julho de 2023)"
       }
     },
     {
       "title": {
         "EN": "Corruption in International Arbitration and Enforcement Proceedings",
-        "PT": "Corruption in International Arbitration and Enforcement Proceedings",
-        "ES": "Corruption in International Arbitration and Enforcement Proceedings"
+        "ES": "Corrupción en Arbitraje Internacional y Procedimientos de Ejecución",
+        "PT": "Corrupção em Arbitragem Internacional e Procedimentos de Execução"
       },
       "event": {
-        "EN": "Conferência Anual da Penn Carey Law International Arbitration Association, 24 de março de 2023",
-        "PT": "Conferência Anual da Penn Carey Law International Arbitration Association, 24 de março de 2023",
-        "ES": "Annual Conference of the Penn Carey Law International Arbitration Association, Filadelfia, 24 de marzo de 2023"
+        "EN": "Annual Conference of the Penn Carey Law International Arbitration Association (March 24, 2023)",
+        "ES": "Conferencia Anual de la Asociación de Arbitraje Internacional de Penn Carey Law (24 de marzo de 2023)",
+        "PT": "Conferência Anual da Associação de Arbitragem Internacional da Penn Carey Law (24 de março de 2023)"
       }
     },
     {
       "title": {
-        "EN": "Discovery em Arbitragem Internacional",
-        "PT": "Discovery em Arbitragem Internacional",
-        "ES": "Discovery em Arbitragem Internacional"
+        "EN": "Discovery in International Arbitration",
+        "ES": "Descubrimiento en Arbitraje Internacional",
+        "PT": "Discovery em Arbitragem Internacional"
       },
       "event": {
-        "EN": "Mesa Redonda do Grupo de Estudo do Comitê Brasileiro de Arbitragem (CBAR), 16 de março de 2023",
-        "PT": "Mesa Redonda do Grupo de Estudo do Comitê Brasileiro de Arbitragem (CBAR), 16 de março de 2023",
-        "ES": "Mesa Redonda del Grupo de Estudio del Comité Brasileño de Arbitraje (CBAR), Río de Janeiro, 16 de marzo de 2023"
+        "EN": "Brazilian Arbitration Committee (CBAR) Study Group Roundtable (March 16, 2023)",
+        "ES": "Mesa Redonda del Grupo de Estudio del Comité Brasileño de Arbitraje (CBAR) (16 de marzo de 2023)",
+        "PT": "Mesa Redonda do Grupo de Estudos do Comitê Brasileiro de Arbitragem (CBAR) (16 de março de 2023)"
       }
     },
     {
       "title": {
-        "EN": "The Practical Impacts of the Supreme Court’s Ruling On Section 1782 Discovery",
-        "PT": "The Practical Impacts of the Supreme Court’s Ruling On Section 1782 Discovery",
-        "ES": "The Practical Impacts of the Supreme Court’s Ruling on Section 1782 Discovery"
+        "EN": "The Practical Impacts of the Supreme Court’s Ruling on Section 1782 Discovery",
+        "ES": "Los Impactos Prácticos del Fallo de la Corte Suprema sobre el Descubrimiento de la Sección 1782",
+        "PT": "Os Impactos Práticos da Decisão da Suprema Corte sobre o Discovery da Seção 1782"
       },
       "event": {
-        "EN": "II Brazilian Arbitration Day organizado pela Georgetown University e Canal Arbitragem, 26 de janeiro de 2023",
-        "PT": "II Brazilian Arbitration Day organizado pela Georgetown University e Canal Arbitragem, 26 de janeiro de 2023",
-        "ES": "II Brazilian Arbitration Day, Georgetown University Law Center y Canal Arbitragem, Washington, DC, 26 de enero de 2023"
+        "EN": "II Brazilian Arbitration Day organized by Georgetown University and Canal Arbitragem (January 26, 2023)",
+        "ES": "II Día del Arbitraje Brasileño organizado por Georgetown University y Canal Arbitragem (26 de enero de 2023)",
+        "PT": "II Dia da Arbitragem Brasileira organizado pela Georgetown University e Canal Arbitragem (26 de janeiro de 2023)"
       }
     },
     {
       "title": {
-        "EN": "Practical Issues on Producing Evidence in International Arbitration",
-        "PT": "Practical Issues on Producing Evidence in International Arbitration",
-        "ES": "Practical Issues on Producing Evidence in International Arbitration"
+        "EN": "Practical Issues on Producing Evidence in International Arbitration —New York University",
+        "ES": "Cuestiones Prácticas sobre la Producción de Pruebas en Arbitraje Internacional",
+        "PT": "Questões Práticas sobre a Produção de Provas em Arbitragem Internacional"
       },
       "event": {
-        "EN": "Universidade de Nova York, Universidade de Columbia e Câmara de Comércio Brasil-Estados Unidos, 26 de agosto de 2022",
-        "PT": "Universidade de Nova York, Universidade de Columbia e Câmara de Comércio Brasil-Estados Unidos, 26 de agosto de 2022",
-        "ES": "New York University, Columbia University, y la Cámara de Comercio Brasil-Estados Unidos, Nueva York, 26 de agosto de 2022"
+        "EN": "Columbia University, and the Brazilian-American Chamber of Commerce (August 26, 2022)",
+        "ES": "Universidad de Nueva York, Universidad de Columbia y la Cámara de Comercio Brasileño-Americana (26 de agosto de 2022)",
+        "PT": "Universidade de Nova York, Universidade de Columbia e a Câmara de Comércio Brasil-Americana (26 de agosto de 2022)"
       }
     },
     {
       "title": {
         "EN": "Closing Remarks of I Brazilian Arbitration Day",
-        "PT": "Closing Remarks of I Brazilian Arbitration Day",
-        "ES": "Closing Remarks"
+        "ES": "Palabras de Clausura del I Día del Arbitraje Brasileño",
+        "PT": "Palavras de Encerramento do I Dia da Arbitragem Brasileira"
       },
       "event": {
-        "EN": "Georgetown University Law Center and Arbitration Channel, 8 de abril de 2022",
-        "PT": "Georgetown University Law Center and Arbitration Channel, 8 de abril de 2022",
-        "ES": "I Brazilian Arbitration Day, Georgetown University Law Center y Arbitration Channel, 8 de abril de 2022"
+        "EN": "organized by Georgetown University and Canal Arbitragem (April 8, 2022)",
+        "ES": "organizado por Georgetown University y Canal Arbitragem (8 de abril de 2022)",
+        "PT": "organizado pela Georgetown University e Canal Arbitragem (8 de abril de 2022)"
       }
     },
     {
       "title": {
         "EN": "Corruption in International Arbitration",
-        "PT": "Corruption in International Arbitration",
-        "ES": "Corruption in International Arbitration"
+        "ES": "Corrupción en Arbitraje Internacional",
+        "PT": "Corrupção em Arbitragem Internacional"
       },
       "event": {
-        "EN": "I Brazilian Arbitration Day Congress, Georgetown University and the Arbitration Channel, 8 de abril de 2022",
-        "PT": "I Brazilian Arbitration Day Congress, Georgetown University and the Arbitration Channel, 8 de abril de 2022",
-        "ES": "I Brazilian Arbitration Day Congress, Georgetown University y Arbitration Channel, 8 de abril de 2022"
+        "EN": "I Brazilian Arbitration Day Congress organized by Georgetown University and Canal Arbitragem (April 8, 2022)",
+        "ES": "I Congreso del Día del Arbitraje Brasileño organizado por Georgetown University y Canal Arbitragem (8 de abril de 2022)",
+        "PT": "I Congresso do Dia da Arbitragem Brasileira organizado pela Georgetown University e Canal Arbitragem (8 de abril de 2022)"
       }
     },
     {
       "title": {
         "EN": "Supply Chain Disputes",
-        "PT": "Supply Chain Disputes",
-        "ES": "Supply Chain Disputes"
+        "ES": "Disputas de Cadena de Suministro",
+        "PT": "Disputas de Cadeia de Suprimentos"
       },
       "event": {
-        "EN": "Trilha de Arbitragem Internacional AAA-ICDR do Evento Anual da Seccional de Direito Internacional da Ordem dos Advogados da Flórida, 1º de abril de 2022",
-        "PT": "Trilha de Arbitragem Internacional AAA-ICDR do Evento Anual da Seccional de Direito Internacional da Ordem dos Advogados da Flórida, 1º de abril de 2022",
-        "ES": "AAA-ICDR International Arbitration Track of the Florida Bar’s International Law Sectional Annual Event, Miami, 1 de abril de 2022"
+        "EN": "AAA-ICDR International Arbitration Track of the Florida Bar’s International Law Sectional Annual Event (April 1, 2022)",
+        "ES": "Pista de Arbitraje Internacional AAA-ICDR del Evento Anual de la Sección de Derecho Internacional del Colegio de Abogados de Florida (1 de abril de 2022)",
+        "PT": "Trilha de Arbitragem Internacional AAA-ICDR do Evento Anual da Seção de Direito Internacional da Ordem dos Advogados da Flórida (1 de abril de 2022)"
       }
     },
     {
       "title": {
         "EN": "ICDR Rules on International Dispute Resolution Procedures",
-        "PT": "ICDR Rules on International Dispute Resolution Procedures",
-        "ES": "ICDR Rules on International Dispute Resolution Procedures"
+        "ES": "Reglas del ICDR sobre Procedimientos de Resolución de Disputas Internacionales",
+        "PT": "Regras do ICDR sobre Procedimentos de Resolução de Disputas Internacionais"
       },
       "event": {
-        "EN": "The Chartered Institute of Arbitrators (CIArb) - Representação Brasileira, 8 de dezembro de 2021",
-        "PT": "The Chartered Institute of Arbitrators (CIArb) - Representação Brasileira, 8 de dezembro de 2021",
-        "ES": "The Chartered Institute of Arbitrators (CIArb) Brazil Branch, Webinar, 8 de diciembre de 2021"
+        "EN": "The Chartered Institute of Arbitrators (CIArb) Brazil Branch (December 8, 2021)",
+        "ES": "El Instituto Colegiado de Árbitros (CIArb) Rama Brasil (8 de diciembre de 2021)",
+        "PT": "O Instituto Colegiado de Árbitros (CIArb) Filial Brasil (8 de dezembro de 2021)"
       }
     },
     {
       "title": {
-        "EN": "Hot Topics Related to Arbitration",
-        "PT": "Hot Topics Related to Arbitration",
-        "ES": "Hot Topics Related to Arbitration"
+        "EN": "Hot Topics Related To Arbitration",
+        "ES": "Temas Candentes Relacionados con el Arbitraje",
+        "PT": "Tópicos Quentes Relacionados à Arbitragem"
       },
       "event": {
-        "EN": "Câmara de Comércio Brasil-Estados Unidos, Nova York, 30 de novembro de 2021",
-        "PT": "Câmara de Comércio Brasil-Estados Unidos, Nova York, 30 de novembro de 2021",
-        "ES": "Cámara de Comercio Brasil-Estados Unidos, Nueva York, 30 de noviembre de 2021"
+        "EN": "Brazilian-American Chamber of Commerce, New York City (November 30, 2021)",
+        "ES": "Cámara de Comercio Brasileño-Americana, Ciudad de Nueva York (30 de noviembre de 2021)",
+        "PT": "Câmara de Comércio Brasil-Americana, Cidade de Nova York (30 de novembro de 2021)"
       }
     },
     {
       "title": {
         "EN": "Key Types of Privileges and Their Application in International Disputes",
-        "PT": "Key Types of Privileges and Their Application in International Disputes",
-        "ES": "Key Types of Privileges and Their Application in International Disputes"
+        "ES": "Key Types of Privileges and Their Application in International Disputes",
+        "PT": "Key Types of Privileges and Their Application in International Disputes"
       },
       "event": {
-        "EN": "Série de Webinars Dechert LLP, 17 de março, 5 de abril, 28 de abril de 2021",
-        "PT": "Série de Webinars Dechert LLP, 17 de março, 5 de abril, 28 de abril de 2021",
-        "ES": "Serie de Seminarios Web de Dechert LLP, 17 de marzo, 5 de abril, 28 de abril de 2021"
+        "EN": "Dechert LLP Webinar Series (March 17, April 5, April 28, 2021)",
+        "ES": "Serie de Seminarios Web de Dechert LLP, 17 de marzo, 5 de abril, 28 de abril de 2021",
+        "PT": "Série de Webinars Dechert LLP, 17 de março, 5 de março, 28 de abril de 2021"
       }
     },
     {
       "title": {
-        "EN": "Virtual Hearings in International Arbitration",
-        "PT": "Virtual Hearings in International Arbitration",
-        "ES": "Virtual Hearings in International Arbitration"
+        "EN": "Virtual Hearings in International Arbitration –Vancouver International Arbitration Centre Webinar (October 5",
+        "ES": "Audiencias Virtuales en Arbitraje Internacional",
+        "PT": "Audiências Virtuais em Arbitragem Internacional"
       },
       "event": {
-        "EN": "Webinar do Centro Internacional de Arbitragem de Vancouver, 5 de outubro de 2020“",
-        "PT": "Webinar do Centro Internacional de Arbitragem de Vancouver, 5 de outubro de 2020“",
-        "ES": "Vancouver International Arbitration Centre, Webinar, 5 de octubre de 2020"
+        "EN": "2020)",
+        "ES": "Webinar del Centro de Arbitraje Internacional de Vancouver (5 de octubre de 2020)",
+        "PT": "Webinar do Centro de Arbitragem Internacional de Vancouver (5 de outubro de 2020)"
       }
     },
     {
       "title": {
-        "EN": "Key Considerations for Legal Positions on Force Majeure: Practical Steps if Disputes are Inevitable” — Nairobi Centre for International Arbitration Webina",
-        "PT": "Key Considerations for Legal Positions on Force Majeure: Practical Steps if Disputes are Inevitable” — Nairobi Centre for International Arbitration Webina",
-        "ES": "Key Considerations for Legal Positions on Force Majeure: Practical Steps if Disputes are Inevitable"
+        "EN": "Key Considerations for Legal Positions on Force Majeure: Practical Steps if Disputes are Inevitable – Nairobi Centre For International Arbitration Webinar (August 13",
+        "ES": "Consideraciones Clave para Posiciones Legales sobre Fuerza Mayor: Pasos Prácticos si las Disputas son Inevitables",
+        "PT": "Considerações Chave para Posições Legais sobre Força Maior: Passos Práticos se as Disputas são Inevitáveis"
       },
       "event": {
-        "EN": "13 de agosto de 2020",
-        "PT": "13 de agosto de 2020",
-        "ES": "Nairobi Centre for International Arbitration, Webinar, 13 de agosto de 2020"
+        "EN": "2020)",
+        "ES": "Webinar del Centro de Arbitraje Internacional de Nairobi (13 de agosto de 2020)",
+        "PT": "Webinar do Centro de Arbitragem Internacional de Nairobi (13 de agosto de 2020)"
       }
     },
     {
       "title": {
-        "EN": "From NAFTA to USMCA: A Discussion on Key Changes to Trade and Investment",
-        "PT": "From NAFTA to USMCA: A Discussion on Key Changes to Trade and Investment",
-        "ES": "From NAFTA to USMCA: Discussion on Key Changes to Trade and Investment"
+        "EN": "Virtual Proceedings and Guerrilla Tactics in Arbitration",
+        "ES": "Procedimientos Virtuales y Tácticas de Guerrilla en Arbitraje",
+        "PT": "Procedimentos Virtuais e Táticas de Guerrilha em Arbitragem"
       },
       "event": {
-        "EN": "Webinar Dechert LLP, 29 de julho de 2020",
-        "PT": "Webinar Dechert LLP, 29 de julho de 2020",
-        "ES": "Serie de Seminarios Web de Dechert LLP, 29 de julio de 2020"
+        "EN": "INOVARB AmCham Brazil Webinar (June 4, 2020)",
+        "ES": "Webinar INOVARB AmCham Brasil (4 de junio de 2020)",
+        "PT": "Webinar INOVARB AmCham Brasil (4 de junho de 2020)"
       }
     },
     {
       "title": {
-        "EN": "Procedimentos Virtuais e Táticas de Guerrilha em Arbitragem",
-        "PT": "Procedimentos Virtuais e Táticas de Guerrilha em Arbitragem",
-        "ES": "Procedimentos Virtuais e Táticas de Gerrilha em Arbitragem"
+        "EN": "Virtual Arbitrations: Advantages and Disadvantages",
+        "ES": "Arbitrajes Virtuales: Ventajas e Inconvenientes",
+        "PT": "Arbitragens Virtuais: Vantagens e Inconvenientes"
       },
       "event": {
-        "EN": "Webinar INOVARB AmCham Brazil, 4 de junho de 2020",
-        "PT": "Webinar INOVARB AmCham Brazil, 4 de junho de 2020",
-        "ES": "INOVARB AmCham Brazil, Webinar, 4 de junio de 2020"
+        "EN": "Webinar organized by IPA Instituto Peruano de Arbitraje (May 14, 2020)",
+        "ES": "Webinar organizado por IPA Instituto Peruano de Arbitraje (14 de mayo de 2020)",
+        "PT": "Webinar organizado pelo IPA Instituto Peruano de Arbitraje (14 de maio de 2020)"
       }
     },
     {
       "title": {
-        "EN": "Arbitrajes Virtuales: Ventajas e Inconvenientes",
-        "PT": "Arbitrajes Virtuales: Ventajas e Inconvenientes",
-        "ES": "Arbitrajes Virtuales: Ventajas e Inconvenientes"
+        "EN": "Tribunal’s Power to Sanction Misconduct",
+        "ES": "Poder del Tribunal para Sancionar Conductas Indebidas",
+        "PT": "Poder do Tribunal para Sancionar Condutas Impróprias"
       },
       "event": {
-        "EN": "IPA Instituto Peruano de Arbitraje, 14 de maio de 2020",
-        "PT": "IPA Instituto Peruano de Arbitraje, 14 de maio de 2020",
-        "ES": "Instituto Peruano de Arbitraje (IPA), Webinar, 14 de mayo de 2020"
-      }
-    },
-    {
-      "title": {
-        "EN": "Tribunal's Power to Sanction Misconduct",
-        "PT": "Tribunal's Power to Sanction Misconduct",
-        "ES": "Tribunal’s Power to Sanction Misconduct"
-      },
-      "event": {
-        "EN": "Comitê de Direito de Investimento da Seção Americana da ILA e Sociedade de Arbitragem Internacional de Georgetown, Washington, DC, 28 de fevereiro de 2020",
-        "PT": "Comitê de Direito de Investimento da Seção Americana da ILA e Sociedade de Arbitragem Internacional de Georgetown, Washington, DC, 28 de fevereiro de 2020",
-        "ES": "ILA American Branch Investment Law Committee y Georgetown International Arbitration Society, Washington, DC, 28 de febrero de 2020"
+        "EN": "ILA American Branch Investment Law Committee and Georgetown International Arbitration Society, Washington, D.C. (February 28, 2020)",
+        "ES": "Comité de Derecho de Inversiones de la Rama Americana de la ILA y Sociedad de Arbitraje Internacional de Georgetown, Washington, D.C. (28 de febrero de 2020)",
+        "PT": "Comitê de Direito de Investimentos da Filial Americana da ILA e Sociedade de Arbitragem Internacional de Georgetown, Washington, D.C. (28 de fevereiro de 2020)"
       }
     },
     {
       "title": {
         "EN": "Investor-State Disputes – A New Dawn in Treaty Reform?",
-        "PT": "Investor-State Disputes – A New Dawn in Treaty Reform?",
-        "ES": "Investor-State Disputes – A New Dawn in Treaty Reform?"
+        "ES": "Disputas Inversionista-Estado – ¿Un Nuevo Amanecer en la Reforma de Tratados?",
+        "PT": "Disputas Investidor-Estado – Um Novo Amanhecer na Reforma de Tratados?"
       },
       "event": {
-        "EN": "Who's Who Legal Future Leaders: Conferência de Arbitragem EUA, Washington, DC, 14 de novembro de 2019",
-        "PT": "Who's Who Legal Future Leaders: Conferência de Arbitragem EUA, Washington, DC, 14 de novembro de 2019",
-        "ES": "Who's Who Legal Future Leaders: Arbitration Conference USA, Washington, DC, 14 de noviembre de 2019"
+        "EN": "Who's Who Legal Future Leaders: Arbitration Conference USA, Washington, D.C. (November 14, 2019)",
+        "ES": "Who's Who Legal Future Leaders: Conferencia de Arbitraje EE.UU., Washington, D.C. (14 de noviembre de 2019)",
+        "PT": "Who's Who Legal Future Leaders: Conferência de Arbitragem EUA, Washington, D.C. (14 de novembro de 2019)"
       }
     },
     {
       "title": {
-        "EN": "Arbitration, Cybersecurity and Data Protection",
-        "PT": "Arbitration, Cybersecurity and Data Protection",
-        "ES": "Arbitragem, Cibersegurança e Proteção de Dados"
+        "EN": "Arbitration",
+        "ES": "Arbitraje, Ciberseguridad y Protección de Datos",
+        "PT": "Arbitragem, Cibersegurança e Proteção de Dados"
       },
       "event": {
-        "EN": "VI Congresso de Arbitragem CAM-CCBC, São Paulo, 22 de outubro de 2019",
-        "PT": "VI Congresso de Arbitragem CAM-CCBC, São Paulo, 22 de outubro de 2019",
-        "ES": "VI Congreso de Arbitraje CAM-CCBC, São Paulo, 22 de octubre de 2019"
+        "EN": "Cybersecurity and Data Protection —VI CAM-CCBC Arbitration Congress, São Paulo (October 22, 2019)",
+        "ES": "VI Congreso de Arbitraje CAM-CCBC, São Paulo (22 de octubre de 2019)",
+        "PT": "VI Congresso de Arbitragem CAM-CCBC, São Paulo (22 de outubro de 2019)"
       }
     },
     {
       "title": {
         "EN": "Social Media, Internet and BIT Protections",
-        "PT": "Social Media, Internet and BIT Protections",
-        "ES": "Social Media, Internet and BIT Protections"
+        "ES": "Redes Sociales, Internet y Protecciones de TBI",
+        "PT": "Mídias Sociais, Internet e Proteções de TBI"
       },
       "event": {
-        "EN": "Evento de Abertura do FDI Pre-Moot, Mattos Filho, Veiga Filho, Marrey Jr e Quiroga Advogados, São Paulo, 18 de outubro de 2019",
-        "PT": "Evento de Abertura do FDI Pre-Moot, Mattos Filho, Veiga Filho, Marrey Jr e Quiroga Advogados, São Paulo, 18 de outubro de 2019",
-        "ES": "Evento de Apertura del FDI Pre-Moot, Mattos Filho, Veiga Filho, y Marrey Jr e Quiroga Advogados, São Paulo, 18 de octubre de 2019"
+        "EN": "FDI Pre-Moot Opening Event, Mattos Filho, Veiga Filho, Marrey Jr e Quiroga Advogados, São Paulo (October 18, 2019)",
+        "ES": "Evento de Apertura del Pre-Moot de IED, Mattos Filho, Veiga Filho, Marrey Jr e Quiroga Advogados, São Paulo (18 de octubre de 2019)",
+        "PT": "Evento de Abertura do Pre-Moot de IED, Mattos Filho, Veiga Filho, Marrey Jr e Quiroga Advogados, São Paulo (18 de outubro de 2019)"
       }
     },
     {
       "title": {
-        "EN": "The GAR Live Debate: “This House Believes that the Current Format of Investment Treaty Awards Undermines the Legitimacy of an Investor-State Arbitral Dispute Settlement” — Fifth Annual GAR Live BITs",
-        "PT": "The GAR Live Debate: “This House Believes that the Current Format of Investment Treaty Awards Undermines the Legitimacy of an Investor-State Arbitral Dispute Settlement” — Fifth Annual GAR Live BITs",
-        "ES": "This House Believes that the Current Format of Investment Treaty Awards Undermines the Legitimacy of an Investor-State Arbitral Dispute Settlement"
+        "EN": "The GAR Live Debate: “This House Believes that the Current Format of Investment Treaty Awards Undermines the Legitimacy of an Investor-State Arbitral Dispute Settlement”",
+        "ES": "El Debate en Vivo de GAR: \"Esta Cámara Cree que el Formato Actual de los Laudos de Tratados de Inversión Socava la Legitimidad de la Resolución de Disputas Arbitrales Inversionista-Estado\"",
+        "PT": "O Debate ao Vivo do GAR: \"Esta Casa Acredita que o Formato Atual das Sentenças de Tratados de Investimento Prejudica a Legitimidade da Resolução de Disputas Arbitrais Investidor-Estado\""
       },
       "event": {
-        "EN": "Washington, DC, 16 de maio de 2019",
-        "PT": "Washington, DC, 16 de maio de 2019",
-        "ES": "Fifth Annual GAR Live BITs, Washington, DC, 16 de mayo de 2019"
+        "EN": "Fifth Annual GAR Live BITs, Washington, D.C. (May 16, 2019)",
+        "ES": "Quinto GAR Live BITs Anual, Washington, D.C. (16 de mayo de 2019)",
+        "PT": "Quinto GAR Live BITs Anual, Washington, D.C. (16 de maio de 2019)"
       }
     },
     {
       "title": {
-        "EN": "La Jurisprudencia Como Arma: ¿Es Urgente y Necesaria La Fijación de Criterios Jurisprudenciales Predecibles Por Las Cortes Nacionales Sobre Los Cuestionamientos a Los Laudos Arbitrales?",
-        "PT": "La Jurisprudencia Como Arma: ¿Es Urgente y Necesaria La Fijación de Criterios Jurisprudenciales Predecibles Por Las Cortes Nacionales Sobre Los Cuestionamientos a Los Laudos Arbitrales?",
-        "ES": "La Jurisprudencia Como Arma: ¿Es Urgente y Necesaria La Fijación de Criterios Jurisprudenciales Predecibles Por Las Cortes Nacionales Sobre Los Cuestionamientos a Los Laudos Arbitrales?"
+        "EN": "La Jurisprudencia Como Arma.  ¿Es Urgente y Necesaria La Fijación de Criterios Jurisprudenciales Predecibles Por Las Cortes Nacionales Sobre Los Cuestionamientos a Los Laudos Arbitrales?",
+        "ES": "La Jurisprudencia Como Arma. ¿Es Urgente y Necesaria La Fijación de Criterios Jurisprudenciales Predecibles Por Las Cortes Nacionales Sobre Los Cuestionamientos a Los Laudos Arbitrales?",
+        "PT": "A Jurisprudência Como Arma. É Urgente e Necessária a Fixação de Critérios Jurisprudenciais Previsíveis Pelos Tribunais Nacionais Sobre os Questionamentos às Sentenças Arbitrais?"
       },
       "event": {
-        "EN": "XII Congresso Internacional de Arbitragem, IPA, Lima, 24 de abril de 2019",
-        "PT": "XII Congresso Internacional de Arbitragem, IPA, Lima, 24 de abril de 2019",
-        "ES": "XII Congreso Internacional de Arbitraje, IPA, Lima, 24 de abril de 2019"
+        "EN": "XII Congreso Internacional de Arbitraje, IPA, Lima, (April 24, 2019)  (Translate)",
+        "ES": "XII Congreso Internacional de Arbitraje, IPA, Lima (24 de abril de 2019)",
+        "PT": "XII Congresso Internacional de Arbitragem, IPA, Lima (24 de abril de 2019)"
       }
     },
     {
       "title": {
         "EN": "Ongoing Challenges to International Investment Arbitration",
-        "PT": "Ongoing Challenges to International Investment Arbitration",
-        "ES": "Ongoing Challenges to International Investment Arbitration"
+        "ES": "Desafíos Actuales del Arbitraje Internacional de Inversiones",
+        "PT": "Desafios Atuais da Arbitragem Internacional de Investimentos"
       },
       "event": {
-        "EN": "3ª Conferência Anual da IAA, Filadélfia, PA, 22 de março de 2019",
-        "PT": "3ª Conferência Anual da IAA, Filadélfia, PA, 22 de março de 2019",
-        "ES": "3rd Annual IAA Conference, Filadelfia, 22 de marzo de 2019"
+        "EN": "3rd Annual IAA Conference, Philadelphia, PA (March 22, 2019)",
+        "ES": "3ª Conferencia Anual de la IAA, Filadelfia, PA (22 de marzo de 2019)",
+        "PT": "3ª Conferência Anual da IAA, Filadélfia, PA (22 de março de 2019)"
       }
     },
     {
       "title": {
-        "EN": "¿Ha Llegado el Invierno al Arbitraje? ¿Crisis, Ética y Corrupción?",
-        "PT": "¿Ha Llegado el Invierno al Arbitraje? ¿Crisis, Ética y Corrupción?",
-        "ES": "¿Ha Llegado el Invierno al Arbitraje? ¿Crisis, Ética y Corrupción?"
+        "EN": "Has Winter Arrived in Arbitration? Crisis, Ethics, and Corruption",
+        "ES": "¿Ha Llegado el Invierno al Arbitraje? ¿Crisis, Ética y Corrupción?",
+        "PT": "Chegou o Inverno à Arbitragem? Crise, Ética e Corrupção?"
       },
       "event": {
-        "EN": "Conferência Internacional de Mulheres em Arbitragem, Instituto Peruano de Arbitragem, Lima, 31 de janeiro de 2019",
-        "PT": "Conferência Internacional de Mulheres em Arbitragem, Instituto Peruano de Arbitragem, Lima, 31 de janeiro de 2019",
-        "ES": "Conferencia Internacional de Mujeres en Arbitraje, IPA, Lima, 31 de enero de 2019"
+        "EN": "International Women in Arbitration Conference, Instituto Peruano de Arbitraje, Lima (January 31, 2019)",
+        "ES": "Conferencia Internacional de Mujeres en Arbitraje, Instituto Peruano de Arbitraje, Lima (31 de enero de 2019)",
+        "PT": "Conferência Internacional de Mulheres em Arbitragem, Instituto Peruano de Arbitraje, Lima (31 de janeiro de 2019)"
       }
     },
     {
       "title": {
-        "EN": "¿Cómo Afrontar un Arbitraje Nacional o Internacional de Asociación Público-Privada?",
-        "PT": "¿Cómo Afrontar un Arbitraje Nacional o Internacional de Asociación Público-Privada?",
-        "ES": "¿Cómo Afrontar un Arbitraje Nacional o Internacional de Asociación Público-Privada?"
+        "EN": "How to Address a Domestic or International Public-Private Partnership Arbitration?",
+        "ES": "¿Cómo Afrontar un Arbitraje Nacional o Internacional de Asociación Público-Privada?",
+        "PT": "Como Enfrentar uma Arbitragem Nacional ou Internacional de Parceria Público-Privada?"
       },
       "event": {
-        "EN": "Lima, 30 de janeiro de 2019",
-        "PT": "Lima, 30 de janeiro de 2019",
-        "ES": "IPA, Lima, 30 de enero de 2019"
+        "EN": "Lima (January 30, 2019)",
+        "ES": "Lima (30 de enero de 2019)",
+        "PT": "Lima (30 de janeiro de 2019)"
       }
     },
     {
       "title": {
         "EN": "HIALSA Arbitration Workshop: Evidence in International Arbitration",
-        "PT": "HIALSA Arbitration Workshop: Evidence in International Arbitration",
-        "ES": "HIALSA Arbitration Workshop: Evidence in International Arbitration"
+        "ES": "Taller de Arbitraje HIALSA: Pruebas en Arbitraje Internacional",
+        "PT": "Workshop de Arbitragem HIALSA: Provas em Arbitragem Internacional"
       },
       "event": {
-        "EN": "Cambridge, Massachusetts, 2 de outubro de 2018",
-        "PT": "Cambridge, Massachusetts, 2 de outubro de 2018",
-        "ES": "Harvard University, Cambridge, 2 de octubre de 2018"
+        "EN": "Cambridge, Massachusetts (October 2, 2018)",
+        "ES": "Cambridge, Massachusetts (2 de octubre de 2018)",
+        "PT": "Cambridge, Massachusetts (2 de outubro de 2018)"
       }
     },
     {
       "title": {
         "EN": "Introduction to International Commercial & Investment Arbitration",
-        "PT": "Introduction to International Commercial & Investment Arbitration",
-        "ES": "Introduction to International Commercial & Investment Arbitration"
+        "ES": "Introducción al Arbitraje Comercial e de Inversiones Internacional",
+        "PT": "Introdução à Arbitragem Comercial e de Investimentos Internacional"
       },
       "event": {
-        "EN": "American University, Washington, College of Law, Washington, DC, 27 de setembro de 2018",
-        "PT": "American University, Washington, College of Law, Washington, DC, 27 de setembro de 2018",
-        "ES": "American University Washington College of Law, Washington, DC, 27 de septiembre de 2018"
+        "EN": "American University, Washington College of Law, Washington, D.C. (September 27, 2018)",
+        "ES": "American University, Washington College of Law, Washington, D.C. (27 de septiembre de 2018)",
+        "PT": "American University, Washington College of Law, Washington, D.C. (27 de setembro de 2018)"
       }
     },
     {
       "title": {
         "EN": "Duty to Disclose and Brazilian Arbitration Culture",
-        "PT": "Duty to Disclose and Brazilian Arbitration Culture",
-        "ES": "Duty to Disclose and Brazilian Arbitration Culture"
+        "ES": "Deber de Revelar y Cultura del Arbitraje Brasileño",
+        "PT": "Dever de Revelar e Cultura da Arbitragem Brasileira"
       },
       "event": {
-        "EN": "Congresso CCMA CIESP/FIESP Dia da Arbitragem, Nova York, NY, 17 de abril de 2018",
-        "PT": "Congresso CCMA CIESP/FIESP Dia da Arbitragem, Nova York, NY, 17 de abril de 2018",
-        "ES": "CCMA CIESP/FIESP Congress Arbitration Day, Nueva York, 17 de abril de 2018"
+        "EN": "CCMA CIESP/FIESP Congress Arbitration Day, New York, NY (April 17, 2018)",
+        "ES": "Día de Arbitraje del Congreso CCMA CIESP/FIESP, Nueva York, NY (17 de abril de 2018)",
+        "PT": "Dia de Arbitragem do Congresso CCMA CIESP/FIESP, Nova York, NY (17 de abril de 2018)"
       }
     },
     {
       "title": {
         "EN": "Energy Across Borders: Geopolitics, Conflict and International Arbitration",
-        "PT": "Energy Across Borders: Geopolitics, Conflict and International Arbitration",
-        "ES": "Energy Across Borders: Geopolitics, Conflict and International Arbitration"
+        "ES": "Energía a Través de las Fronteras: Geopolítica, Conflicto y Arbitraje Internacional",
+        "PT": "Energia Através das Fronteiras: Geopolítica, Conflito e Arbitragem Internacional"
       },
       "event": {
-        "EN": "Conferência Energy Days, Pennsylvania State University, Pensilvânia, 22 de maio de 2017",
-        "PT": "Conferência Energy Days, Pennsylvania State University, Pensilvânia, 22 de maio de 2017",
-        "ES": "Energy Days Conference, Pennsylvania State University, University Park, 22 de mayo de 2017"
+        "EN": "Energy Days Conference, Pennsylvania State University, Pennsylvania (May 22, 2017)",
+        "ES": "Conferencia Energy Days, Universidad Estatal de Pensilvania, Pensilvania (22 de mayo de 2017)",
+        "PT": "Conferência Energy Days, Universidade Estadual da Pensilvânia, Pensilvânia (22 de maio de 2017)"
       }
     },
     {
       "title": {
-        "EN": "Visión de los Arbitros y Abogados Sobre el Desarrollo del Arbitraje Internacional",
-        "PT": "Visión de los Arbitros y Abogados Sobre el Desarrollo del Arbitraje Internacional",
-        "ES": "Visión de los Árbitros y Abogados Sobre el Desarrollo del Arbitraje Internacional"
+        "EN": "Arbitrators and Counsel's Perspectives on the Development of International Arbitration",
+        "ES": "Visión de los Árbitros y Abogados Sobre el Desarrollo del Arbitraje Internacional",
+        "PT": "Visão dos Árbitros e Advogados Sobre o Desenvolvimento da Arbitragem Internacional"
       },
       "event": {
-        "EN": "Congresso de Arbitragem Nacional e Internacional, Centro de Arbitragem e Conciliação, Bogotá, Colômbia, 2 de abril de 2017",
-        "PT": "Congresso de Arbitragem Nacional e Internacional, Centro de Arbitragem e Conciliação, Bogotá, Colômbia, 2 de abril de 2017",
-        "ES": "Congreso de Arbitraje Nacional e Internacional, Centro de Arbitraje y Conciliación, Bogotá, 2 de abril de 2017"
+        "EN": "National and International Arbitration Congress, Arbitration and Conciliation Center, Bogota, Colombia (April 2, 2017)",
+        "ES": "Congreso de Arbitraje Nacional e Internacional, Centro de Arbitraje y Conciliación, Bogotá, Colombia (2 de abril de 2017)",
+        "PT": "Congresso de Arbitragem Nacional e Internacional, Centro de Arbitragem e Conciliação, Bogotá, Colômbia (2 de abril de 2017)"
       }
     },
     {
       "title": {
-        "EN": "Arbitragem e Administração Pública: Uma Realidade nos Países da América Latina? Jurisprudência e Posição do Poder Judiciário",
-        "PT": "Arbitragem e Administração Pública: Uma Realidade nos Países da América Latina? Jurisprudência e Posição do Poder Judiciário",
-        "ES": "Arbitragem e Administração Pública: Uma Realidade nos Países da América Latina? Jurisprudência e Posição do Poder Judiciário"
+        "EN": "Arbitration and Public Administration: A Reality in Latin American Countries? Case Law and Position of the Judiciary Branch",
+        "ES": "Arbitraje y Administración Pública: ¿Una Realidad en los Países Latinoamericanos? Jurisprudencia y Posición del Poder Judicial",
+        "PT": "Arbitragem e Administração Pública: Uma Realidade nos Países Latino-Americanos? Jurisprudência e Posição do Poder Judiciário"
       },
       "event": {
-        "EN": "III Congresso Pan-Americano de Arbitragem CAM-CCBC, São Paulo, Brasil, 24 de outubro de 2016",
-        "PT": "III Congresso Pan-Americano de Arbitragem CAM-CCBC, São Paulo, Brasil, 24 de outubro de 2016",
-        "ES": "III Congreso Panamericano de Arbitraje CAM-CCBC, São Paulo, 24 de octubre de 2016"
+        "EN": "III Congresso Pan-Americano de Arbitragem CAM-CCBC, Sao Paulo, Brazil (October 24, 2016)",
+        "ES": "III Congreso Panamericano de Arbitraje CAM-CCBC, São Paulo, Brasil (24 de octubre de 2016)",
+        "PT": "III Congresso Pan-Americano de Arbitragem CAM-CCBC, São Paulo, Brasil (24 de outubro de 2016)"
       }
     },
     {
       "title": {
         "EN": "Aspectos Prácticos del Arbitraje Internacional",
-        "PT": "Aspectos Prácticos del Arbitraje Internacional",
-        "ES": "Aspectos Prácticos del Arbitraje Internacional"
+        "ES": "Aspectos Prácticos del Arbitraje Internacional",
+        "PT": "Aspectos Práticos da Arbitragem Internacional"
       },
       "event": {
-        "EN": "International Centre for Dispute Resolution, Simpósio Internacional de Arbitragem, Nova York, NY, 27 de maio de 2016",
-        "PT": "International Centre for Dispute Resolution, Simpósio Internacional de Arbitragem, Nova York, NY, 27 de maio de 2016",
-        "ES": "International Centre for Dispute Resolution (ICDR), International Arbitration Symposium, Nueva York, 27 de mayo de 2016"
+        "EN": "International Centre of Dispute Resolution, International Arbitration Symposium, New York, NY (May 27, 2016)",
+        "ES": "Centro Internacional de Resolución de Disputas, Simposio de Arbitraje Internacional, Nueva York, NY (27 de mayo de 2016)",
+        "PT": "Centro Internacional de Resolução de Disputas, Simpósio de Arbitragem Internacional, Nova York, NY (27 de maio de 2016)"
       }
     },
     {
       "title": {
-        "EN": "Strategies for Faster and Cheaper Cross-Border Disputes",
-        "PT": "Strategies for Faster and Cheaper Cross-Border Disputes",
-        "ES": "Strategies for Faster and Cheaper Cross-Border Disputes"
+        "EN": "Strategies for Faster and Cheaper Cross-Border",
+        "ES": "Estrategias para Arbitrajes Transfronterizos Más Rápidos y Económicos",
+        "PT": "Estratégias para Arbitragens Transfronteiriças Mais Rápidas e Econômicas"
       },
       "event": {
-        "EN": "ACC GNY Signature CLE Program, Nova York, NY, 14 de janeiro de 2016",
-        "PT": "ACC GNY Signature CLE Program, Nova York, NY, 14 de janeiro de 2016",
-        "ES": "GNY Signature CLE Program, New York Corporate Counsel Association (ACC GNY), Nueva York, 14 de enero de 2016"
+        "EN": "ACC GNY Signature CLE Program, New York, NY (January 14, 2016)",
+        "ES": "Programa CLE Signature de ACC GNY, Nueva York, NY (14 de enero de 2016)",
+        "PT": "Programa CLE Signature da ACC GNY, Nova York, NY (14 de janeiro de 2016)"
       }
     },
     {
       "title": {
         "EN": "Is International Arbitration Really Open to New Faces?",
-        "PT": "Is International Arbitration Really Open to New Faces?",
-        "ES": "Is International Arbitration Really Open to New Faces?"
+        "ES": "¿Está el Arbitraje Internacional Realmente Abierto a Nuevos Rostros?",
+        "PT": "A Arbitragem Internacional Está Realmente Aberta a Novos Rostos?"
       },
       "event": {
-        "EN": "27th Annual ITA Workshop: Influências Subconscientes da Arbitragem Internacional, Dallas, 17 de junho de 2015",
-        "PT": "27th Annual ITA Workshop: Influências Subconscientes da Arbitragem Internacional, Dallas, 17 de junho de 2015",
-        "ES": "27th Annual ITA Workshop: Subconscious Influences of International Arbitration, Dallas 17 de junio de 2015"
+        "EN": "27th Annual ITA Workshop: Subconscious Influences of International Arbitration, Dallas, TX (June 17, 2015)",
+        "ES": "27º Taller Anual de ITA: Influencias Subconscientes del Arbitraje Internacional, Dallas, TX (17 de junio de 2015)",
+        "PT": "27º Workshop Anual do ITA: Influências Subconscientes da Arbitragem Internacional, Dallas, TX (17 de junho de 2015)"
       }
     },
     {
       "title": {
         "EN": "Dispute Resolution Current Trends Involving Arbitration and Compliance Issues in Brazil",
-        "PT": "Dispute Resolution Current Trends Involving Arbitration and Compliance Issues in Brazil",
-        "ES": "Dispute Resolution Current Trends Involving Arbitration and Compliance Issues in Brazil"
+        "ES": "Tendencias Actuales en Resolución de Disputas Relacionadas con Arbitraje y Cumplimiento en Brasil",
+        "PT": "Tendências Atuais em Resolução de Disputas Relacionadas à Arbitragem e Compliance no Brasil"
       },
       "event": {
-        "EN": "Georgetown University Law Center, Washington, DC, 15 de setembro de 2014",
-        "PT": "Georgetown University Law Center, Washington, DC, 15 de setembro de 2014",
-        "ES": "Georgetown University Law Center, Washington, DC, 15 de septiembre de 2014"
+        "EN": "Georgetown University Law Center, Washington, DC (September 15, 2014)",
+        "ES": "Georgetown University Law Center, Washington, DC (15 de septiembre de 2014)",
+        "PT": "Georgetown University Law Center, Washington, DC (15 de setembro de 2014)"
       }
     },
     {
       "title": {
         "EN": "Specific Themes of Doing Business in Latin America",
-        "PT": "Specific Themes of Doing Business in Latin America",
-        "ES": "Specific Themes of Doing Business in Latin America"
+        "ES": "Temas Específicos de Hacer Negocios en América Latina",
+        "PT": "Temas Específicos de Fazer Negócios na América Latina"
       },
       "event": {
-        "EN": "Seção de Direito Internacional da ABA, Novas Perspectivas para Projetos de Infraestrutura na América Latina, São Paulo, 24 de agosto de 2013",
-        "PT": "Seção de Direito Internacional da ABA, Novas Perspectivas para Projetos de Infraestrutura na América Latina, São Paulo, 24 de agosto de 2013",
-        "ES": "Sección de Derecho Internacional de la American Bar Association (ABA), Nuevas Perspectivas para Proyectos de Infraestrutura en América Latina, São Paulo, 24 de agosto de 2013"
+        "EN": "ABA Section of International Law, New Perspectives for Infrastructure Projects in Latin America, São Paulo (August 24, 2013)",
+        "ES": "Sección de Derecho Internacional de la ABA, Nuevas Perspectivas para Proyectos de Infraestructura en América Latina, São Paulo (24 de agosto de 2013)",
+        "PT": "Seção de Direito Internacional da ABA, Novas Perspectivas para Projetos de Infraestrutura na América Latina, São Paulo (24 de agosto de 2013)"
       }
     },
     {
       "title": {
         "EN": "Budgeting and Managing an International Arbitration: How to Keep Arbitration Cost-Efficient and Effective",
-        "PT": "Budgeting and Managing an International Arbitration: How to Keep Arbitration Cost-Efficient and Effective",
-        "ES": "Budgeting and Managing an International Arbitration: How to Keep Arbitration Cost Efficient and Effective"
+        "ES": "Presupuesto y Gestión de un Arbitraje Internacional: Cómo Mantener el Arbitraje Rentable y Efectivo",
+        "PT": "Orçamento e Gestão de uma Arbitragem Internacional: Como Manter a Arbitragem Rentável e Eficaz"
       },
       "event": {
-        "EN": "Reunião de Primavera de 2013 da Seção de Direito Internacional da ABA, Washington, DC, 24 de abril de 2013",
-        "PT": "Reunião de Primavera de 2013 da Seção de Direito Internacional da ABA, Washington, DC, 24 de abril de 2013",
-        "ES": "ABA Section of International Law Spring Meeting, Washington, DC, 24 de abril de 2013"
+        "EN": "ABA Section of International Law 2013 Spring Meeting, Washington, DC (April 24, 2013)",
+        "ES": "Reunión de Primavera 2013 de la Sección de Derecho Internacional de la ABA, Washington, DC (24 de abril de 2013)",
+        "PT": "Reunião de Primavera 2013 da Seção de Direito Internacional da ABA, Washington, DC (24 de abril de 2013)"
       }
     },
     {
       "title": {
-        "EN": "U.S. Judicial Discovery for Use in International Commercial Arbitration",
-        "PT": "U.S. Judicial Discovery for Use in International Commercial Arbitration",
-        "ES": "U.S. Judicial Discovery for Use in the International Commercial Arbitration"
+        "EN": "U.S. Judicial Discovery for Use in International Commercial Arbitration, Guest Lecturer",
+        "ES": "Descubrimiento Judicial de EE.UU. para Uso en Arbitraje Comercial Internacional",
+        "PT": "Discovery Judicial dos EUA para Uso em Arbitragem Comercial Internacional"
       },
       "event": {
-        "EN": "Palestrante Convidado, Curso de Arbitragem Comercial Internacional na Georgetown University Law Center, Washington, DC, 19 de novembro de 2012",
-        "PT": "Palestrante Convidado, Curso de Arbitragem Comercial Internacional na Georgetown University Law Center, Washington, DC, 19 de novembro de 2012",
-        "ES": "Ponente, Clase de Arbitraje Comercial Internacional, Georgetown University Law Center, Washington, DC, 19 de noviembre de 2012"
+        "EN": "International Commercial Arbitration Class at Georgetown University Law Center, Washington, D.C. (November 19, 2012)",
+        "ES": "Conferenciante Invitada, Clase de Arbitraje Comercial Internacional en Georgetown University Law Center, Washington, D.C. (19 de noviembre de 2012)",
+        "PT": "Palestrante Convidada, Aula de Arbitragem Comercial Internacional no Georgetown University Law Center, Washington, D.C. (19 de novembro de 2012)"
       }
     },
     {
       "title": {
-        "EN": "O Papel do Árbitro na Avaliação de Danos",
-        "PT": "O Papel do Árbitro na Avaliação de Danos",
-        "ES": "O Papel do Árbitro na Avaliação de Danos"
+        "EN": "The Arbitrator's Role in the Assessment of Damages",
+        "ES": "El Papel del Árbitro en la Evaluación de Daños",
+        "PT": "O Papel do Árbitro na Avaliação de Danos"
       },
       "event": {
-        "EN": "XI Congresso do Comitê Brasileiro de Arbitragem--CBAr: Aspectos Econômicos da Arbitragem, Porto Alegre, setembro de 2012",
-        "PT": "XI Congresso do Comitê Brasileiro de Arbitragem--CBAr: Aspectos Econômicos da Arbitragem, Porto Alegre, setembro de 2012",
-        "ES": "XI Congreso del Comité Brasileño de Arbitraje (CBAr): Aspectos Económicos del Arbitraje, Porto Alegre, septiembre de 2012"
+        "EN": "XI Brazilian Arbitration Committee Congress--CBAr: Economic Aspects of Arbitration, Porto Alegre (September 2012)",
+        "ES": "XI Congreso del Comité Brasileño de Arbitraje--CBAr: Aspectos Económicos del Arbitraje, Porto Alegre (septiembre de 2012)",
+        "PT": "XI Congresso do Comitê Brasileiro de Arbitragem--CBAr: Aspectos Econômicos da Arbitragem, Porto Alegre (setembro de 2012)"
       }
     },
     {
       "title": {
-        "EN": "\"How to Handle a BIT Arbitration",
-        "PT": "\"How to Handle a BIT Arbitration",
-        "ES": "How to Handle a BIT Arbitration"
+        "EN": "How to Handle a BIT Arbitration",
+        "ES": "Cómo Manejar un Arbitraje de TBI",
+        "PT": "Como Conduzir uma Arbitragem de TBI"
       },
       "event": {
-        "EN": "Nono Seminário Anual sobre Arbitragem Comercial Internacional na American University’s Washington College of Law, Washington, DC, 3 de outubro de 2012",
-        "PT": "Nono Seminário Anual sobre Arbitragem Comercial Internacional na American University’s Washington College of Law, Washington, DC, 3 de outubro de 2012",
-        "ES": "Ninth Annual Seminar on International Commercial Arbitration, American University Washington College of Law, Washington, DC, 3 de octubre de 2012"
+        "EN": "Ninth Annual Seminar on International Commercial Arbitration at American University's Washington College of Law, Washington, DC (October 3, 2012)",
+        "ES": "Noveno Seminario Anual sobre Arbitraje Comercial Internacional en American University's Washington College of Law, Washington, DC (3 de octubre de 2012)",
+        "PT": "Nono Seminário Anual sobre Arbitragem Comercial Internacional na American University's Washington College of Law, Washington, DC (3 de outubro de 2012)"
       }
     },
     {
       "title": {
         "EN": "Documentary Evidence and the Use of Discovery, Evidence in International Arbitration",
-        "PT": "Documentary Evidence and the Use of Discovery, Evidence in International Arbitration",
-        "ES": "Documentary Evidence and the Use of Discovery, Evidence in International Arbitration"
+        "ES": "Prueba Documental y el Uso del Descubrimiento, Pruebas en Arbitraje Internacional",
+        "PT": "Prova Documental e o Uso do Discovery, Provas em Arbitragem Internacional"
       },
       "event": {
-        "EN": "ICDR Young & International e ICC Young Arbitrators Forum, Bogotá, setembro de 2010",
-        "PT": "ICDR Young & International e ICC Young Arbitrators Forum, Bogotá, setembro de 2010",
-        "ES": "ICDR Young & International y ICC Young Arbitrators Forum, Bogotá, septiembre de 2010"
+        "EN": "ICDR Young & International e ICC Young Arbitrators Forum, Bogotá (September 2010)",
+        "ES": "ICDR Young & International e ICC Young Arbitrators Forum, Bogotá (septiembre de 2010)",
+        "PT": "ICDR Young & International e ICC Young Arbitrators Forum, Bogotá (setembro de 2010)"
       }
     },
     {
       "title": {
         "EN": "Jurisdictional Issues in ICSID Arbitration",
-        "PT": "Jurisdictional Issues in ICSID Arbitration",
-        "ES": "Jurisdiccional Issues in ICSID Arbitration"
+        "ES": "Cuestiones Jurisdiccionales en Arbitraje CIADI",
+        "PT": "Questões Jurisdicionais em Arbitragem ICSID"
       },
       "event": {
-        "EN": "Seminário sobre questões jurídicas internacionais apresentado ao governo da República da Colômbia, Bogotá, junho de 2009",
-        "PT": "Seminário sobre questões jurídicas internacionais apresentado ao governo da República da Colômbia, Bogotá, junho de 2009",
-        "ES": "Seminario sobre cuestiones jurídicas internacionales, presentado al gobierno de la República de Colombia, Bogotá, junio de 2009"
+        "EN": "Seminário sobre questões jurídicas internacionais apresentado ao governo da República da Colômbia, Bogotá, (June 2009)",
+        "ES": "Seminario sobre cuestiones jurídicas internacionales presentado al gobierno de la República de Colombia, Bogotá (junio de 2009)",
+        "PT": "Seminário sobre questões jurídicas internacionais apresentado ao governo da República da Colômbia, Bogotá (junho de 2009)"
       }
     }
   ],
   "publications": [
     {
       "title": {
-        "EN": "“The Role of Counsel in International Arbitration: Set-Aside Steps,",
+        "EN": "Arbitragem de Emergência: O Fim da Dependência das Cortes Nacionais?, chapter to AASP Law Review – Issue 169, marking the 30th anniversary of the Brazilian Arbitration Act (co-author), coordinated by Ana Cândida Menezes Marcato and Silvia Rodrigues Pachikoski (2026).",
+        "ES": "Arbitraje de emergencia: ¿el fin de la dependencia de los tribunales nacionales?, capítulo en AASP Law Review – Edición 169, conmemorando el 30.º aniversario de la Ley Brasileña de Arbitraje (coautora), coordinado por Ana Cândida Menezes Marcato y Silvia Rodrigues Pachikoski (2026).",
+        "PT": "Emergency Arbitration: The End of Dependence on National Courts?, capítulo para edição 169 da Revista da AASP, sobre os 30 anos da Lei de Arbitragem brasileira (coautora), sob a coordenação de Ana Cândida Menezes Marcato e Silvia Rodrigues Pachikoski (2026)."
+      },
+      "publication": {
+        "EN": "AASP Law Review – Issue 169 (2026)",
+        "ES": "Revista de la AASP – Edición 169 (2026)",
+        "PT": "Revista da AASP – Edição 169 (2026)"
+      }
+    },
+    {
+      "title": {
+        "EN": "“The Role of Counsel in International Arbitration: Set-Aside Steps,”",
         "PT": "“The Role of Counsel in International Arbitration: Set-Aside Steps,",
         "ES": "The Role of Counsel in International Arbitration: Set-Aside Steps"
       },
       "publication": {
-        "EN": "capítulo do livro Arbitragem Internacional na Prática (coautora), editado por Courtney Lotfi, Alicja Zielinska-Eisen e Veronica Sandler Obregon, Kluwer International Law, 2024",
+        "EN": "book chapter in International Arbitration in Practice (co-author), edited by Courtney Lotfi, Alicja Zielinska-Eisen and Veronica Sandler Obregon, Kluwer International Law, 2024",
         "PT": "capítulo do livro Arbitragem Internacional na Prática (coautora), editado por Courtney Lotfi, Alicja Zielinska-Eisen e Veronica Sandler Obregon, Kluwer International Law, 2024",
         "ES": "capítulo (coautora) en International Arbitration in Practice, editado por Courtney Lotfi, Alicja Zielinska-Eisen y Veronica Sandler Obregon, Kluwer International Law, 2024."
       }
@@ -669,7 +717,7 @@
         "ES": "Lei de Arbitragem Comentada: Lei No. 9.307/1996"
       },
       "publication": {
-        "EN": "coautora, comentários ao Artigo 12, Revista dos Tribunais, 2023",
+        "EN": "co-author, comments to Article 12, Revista dos Tribunais, 2023",
         "PT": "coautora, comentários ao Artigo 12, Revista dos Tribunais, 2023",
         "ES": "coautora, Comentarios al Artículo 12, Revista dos Tribunais, 2023."
       }
@@ -681,7 +729,7 @@
         "ES": "Litigation Alternatives for COVID-19 Hospitality Disputes"
       },
       "publication": {
-        "EN": "Law360, 11 de maio de 2020",
+        "EN": "Law360, May 11, 2020",
         "PT": "Law360, 11 de maio de 2020",
         "ES": "Law360, 11 de mayo de 2020"
       }
@@ -693,7 +741,7 @@
         "ES": "Navigating Investors’ Rights under the USMCA"
       },
       "publication": {
-        "EN": "coautora, Transnational Dispute Management, Vol. 17, Nº 3, março de 2020",
+        "EN": "co-author, Transnational Dispute Management, Vol. 17, No. 3, March 2020",
         "PT": "coautora, Transnational Dispute Management, Vol. 17, Nº 3, março de 2020",
         "ES": "coautora, Transnational Dispute Management, vol. 17, nº 3, marzo de 2020."
       }
@@ -705,7 +753,7 @@
         "ES": "Mining Arbitration in Latin America: Social and Environmental Issues in Investment Arbitration Cases"
       },
       "publication": {
-        "EN": "coautora, Global Arbitration Review: The Guide to Mining Arbitrations, julho de 2019",
+        "EN": "co-author, Global Arbitration Review: The Guide to Mining Arbitrations, July 2019",
         "PT": "coautora, Global Arbitration Review: The Guide to Mining Arbitrations, julho de 2019",
         "ES": "coautora, Global Arbitration Review: The Guide to Mining Arbitrations, julio de 2019."
       }
@@ -717,7 +765,7 @@
         "ES": "Construction Contracts in Brazil"
       },
       "publication": {
-        "EN": "Lexology Q&A, março de 2019",
+        "EN": "Lexology Q&A, March 2019",
         "PT": "Lexology Q&A, março de 2019",
         "ES": "Lexology Q&A, marzo de 2019."
       }
@@ -729,7 +777,7 @@
         "ES": "A Structured Guide to Arbitration Law and Practice in Brazil"
       },
       "publication": {
-        "EN": "Lexology Q&A, setembro de 2014, atualizado em março de 2019",
+        "EN": "Lexology Q&A, September 2014, updated March 2019",
         "PT": "Lexology Q&A, setembro de 2014, atualizado em março de 2019",
         "ES": "Lexology Q&A, septiembre 2014, actualizado marzo 2019"
       }
@@ -741,7 +789,7 @@
         "ES": "United States: Arbitration Q&A"
       },
       "publication": {
-        "EN": "The In-House Lawyer, outubro de 2018",
+        "EN": "The In-House Lawyer, October 2018",
         "PT": "The In-House Lawyer, outubro de 2018",
         "ES": "The In-House Lawyer, octubre de 2018."
       }
@@ -753,7 +801,7 @@
         "ES": "Arbitragem Comercial Envolvendo Administraçao Pública: uma Realidade na América Latina?"
       },
       "publication": {
-        "EN": "Revista Visão Jurídica, abril de 2017",
+        "EN": "co-author, Revista Visão Jurídica, April 2017",
         "PT": "Revista Visão Jurídica, abril de 2017",
         "ES": "coautora, Revista Visão Jurídica, abril de 2017."
       }
@@ -765,7 +813,7 @@
         "ES": "Liçoes a Respeito de Decisoes Vinculantes e Nao Finais Proferidas por Dispute Adjudication Boards: o CasoCRW Joint Operation v. PT Perusahaan Gas Negara (PERSERO)"
       },
       "publication": {
-        "EN": "coautora, Revista de Arbitragem e Mediação – RArb, nº 48, abril de 2016",
+        "EN": "co-author, Revista de Arbitragem e Mediação – RArb, No. 48, April 2016",
         "PT": "coautora, Revista de Arbitragem e Mediação – RArb, nº 48, abril de 2016",
         "ES": "coautora, Revista de Arbitraje y Mediación – RArb, nº 48, abril de 2016."
       }
@@ -777,7 +825,7 @@
         "ES": "Directrices Prácticas Para la Redacción del Acuerdo Arbitral"
       },
       "publication": {
-        "EN": "coautora, Tratado de Direito Arbitral, Vol. 2 (Coautor), março de 2011",
+        "EN": "co-author, Tratado de Direito Arbitral, Vol. 2 (Co-author), March 2011",
         "PT": "coautora, Tratado de Direito Arbitral, Vol. 2 (Coautor), março de 2011",
         "ES": "coautora, Tratado de Derecho Arbitral, vol. 2, coautora, marzo de 2011."
       }
@@ -789,7 +837,7 @@
         "ES": "US Judicial Discovery in Private International Arbitration: Outlook Remains Uncertain"
       },
       "publication": {
-        "EN": "Miami Arbitration Reports, Vol. 1, Nº 5, outubro de 2009",
+        "EN": "Miami Arbitration Reports, Vol. 1, No. 5, October 2009",
         "PT": "Miami Arbitration Reports, Vol. 1, Nº 5, outubro de 2009",
         "ES": "Miami Arbitration Reports, vol. 1, nº 5, octubre de 2009."
       }
