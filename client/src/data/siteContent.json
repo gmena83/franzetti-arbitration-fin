@@ -214,6 +214,11 @@
             "ES": "Descargar CV",
             "PT": "Baixar CV"
         },
+        "footer.cvUnavailable": {
+            "EN": "Downloads are temporarily unavailable while these documents are being updated.",
+            "ES": "Las descargas no están disponibles temporalmente mientras actualizamos estos documentos.",
+            "PT": "Os downloads estão temporariamente indisponíveis enquanto atualizamos estes documentos."
+        },
         "footer.connect": {
             "EN": "Connect",
             "ES": "Conectar",

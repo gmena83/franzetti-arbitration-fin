@@ -34,6 +34,17 @@
   status = 200
   force = true
 
+# TEMPORARY: the resume/CV documents are withheld while a mistake in them is
+# corrected, so the files are not reachable by direct or bookmarked URL either.
+# Must stay ABOVE the SPA catch-all below (first matching rule wins).
+# To restore access: delete this block and set CV_DOWNLOADS_ENABLED back to
+# `true` in client/src/components/Footer.tsx.
+[[redirects]]
+  from = "/cv/*"
+  to = "/index.html"
+  status = 404
+  force = true
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
