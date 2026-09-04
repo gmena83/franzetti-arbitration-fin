@@ -26,6 +26,13 @@ type CvLinks = {
   vcard?: string;
 };
 
+/* TEMPORARY: resume/CV downloads are disabled while the documents are being
+ * corrected. The footer entries stay visible but inert.
+ * To restore downloads: set this flag back to `true` AND remove the "/cv/*"
+ * 404 redirect block in netlify.toml that also blocks the direct file URLs.
+ */
+const CV_DOWNLOADS_ENABLED: boolean = false;
+
 export default function Footer() {
   const { t, language } = useLanguage();
 
@@ -42,13 +49,16 @@ export default function Footer() {
     { label: t("nav.contact"), href: "/contact" },
   ];
 
-  const hasAnyCv =
-    Boolean(cv?.english?.trim()) ||
-    Boolean(cv?.englishMini?.trim()) ||
-    Boolean(cv?.spanish?.trim()) ||
-    Boolean(cv?.spanishMini?.trim()) ||
-    Boolean(cv?.portuguese?.trim()) ||
-    Boolean(cv?.portugueseMini?.trim());
+  const cvDownloads = [
+    { href: cv?.english, label: "Full CV (EN)" },
+    { href: cv?.englishMini, label: "One-page CV (EN)" },
+    { href: cv?.spanish, label: "CV Completo (ES)" },
+    { href: cv?.spanishMini, label: "One-page CV (ES)" },
+    { href: cv?.portuguese, label: "CV Completo (PT)" },
+    { href: cv?.portugueseMini, label: "One-page CV (PT)" },
+  ].filter((item) => Boolean(item.href?.trim()));
+
+  const hasAnyCv = cvDownloads.length > 0;
 
   const hasVcard = Boolean(cv?.vcard?.trim());
 
@@ -81,37 +91,28 @@ export default function Footer() {
                 <div className="flex flex-col gap-3">
                   {/* CV Links - Vertical Stack */}
                   <div className="flex flex-col gap-2 text-sm">
-                    {cv?.english && (
-                      <a href={cv.english} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
-                        Full CV (EN)
-                      </a>
-                    )}
-                    {cv?.englishMini && (
-                      <a href={cv.englishMini} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
-                        One-page CV (EN)
-                      </a>
-                    )}
-                    {cv?.spanish && (
-                      <a href={cv.spanish} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
-                        CV Completo (ES)
-                      </a>
-                    )}
-                    {cv?.spanishMini && (
-                      <a href={cv.spanishMini} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
-                        One-page CV (ES)
-                      </a>
-                    )}
-                    {cv?.portuguese && (
-                      <a href={cv.portuguese} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
-                        CV Completo (PT)
-                      </a>
-                    )}
-                    {cv?.portugueseMini && (
-                      <a href={cv.portugueseMini} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
-                        One-page CV (PT)
-                      </a>
+                    {cvDownloads.map((item) =>
+                      CV_DOWNLOADS_ENABLED ? (
+                        <a key={item.label} href={item.href} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
+                          {item.label}
+                        </a>
+                      ) : (
+                        <span
+                          key={item.label}
+                          aria-disabled="true"
+                          title={t("footer.cvUnavailable")}
+                          className="text-gray-500 cursor-not-allowed select-none"
+                        >
+                          {item.label}
+                        </span>
+                      )
                     )}
                   </div>
+                  {!CV_DOWNLOADS_ENABLED && (
+                    <p className="text-xs text-gray-400 max-w-xs">
+                      {t("footer.cvUnavailable")}
+                    </p>
+                  )}
                 </div>
               </div>
             )}
