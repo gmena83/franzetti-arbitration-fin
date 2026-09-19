@@ -309,14 +309,46 @@ Guandalini and Romulo Greff Mariana - Synergia (2026). Placed at the top of the
 
 ## 3. CV / Resume documents
 
+**Only the corrected English CV is published.**
+
 - `client/public/cv/Franzetti-CV-English.pdf` replaced with the client's corrected
   **"Franzetti Curriculum Vitae Sept. 2026 (EN)"** (byte-identical, MD5 verified).
-- The full English CV download is **re-enabled** in the footer.
-- The one-page English CV and the Spanish and Portuguese CVs are still the
-  superseded versions (they carry the old "Dec. 2025" King & Spalding end date and
-  the old "Washington, DC" spelling), so they remain hidden behind their own 404
-  rules and the footer shows them as unavailable. **Action needed from the client:
-  send corrected ES and PT CVs (and the one-page versions) to publish them.**
+- The full English CV download is **enabled** in the footer.
+
+**The superseded documents were deleted from the repository** (not merely hidden)
+on 2026-09-19, at the client's instruction:
+
+| Deleted | Why |
+|---|---|
+| `client/public/cv/Franzetti-CV-Spanish.pdf` | old "Dic. 2025" end date, old "Washington, DC" |
+| `client/public/cv/Franzetti-Mini-CV-Spanish.pdf` | same |
+| `client/public/cv/Franzetti-CV-Portuguese.pdf` | old "Dez. 2025" end date, old "Washington, DC" |
+| `client/public/cv/Franzetti-Mini-CV-Portuguese.pdf` | same |
+| `client/public/cv/Franzetti-Mini-CV-English.pdf` | old "Washington, DC" spelling; stale University of Miami teaching period ("2025-2026" vs "2024-2025") |
+| `cv-english.pdf` (repo root) | a duplicate of the *superseded* English CV, byte-identical to the old published file |
+
+**Why deletion rather than blocking matters.** This repository is **public** on
+GitHub. The Netlify 404 rules only ever governed the website: anyone could still
+download every one of those superseded PDFs straight from
+`raw.githubusercontent.com`. Blocking the routes gave a false sense of
+protection; removing the files is the actual control. The previous
+"residual exposure" concern is therefore closed properly.
+
+The footer still lists the Spanish and Portuguese entries, but as inert,
+non-clickable labels with the note that those versions are being updated - they
+are "off", not removed, so the new documents can be dropped in without a layout
+change.
+
+The five 404 rules in `netlify.toml` are **kept deliberately** as a release gate
+for the replacement Spanish and Portuguese CVs that are expected shortly: if a new
+PDF is committed while it is still under review, it will not be reachable by
+direct or bookmarked URL even though it exists in the build output. The
+verification harness asserts this in **both** directions - a variant must be
+published exactly when its file exists and exactly when it is not blocked - so a
+half-finished publish fails the checks instead of silently 404-ing a live link or
+silently exposing an unreviewed document.
+
+`client/public/cv/cv.json` now lists only the live English CV.
 
 ## 4. Incidental repairs
 
@@ -396,15 +428,14 @@ fed back in and resolved rather than filed away.
   and two recognition lines differ in their years (Best Lawyers carries a year on
   the site but not in the CV; the Chambers Band 6 line carries a year in the CV
   but not on the site).
-- **Residual exposure of the superseded CVs:** the five hidden PDFs are still
-  present in `client/public/cv/` and therefore still ship inside the build; the
-  only thing preventing download is the Netlify 404 rules. A local preview serves
-  them normally. Recommendation: delete them from `client/public/cv/` so the block
-  is structural rather than configurational - held back because the client chose to
-  hide rather than remove them and may want to re-issue corrected files under the
-  same names.
 - Recognition years were not touched: the Recognitions block was outside the
   client's correction document.
+- **Old resume drafts still sit at the repo root**: `cv-english.md`,
+  `cv-spanish.md` and `cv-portuguese.md` contain the full superseded resume text
+  and, like everything else here, are readable by anyone because the GitHub repo
+  is public. They were left in place because they may be the working source for
+  the Spanish and Portuguese versions that are coming; say the word and they go.
+  (The stale `cv-english.pdf` that sat alongside them **has** been deleted.)
 """
 
 
@@ -449,7 +480,7 @@ it is recorded as a follow-up rather than silently changed.
 | 03-F2 | 03 cv-documents | Minor | CV says "ArbitralWomen"; site says "Arbitral Women" | **FOLLOW-UP.** Not in the client's instruction list; flagged for a decision rather than changed with the quotes. |
 | 03-F3 | 03 cv-documents | Minor | Other CV-vs-site wording divergences ("an American company" vs "a U.S. company"; accent/locale forms in the Redes Andinas matter) | **FOLLOW-UP.** The client's instruction document did not list these matters. |
 | 03-F4 | 03 cv-documents | Minor | Recognition years differ between the CV and the site (Best Lawyers year; Chambers Band 6 year) | **FOLLOW-UP.** Not in the instruction set; the Recognitions block was not touched. |
-| 03-F5 | 03 cv-documents | Residual risk | The five superseded PDFs still ship in `dist/public/cv/`; the only thing hiding them is `netlify.toml`. Local preview serves them with 200 | **OPEN - RECOMMENDED HARDENING.** Deleting the files from `client/public/cv/` would make the block structural rather than configurational. Held back because the client chose to hide rather than remove them, and may want to re-issue corrected versions under the same names. |
+| 03-F5 | 03 cv-documents | Residual risk | The five superseded PDFs still shipped in `dist/public/cv/`; only `netlify.toml` hid them, and the repo is public | **RESOLVED** (2026-09-19). The files were deleted from the repository outright, which is the real control for a public repo. The Netlify rules are retained as a release gate for the incoming replacements, and the harness now asserts published-vs-present-vs-blocked consistency in both directions. |
 | 03-1..03-6 | 03 cv-documents | - | The six numbered integrity checks (PDF byte-identity, footer flags, redirect rules, staleness, build output, PDF-vs-site cross-check) | **ALL PASS.** No action. |
 
 ## What this tells you about the delivered state

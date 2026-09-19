@@ -444,9 +444,42 @@ def data_checks():
     check("data/cv", "netlify: blanket /cv/* 404 block removed", 'from = "/cv/*"' not in nf)
     for f in ["Franzetti-Mini-CV-English.pdf", "Franzetti-CV-Spanish.pdf", "Franzetti-Mini-CV-Spanish.pdf",
               "Franzetti-CV-Portuguese.pdf", "Franzetti-Mini-CV-Portuguese.pdf"]:
-        check("data/cv", f"netlify: stale file /cv/{f} still 404-blocked", f'from = "/cv/{f}"' in nf)
+        check("data/cv", f"netlify: release gate present for /cv/{f}", f'from = "/cv/{f}"' in nf)
     check("data/cv", "netlify: corrected EN CV is NOT 404-blocked",
           'from = "/cv/Franzetti-CV-English.pdf"' not in nf)
+
+    # --- release-gate consistency, asserted in BOTH directions.
+    # published  <=>  the file exists on disk  <=>  no 404 rule blocks it.
+    VARIANT_FILES = {
+        "english": "Franzetti-CV-English.pdf",
+        "englishMini": "Franzetti-Mini-CV-English.pdf",
+        "spanish": "Franzetti-CV-Spanish.pdf",
+        "spanishMini": "Franzetti-Mini-CV-Spanish.pdf",
+        "portuguese": "Franzetti-CV-Portuguese.pdf",
+        "portugueseMini": "Franzetti-Mini-CV-Portuguese.pdf",
+    }
+    for key, fname in VARIANT_FILES.items():
+        m = re.search(rf"{key}:\s*(true|false)", footer)
+        enabled = bool(m and m.group(1) == "true")
+        present = os.path.exists(os.path.join(REPO, "client", "public", "cv", fname))
+        blocked = f'from = "/cv/{fname}"' in nf
+        check("data/cv", f"{key}: published iff the file is in the repo (enabled={enabled}, present={present})",
+              enabled == present, f"enabled={enabled} present={present}")
+        check("data/cv", f"{key}: published iff not 404-blocked (enabled={enabled}, blocked={blocked})",
+              enabled != blocked, f"enabled={enabled} blocked={blocked}")
+
+    # --- the superseded documents must be gone from the repository entirely
+    for gone in ["client/public/cv/Franzetti-CV-Spanish.pdf",
+                 "client/public/cv/Franzetti-Mini-CV-Spanish.pdf",
+                 "client/public/cv/Franzetti-CV-Portuguese.pdf",
+                 "client/public/cv/Franzetti-Mini-CV-Portuguese.pdf",
+                 "client/public/cv/Franzetti-Mini-CV-English.pdf",
+                 "cv-english.pdf"]:
+        check("data/cv", f"superseded document deleted from the repo: {gone}",
+              not os.path.exists(os.path.join(REPO, gone)), gone)
+    shipped = sorted(os.listdir(os.path.join(REPO, "client", "public", "cv")))
+    check("data/cv", "client/public/cv holds only the published English CV (+ cv.json)",
+          shipped == ["Franzetti-CV-English.pdf", "cv.json"], str(shipped))
 
     # --- new logo assets ship in the build
     for logo in ["american-university-wcl-logo.svg", "nova-school-of-law-logo.svg"]:
