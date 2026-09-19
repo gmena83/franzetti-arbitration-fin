@@ -337,14 +337,40 @@ wordmark, `b3-cam-logo.png` holds the B3 mark) and the two entries repointed.
 Both entries now display the correct logo; verified by image dimensions (HKIAC's
 wordmark is a wide 543x182 banner, B3's is a 78x75 square mark).
 
-## 5. Recommended follow-ups (not requested, left alone)
+## 5. Fixes raised by the independent review and then applied
+
+The review agents below were run against the finished work; their findings were
+fed back in and resolved rather than filed away.
+
+| Raised by | Finding | Resolution |
+|---|---|---|
+| About-page audit | The "Arbitral Experience" subtitle was rendering *before* the second paragraph; the client's document sequences it after that paragraph and before its bullet list | Heading moved; order is now asserted by automated tests in EN, ES and PT so a placement error can never again pass as "present" |
+| About-page audit | Spanish rendering of the Legal 500 quote read "Érica **sobresalta**…" ("startles/frightens"); should be "sobresale" | Corrected |
+| CV/Resume audit | The Georgetown Education entry had a Portuguese note but **no Spanish note**, so the Spanish page silently fell back to the English string | Spanish note added; a test now fails if any populated English field lacks ES or PT |
+| CV/Resume audit | The "Directrices Prácticas…" English record cited the book as "Tratado de **Direito** Arbitral" (Portuguese) and duplicated "(Co-author)" | Corrected to "Tratado de Derecho Arbitral"; duplication removed |
+| CV/Resume audit | "Lei **nº** 9.307/1996" where the client's document writes "Lei **No.** 9.307/1996" | Aligned to the document |
+| CV/Resume audit | "A Structured Guide…" dropped the day from its date | Now "September 17, 2014" |
+| CV/Resume audit | Weil and Crowell had no explicit Spanish/Portuguese location; the two Brazilian education entries had no Spanish location | Explicit ES/PT fields added so nothing relies on an English fallback |
+| CV/Resume audit | FGV's English record split its degree across `degree` + `note` while ES/PT carried it in one field | Merged into a single phrase so all three languages have the same shape (rendering unchanged) |
+
+## 6. Recommended follow-ups (not requested, left alone)
 
 - "Washington, DC" still appears in three historical Speaking Engagements venue
   strings ("Georgetown University Law Center, Washington, DC (September 15, 2014)"
   and two others). The client's instruction scoped the DC -> D.C. change to
   Professional Background, so these were left untouched; flagging for a decision.
+- **The three directory quotes on the About page (The Legal 500, Chambers USA,
+  Lexology) are faithful in English but are *paraphrases* in Spanish and
+  Portuguese rather than translations** - the Spanish Chambers quote even contains
+  an inserted "[Érica]" that is not in the source. These are attributable
+  statements, and the client's document supplied only the English. Left as they
+  were rather than inventing attributed translations; the client should supply
+  approved ES/PT wording (or approve leaving the quotes in English).
 - `section.services`, `section.asArbitrator`, `section.asCounsel` and other
   translation keys remain as-is.
+- One pre-existing typo in `mattersAsCounsel`: the Pac Rim Cayman matter appears
+  twice with "Advogada da **R**equerente" vs "Advogada da **r**equerente". Not
+  part of this instruction set.
 - The `/cases` page image reference `EricaFranzetti39134-RT.jpg` is not present in
   `client/public/images/` (pre-existing; the Cases page was not part of this
   request).

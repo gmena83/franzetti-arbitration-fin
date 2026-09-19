@@ -214,7 +214,7 @@ DOM_CHECKS = [
     ("/thought-leadership|publication", "Publication: new 2026 Organizacao da Audiencia de Instrucao added",
      "Organizacao da Audiencia de Instrucao: Boas Praticas"),
     ("/thought-leadership|publication", "Publication: Lei de Arbitragem Comentada (Article 12) present",
-     "Lei de Arbitragem Comentada: Lei no 9.307/1996"),
+     "Lei de Arbitragem Comentada: Lei No. 9.307/1996"),
     ("/thought-leadership|publication", "Publication: A Structured Guide to Arbitration Law and Practice in Brazil present",
      "A Structured Guide to Arbitration Law and Practice in Brazil"),
     ("/thought-leadership|publication", "Publication: Directrices Practicas Para la Redaccion del Acuerdo Arbitral present",
@@ -369,6 +369,32 @@ def data_checks():
     check("data/publications", "new publication sits at the top of the 2026 entries",
           "Organizacao da Audiencia" in pubs[1], pubs[1][:70])
 
+    # --- every CV list item fully localised (no silent English fallback)
+    for item in c["professionalBackground"]:
+        for f in ("location", "locationES", "locationPT", "role", "roleES", "rolePT"):
+            check("data/experience", f"professionalBackground {item['title'][:28]!r}.{f} localised",
+                  bool(str(item.get(f, "")).strip()), repr(item.get(f)))
+    for item in c["education"]:
+        # only require a language variant where the English field is actually populated
+        for base in ("degree", "note", "location"):
+            if str(item.get(base, "")).strip():
+                check("data/experience", f"education {item['institution'][:28]!r}.{base} localised in ES/PT",
+                      bool(str(item.get(base + "ES", "")).strip()) and bool(str(item.get(base + "PT", "")).strip()),
+                      f"ES={item.get(base + 'ES')!r} PT={item.get(base + 'PT')!r}")
+
+    # --- publication wording aligned with the client's document
+    pub_txt = {p["title"]["EN"]: p["publication"] for p in c["thoughtLeadership"]["publications"]}
+    dp = next((v for k, v in pub_txt.items() if k.startswith("Directrices")), {})
+    check("data/publications", "'Directrices...' EN cites 'Tratado de Derecho Arbitral' (Spanish title)",
+          "Tratado de Derecho Arbitral" in dp.get("EN", ""), dp.get("EN", ""))
+    check("data/publications", "'Directrices...' EN no longer duplicates '(Co-author)'",
+          "(Co-author)" not in dp.get("EN", "") and "(Coautor)" not in dp.get("PT", ""), dp.get("EN", ""))
+    sg = next((v for k, v in pub_txt.items() if k.startswith("A Structured Guide")), {})
+    check("data/publications", "'A Structured Guide' carries the full date (September 17, 2014)",
+          "September 17, 2014" in sg.get("EN", ""), sg.get("EN", ""))
+    check("data/publications", "'Lei No. 9.307/1996' in the commented-arbitration-act title",
+          any(k.endswith("Lei No. 9.307/1996") for k in pub_txt), "")
+
     # --- CV PDF: byte-identical to the client's supplied file
     import hashlib
     def md5(p):
@@ -434,6 +460,8 @@ LANG_CHECKS = {
         ("Association: ICDR corrected", "Centro Internacional para la Resolución de Disputas (ICDR)"),
         ("Teaching: American University", "American University Washington College of Law"),
         ("Teaching: NOVA", "NOVA School of Law"),
+        ("Education: Georgetown note translated (no EN fallback)", "Estudios Internacionales, Distinción y Lista del Decano"),
+        ("Professional Background: Weil / Crowell location", "Washington, D.C., Asociada Senior"),
     ],
     "Português": [
         ("About p1 translated", "carreira jurídica de 25 anos em escritórios de advocacia líderes de mercado"),

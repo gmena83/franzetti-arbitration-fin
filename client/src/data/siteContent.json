@@ -329,7 +329,9 @@
                 "period": "Jul. 2012 – Sept. 2015",
                 "logo": "/images/weil-logo-new.png",
                 "url": "https://www.weil.com",
-                "roleES": "Asociada Senior"
+                "roleES": "Asociada Senior",
+                "locationES": "Washington, D.C.",
+                "locationPT": "Washington, D.C."
             },
             {
                 "title": "Crowell & Moring LLP",
@@ -339,7 +341,9 @@
                 "period": "Sept. 2008 – Jul. 2012",
                 "logo": "/images/crowell-logo-new.png",
                 "url": "https://www.crowell.com",
-                "roleES": "Asociada"
+                "roleES": "Asociada",
+                "locationES": "Washington, D.C.",
+                "locationPT": "Washington, D.C."
             },
             {
                 "title": "Wald & Advogados Associados",
@@ -423,6 +427,7 @@
                 "institution": "Georgetown University Law Center",
                 "note": "International Studies, Distinction and Dean’s List",
                 "notePT": "Distinção de honra (High Distinction) e Lista do Reitor (Dean's List)",
+                "noteES": "Estudios Internacionales, Distinción y Lista del Decano",
                 "location": "Washington, D.C.",
                 "year": "2008",
                 "logo": "/images/georgetown-logo-new.png",
@@ -432,13 +437,14 @@
                 "locationPT": "Washington, D.C."
             },
             {
-                "degree": "Postgraduate Specialization",
+                "degree": "Postgraduate Specialization in Business and Economics Law",
                 "degreePT": "Pós-Graduação (Especialização) em Direito Empresarial e Econômico",
                 "institution": "Getúlio Vargas Foundation",
                 "institutionPT": "Fundação Getúlio Vargas",
-                "note": "in Business and Economics Law",
+                "note": "",
                 "notePT": "",
                 "location": "São Paulo, Brazil",
+                "locationES": "São Paulo, Brasil",
                 "locationPT": "São Paulo, Brasil",
                 "year": "2006",
                 "logo": "/images/fgv-logo.png",
@@ -453,6 +459,7 @@
                 "institutionPT": "Faculdade de Direito da Universidade de São Paulo (USP)",
                 "note": "",
                 "location": "São Paulo, Brazil",
+                "locationES": "São Paulo, Brasil",
                 "locationPT": "São Paulo, Brasil",
                 "year": "2000",
                 "logo": "/images/usp-logo.png",
@@ -1576,8 +1583,8 @@
                 },
                 {
                     "title": {
-                        "EN": "Lei de Arbitragem Comentada: Lei nº 9.307/1996",
-                        "PT": "Lei de Arbitragem Comentada: Lei nº 9.307/1996",
+                        "EN": "Lei de Arbitragem Comentada: Lei No. 9.307/1996",
+                        "PT": "Lei de Arbitragem Comentada: Lei No. 9.307/1996",
                         "ES": "Lei de Arbitragem Comentada: Lei No. 9.307/1996"
                     },
                     "publication": {
@@ -1641,9 +1648,9 @@
                         "ES": "A Structured Guide to Arbitration Law and Practice in Brazil"
                     },
                     "publication": {
-                        "EN": "Lexology Q&A, September 2014, updated March 2019",
-                        "PT": "Lexology Q&A, setembro de 2014, atualizado em março de 2019",
-                        "ES": "Lexology Q&A, septiembre 2014, actualizado marzo 2019"
+                        "EN": "Lexology Q&A, September 17, 2014, updated March 2019",
+                        "PT": "Lexology Q&A, 17 de setembro de 2014, atualizado em março de 2019",
+                        "ES": "Lexology Q&A, 17 de septiembre de 2014, actualizado en marzo de 2019"
                     }
                 },
                 {
@@ -1689,8 +1696,8 @@
                         "ES": "Directrices Prácticas Para la Redacción del Acuerdo Arbitral"
                     },
                     "publication": {
-                        "EN": "co-author, Tratado de Direito Arbitral, Vol. 2 (Co-author), March 2011",
-                        "PT": "coautora, Tratado de Direito Arbitral, Vol. 2 (Coautor), março de 2011",
+                        "EN": "co-author, Tratado de Derecho Arbitral, Vol. 2, March 2011",
+                        "PT": "coautora, Tratado de Direito Arbitral, Vol. 2, março de 2011",
                         "ES": "coautora, Tratado de Derecho Arbitral, vol. 2, coautora, marzo de 2011."
                     }
                 },
