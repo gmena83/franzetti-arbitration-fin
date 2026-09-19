@@ -45,9 +45,9 @@
             "PT": "Sobre"
         },
         "about.description": {
-            "EN": "Erica Franzetti is an independent arbitrator and international disputes counsel. With a 25‑year career at market‑leading law firms, she has a longstanding track record in commercial and investor‑State arbitration across a wide range of industries and jurisdictions. She focuses her practice on serving as an independent arbitrator in complex cross‑border disputes and on advising clients on dispute strategy, enforcement, and investment protection. Her work has particular emphasis on energy, natural resources and infrastructure disputes.",
-            "ES": "Erica Franzetti es árbitro internacional y abogada de disputas internacionales. Con una carrera de 25 años en firmas de abogados líderes en el mercado, tiene una larga trayectoria en arbitraje comercial y de inversión-Estado en una amplia gama de industrias y jurisdicciones. Enfoca su práctica en actuar como árbitro independiente en disputas transfronterizas complejas y en asesorar a clientes sobre estrategia de disputas, ejecución y protección de inversiones. Su trabajo tiene un énfasis particular en disputas de energía, recursos naturales e infraestructura.",
-            "PT": "Erica Franzetti é árbitro internacional e advogada de disputas internacionais. Com uma carreira de 25 anos em escritórios de advocacia líderes de mercado, ela possui um longo histórico em arbitragem comercial e investidor-Estado em uma ampla gama de indústrias e jurisdições. Ela foca sua prática em atuar como árbitro independente em disputas transfronteiriças complexas e em assessorar clientes sobre estratégia de disputas, execução e proteção de investimentos. Seu trabalho tem ênfase particular em disputas de energia, recursos naturais e infraestrutura."
+            "EN": "Erica Franzetti is an independent arbitrator and international disputes counsel. With a 25-year legal career at market-leading law firms, she has extensive experience in commercial and investor-State arbitration across a wide range of industries and jurisdictions. Her practice focuses on serving as an independent arbitrator in complex cross-border disputes and advising on complex international disputes, particularly in the energy, natural resources, and infrastructure sectors.",
+            "ES": "Erica Franzetti es una árbitra independiente y abogada especializada en disputas internacionales. Con una carrera jurídica de 25 años en firmas de abogados líderes en el mercado, cuenta con amplia experiencia en arbitraje comercial y de inversión-Estado en una amplia gama de industrias y jurisdicciones. Su práctica se centra en actuar como árbitra independiente en disputas transfronterizas complejas y en asesorar sobre disputas internacionales complejas, en particular en los sectores de energía, recursos naturales e infraestructura.",
+            "PT": "Erica Franzetti é árbitra independente e advogada especializada em disputas internacionais. Com uma carreira jurídica de 25 anos em escritórios de advocacia líderes de mercado, possui ampla experiência em arbitragem comercial e de investimento (investidor-Estado) em uma ampla gama de setores e jurisdições. Sua prática concentra-se em atuar como árbitra independente em disputas transfronteiriças complexas e em assessorar sobre disputas internacionais complexas, especialmente nos setores de energia, recursos naturais e infraestrutura."
         },
         "section.professionalBackground": {
             "EN": "Professional Background",
@@ -100,14 +100,14 @@
             "PT": "Serviços"
         },
         "section.independentArbitrator": {
-            "EN": "Independent Arbitrator",
-            "ES": "Árbitra Independiente",
-            "PT": "Árbitra Independente"
+            "EN": "Arbitral Experience",
+            "ES": "Experiencia Arbitral",
+            "PT": "Experiência Arbitral"
         },
         "section.strategicAdvisory": {
-            "EN": "Strategic Advisory and Consulting",
-            "ES": "Asesoría Estratégica y Consultoría",
-            "PT": "Assessoria Estratégica e Consultoria"
+            "EN": "Advisory Experience",
+            "ES": "Experiencia en Asesoría",
+            "PT": "Experiência em Assessoria"
         },
         "section.multijurisdictional": {
             "EN": "Multijurisdictional and Multisectoral Experience",
@@ -115,9 +115,9 @@
             "PT": "Experiência Multijurisdicional e Multisetorial"
         },
         "section.thoughtLeadershipTrajectory": {
-            "EN": "Thought Leadership and Professional Trajectory",
-            "ES": "Liderazgo Intelectual y Trayectoria Profesional",
-            "PT": "Liderança Intelectual e Trajetória Profissional"
+            "EN": "Recognition and Professional Background",
+            "ES": "Reconocimiento y Trayectoria Profesional",
+            "PT": "Reconhecimento e Trajetória Profissional"
         },
         "thoughtLeadership.title": {
             "EN": "Thought Leadership",
@@ -299,31 +299,31 @@
         "professionalBackground": [
             {
                 "title": "King & Spalding LLP",
-                "location": "Washington, DC and Miami",
+                "location": "Washington, D.C. and Miami",
                 "role": "Partner",
                 "rolePT": "Sócia",
                 "period": "Sept. 2021 – Jan. 2026",
                 "logo": "/images/king-spalding-logo.png",
                 "url": "https://www.kslaw.com",
                 "roleES": "Socia",
-                "locationES": "Washington, DC y Miami",
-                "locationPT": "Washington, DC e Miami"
+                "locationES": "Washington, D.C. y Miami",
+                "locationPT": "Washington, D.C. e Miami"
             },
             {
                 "title": "Dechert LLP",
-                "location": "Washington, DC",
+                "location": "Washington, D.C.",
                 "role": "Partner / Counsel",
                 "rolePT": "Sócia / Counsel",
                 "period": "Sept. 2015 – Sept. 2021",
                 "logo": "/images/dechert-logo-new.png",
                 "url": "https://www.dechert.com",
                 "roleES": "Socia / Consejera Jurídica",
-                "locationES": "Washington, DC",
-                "locationPT": "Washington, DC"
+                "locationES": "Washington, D.C.",
+                "locationPT": "Washington, D.C."
             },
             {
                 "title": "Weil, Gotshal & Manges LLP",
-                "location": "Washington, DC",
+                "location": "Washington, D.C.",
                 "role": "Senior Associate",
                 "rolePT": "Associada Sênior",
                 "period": "Jul. 2012 – Sept. 2015",
@@ -333,7 +333,7 @@
             },
             {
                 "title": "Crowell & Moring LLP",
-                "location": "Washington, DC",
+                "location": "Washington, D.C.",
                 "role": "Associate",
                 "rolePT": "Associada",
                 "period": "Sept. 2008 – Jul. 2012",
@@ -390,6 +390,30 @@
                 "url": "https://www.law.georgetown.edu",
                 "roleES": "Profesora Adjunta",
                 "courseES": "Resolución de Controversias Inversionista-Estado"
+            },
+            {
+                "institution": "American University Washington College of Law",
+                "role": "Guest Lecturer",
+                "rolePT": "Professora Convidada",
+                "roleES": "Profesora Invitada",
+                "course": "Advanced Practical Seminar on International Arbitration Involving a State Party; Practical Seminar on International Arbitration",
+                "coursePT": "Seminário Prático Avançado sobre Arbitragem Internacional Envolvendo um Estado-Parte; Seminário Prático sobre Arbitragem Internacional",
+                "courseES": "Seminario Práctico Avanzado sobre Arbitraje Internacional con una Parte Estatal; Seminario Práctico sobre Arbitraje Internacional",
+                "period": "July 2026; Sept. 2018",
+                "logo": "/images/american-university-wcl-logo.svg",
+                "url": "https://www.wcl.american.edu"
+            },
+            {
+                "institution": "NOVA School of Law",
+                "role": "Guest Lecturer",
+                "rolePT": "Professora Convidada",
+                "roleES": "Profesora Invitada",
+                "course": "Summer School on International Arbitration",
+                "coursePT": "Escola de Verão sobre Arbitragem Internacional",
+                "courseES": "Escuela de Verano sobre Arbitraje Internacional",
+                "period": "July 2023",
+                "logo": "/images/nova-school-of-law-logo.svg",
+                "url": "https://novalaw.unl.pt"
             }
         ],
         "education": [
@@ -399,11 +423,13 @@
                 "institution": "Georgetown University Law Center",
                 "note": "International Studies, Distinction and Dean’s List",
                 "notePT": "Distinção de honra (High Distinction) e Lista do Reitor (Dean's List)",
-                "location": "Washington D.C.",
+                "location": "Washington, D.C.",
                 "year": "2008",
                 "logo": "/images/georgetown-logo-new.png",
                 "url": "https://www.law.georgetown.edu",
-                "degreeES": "Master of Laws (LL.M.)"
+                "degreeES": "Master of Laws (LL.M.)",
+                "locationES": "Washington, D.C.",
+                "locationPT": "Washington, D.C."
             },
             {
                 "degree": "Postgraduate Specialization",
@@ -436,7 +462,14 @@
         ],
         "professionalAssociations": [
             {
-                "name": "Panel of Arbitrators of the International Centre of Dispute Resolution (ICDR)",
+                "name": "Fellow of the Chartered Institute of Arbitrators (FCIArb)",
+                "nameES": "Miembro del Chartered Institute of Arbitrators (FCIArb)",
+                "namePT": "Membro do Chartered Institute of Arbitrators (FCIArb)",
+                "logo": "/images/logos/ciarb.jpg",
+                "url": "https://www.ciarb.org"
+            },
+            {
+                "name": "Panel of Arbitrators of the International Centre for Dispute Resolution (ICDR)",
                 "nameES": "Panel de Árbitros del Centro Internacional para la Resolución de Disputas (ICDR)",
                 "namePT": "Lista de Árbitros do International Centre for Dispute Resolution (ICDR)",
                 "logo": "/images/logos/aaa-icdr.jpg",
@@ -485,7 +518,7 @@
                 "url": ""
             },
             {
-                "name": "Arbitration & Mediation Committee of the International Court of Commerce (ICC) Brazil",
+                "name": "Arbitration & Mediation Committee of the International Chamber of Commerce (ICC) Brazil",
                 "nameES": "Comité de Arbitraje y Mediación de la Cámara de Comercio Internacional (CCI) Brasil",
                 "namePT": "Comitê de Arbitragem e Mediação da Câmara de Comércio Internacional (CCI) Brasil",
                 "logo": "/images/logos/icc.png",
@@ -497,6 +530,13 @@
                 "namePT": "Comitê de Arbitragem do Conselho Empresarial dos Estados Unidos para o Comércio Internacional (USCIB)",
                 "logo": "/images/logos/uscib.png",
                 "url": "https://www.uscib.org"
+            },
+            {
+                "name": "Brazilian Arbitration Committee (CBAr)",
+                "nameES": "Comité Brasileño de Arbitraje (CBAr)",
+                "namePT": "Comitê Brasileiro de Arbitragem (CBAr)",
+                "logo": "/images/logos/cbar.jpg",
+                "url": "https://cbar.org.br"
             },
             {
                 "name": "Arbitral Women",
@@ -741,6 +781,38 @@
                     "period": "2017-2022",
                     "logo": "/images/georgetown-logo-new.png",
                     "url": "https://www.law.georgetown.edu"
+                },
+                {
+                    "institution": "American University Washington College of Law",
+                    "role": {
+                        "EN": "Guest Lecturer",
+                        "PT": "Professora Convidada",
+                        "ES": "Profesora Invitada"
+                    },
+                    "course": {
+                        "EN": "Advanced Practical Seminar on International Arbitration Involving a State Party; Practical Seminar on International Arbitration",
+                        "PT": "Seminário Prático Avançado sobre Arbitragem Internacional Envolvendo um Estado-Parte; Seminário Prático sobre Arbitragem Internacional",
+                        "ES": "Seminario Práctico Avanzado sobre Arbitraje Internacional con una Parte Estatal; Seminario Práctico sobre Arbitraje Internacional"
+                    },
+                    "period": "July 2026; Sept. 2018",
+                    "logo": "/images/american-university-wcl-logo.svg",
+                    "url": "https://www.wcl.american.edu"
+                },
+                {
+                    "institution": "NOVA School of Law",
+                    "role": {
+                        "EN": "Guest Lecturer",
+                        "PT": "Professora Convidada",
+                        "ES": "Profesora Invitada"
+                    },
+                    "course": {
+                        "EN": "Summer School on International Arbitration",
+                        "PT": "Escola de Verão sobre Arbitragem Internacional",
+                        "ES": "Escuela de Verano sobre Arbitraje Internacional"
+                    },
+                    "period": "July 2023",
+                    "logo": "/images/nova-school-of-law-logo.svg",
+                    "url": "https://novalaw.unl.pt"
                 }
             ],
             "speakingEngagements": [
@@ -775,9 +847,9 @@
                         "PT": "Using Witness Statements in Arbitration in Latin America"
                     },
                     "event": {
-                        "EN": "ICDR/Ciarb/University of Miami School of Law, Miami (March 2, 2026)",
+                        "EN": "ICDR/CIArb/University of Miami School of Law, Miami (March 2, 2026)",
                         "ES": "ICDR/CIArb/Facultad de Derecho de la Universidad de Miami, Miami (2 de marzo de 2026)",
-                        "PT": "ICDR/Ciarb/Faculdade de Direito da Universidade de Miami, Miami (2 de março de 2026)"
+                        "PT": "ICDR/CIArb/Faculdade de Direito da Universidade de Miami, Miami (2 de março de 2026)"
                     }
                 },
                 {
@@ -854,14 +926,14 @@
                 },
                 {
                     "title": {
-                        "EN": "Arbitration in the Commercial Aviation Sector with Brazilian Parties",
-                        "ES": "Arbitraje en el Sector de Aviación Comercial con Partes Brasileñas",
+                        "EN": "Arbitragem no Setor de Aviação Comercial com Partes Brasileiras",
+                        "ES": "Arbitragem no Setor de Aviação Comercial com Partes Brasileiras",
                         "PT": "Arbitragem no Setor de Aviação Comercial com Partes Brasileiras"
                     },
                     "event": {
-                        "EN": "Arbitration Channel (October 29, 2024)",
-                        "ES": "Canal de Arbitraje (29 de octubre de 2024)",
-                        "PT": "Canal de Arbitragem (29 de outubro de 2024)"
+                        "EN": "Arbitration Channel Webinar (October 29, 2024)",
+                        "ES": "Webinar del Arbitration Channel (29 de octubre de 2024)",
+                        "PT": "Webinar do Arbitration Channel (29 de outubro de 2024)"
                     }
                 },
                 {
@@ -926,14 +998,14 @@
                 },
                 {
                     "title": {
-                        "EN": "Business Contracts and Arbitration in Regulated Sectors: Party Autonomy and Regulatory Heteronomy",
-                        "ES": "Contratos Comerciales y Arbitraje en Sectores Regulados: Autonomía de las Partes y Heteronomía Regulatoria",
+                        "EN": "Contratos Comerciais e Arbitragem em Setores Regulados: Autonomia das Partes e Heteronomia Regulatória",
+                        "ES": "Contratos Comerciais e Arbitragem em Setores Regulados: Autonomia das Partes e Heteronomia Regulatória",
                         "PT": "Contratos Comerciais e Arbitragem em Setores Regulados: Autonomia das Partes e Heteronomia Regulatória"
                     },
                     "event": {
-                        "EN": "CBAR 22nd International Arbitration Conference, Rio de Janeiro (September 14, 2023)",
-                        "ES": "CBAR 22ª Conferencia Internacional de Arbitraje, Río de Janeiro (14 de septiembre de 2023)",
-                        "PT": "CBAR 22ª Conferência Internacional de Arbitragem, Rio de Janeiro (14 de setembro de 2023)"
+                        "EN": "CBAr 22nd International Arbitration Conference, Rio de Janeiro (September 14, 2023)",
+                        "ES": "22.ª Conferencia Internacional de Arbitraje del CBAr, Río de Janeiro (14 de septiembre de 2023)",
+                        "PT": "22ª Conferência Internacional de Arbitragem do CBAr, Rio de Janeiro (14 de setembro de 2023)"
                     }
                 },
                 {
@@ -1070,32 +1142,44 @@
                 },
                 {
                     "title": {
-                        "EN": "Virtual Hearings in International Arbitration –Vancouver International Arbitration Centre Webinar (October 5",
+                        "EN": "Virtual Hearings in International Arbitration",
                         "ES": "Audiencias Virtuales en Arbitraje Internacional",
                         "PT": "Audiências Virtuais em Arbitragem Internacional"
                     },
                     "event": {
-                        "EN": "2020)",
+                        "EN": "Vancouver International Arbitration Centre Webinar (October 5, 2020)",
                         "ES": "Webinar del Centro de Arbitraje Internacional de Vancouver (5 de octubre de 2020)",
                         "PT": "Webinar do Centro de Arbitragem Internacional de Vancouver (5 de outubro de 2020)"
                     }
                 },
                 {
                     "title": {
-                        "EN": "Key Considerations for Legal Positions on Force Majeure: Practical Steps if Disputes are Inevitable – Nairobi Centre For International Arbitration Webinar (August 13",
+                        "EN": "Key Considerations for Legal Positions on Force Majeure: Practical Steps if Disputes are Inevitable",
                         "ES": "Consideraciones Clave para Posiciones Legales sobre Fuerza Mayor: Pasos Prácticos si las Disputas son Inevitables",
                         "PT": "Considerações Chave para Posições Legais sobre Força Maior: Passos Práticos se as Disputas são Inevitáveis"
                     },
                     "event": {
-                        "EN": "2020)",
+                        "EN": "Nairobi Centre for International Arbitration Webinar (August 13, 2020)",
                         "ES": "Webinar del Centro de Arbitraje Internacional de Nairobi (13 de agosto de 2020)",
                         "PT": "Webinar do Centro de Arbitragem Internacional de Nairobi (13 de agosto de 2020)"
                     }
                 },
                 {
                     "title": {
-                        "EN": "Virtual Proceedings and Guerrilla Tactics in Arbitration",
-                        "ES": "Procedimientos Virtuales y Tácticas de Guerrilla en Arbitraje",
+                        "EN": "From NAFTA to USMCA: A Discussion on Key Changes to Trade and Investment",
+                        "ES": "From NAFTA to USMCA: A Discussion on Key Changes to Trade and Investment",
+                        "PT": "From NAFTA to USMCA: A Discussion on Key Changes to Trade and Investment"
+                    },
+                    "event": {
+                        "EN": "Dechert LLP Webinar (July 29, 2020)",
+                        "ES": "Webinar de Dechert LLP (29 de julio de 2020)",
+                        "PT": "Webinar da Dechert LLP (29 de julho de 2020)"
+                    }
+                },
+                {
+                    "title": {
+                        "EN": "Procedimentos Virtuais e Táticas de Guerrilha em Arbitragem",
+                        "ES": "Procedimentos Virtuais e Táticas de Guerrilha em Arbitragem",
                         "PT": "Procedimentos Virtuais e Táticas de Guerrilha em Arbitragem"
                     },
                     "event": {
@@ -1106,14 +1190,14 @@
                 },
                 {
                     "title": {
-                        "EN": "Virtual Arbitrations: Advantages and Disadvantages",
+                        "EN": "Arbitrajes Virtuales: Ventajas e Inconvenientes",
                         "ES": "Arbitrajes Virtuales: Ventajas e Inconvenientes",
-                        "PT": "Arbitragens Virtuais: Vantagens e Inconvenientes"
+                        "PT": "Arbitrajes Virtuales: Ventajas e Inconvenientes"
                     },
                     "event": {
-                        "EN": "Webinar organized by IPA Instituto Peruano de Arbitraje (May 14, 2020)",
-                        "ES": "Webinar organizado por IPA Instituto Peruano de Arbitraje (14 de mayo de 2020)",
-                        "PT": "Webinar organizado pelo IPA Instituto Peruano de Arbitraje (14 de maio de 2020)"
+                        "EN": "IPA Instituto Peruano de Arbitraje Webinar (May 14, 2020)",
+                        "ES": "Webinar del IPA Instituto Peruano de Arbitraje (14 de mayo de 2020)",
+                        "PT": "Webinar do IPA Instituto Peruano de Arbitraje (14 de maio de 2020)"
                     }
                 },
                 {
@@ -1142,12 +1226,12 @@
                 },
                 {
                     "title": {
-                        "EN": "Arbitration",
+                        "EN": "Arbitration, Cybersecurity and Data Protection",
                         "ES": "Arbitraje, Ciberseguridad y Protección de Datos",
                         "PT": "Arbitragem, Cibersegurança e Proteção de Dados"
                     },
                     "event": {
-                        "EN": "Cybersecurity and Data Protection —VI CAM-CCBC Arbitration Congress, São Paulo (October 22, 2019)",
+                        "EN": "VI CAM-CCBC Arbitration Congress, São Paulo (October 22, 2019)",
                         "ES": "VI Congreso de Arbitraje CAM-CCBC, São Paulo (22 de octubre de 2019)",
                         "PT": "VI Congresso de Arbitragem CAM-CCBC, São Paulo (22 de outubro de 2019)"
                     }
@@ -1183,9 +1267,21 @@
                         "PT": "A Jurisprudência Como Arma. É Urgente e Necessária a Fixação de Critérios Jurisprudenciais Previsíveis Pelos Tribunais Nacionais Sobre os Questionamentos às Sentenças Arbitrais?"
                     },
                     "event": {
-                        "EN": "XII Congreso Internacional de Arbitraje, IPA, Lima, (April 24, 2019)  (Translate)",
+                        "EN": "XII Congreso Internacional de Arbitraje, IPA, Lima (April 24, 2019)",
                         "ES": "XII Congreso Internacional de Arbitraje, IPA, Lima (24 de abril de 2019)",
                         "PT": "XII Congresso Internacional de Arbitragem, IPA, Lima (24 de abril de 2019)"
+                    }
+                },
+                {
+                    "title": {
+                        "EN": "Negotiation of Treaties for the Promotion and Protection of Foreign Investment",
+                        "ES": "Negotiation of Treaties for the Promotion and Protection of Foreign Investment",
+                        "PT": "Negotiation of Treaties for the Promotion and Protection of Foreign Investment"
+                    },
+                    "event": {
+                        "EN": "Private seminar organized by Dechert LLP for Embassies, Washington, D.C. (April 10, 2019)",
+                        "ES": "Seminario privado organizado por Dechert LLP para Embajadas, Washington, D.C. (10 de abril de 2019)",
+                        "PT": "Seminário privado organizado pela Dechert LLP para Embaixadas, Washington, D.C. (10 de abril de 2019)"
                     }
                 },
                 {
@@ -1202,21 +1298,21 @@
                 },
                 {
                     "title": {
-                        "EN": "Has Winter Arrived in Arbitration? Crisis, Ethics, and Corruption",
+                        "EN": "¿Ha Llegado el Invierno al Arbitraje? ¿Crisis, Ética y Corrupción?",
                         "ES": "¿Ha Llegado el Invierno al Arbitraje? ¿Crisis, Ética y Corrupción?",
-                        "PT": "Chegou o Inverno à Arbitragem? Crise, Ética e Corrupção?"
+                        "PT": "¿Ha Llegado el Invierno al Arbitraje? ¿Crisis, Ética y Corrupción?"
                     },
                     "event": {
-                        "EN": "International Women in Arbitration Conference, Instituto Peruano de Arbitraje, Lima (January 31, 2019)",
+                        "EN": "Conferencia Internacional de Mujeres en Arbitraje, Instituto Peruano de Arbitraje, Lima (January 31, 2019)",
                         "ES": "Conferencia Internacional de Mujeres en Arbitraje, Instituto Peruano de Arbitraje, Lima (31 de enero de 2019)",
                         "PT": "Conferência Internacional de Mulheres em Arbitragem, Instituto Peruano de Arbitraje, Lima (31 de janeiro de 2019)"
                     }
                 },
                 {
                     "title": {
-                        "EN": "How to Address a Domestic or International Public-Private Partnership Arbitration?",
+                        "EN": "¿Cómo Afrontar un Arbitraje Nacional o Internacional de Asociación Público-Privada?",
                         "ES": "¿Cómo Afrontar un Arbitraje Nacional o Internacional de Asociación Público-Privada?",
-                        "PT": "Como Enfrentar uma Arbitragem Nacional ou Internacional de Parceria Público-Privada?"
+                        "PT": "¿Cómo Afrontar un Arbitraje Nacional o Internacional de Asociación Público-Privada?"
                     },
                     "event": {
                         "EN": "Lima (January 30, 2019)",
@@ -1250,6 +1346,18 @@
                 },
                 {
                     "title": {
+                        "EN": "Aspectos Prácticos del Arbitraje Internacional",
+                        "ES": "Aspectos Prácticos del Arbitraje Internacional",
+                        "PT": "Aspectos Prácticos del Arbitraje Internacional"
+                    },
+                    "event": {
+                        "EN": "Private seminar organized by Dirección Nacional de Vialidad, in cooperation with the ICDR, Buenos Aires, Argentina (July 27, 2018)",
+                        "ES": "Seminario privado organizado por la Dirección Nacional de Vialidad, en cooperación con el ICDR, Buenos Aires, Argentina (27 de julio de 2018)",
+                        "PT": "Seminário privado organizado pela Dirección Nacional de Vialidad, em cooperação com o ICDR, Buenos Aires, Argentina (27 de julho de 2018)"
+                    }
+                },
+                {
+                    "title": {
                         "EN": "Duty to Disclose and Brazilian Arbitration Culture",
                         "ES": "Deber de Revelar y Cultura del Arbitraje Brasileño",
                         "PT": "Dever de Revelar e Cultura da Arbitragem Brasileira"
@@ -1274,14 +1382,14 @@
                 },
                 {
                     "title": {
-                        "EN": "Arbitrators and Counsel's Perspectives on the Development of International Arbitration",
+                        "EN": "Visión de los Árbitros y Abogados Sobre el Desarrollo del Arbitraje Internacional",
                         "ES": "Visión de los Árbitros y Abogados Sobre el Desarrollo del Arbitraje Internacional",
-                        "PT": "Visão dos Árbitros e Advogados Sobre o Desenvolvimento da Arbitragem Internacional"
+                        "PT": "Visión de los Árbitros y Abogados Sobre el Desarrollo del Arbitraje Internacional"
                     },
                     "event": {
-                        "EN": "National and International Arbitration Congress, Arbitration and Conciliation Center, Bogota, Colombia (April 2, 2017)",
-                        "ES": "Congreso de Arbitraje Nacional e Internacional, Centro de Arbitraje y Conciliación, Bogotá, Colombia (2 de abril de 2017)",
-                        "PT": "Congresso de Arbitragem Nacional e Internacional, Centro de Arbitragem e Conciliação, Bogotá, Colômbia (2 de abril de 2017)"
+                        "EN": "National and International Arbitration Congress, Arbitration and Conciliation Center, Bogotá (April 2, 2017)",
+                        "ES": "Congreso Nacional e Internacional de Arbitraje, Centro de Arbitraje y Conciliación, Bogotá (2 de abril de 2017)",
+                        "PT": "Congresso Nacional e Internacional de Arbitragem, Centro de Arbitragem e Conciliação, Bogotá (2 de abril de 2017)"
                     }
                 },
                 {
@@ -1303,9 +1411,9 @@
                         "PT": "Aspectos Práticos da Arbitragem Internacional"
                     },
                     "event": {
-                        "EN": "International Centre of Dispute Resolution, International Arbitration Symposium, New York, NY (May 27, 2016)",
-                        "ES": "Centro Internacional de Resolución de Disputas, Simposio de Arbitraje Internacional, Nueva York, NY (27 de mayo de 2016)",
-                        "PT": "Centro Internacional de Resolução de Disputas, Simpósio de Arbitragem Internacional, Nova York, NY (27 de maio de 2016)"
+                        "EN": "ICDR, International Arbitration Symposium, New York (May 27, 2016)",
+                        "ES": "ICDR, Simposio de Arbitraje Internacional, Nueva York (27 de mayo de 2016)",
+                        "PT": "ICDR, Simpósio de Arbitragem Internacional, Nova York (27 de maio de 2016)"
                     }
                 },
                 {
@@ -1382,14 +1490,14 @@
                 },
                 {
                     "title": {
-                        "EN": "The Arbitrator's Role in the Assessment of Damages",
-                        "ES": "El Papel del Árbitro en la Evaluación de Daños",
+                        "EN": "O Papel do Árbitro na Avaliação de Danos",
+                        "ES": "O Papel do Árbitro na Avaliação de Danos",
                         "PT": "O Papel do Árbitro na Avaliação de Danos"
                     },
                     "event": {
-                        "EN": "XI Brazilian Arbitration Committee Congress--CBAr: Economic Aspects of Arbitration, Porto Alegre (September 2012)",
-                        "ES": "XI Congreso del Comité Brasileño de Arbitraje--CBAr: Aspectos Económicos del Arbitraje, Porto Alegre (septiembre de 2012)",
-                        "PT": "XI Congresso do Comitê Brasileiro de Arbitragem--CBAr: Aspectos Econômicos da Arbitragem, Porto Alegre (setembro de 2012)"
+                        "EN": "XI Congresso do CBAr: Aspectos Econômicos da Arbitragem, Porto Alegre (September 2012)",
+                        "ES": "XI Congreso del CBAr: Aspectos Económicos del Arbitraje, Porto Alegre (septiembre de 2012)",
+                        "PT": "XI Congresso do CBAr: Aspectos Econômicos da Arbitragem, Porto Alegre (setembro de 2012)"
                     }
                 },
                 {
@@ -1440,6 +1548,18 @@
                         "EN": "AASP Law Review – Issue 169 (2026)",
                         "ES": "Revista de la AASP – Edición 169 (2026)",
                         "PT": "Revista da AASP – Edição 169 (2026)"
+                    }
+                },
+                {
+                    "title": {
+                        "EN": "“Organização da Audiência de Instrução: Boas Práticas,” chapter in the book Produção de Provas em Arbitragens de Construção (co-author), edited by Bruno Guandalini and Romulo Greff Mariana — Synergia (2026).",
+                        "PT": "“Organização da Audiência de Instrução: Boas Práticas,” capítulo do livro Produção de Provas em Arbitragens de Construção (coautora), editado por Bruno Guandalini e Romulo Greff Mariana — Synergia (2026).",
+                        "ES": "“Organização da Audiência de Instrução: Boas Práticas,” capítulo en el libro Produção de Provas em Arbitragens de Construção (coautora), editado por Bruno Guandalini y Romulo Greff Mariana — Synergia (2026)."
+                    },
+                    "publication": {
+                        "EN": "Book chapter in Produção de Provas em Arbitragens de Construção — Synergia (2026)",
+                        "PT": "Capítulo do livro Produção de Provas em Arbitragens de Construção — Synergia (2026)",
+                        "ES": "Capítulo en el libro Produção de Provas em Arbitragens de Construção — Synergia (2026)"
                     }
                 },
                 {
@@ -1590,9 +1710,9 @@
         },
         "about": {
             "p1": {
-                "EN": "Erica Franzetti is an independent arbitrator and international disputes counsel. With a 25‑year career at market‑leading law firms, she has a longstanding track record in commercial and investor‑State arbitration across a wide range of industries and jurisdictions. She focuses her practice on serving as an independent arbitrator in complex cross‑border disputes and on advising clients on dispute strategy, enforcement, and investment protection. Her work has particular emphasis on energy, natural resources and infrastructure disputes.",
-                "PT": "Érica Franzetti é árbitra independente e advogada especializada em disputas internacionais. Com uma carreira de 25 anos em escritórios de advocacia líderes de mercado, possui ampla experiencia em arbitragem comercial e de investimento (investidor-Estado) em diversos setores e jurisdições. Atualmente, concentra sua atuação na função decisória e no aconselhamento estratégico de disputas internacionais complexas, com ênfase nos setores de energia, recursos naturais e infraestrutura.",
-                "ES": "Érica Franzetti es una árbitra independiente y abogada de prestigio global, reconocida mundialmente por su destreza en la resolución de disputas de alta complejidad. Con una carrera de 25 años en despachos de abogados líderes del mercado, cuenta con una vasta experiencia en arbitraje comercial internacional e inversionista-Estado en diversas industrias y jurisdicciones. Actualmente, se especializa en la función decisoria y en la asesoría estratégica en disputas internacionales, con énfasis en disputas relativas a la energía, recursos naturales e infraestructura."
+                "EN": "Erica Franzetti is an independent arbitrator and international disputes counsel. With a 25-year legal career at market-leading law firms, she has extensive experience in commercial and investor-State arbitration across a wide range of industries and jurisdictions. Her practice focuses on serving as an independent arbitrator in complex cross-border disputes and advising on complex international disputes, particularly in the energy, natural resources, and infrastructure sectors.",
+                "ES": "Erica Franzetti es una árbitra independiente y abogada especializada en disputas internacionales. Con una carrera jurídica de 25 años en firmas de abogados líderes en el mercado, cuenta con amplia experiencia en arbitraje comercial y de inversión-Estado en una amplia gama de industrias y jurisdicciones. Su práctica se centra en actuar como árbitra independiente en disputas transfronterizas complejas y en asesorar sobre disputas internacionales complejas, en particular en los sectores de energía, recursos naturales e infraestructura.",
+                "PT": "Erica Franzetti é árbitra independente e advogada especializada em disputas internacionais. Com uma carreira jurídica de 25 anos em escritórios de advocacia líderes de mercado, possui ampla experiência em arbitragem comercial e de investimento (investidor-Estado) em uma ampla gama de setores e jurisdições. Sua prática concentra-se em atuar como árbitra independente em disputas transfronteiriças complexas e em assessorar sobre disputas internacionais complexas, especialmente nos setores de energia, recursos naturais e infraestrutura."
             },
             "quote1": {
                 "EN": "Erica is a superstar who stands out for her extremely well-versed approach in high-stakes international disputes.",
@@ -1605,50 +1725,50 @@
                 "ES": "The Legal 500"
             },
             "p2": {
-                "EN": "Erica serves as sole arbitrator, co-arbitrator, and presiding arbitrator in U.S. and international disputes. She draws on her linguistic and cultural fluency, as well as extensive experience across civil and common law traditions to manage proceedings efficiently, fairly, and with procedural rigor.",
-                "PT": "Érica atua como árbitra única, co-árbitra e presidente de tribunais arbitrais em disputas nos Estados Unidos e internacionais. Sua fluência linguística e sensibilidade cultural, assim como seu domínio tanto do direito civil quanto do common law, permitem que ela conduza procedimentos de forma eficiente, justa e com rigor procedimental.",
-                "ES": "Érica actúa como coárbitra, árbitra única y presidenta en tribunales domésticos (EE. UU.) e internacionales. Su fluidez lingüística y sensibilidad cultural, así como su dominio tanto del derecho civil como del common law, le permite dirigir procedimientos con eficiencia operativa, equidad y rigor procesal."
+                "EN": "A fellow of the Chartered Institute of Arbitrators (FCIArb), Erica serves as sole arbitrator, co-arbitrator and chair of arbitral tribunals. Her linguistic fluency and cultural sensitivity, together with her command of both civil law and common law systems, enable her to conduct proceedings efficiently, fairly, and with procedural rigor.",
+                "ES": "Miembro del Chartered Institute of Arbitrators (FCIArb), Erica actúa como árbitra única, coárbitra y presidenta de tribunales arbitrales. Su fluidez lingüística y sensibilidad cultural, junto con su dominio tanto del derecho civil como del common law, le permiten conducir los procedimientos con eficiencia, equidad y rigor procesal.",
+                "PT": "Membro do Chartered Institute of Arbitrators (FCIArb), Erica atua como árbitra única, co-árbitra e presidente de tribunais arbitrais. Sua fluência linguística e sensibilidade cultural, somadas ao seu domínio tanto do direito civil quanto do common law, permitem-lhe conduzir os procedimentos com eficiência, equidade e rigor procedimental."
             },
             "serviceList1": {
                 "EN": [
-                    "Experience under Multiple Arbitral Rules – Solid track record in international arbitrations administered under the ICC, AAA, ICDR, LCIA, ICSID, and UNCITRAL Rules.",
-                    "Excellence in Arbitral Case Management – Extensive experience managing arbitral tribunals and drafting arbitral awards, ensuring technically robust and enforceable decisions under diverse legal frameworks.",
-                    "Leadership in High-Value Disputes – Broad experience conducting transnational disputes and complex arbitrations, with a particular focus on cases involving high economic value and reputational risk."
-                ],
-                "PT": [
-                    "Atuação sob Diversos Regulamentos Arbitrais – Sólida trajetória em arbitragens internacionais sob diversos regulamentos de arbitragem e administradas por instituições de arbitragem líderes como a ICC, AAA, ICDR, LCIA, ICSID e UNCITRAL.",
-                    "Excelência na Condução do Procedimento Arbitral – Vasta experiência na gestão de tribunais arbitrais e na redação de sentenças arbitrais, garantindo decisões tecnicamente robustas e exequíveis sob diversos marcos normativos.",
-                    "Liderança em Disputas de Alto Valor – Ampla experiência na condução de disputas transnacionais e arbitragens complexas, com foco especial em casos de alto valor econômico e risco reputacional."
+                    "Experience under Multiple Arbitral Rules – Erica has acted as arbitrator and counsel in proceedings under the ICC, AAA, ICDR, LCIA, ICSID, and UNCITRAL Rules.",
+                    "Tribunal Management and Awards – She has substantial experience managing arbitral tribunals and drafting reasoned arbitral awards under diverse legal frameworks.",
+                    "Complex Cross-Border Disputes – Her work includes complex commercial and investor-State disputes involving significant commercial interests and reputational considerations."
                 ],
                 "ES": [
-                    "Actuación bajo Diversos Reglamentos Arbitrales – Sólida trayectoria en arbitrajes internacionales bajo diversos reglamentos arbitrales y administrados por las principales instituciones arbitrales como la ICC, AAA, ICDR, LCIA, CIADI y CNUDMI.",
-                    "Excelencia en la Conducción Procesal – Amplia experiencia en la gestión integral de tribunales arbitrales y en la redacción de laudos, asegurando decisiones técnicamente robustas y ejecutables bajo diversos marcos normativos.",
-                    "Liderazgo en Disputas de Alto Valor – Vasta experiencia dirigiendo litigios transnacionales y arbitrajes complejos, con especial enfoque en casos de alto valor económico y riesgo reputacional."
+                    "Experiencia bajo múltiples reglamentos arbitrales – Erica ha actuado como árbitra y abogada en procedimientos bajo los reglamentos de la ICC, la AAA, el ICDR, la LCIA, el CIADI y la CNUDMI.",
+                    "Gestión de tribunales y laudos – Cuenta con amplia experiencia en la gestión de tribunales arbitrales y en la redacción de laudos arbitrales fundamentados bajo diversos marcos jurídicos.",
+                    "Disputas transfronterizas complejas – Su trabajo incluye disputas comerciales y de inversión-Estado complejas que involucran intereses comerciales significativos y consideraciones reputacionales."
+                ],
+                "PT": [
+                    "Experiência sob diversos regulamentos arbitrais – Erica atuou como árbitra e advogada em procedimentos sob os regulamentos da ICC, AAA, ICDR, LCIA, ICSID e UNCITRAL.",
+                    "Gestão de tribunais e sentenças – Possui ampla experiência na gestão de tribunais arbitrais e na redação de sentenças arbitrais fundamentadas sob diversos marcos legais.",
+                    "Disputas transfronteiriças complexas – Seu trabalho inclui disputas comerciais e de investidor-Estado complexas, envolvendo interesses comerciais significativos e considerações reputacionais."
                 ]
             },
             "p3": {
-                "EN": "Erica also provides strategic advisory and consulting services to clients worldwide, helping them prevent disputes, optimize procedural strategy, and safeguard cross-border investments:",
-                "PT": "Erica também oferece assessoria e acompanhamento estratégico a clientes em diversos países, auxiliando-os na prevenção de disputas, na definição de estratégias processuais eficazes e na proteção de seus investimentos internacionais:",
-                "ES": "Erica también ofrece asesoría y acompañamiento estratégico a clientes en distintos países, ayudándoles a prevenir disputas, diseñar estrategias procesales eficaces y proteger sus inversiones internacionales:"
+                "EN": "Erica also provides strategic advisory and consulting services to clients worldwide, including:",
+                "ES": "Erica también presta servicios de asesoría estratégica y consultoría a clientes en todo el mundo, entre ellos:",
+                "PT": "Erica também presta serviços de assessoria estratégica e consultoria a clientes em todo o mundo, incluindo:"
             },
             "serviceList2": {
                 "EN": [
-                    "Early-Stage Dispute Prevention and Risk Assessment – Assessment of contingencies and development of preventive dispute structures.",
-                    "Strategic Guidance on Dispute Management and Procedural Positioning – Consulting on procedural strategy and tactical steps aimed at maximizing the likelihood of success.",
-                    "Protection of Global Investments under International Treaties – Analysis of treaty rights and obligations, risk assessment, and strategies for cross-border legal protection.",
-                    "Post-award and enforcement strategy across jurisdictions – Strategic planning for the recognition and enforcement of awards, as well as defense in annulment proceedings across multiple jurisdictions."
-                ],
-                "PT": [
-                    "Mitigação Preventiva e Gestão de Riscos – Avaliação de contingências e elaboração de estruturas preventivas de disputas.",
-                    "Direção Tática em Disputas Internacionais – Consultoria estratégica sobre a definição de postura processual e a seleção de táticas voltadas a maximizar as probabilidades de êxito.",
-                    "Proteção de Investimentos Internacionais – Análise de direitos e deveres previstos em tratados de investimento, avaliação de riscos e elaboração de estratégias de proteção jurídica transnacional.",
-                    "Reconhecimento e Execução de Sentença Arbitral – Aconselhamento estratégico para o reconhecimento e a execução de sentenças, bem como defesa em ações de anulação em múltiplas jurisdições."
+                    "Dispute Prevention and Risk Assessment – Assessment of potential disputes and development of structures designed to mitigate dispute risk.",
+                    "Dispute Strategy and Procedural Positioning – Advice on procedural strategy and tactical steps throughout the life cycle of a dispute.",
+                    "Protection of Cross-Border Investments – Analysis of treaty rights and obligations, risk assessment, and strategies to protect cross-border legal investments.",
+                    "Post-award and Enforcement Strategy – Strategic planning for the recognition and enforcement of awards, as well as the defense of set aside proceedings in multiple jurisdictions."
                 ],
                 "ES": [
-                    "Mitigación Preventiva y Gestión de Riesgos – Evaluación temprana de contingencias y diseño de estructuras preventivas de litigios.",
-                    "Dirección Táctica en Disputas Internacionales – Consultoría estratégica sobre el diseño de la postura procesal y la selección de tácticas procesales óptimas para maximizar las probabilidades de éxito.",
-                    "Protección de Inversiones Internacionales – Análisis especializado de la arquitectura de tratados de inversión, evaluación de riesgos, y diseño de estrategias de blindaje jurídico transnacional.",
-                    "Ingeniería de Ejecución y Fase Post-Laudo – Planificación estrategia para el reconocimiento y ejecución de laudos, así como defensa en procesos de anulación en múltiples jurisdicciones."
+                    "Prevención de disputas y evaluación de riesgos – Evaluación de posibles disputas y desarrollo de estructuras destinadas a mitigar el riesgo de disputas.",
+                    "Estrategia de disputas y posicionamiento procesal – Asesoramiento sobre estrategia procesal y pasos tácticos a lo largo del ciclo de vida de una disputa.",
+                    "Protección de inversiones transfronterizas – Análisis de los derechos y obligaciones derivados de tratados, evaluación de riesgos y estrategias para proteger inversiones jurídicas transfronterizas.",
+                    "Estrategia posterior al laudo y de ejecución – Planificación estratégica para el reconocimiento y la ejecución de laudos, así como la defensa en procedimientos de anulación en múltiples jurisdicciones."
+                ],
+                "PT": [
+                    "Prevenção de disputas e avaliação de riscos – Avaliação de potenciais disputas e desenvolvimento de estruturas destinadas a mitigar o risco de disputas.",
+                    "Estratégia de disputas e posicionamento processual – Assessoria sobre estratégia processual e passos táticos ao longo do ciclo de vida de uma disputa.",
+                    "Proteção de investimentos transfronteiriços – Análise de direitos e obrigações previstos em tratados, avaliação de riscos e estratégias para proteger investimentos jurídicos transfronteiriços.",
+                    "Estratégia pós-sentença e de execução – Planejamento estratégico para o reconhecimento e a execução de sentenças, bem como a defesa em procedimentos de anulação em múltiplas jurisdições."
                 ]
             },
             "quote2": {
@@ -1662,28 +1782,28 @@
                 "ES": "Chambers USA"
             },
             "p4": {
-                "EN": "Erica has acted in high‑stakes arbitration proceedings across the Americas, Europe, Africa, and Asia, including matters involving the United States, Argentina, Brazil, Canada, Chile, Colombia, Croatia, the Dominican Republic, Ghana, Hungary, Mexico, Peru, and the Philippines. She brings experience in highly complex disputes across multiple sectors.",
-                "PT": "Érica atuou em arbitragens abrangendo diversas jurisdições, incluindo Argentina, Brasil, Canadá, Chile, Colômbia, Croácia, República Dominicana, Gana, Hungria, México, Peru, Filipinas e Estados Unidos. Sua experiência cobre uma ampla gama de disputas em variados setores:",
-                "ES": "Érica cuenta con una trayectoria global en arbitraje internacional, habiendo intervenido en procedimientos que abarcan jurisdicciones claves en las Américas, Europa, África y Asia (incluyendo Estados Unidos, Argentina, Brasil, Canadá, Chile, Colombia, Croacia, República Dominicana, Gana, Hungría, México, Perú y Filipinas). Su peritaje técnico se extiende a sectores estratégicos y disputas de alta complejidad, incluyendo:"
+                "EN": "Erica has acted in high-stakes arbitration proceedings across the Americas, Europe, Africa, and Asia, including matters involving the United States, Argentina, Brazil, Canada, Chile, Colombia, Croatia, the Dominican Republic, Ghana, Hungary, Mexico, Perú, and the Philippines. Her work spans a broad range of complex disputes, including:",
+                "ES": "Erica ha actuado en procedimientos arbitrales de alto impacto en las Américas, Europa, África y Asia, incluidos asuntos relacionados con los Estados Unidos, Argentina, Brasil, Canadá, Chile, Colombia, Croacia, la República Dominicana, Ghana, Hungría, México, Perú y Filipinas. Su trabajo abarca una amplia gama de disputas complejas, entre ellas:",
+                "PT": "Erica atuou em procedimentos arbitrais de alto impacto nas Américas, Europa, África e Ásia, incluindo casos envolvendo os Estados Unidos, Argentina, Brasil, Canadá, Chile, Colômbia, Croácia, República Dominicana, Gana, Hungria, México, Peru e Filipinas. Seu trabalho abrange uma ampla gama de disputas complexas, incluindo:"
             },
             "sectorList": {
                 "EN": [
-                    "Commercial contracts – Hotel management and operation, distribution agreements, financial contracts, intellectual property, force majeure and changed circumstances, and transactions governed by the Convention on Contracts for the International Sale of Goods (CISG).",
-                    "Infrastructure and construction – Concessions, telecommunications, and transportation projects.",
-                    "Corporate and M&A – Governance and accountability disputes, mergers and acquisitions, shareholder and joint venture conflicts, and venture capital transactions.",
-                    "Energy and natural resources – Mining, oil and gas, LNG pricing, and electric and nuclear power generation."
-                ],
-                "PT": [
-                    "Contratos Comerciais – Experiência inclui gestão hoteleira, contratos de distribuição, contratos financeiros, propriedade intelectual e transações sob a Convenção das Nações Unidas sobre Contratos de Compra e Venda Internacional de Mercadorias (CISG, na sigla em inglês).",
-                    "Infraestrutura e Construção – Experiência inclui concessões, telecomunicações, e projetos de transporte rodoviários.",
-                    "Societário e M&A – Especialista em governança, fusões e aquisições, consórcios, joint ventures e operações de capital de risco.",
-                    "Energia e Recursos Naturais – Ampla experiência em mineração, petróleo e gás, precificação de gás natural liquefeito (GNL), bem como geração de energia elétrica e nuclear."
+                    "Commercial contracts – Hotel management and operation; distribution agreements; financial contracts; intellectual property; force majeure and changed-circumstances claims; and transactions governed by the United Nations Convention on Contracts for the International Sale of Goods (CISG).",
+                    "Infrastructure and Construction – Concessions, telecommunications, and transportation projects.",
+                    "Corporate and M&A – Corporate governance and accountability disputes, mergers and acquisitions, shareholder and joint-venture conflicts, and venture-capital transactions.",
+                    "Energy and Natural Resources – Mining, oil and gas, LNG pricing, and electricity and nuclear power generation."
                 ],
                 "ES": [
-                    "Contratos Comerciales – Gestión hotelera, contratos de distribución, contratos financieros, propiedad intelectual, y transacciones bajo la Convención de las Naciones Unidas sobre los Contratos de Compraventa Internacional de Mercaderías (CISG, por sus siglas en inglés).",
-                    "Infraestructura y Construcción – Concesiones, telecomunicaciones, y proyectos de transporte.",
-                    "Corporativo y M&A – Especialista en gobernanza corporativa, fusiones y adquisiciones, joint ventures, y operaciones de capital de riesgo.",
-                    "Energia y Recursos Naturales – Minería, hidrocarburos (petróleo, gas y líquidos de gas natural (LGN)), así como generación de energía eléctrica y nuclear."
+                    "Contratos comerciales – Gestión y operación hotelera; contratos de distribución; contratos financieros; propiedad intelectual; reclamaciones por fuerza mayor y cambio de circunstancias; y transacciones regidas por la Convención de las Naciones Unidas sobre los Contratos de Compraventa Internacional de Mercaderías (CISG).",
+                    "Infraestructura y construcción – Concesiones, telecomunicaciones y proyectos de transporte.",
+                    "Societario y fusiones y adquisiciones – Disputas de gobierno corporativo y rendición de cuentas, fusiones y adquisiciones, conflictos entre accionistas y socios de joint ventures, y operaciones de capital riesgo.",
+                    "Energía y recursos naturales – Minería, petróleo y gas, precios del GNL y generación de energía eléctrica y nuclear."
+                ],
+                "PT": [
+                    "Contratos comerciais – Gestão e operação hoteleira; contratos de distribuição; contratos financeiros; propriedade intelectual; alegações de força maior e de mudança de circunstâncias; e transações regidas pela Convenção das Nações Unidas sobre Contratos de Compra e Venda Internacional de Mercadorias (CISG).",
+                    "Infraestrutura e construção – Concessões, telecomunicações e projetos de transporte.",
+                    "Societário e M&A – Disputas de governança corporativa e responsabilização, fusões e aquisições, conflitos entre acionistas e em joint ventures, e operações de capital de risco.",
+                    "Energia e recursos naturais – Mineração, petróleo e gás, precificação de GNL e geração de energia elétrica e nuclear."
                 ]
             },
             "quote3": {
@@ -1697,19 +1817,19 @@
                 "ES": "Lexology"
             },
             "p5": {
-                "EN": "Erica has received top-tier recognition from leading legal directories, including Chambers & Partners, The Legal 500, Lexology (formerly known as Who's Who Legal), Latin Lawyer, and Best Lawyers, and has been named one of Latin America's Top 100 Female Lawyers by Latinvex.",
-                "PT": "Érica recebeu distinções de alto prestígio concedidas pelas principais instituições do setor, incluindo Chambers & Partners, The Legal 500, Lexology (anteriormente Who’s Who Legal), Latin Lawyer e Best Lawyers, além de ter sido nomeada uma das 100 melhores advogadas da América Latina pela Latinvex.",
-                "ES": "Érica es distinguida consistentemente por los directorios legales más prestigiosos del mundo, incluidos Chambers & Partners, The Legal 500, Lexology (anteriormente Who's Who Legal), Latin Lawyer y Best Lawyers. Ha sido destacada por Latinvex como una de las 100 Mejores Abogadas de América Latina."
+                "EN": "Erica has received prestigious recognition from leading legal directories, including Chambers and Partners, The Legal 500, Lexology (formerly Who’s Who Legal), Latin Lawyer, and Best Lawyers, and has been named one of Latin America’s Top 100 Female Lawyers by Latinvex.",
+                "ES": "Erica ha recibido reconocimientos de prestigio de los principales directorios jurídicos, entre ellos Chambers and Partners, The Legal 500, Lexology (anteriormente Who’s Who Legal), Latin Lawyer y Best Lawyers, y ha sido nombrada una de las 100 Mejores Abogadas de América Latina por Latinvex.",
+                "PT": "Erica recebeu reconhecimentos de prestígio dos principais diretórios jurídicos, incluindo Chambers and Partners, The Legal 500, Lexology (anteriormente Who’s Who Legal), Latin Lawyer e Best Lawyers, e foi nomeada uma das 100 Melhores Advogadas da América Latina pela Latinvex."
             },
             "p6": {
-                "EN": "She regularly publishes and speaks on international commercial arbitration, investor-state arbitration, and dispute resolution strategy at international conferences and professional forums, and has taught at leading academic institutions, such as the Georgetown University Law Center and the University of Miami School of Law.",
-                "PT": "Ela regularmente publica e discursa, em conferências internacionais e fóruns profissionais, sobre arbitragem comercial internacional, arbitragem entre investidores e Estados e estratégias de resolução de disputas, além de possuir experiência docente em instituições acadêmicas de excelência, tais como a Georgetown University Law Center e a University of Miami School of Law.",
-                "ES": "Ponente habitual en foros internacionales sobre arbitraje comercial y de inversión, Érica también aporta una sólida vertiente académica como docente en instituciones de élite como Georgetown University Law Center y la University of Miami School of Law."
+                "EN": "She regularly publishes and speaks on international commercial arbitration, investor-State arbitration, and dispute-resolution strategy at international conferences and professional forums, and has taught at leading academic institutions, including the Georgetown University Law Center and the University of Miami School of Law.",
+                "ES": "Publica y expone con regularidad sobre arbitraje comercial internacional, arbitraje de inversión-Estado y estrategia de resolución de disputas en conferencias internacionales y foros profesionales, y ha impartido docencia en instituciones académicas de primer nivel, como Georgetown University Law Center y la University of Miami School of Law.",
+                "PT": "Publica e palestra regularmente sobre arbitragem comercial internacional, arbitragem de investidor-Estado e estratégia de resolução de disputas em conferências internacionais e fóruns profissionais, e lecionou em instituições acadêmicas de destaque, incluindo Georgetown University Law Center e a University of Miami School of Law."
             },
             "p7": {
-                "EN": "Before founding her own practice, Erica had over 17 years of experience at major U.S. law firms, including eight years as a partner in globally recognized international arbitration teams. She is admitted to practice in Washington, D.C., New York, and Brazil, and works fluently in English, Spanish, and Portuguese.",
-                "PT": "Antes de fundar seu próprio escritório, Érica acumulou 17 anos de experiência em prestigiados escritórios de advocacia nos Estados Unidos, incluindo oito anos como sócia em equipes de arbitragem reconhecidas globalmente. Anteriormente, atuou na área contenciosa de renomados escritórios de advocacia no Brasil. É habilitada para advogar em Washington, DC, Nova York e no Brasil, e trabalha com fluência em inglês, espanhol e português.",
-                "ES": "Antes de fundar su práctica independiente, Érica acumuló 17 años de experiencia en firmas de prestigio en los Estados Unidos, incluidos ocho años como socia en equipos de arbitraje internacional de primer nivel. Anteriormente, trabajó como litigante en reconocidas firmas de abogados en Brasil. Está autorizada para ejercer como abogada en Washington, DC, Nueva York y Brasil, con fluidez profesional y jurídica en inglés, español y portugués."
+                "EN": "Before founding her own practice, Erica spent more than 17 years at major U.S. law firms, including approximately eight years as a partner in internationally recognized arbitration teams. She is admitted to practice in the District of Columbia, New York, and Brazil, and is fluent in English, Spanish, and Portuguese.",
+                "ES": "Antes de fundar su propia práctica, Erica pasó más de 17 años en importantes firmas de abogados de Estados Unidos, incluidos aproximadamente ocho años como socia en equipos de arbitraje reconocidos internacionalmente. Está admitida para ejercer en el Distrito de Columbia, Nueva York y Brasil, y es fluida en inglés, español y portugués.",
+                "PT": "Antes de fundar sua própria prática, Erica passou mais de 17 anos em grandes escritórios de advocacia dos Estados Unidos, incluindo aproximadamente oito anos como sócia em equipes de arbitragem reconhecidas internacionalmente. É admitida para advogar no Distrito de Columbia, Nova York e Brasil, e é fluente em inglês, espanhol e português."
             }
         },
         "languages": [
@@ -1743,9 +1863,9 @@
                 },
                 {
                     "text": {
-                        "EN": "President of an arbitral tribunal in an ICDR arbitration between two multinational companies concerning the purchase of electric vehicle charging equipment governed by the laws of the State of Delaware.",
-                        "ES": "Presidenta de tribunal en un arbitraje ICDR entre multinacionales relativo a la adquisición de infraestructura de carga para vehículos eléctricos, regido por la ley del Estado de Delaware.",
-                        "PT": "Presidente de um tribunal arbitral em uma arbitragem da ICDR entre duas empresas multinacionais referente à compra de equipamentos de carregamento para veículos elétricos, regida pelas leis do Estado de Delaware."
+                        "EN": "President of an arbitral tribunal in an ICDR arbitration between two multinational companies concerning the purchase of electric vehicle charging equipment governed by the laws of the State of Delaware; seated in Wilmington, DE.",
+                        "ES": "Presidenta de un tribunal arbitral en un arbitraje del ICDR entre dos empresas multinacionales relativo a la compra de equipos de carga para vehículos eléctricos, regido por las leyes del Estado de Delaware; sede en Wilmington, DE.",
+                        "PT": "Presidente de um tribunal arbitral em uma arbitragem do ICDR entre duas empresas multinacionais referente à compra de equipamentos de carregamento para veículos elétricos, regida pelas leis do Estado de Delaware; sede em Wilmington, DE."
                     },
                     "categories": [
                         "commercial"
@@ -1773,9 +1893,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Co-arbitrator in a CCBC corporate dispute arising out of a share purchase agreement governed by Brazilian law; seated in New York.",
-                        "ES": "Coárbitra en una controversia societaria ante la CCBC derivada de un contrato de compraventa de acciones, regido por la legislación brasileña; con sede arbitral en Nueva York.",
-                        "PT": "Coárbitra em uma disputa societária da CCBC decorrente de um contrato de compra e venda de ações, regido pela legislação brasileira; sede em Nova York."
+                        "EN": "Co-arbitrator in a CCBC corporate dispute arising out of a share purchase agreement governed by the laws of Brazil; seated in New York.",
+                        "ES": "Coárbitra en una disputa societaria ante la CCBC derivada de un contrato de compraventa de acciones regido por las leyes de Brasil; sede en Nueva York.",
+                        "PT": "Co-árbitra em uma disputa societária da CCBC decorrente de um contrato de compra e venda de ações regido pelas leis do Brasil; sede em Nova York."
                     },
                     "categories": [
                         "deal-structure"
@@ -1783,9 +1903,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Co-arbitrator in an ICDR construction dispute concerning a concession agreement for the development of a highway project in Latin America; proceedings in Spanish.",
-                        "ES": "Coárbitra en un arbitraje ICDR relativo a un contrato de concesión para el desarrollo de un proyecto de autopista en un Estado latinoamericano; llevado a cabo en español.",
-                        "PT": "Coárbitra em disputa de construção administrada pelo ICDR referente a um contrato de concessão para o desenvolvimento de uma rodovia na América Latina; procedimento em espanhol."
+                        "EN": "Co-arbitrator in an ICDR construction dispute concerning a concession agreement for the development of a highway project in Latin America; seated in Bogotá; proceedings in Spanish.",
+                        "ES": "Coárbitra en un arbitraje de construcción del ICDR relativo a un contrato de concesión para el desarrollo de un proyecto de autopista en América Latina; sede en Bogotá; procedimiento en español.",
+                        "PT": "Co-árbitra em uma disputa de construção do ICDR referente a um contrato de concessão para o desenvolvimento de um projeto de rodovia na América Latina; sede em Bogotá; procedimento em espanhol."
                     },
                     "categories": [
                         "construction"
@@ -1793,9 +1913,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Co-arbitrator in an ICDR construction dispute concerning a concession agreement for a large-scale infrastructure project in Latin America; proceedings in Spanish.",
-                        "ES": "Coárbitra en un arbitraje ICDR relativo a un contrato de concesión para el desarrollo de un proyecto importante de infraestructura en un Estado latinoamericano; llevado a cabo en español.",
-                        "PT": "Coárbitra em disputa de construção administrada pelo ICDR referente a um contrato de concessão para um projeto de infraestrutura de grande porte na América Latina; procedimento em espanhol."
+                        "EN": "Co-arbitrator in an ICDR construction dispute concerning a concession agreement for a large-scale infrastructure project in Latin America; seated in Bogotá; proceedings in Spanish.",
+                        "ES": "Coárbitra en un arbitraje de construcción del ICDR relativo a un contrato de concesión para un proyecto de infraestructura de gran escala en América Latina; sede en Bogotá; procedimiento en español.",
+                        "PT": "Co-árbitra em uma disputa de construção do ICDR referente a um contrato de concessão para um projeto de infraestrutura de grande porte na América Latina; sede em Bogotá; procedimento em espanhol."
                     },
                     "categories": [
                         "construction"
@@ -1803,9 +1923,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Co-arbitrator in an ICDR arbitration between a food producer in the United States and a Peruvian company concerning a supply contract governed by Peruvian law; seated in Lima.",
-                        "ES": "Coárbitra en un arbitraje ICDR entre un productor de alimentos estadounidense y una empresa peruana relativo a un contrato de suministro, regido por la ley peruana.",
-                        "PT": "Coárbitra em arbitragem administrada pelo ICDR entre uma produtora de alimentos nos Estados Unidos e uma empresa peruana, referente a um contrato de fornecimento regido pela lei peruana."
+                        "EN": "Co-arbitrator in an ICDR arbitration between a food producer in the United States and a Peruvian company concerning a supply contract governed by the laws of Peru; seated in Lima.",
+                        "ES": "Coárbitra en un arbitraje del ICDR entre un productor de alimentos de los Estados Unidos y una empresa peruana relativo a un contrato de suministro regido por las leyes del Perú; sede en Lima.",
+                        "PT": "Co-árbitra em uma arbitragem do ICDR entre uma produtora de alimentos dos Estados Unidos e uma empresa peruana referente a um contrato de fornecimento regido pelas leis do Peru; sede em Lima."
                     },
                     "categories": [
                         "commercial"
@@ -1823,9 +1943,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Co-arbitrator in an ICDR arbitration between a Swiss and an American company concerning the breach of a sales agreement governed by the laws of the State of Florida.",
-                        "ES": "Coárbitra en un arbitraje ICDR entre una empresa suiza y una estadounidense relativo al incumplimiento de un contrato de compraventa, regido por la ley del Estado de Florida.",
-                        "PT": "Coárbitra em arbitragem administrada pelo ICDR entre uma empresa suíça e uma empresa americana, referente ao inadimplemento de um contrato de compra e venda regido pelas leis do Estado da Flórida."
+                        "EN": "Co-arbitrator in an ICDR arbitration between a Swiss and an American company concerning the breach of a sales agreement governed by the laws of the State of Florida; seated in Miami.",
+                        "ES": "Coárbitra en un arbitraje del ICDR entre una empresa suiza y una estadounidense relativo al incumplimiento de un contrato de compraventa regido por las leyes del Estado de Florida; sede en Miami.",
+                        "PT": "Co-árbitra em uma arbitragem do ICDR entre uma empresa suíça e uma empresa americana referente ao inadimplemento de um contrato de compra e venda regido pelas leis do Estado da Flórida; sede em Miami."
                     },
                     "categories": [
                         "commercial"
@@ -1853,6 +1973,16 @@
                 },
                 {
                     "text": {
+                        "EN": "Sole arbitrator in an arbitration under the AAA Commercial Rules concerning a claim for breach of a sales and purchase agreement in the healthcare industry.",
+                        "ES": "Árbitra única en un arbitraje bajo el Reglamento Comercial de la AAA relativo a una reclamación por incumplimiento de un contrato de compraventa en el sector de la salud.",
+                        "PT": "Árbitra única em uma arbitragem sob o Regulamento Comercial da AAA referente a uma alegação de inadimplemento de um contrato de compra e venda no setor de saúde."
+                    },
+                    "categories": [
+                        "commercial"
+                    ]
+                },
+                {
+                    "text": {
                         "EN": "Sole arbitrator in an arbitration under the AAA Commercial Rules concerning a claim for breach of a hotel management agreement.",
                         "ES": "Árbitra única en un arbitraje AAA relativo a una reclamación por incumplimiento de un contrato de gestión hotelera.",
                         "PT": "Árbitra única em arbitragem sob as Regras Comerciais da AAA referente à alegação de violação de contrato de administração de um hotel."
@@ -1873,6 +2003,16 @@
                 },
                 {
                     "text": {
+                        "EN": "Sole arbitrator in an arbitration under the AAA Commercial Rules concerning a claim for breach of a services agreement in the financial services industry.",
+                        "ES": "Árbitra única en un arbitraje bajo el Reglamento Comercial de la AAA relativo a una reclamación por incumplimiento de un contrato de servicios en el sector de servicios financieros.",
+                        "PT": "Árbitra única em uma arbitragem sob o Regulamento Comercial da AAA referente a uma alegação de inadimplemento de um contrato de prestação de serviços no setor de serviços financeiros."
+                    },
+                    "categories": [
+                        "commercial"
+                    ]
+                },
+                {
+                    "text": {
                         "EN": "Sole arbitrator in an arbitration under the AAA Commercial Rules concerning a claim for breach of a loan agreement in the financial services industry.",
                         "ES": "Árbitra única en un arbitraje bajo el Reglamento Comercial de la AAA relativo a una reclamación por incumplimiento de un contrato de préstamo en la industria de servicios financieros.",
                         "PT": "Árbitra única em arbitragem sob o Regulamento Comercial da AAA relativa a uma reclamação por inadimplemento de contrato de mútuo no setor de serviços financeiros."
@@ -1883,9 +2023,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Co-arbitrator in an ICC arbitration between energy-sector companies concerning offshore infrastructure and operation services agreements governed by Brazilian law; seated in Rio de Janeiro.",
-                        "ES": "Coárbitra en un arbitraje CCI entre empresas del sector energético relativo a contratos de infraestructura offshore y de servicios de operación regidos por el derecho brasileño; con sede en Río de Janeiro.",
-                        "PT": "Coárbitra em arbitragem CCI entre empresas do setor de energia relativa a contratos de infraestrutura offshore e de serviços de operação regidos pelo direito brasileiro; com sede no Rio de Janeiro."
+                        "EN": "Co-arbitrator in an ICC dispute between energy-sector companies concerning offshore infrastructure and operation services agreements governed by the laws of Brazil; seated in Rio de Janeiro.",
+                        "ES": "Coárbitra en una disputa de la ICC entre empresas del sector energético relativa a contratos de infraestructura offshore y de servicios de operación regidos por las leyes de Brasil; sede en Río de Janeiro.",
+                        "PT": "Co-árbitra em uma disputa da ICC entre empresas do setor de energia referente a contratos de infraestrutura offshore e de serviços de operação regidos pelas leis do Brasil; sede no Rio de Janeiro."
                     },
                     "categories": [
                         "construction",
@@ -1936,9 +2076,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Counsel to a logistics multinational company in an ICC arbitration against a Colombian company in connection with a commercial representation agreement governed by the laws of the State of Texas.",
-                        "PT": "Advogada de uma empresa multinacional do setor de logística em uma arbitragem administrada pela ICC contra empresa colombiana, relacionada a contrato de representação comercial regido pelas leis do Estado do Texas.",
-                        "ES": "Abogada de una empresa de logística multinacional en un arbitraje ICC contra una empresa colombiana relativo a un contrato de representación comercial, regido por la ley del Estado de Texas."
+                        "EN": "Counsel to a multinational logistics company in an ICC arbitration against a Colombian company in connection with a commercial representation agreement governed by the laws of the State of Texas.",
+                        "PT": "Advogada de uma empresa multinacional de logística em uma arbitragem da ICC contra uma empresa colombiana referente a um contrato de representação comercial regido pelas leis do Estado do Texas.",
+                        "ES": "Abogada de una empresa multinacional de logística en un arbitraje de la ICC contra una empresa colombiana en relación con un contrato de representación comercial regido por las leyes del Estado de Texas."
                     },
                     "categories": [
                         "commercial"
@@ -1966,9 +2106,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Counsel to an American company against a construction Brazilian conglomerate in an ICC arbitration concerning an indemnity agreement governed by the laws of Brazil.",
-                        "PT": "Advogada de uma empresa americana contra um conglomerado brasileiro de construção em uma arbitragem da ICC relativa a um acordo de indenização regido pelas leis brasileiras.",
-                        "ES": "Abogada de una empresa estadounidense contra un conglomerado de construcción brasileño en un arbitraje ICC relativo a un acuerdo de indemnización, regido por la ley brasileña."
+                        "EN": "Counsel to an American company against a Brazilian construction conglomerate in an ICC arbitration concerning an indemnity agreement governed by the laws of Brazil.",
+                        "PT": "Advogada de uma empresa americana contra um conglomerado brasileiro de construção em uma arbitragem da ICC referente a um acordo de indenização regido pelas leis do Brasil.",
+                        "ES": "Abogada de una empresa estadounidense contra un conglomerado brasileño de construcción en un arbitraje de la ICC relativo a un acuerdo de indemnización regido por las leyes de Brasil."
                     },
                     "categories": [
                         "construction"
@@ -1976,9 +2116,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Counsel to the Claimant in Quanta Services Netherlands B.V. v. Republic of Peru (ICSID Case No. ARB/21/1), a dispute under the Netherlands-Peru BIT arising from state measures affecting concessions to design, build, and operate fiber‑optic networks for the provision of telecommunications and internet services.",
-                        "PT": "Advogada da Requerente em Quanta Services Netherlands B.V. v. Republic of Peru (Caso ICSID nº ARB/21/1), uma disputa sob o Tratado Bilateral de Investimento (TBI) entre os Países Baixos e o Peru, decorrente de medidas relacionadas a concessões para a construção e operação de redes de fibra óptica para prestação de serviços de telecomunicações e internet.",
-                        "ES": "Abogada de la demandante en el caso Quanta Services Netherlands B.V. v. República del Perú (Caso CIADI No. ARB/21/1), un arbitraje bajo el TBI Países Bajos-Perú, relativo a medidas estatales relacionadas con las concesiones para la construcción y operación de redes de fibra óptica para el suministro de servicios de telecomunicaciones e internet."
+                        "EN": "Counsel to the Claimant in Quanta Services Netherlands B.V. v. Republic of Perú (ICSID Case No. ARB/21/1), a dispute under the Netherlands-Perú Bilateral Investment Treaty (BIT) arising from measures related to concessions to build and operate fiber-optic networks.",
+                        "PT": "Advogada da Requerente em Quanta Services Netherlands B.V. v. República do Peru (Caso ICSID n.º ARB/21/1), uma disputa sob o Tratado Bilateral de Investimento (TBI) Países Baixos-Peru decorrente de medidas relacionadas a concessões para construir e operar redes de fibra óptica.",
+                        "ES": "Abogada de la Demandante en Quanta Services Netherlands B.V. c. República del Perú (Caso CIADI n.º ARB/21/1), una disputa bajo el Tratado Bilateral de Inversión (TBI) Países Bajos-Perú derivada de medidas relacionadas con las concesiones para construir y operar redes de fibra óptica."
                     },
                     "categories": [
                         "construction"
@@ -2006,9 +2146,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Advisor to a Dutch investor on financing and corporate governance matters connected to a joint venture for the development of a startup nuclear energy project in Latin America.",
-                        "PT": "Assessora de um investidor holandês em questões de financiamento e governança corporativa relacionadas a um acordo de Operações Conjuntas para o desenvolvimento de um projeto startup de energia nuclear na América Latina.",
-                        "ES": "Asesora de un inversionista holandés en cuestiones de financiación y gobernanza corporativa relativos a un acuerdo de joint venture para el desarrollo de un proyecto de energía nuclear en un Estado latinoamericano."
+                        "EN": "Advisor to a Dutch investor on financing and corporate governance matters connected to a joint venture agreement governed by the laws of the State of Delaware for the development of a startup nuclear energy project in Latin America.",
+                        "PT": "Assessora de um investidor holandês em questões de financiamento e governança corporativa relacionadas a um contrato de joint venture regido pelas leis do Estado de Delaware para o desenvolvimento de um projeto de energia nuclear em fase inicial na América Latina.",
+                        "ES": "Asesora de un inversionista neerlandés en cuestiones de financiamiento y gobierno corporativo vinculadas a un contrato de joint venture regido por las leyes del Estado de Delaware para el desarrollo de un proyecto de energía nuclear en etapa inicial en América Latina."
                     },
                     "categories": [
                         "deal-structure"
@@ -2016,9 +2156,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Counsel to the Respondent in Croatia v. MOL Hungarian Oil and Gas PLC (PCA Case No. 2014-15), a contractual dispute under the UNCITRAL rules regarding shareholders' rights and the corporate governance of a Croatian oil and gas company, the validity of a gas master agreement, and corruption allegations.",
-                        "PT": "Advogada da Requerida no caso Republic of Croatia v. MOL Hungarian Oil and Gas PLC (PCA Case No. 2014-15), uma disputa contratual sob as regras da UNCITRAL relativa aos direitos dos acionistas e à governança corporativa de uma empresa croata de petróleo e gás, à validade de um acordo mestre de gás e às alegações de corrupção.",
-                        "ES": "Abogada de la Demandada en el caso República de Croacia v. MOL Hungarian Oil and Gas PLC (Caso CPA No. 2014-15), un arbitraje CNUDMI administrado por la CPA relativo a los derechos de accionistas y gobernanza corporativa de una empresa de petróleo y gas croata, la validez de un acuerdo marco de gas, y alegaciones de corrupción y sobordo."
+                        "EN": "Counsel to the Respondent in Croatia v. MOL Hungarian Oil and Gas PLC (PCA Case No. 2014-15), a contractual dispute under the UNCITRAL Rules regarding shareholders' rights and the corporate governance of a Croatian oil and gas company, the validity of a gas master agreement, and corruption allegations.",
+                        "PT": "Advogada da Requerida em Croácia v. MOL Hungarian Oil and Gas PLC (Caso PCA n.º 2014-15), uma disputa contratual sob o Regulamento da UNCITRAL referente a direitos dos acionistas e à governança corporativa de uma empresa croata de petróleo e gás, à validade de um contrato-mestre de gás e a alegações de corrupção.",
+                        "ES": "Abogada de la Demandada en Croacia c. MOL Hungarian Oil and Gas PLC (Caso CPA n.º 2014-15), una disputa contractual bajo el Reglamento de la CNUDMI relativa a los derechos de los accionistas y el gobierno corporativo de una empresa croata de petróleo y gas, la validez de un contrato marco de gas y alegaciones de corrupción."
                     },
                     "categories": [
                         "deal-structure"
@@ -2096,9 +2236,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Advisor to a Dutch investor on financing and corporate governance matters connected to a joint venture for the development of a startup nuclear energy project in Latin America.",
-                        "PT": "Assessora de um investidor holandês em questões de financiamento e governança corporativa relacionadas a um acordo de Operações Conjuntas para o desenvolvimento de um projeto startup de energia nuclear na América Latina.",
-                        "ES": "Asesora de un inversionista holandés en cuestiones de financiación y gobernanza corporativa relativos a un acuerdo de joint venture para el desarrollo de un proyecto de energía nuclear en un Estado latinoamericano."
+                        "EN": "Advisor to a Dutch investor on financing and corporate governance matters connected to a joint venture agreement governed by the laws of the State of Delaware for the development of a startup nuclear energy project in Latin America.",
+                        "PT": "Assessora de um investidor holandês em questões de financiamento e governança corporativa relacionadas a um contrato de joint venture regido pelas leis do Estado de Delaware para o desenvolvimento de um projeto de energia nuclear em fase inicial na América Latina.",
+                        "ES": "Asesora de un inversionista neerlandés en cuestiones de financiamiento y gobierno corporativo vinculadas a un contrato de joint venture regido por las leyes del Estado de Delaware para el desarrollo de un proyecto de energía nuclear en etapa inicial en América Latina."
                     },
                     "categories": [
                         "energy"
@@ -2146,9 +2286,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Counsel to the Claimant in Gasoducto Sur Peruano S.A. En Liquidación v. Republic of Peru (ICSID Case No. ARB/24/29), a contractual dispute over a gas pipeline project that collapsed in the wake of the Odebrecht corruption scandal.",
-                        "PT": "Advogada da Requerente em Gasoducto Sur Peruano S.A. En Liquidación v. República do Peru (Caso ICSID nº ARB/24/29), disputa contratual relativa a um projeto de gasoduto que foi interrompido em decorrência do escândalo de corrupção envolvendo a Odebrecht.",
-                        "ES": "Abogada del Demandante en el caso Gasoducto Sur Peruano S.A. En Liquidación v. República del Perú (Caso CIADI No. ARB/24/29), un arbitraje relativo a un contrato para un proyecto de gasoducto afectado por el escándalo de corrupción Odebrecht."
+                        "EN": "Counsel to the Claimant in Gasoducto Sur Peruano S.A. en Liquidación v. Republic of Perú (ICSID Case No. ARB/24/29), a contractual dispute over a gas pipeline project that collapsed in the wake of the Odebrecht corruption scandal.",
+                        "PT": "Advogada da Requerente em Gasoducto Sur Peruano S.A. en Liquidación v. República do Peru (Caso ICSID n.º ARB/24/29), uma disputa contratual relativa a um projeto de gasoduto que colapsou na esteira do escândalo de corrupção da Odebrecht.",
+                        "ES": "Abogada de la Demandante en Gasoducto Sur Peruano S.A. en Liquidación c. República del Perú (Caso CIADI n.º ARB/24/29), una disputa contractual relativa a un proyecto de gasoducto que colapsó tras el escándalo de corrupción de Odebrecht."
                     },
                     "categories": [
                         "energy"
@@ -2156,9 +2296,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Counsel to the Claimant in MOL Hungarian Oil and Gas Company v. Republic of Croatia (ICSID Case No. ARB/13/32), a dispute under the Energy Charter Treaty for measures related to the privatization of a Croatian oil and gas company, the supply of gas, and the criminal prosecution of Claimant's CEO for bribery accusations.",
-                        "PT": "Advogada da requerente em MOL Hungarian Oil and Gas Company v. Republic of Croatia (Caso ICSID nº ARB/13/32), uma disputa sob o Tratado da Carta da Energia referente a medidas relacionadas à privatização de uma empresa croata de petróleo e gás, ao fornecimento de gás e à acusação criminal do CEO do Requerente por acusações de suborno.",
-                        "ES": "Abogada de la Demandante en el caso MOL Hungarian Oil and Gas Company v. República de Croacia (Caso CIADI No. ARB/13/32), un arbitraje bajo el TCE relativo a medidas relacionadas con la privatización de una empresa de petróleo y gas croata, el suministro de gas y el enjuiciamiento penal del Director Ejecutivo de la Demandante por acusaciones de soborno."
+                        "EN": "Counsel to the Claimant in MOL Hungarian Oil and Gas Company v. Republic of Croatia (ICSID Case No. ARB/13/32), a dispute under the Energy Charter Treaty concerning measures related to the privatization of a Croatian oil and gas company, the supply of gas, and the criminal prosecution of Claimant's CEO on bribery accusations.",
+                        "PT": "Advogada da Requerente em MOL Hungarian Oil and Gas Company v. República da Croácia (Caso ICSID n.º ARB/13/32), uma disputa sob o Tratado da Carta da Energia referente a medidas relacionadas à privatização de uma empresa croata de petróleo e gás, ao fornecimento de gás e à persecução criminal do CEO da Requerente por acusações de suborno.",
+                        "ES": "Abogada de la Demandante en MOL Hungarian Oil and Gas Company c. República de Croacia (Caso CIADI n.º ARB/13/32), una disputa bajo el Tratado sobre la Carta de la Energía relativa a medidas vinculadas con la privatización de una empresa croata de petróleo y gas, el suministro de gas y el enjuiciamiento penal del director ejecutivo de la Demandante por acusaciones de soborno."
                     },
                     "categories": [
                         "energy"
@@ -2166,9 +2306,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Counsel to the Respondent in Croatia v. MOL Hungarian Oil and Gas PLC (PCA Case No. 2014-15), a contractual dispute under the UNCITRAL rules regarding shareholders' rights and the corporate governance of a Croatian oil and gas company, the validity of a gas master agreement, and corruption allegations.",
-                        "PT": "Advogada da Parte Requerida em Republic of Croatia v. MOL Hungarian Oil and Gas PLC (Caso PCA nº 2014-15), disputa contratual sob as Regras da UNCITRAL envolvendo direitos de acionistas, a governança corporativa de uma empresa croata de óleo e gás, a validade de um contrato-mestre de fornecimento de gás e alegações de corrupção.",
-                        "ES": "Abogada de la Demandada en el caso República de Croacia v. MOL Hungarian Oil and Gas PLC (Caso CPA No. 2014-15), un arbitraje CNUDMI administrado por la CPA relativo a los derechos de accionistas y gobernanza corporativa de una empresa de petróleo y gas croata, la validez de un acuerdo marco de gas, y alegaciones de corrupción y sobordo."
+                        "EN": "Counsel to the Respondent in Croatia v. MOL Hungarian Oil and Gas PLC (PCA Case No. 2014-15), a contractual dispute under the UNCITRAL Rules regarding shareholders' rights and the corporate governance of a Croatian oil and gas company, the validity of a gas master agreement, and corruption allegations.",
+                        "PT": "Advogada da Requerida em Croácia v. MOL Hungarian Oil and Gas PLC (Caso PCA n.º 2014-15), uma disputa contratual sob o Regulamento da UNCITRAL referente a direitos dos acionistas e à governança corporativa de uma empresa croata de petróleo e gás, à validade de um contrato-mestre de gás e a alegações de corrupção.",
+                        "ES": "Abogada de la Demandada en Croacia c. MOL Hungarian Oil and Gas PLC (Caso CPA n.º 2014-15), una disputa contractual bajo el Reglamento de la CNUDMI relativa a los derechos de los accionistas y el gobierno corporativo de una empresa croata de petróleo y gas, la validez de un contrato marco de gas y alegaciones de corrupción."
                     },
                     "categories": [
                         "energy"
@@ -2176,9 +2316,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Counsel to the Claimants in Pluspetrol Perú et al. v. Perupetro (ICSID Case No. ARB/12/28), a dispute arising out of a gas supply contract regarding royalty payments and the sale of liquified natural gas (LNG); proceedings in Spanish.",
-                        "PT": "Advogada das Requerentes em Pluspetrol Perú Corporation S.A. et al. v. Perúpetro S.A. (Caso ICSID nº ARB/12/28), uma disputa decorrente de um contrato de fornecimento de gás referente a pagamentos de royalties e à venda de gás natural liquefeito (GNL); procedimento em espanhol.",
-                        "ES": "Abogada de los Demandantes en el caso Pluspetrol Perú Corporation S.A. et al. v. Perúpetro S.A. (Caso CIADI No. ARB/12/28), un arbitraje relativo a un contrato de suministro de gas con respecto a pagos de regalías y la venta de líquidos de gas natural (LGN) (llevado a cabo en español)."
+                        "EN": "Counsel to the Claimants in Pluspetrol Perú et al. v. Perupetro (ICSID Case No. ARB/12/28), a dispute arising out of a gas supply contract regarding royalty payments and the sale of liquefied natural gas (LNG); proceedings in Spanish.",
+                        "PT": "Advogada dos Requerentes em Pluspetrol Perú e outros v. Perupetro (Caso ICSID n.º ARB/12/28), uma disputa decorrente de um contrato de fornecimento de gás referente a pagamentos de royalties e à venda de gás natural liquefeito (GNL); procedimento em espanhol.",
+                        "ES": "Abogada de los Demandantes en Pluspetrol Perú y otros c. Perupetro (Caso CIADI n.º ARB/12/28), una disputa derivada de un contrato de suministro de gas relativa a pagos de regalías y la venta de gas natural licuado (GNL); procedimiento en español."
                     },
                     "categories": [
                         "energy"
@@ -2196,9 +2336,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Counsel to the Respondent in Chevron Overseas Finance GmbH v. The Republic of the Philippines (PCA Case No. 2019-25), a dispute under the Philippines-Switzerland BIT and the UNCITRAL rules involving the Malampaya gas field.",
-                        "PT": "Advogada do Estado requerido em Chevron Overseas Finance GmbH v. The Republic of the Philippines (Caso PCA nº 2019-25), uma disputa sob o Tratado Bilateral de Investimento Filipinas-Suíça e as regras da UNCITRAL envolvendo o campo de gás Malampaya.",
-                        "ES": "Abogada de la Demandada en el caso Chevron Overseas Finance GmbH v. República de Filipinas (Caso CPA No. 2019-25), un arbitraje bajo el TBI Filipinas-Suiza y las Reglas de Arbitraje de la CNUDMI relativo al yacimiento de gas Malampaya."
+                        "EN": "Counsel to the Respondent in Chevron Overseas Finance GmbH v. the Republic of the Philippines (PCA Case No. 2019-25), a dispute under the Philippines-Switzerland BIT and the UNCITRAL Rules involving the Malampaya gas field.",
+                        "PT": "Advogada da Requerida em Chevron Overseas Finance GmbH v. a República das Filipinas (Caso PCA n.º 2019-25), uma disputa sob o TBI Filipinas-Suíça e o Regulamento da UNCITRAL relativa ao campo de gás Malampaya.",
+                        "ES": "Abogada de la Demandada en Chevron Overseas Finance GmbH c. la República de Filipinas (Caso CPA n.º 2019-25), una disputa bajo el TBI Filipinas-Suiza y el Reglamento de la CNUDMI relativa al yacimiento de gas Malampaya."
                     },
                     "categories": [
                         "energy"
@@ -2226,9 +2366,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Counsel to the Claimant in Quanta Services Netherlands B.V. v. Republic of Peru (ICSID Case No. ARB/21/1), a dispute under the Netherlands-Peru BIT arising from state measures affecting concessions to design, build, and operate fiber‑optic networks for the provision of telecommunications and internet services.",
-                        "PT": "Advogada da Requerente em Quanta Services Netherlands B.V. v. Republic of Peru (Caso ICSID nº ARB/21/1), uma disputa sob o Tratado Bilateral de Investimento (TBI) entre os Países Baixos e o Peru, decorrente de medidas relacionadas a concessões para a construção e operação de redes de fibra óptica para prestação de serviços de telecomunicações e internet.",
-                        "ES": "Abogada de la demandante en el caso Quanta Services Netherlands B.V. v. República del Perú (Caso CIADI No. ARB/21/1), un arbitraje bajo el TBI Países Bajos-Perú, relativo a medidas estatales relacionadas con las concesiones para la construcción y operación de redes de fibra óptica para el suministro de servicios de telecomunicaciones e internet."
+                        "EN": "Counsel to the Claimant in Quanta Services Netherlands B.V. v. Republic of Perú (ICSID Case No. ARB/21/1), a dispute under the Netherlands-Perú Bilateral Investment Treaty (BIT) arising from measures related to concessions to build and operate fiber-optic networks.",
+                        "PT": "Advogada da Requerente em Quanta Services Netherlands B.V. v. República do Peru (Caso ICSID n.º ARB/21/1), uma disputa sob o Tratado Bilateral de Investimento (TBI) Países Baixos-Peru decorrente de medidas relacionadas a concessões para construir e operar redes de fibra óptica.",
+                        "ES": "Abogada de la Demandante en Quanta Services Netherlands B.V. c. República del Perú (Caso CIADI n.º ARB/21/1), una disputa bajo el Tratado Bilateral de Inversión (TBI) Países Bajos-Perú derivada de medidas relacionadas con las concesiones para construir y operar redes de fibra óptica."
                     },
                     "categories": [
                         "investor-state"
@@ -2246,9 +2386,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Counsel to the Claimant in Gasoducto Sur Peruano S.A. En Liquidación v. Republic of Peru (ICSID Case No. ARB/24/29), a contractual dispute over a gas pipeline project that collapsed in the wake of the Odebrecht corruption scandal.",
-                        "PT": "Advogada da Requerente em Gasoducto Sur Peruano S.A. En Liquidación v. República do Peru (Caso ICSID nº ARB/24/29), disputa contratual relativa a um projeto de gasoduto que foi interrompido em decorrência do escândalo de corrupção envolvendo a Odebrecht.",
-                        "ES": "Abogada del Demandante en el caso Gasoducto Sur Peruano S.A. En Liquidación v. República del Perú (Caso CIADI No. ARB/24/29), un arbitraje relativo a un contrato para un proyecto de gasoducto afectado por el escándalo de corrupción Odebrecht."
+                        "EN": "Counsel to the Claimant in Gasoducto Sur Peruano S.A. en Liquidación v. Republic of Perú (ICSID Case No. ARB/24/29), a contractual dispute over a gas pipeline project that collapsed in the wake of the Odebrecht corruption scandal.",
+                        "PT": "Advogada da Requerente em Gasoducto Sur Peruano S.A. en Liquidación v. República do Peru (Caso ICSID n.º ARB/24/29), uma disputa contratual relativa a um projeto de gasoduto que colapsou na esteira do escândalo de corrupção da Odebrecht.",
+                        "ES": "Abogada de la Demandante en Gasoducto Sur Peruano S.A. en Liquidación c. República del Perú (Caso CIADI n.º ARB/24/29), una disputa contractual relativa a un proyecto de gasoducto que colapsó tras el escándalo de corrupción de Odebrecht."
                     },
                     "categories": [
                         "investor-state"
@@ -2256,9 +2396,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Counsel to the Claimant in MOL Hungarian Oil and Gas Company v. Republic of Croatia (ICSID Case No. ARB/13/32), a dispute under the Energy Charter Treaty for measures related to the privatization of a Croatian oil and gas company, the supply of gas, and the criminal prosecution of Claimant's CEO for bribery accusations.",
-                        "PT": "Advogada da requerente em MOL Hungarian Oil and Gas Company v. Republic of Croatia (Caso ICSID nº ARB/13/32), uma disputa sob o Tratado da Carta da Energia referente a medidas relacionadas à privatização de uma empresa croata de petróleo e gás, ao fornecimento de gás e à acusação criminal do CEO do Requerente por acusações de suborno.",
-                        "ES": "Abogada de la Demandante en el caso MOL Hungarian Oil and Gas Company v. República de Croacia (Caso CIADI No. ARB/13/32), un arbitraje bajo el TCE relativo a medidas relacionadas con la privatización de una empresa de petróleo y gas croata, el suministro de gas y el enjuiciamiento penal del Director Ejecutivo de la Demandante por acusaciones de soborno."
+                        "EN": "Counsel to the Claimant in MOL Hungarian Oil and Gas Company v. Republic of Croatia (ICSID Case No. ARB/13/32), a dispute under the Energy Charter Treaty concerning measures related to the privatization of a Croatian oil and gas company, the supply of gas, and the criminal prosecution of Claimant's CEO on bribery accusations.",
+                        "PT": "Advogada da Requerente em MOL Hungarian Oil and Gas Company v. República da Croácia (Caso ICSID n.º ARB/13/32), uma disputa sob o Tratado da Carta da Energia referente a medidas relacionadas à privatização de uma empresa croata de petróleo e gás, ao fornecimento de gás e à persecução criminal do CEO da Requerente por acusações de suborno.",
+                        "ES": "Abogada de la Demandante en MOL Hungarian Oil and Gas Company c. República de Croacia (Caso CIADI n.º ARB/13/32), una disputa bajo el Tratado sobre la Carta de la Energía relativa a medidas vinculadas con la privatización de una empresa croata de petróleo y gas, el suministro de gas y el enjuiciamiento penal del director ejecutivo de la Demandante por acusaciones de soborno."
                     },
                     "categories": [
                         "investor-state"
@@ -2266,9 +2406,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Counsel to the Respondent in Croatia v. MOL Hungarian Oil and Gas PLC (PCA Case No. 2014-15), a contractual dispute under the UNCITRAL rules regarding shareholders' rights and the corporate governance of a Croatian oil and gas company, the validity of a gas master agreement, and corruption allegations.",
-                        "PT": "Advogada da Parte Requerida em Republic of Croatia v. MOL Hungarian Oil and Gas PLC (Caso PCA nº 2014-15), disputa contratual sob as Regras da UNCITRAL envolvendo direitos de acionistas, a governança corporativa de uma empresa croata de óleo e gás, a validade de um contrato-mestre de fornecimento de gás e alegações de corrupção.",
-                        "ES": "Abogada de la Demandada en el caso República de Croacia v. MOL Hungarian Oil and Gas PLC (Caso CPA No. 2014-15), un arbitraje CNUDMI administrado por la CPA relativo a los derechos de accionistas y gobernanza corporativa de una empresa de petróleo y gas croata, la validez de un acuerdo marco de gas, y alegaciones de corrupción y sobordo."
+                        "EN": "Counsel to the Respondent in Croatia v. MOL Hungarian Oil and Gas PLC (PCA Case No. 2014-15), a contractual dispute under the UNCITRAL Rules regarding shareholders' rights and the corporate governance of a Croatian oil and gas company, the validity of a gas master agreement, and corruption allegations.",
+                        "PT": "Advogada da Requerida em Croácia v. MOL Hungarian Oil and Gas PLC (Caso PCA n.º 2014-15), uma disputa contratual sob o Regulamento da UNCITRAL referente a direitos dos acionistas e à governança corporativa de uma empresa croata de petróleo e gás, à validade de um contrato-mestre de gás e a alegações de corrupção.",
+                        "ES": "Abogada de la Demandada en Croacia c. MOL Hungarian Oil and Gas PLC (Caso CPA n.º 2014-15), una disputa contractual bajo el Reglamento de la CNUDMI relativa a los derechos de los accionistas y el gobierno corporativo de una empresa croata de petróleo y gas, la validez de un contrato marco de gas y alegaciones de corrupción."
                     },
                     "categories": [
                         "investor-state"
@@ -2276,9 +2416,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Counsel to the Claimant in Ruby Roz Agricol LLP v. the Republic of Kazakhstan, an UNCITRAL investment dispute about a Kazakh poultry farm investment concerning alleged breaches of an investment contract and the Kazakh Foreign Investments Law.",
-                        "PT": "Advogada da Requerente no caso Ruby Roz Agricol LLP v. República do Cazaquistão, arbitragem de investimento sob o regulamento UNCITRAL relativa a um investimento em um complexo avícola no Cazaquistão, envolvendo alegadas violações de um contrato de investimento e da Lei de Investimentos Estrangeiros do Cazaquistão.",
-                        "ES": "Abogada de la Demandante en el caso Ruby Roz Agricol LLP v. República de Kazajistán, arbitraje de inversión UNCITRAL relativo a una inversión en un complejo avícola en Kazajistán, en el que se alegan incumplimientos de un contrato de inversión y de la Ley de Inversiones Extranjeras de Kazajistán."
+                        "EN": "Counsel to the Claimant in Ruby Roz Agricol LLP v. the Republic of Kazakhstan, an UNCITRAL investment arbitration about a Kazakh poultry farm investment concerning alleged breaches of an investment contract and the Kazakh Foreign Investments Law.",
+                        "PT": "Advogada da Requerente em Ruby Roz Agricol LLP v. a República do Cazaquistão, uma arbitragem de investimento sob o Regulamento da UNCITRAL sobre um investimento em um complexo avícola cazaque, referente a alegadas violações de um contrato de investimento e da Lei de Investimentos Estrangeiros do Cazaquistão.",
+                        "ES": "Abogada de la Demandante en Ruby Roz Agricol LLP c. la República de Kazajistán, un arbitraje de inversión bajo el Reglamento de la CNUDMI relativo a una inversión en una granja avícola kazaja, por presuntos incumplimientos de un contrato de inversión y de la Ley de Inversiones Extranjeras de Kazajistán."
                     },
                     "categories": [
                         "investor-state"
@@ -2296,9 +2436,9 @@
                 },
                 {
                     "text": {
-                        "EN": "Counsel to the Respondent in Chevron Overseas Finance GmbH v. The Republic of the Philippines (PCA Case No. 2019-25), a dispute under the Philippines-Switzerland BIT and the UNCITRAL rules involving the Malampaya gas field.",
-                        "PT": "Advogada da requerente em Chevron Overseas Finance GmbH v. The Republic of the Philippines (Caso PCA nº 2019-25), uma disputa sob o Tratado Bilateral de Investimento Filipinas-Suíça e as regras da UNCITRAL envolvendo o campo de gás Malampaya.",
-                        "ES": "Abogada de la Demandada en el caso Chevron Overseas Finance GmbH v. República de las Filipinas (Caso CPA No. 2019-25), un arbitraje bajo el TBI Filipinas-Suiza y las Reglas de Arbitraje de la CNUDMI relativo al yacimiento de gas Malampaya."
+                        "EN": "Counsel to the Respondent in Chevron Overseas Finance GmbH v. the Republic of the Philippines (PCA Case No. 2019-25), a dispute under the Philippines-Switzerland BIT and the UNCITRAL Rules involving the Malampaya gas field.",
+                        "PT": "Advogada da Requerida em Chevron Overseas Finance GmbH v. a República das Filipinas (Caso PCA n.º 2019-25), uma disputa sob o TBI Filipinas-Suíça e o Regulamento da UNCITRAL relativa ao campo de gás Malampaya.",
+                        "ES": "Abogada de la Demandada en Chevron Overseas Finance GmbH c. la República de Filipinas (Caso CPA n.º 2019-25), una disputa bajo el TBI Filipinas-Suiza y el Reglamento de la CNUDMI relativa al yacimiento de gas Malampaya."
                     },
                     "categories": [
                         "investor-state"

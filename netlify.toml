@@ -34,13 +34,38 @@
   status = 200
   force = true
 
-# TEMPORARY: the resume/CV documents are withheld while a mistake in them is
-# corrected, so the files are not reachable by direct or bookmarked URL either.
+# Resume/CV documents: the corrected ENGLISH CV is published. The one-page
+# English mini CV and the Spanish and Portuguese CVs are still the superseded
+# versions, so only those files stay unreachable by direct or bookmarked URL.
 # Must stay ABOVE the SPA catch-all below (first matching rule wins).
-# To restore access: delete this block and set CV_DOWNLOADS_ENABLED back to
-# `true` in client/src/components/Footer.tsx.
+# To restore a variant: delete its redirect block and set the matching flag in
+# client/src/components/Footer.tsx (CV_DOWNLOAD_ENABLED) back to `true`.
 [[redirects]]
-  from = "/cv/*"
+  from = "/cv/Franzetti-Mini-CV-English.pdf"
+  to = "/index.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/cv/Franzetti-CV-Spanish.pdf"
+  to = "/index.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/cv/Franzetti-Mini-CV-Spanish.pdf"
+  to = "/index.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/cv/Franzetti-CV-Portuguese.pdf"
+  to = "/index.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/cv/Franzetti-Mini-CV-Portuguese.pdf"
   to = "/index.html"
   status = 404
   force = true
