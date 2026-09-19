@@ -109,3 +109,6 @@ temp/
 # python bytecode from the maintenance scripts
 __pycache__/
 *.pyc
+
+# Local Netlify folder
+.netlify
