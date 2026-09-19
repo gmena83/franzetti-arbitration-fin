@@ -30,11 +30,17 @@ type CvLinks = {
  * Client decision (2026-09-18): the corrected ENGLISH CV ("Franzetti Curriculum
  * Vitae Sept. 2026 (EN)") is published and downloadable again.
  *
- * The one-page English mini CV and the Spanish and Portuguese CVs are still the
- * superseded versions (they carry the old King & Spalding "Dec. 2025" end date
- * and the old "Washington, DC" spelling), so they stay visible-but-inert until
- * corrected files are supplied. Each still-hidden variant also has a matching
- * 404 redirect for its direct URL in netlify.toml.
+ * The other five variants are still the superseded versions and stay
+ * visible-but-inert until corrected files are supplied. Specifically:
+ *   - Franzetti-CV-Spanish.pdf / Franzetti-CV-Portuguese.pdf and their minis
+ *     still carry the old King & Spalding end date ("Dic./Dez. 2025", corrected
+ *     to "Jan. 2026") and the old "Washington, DC" spelling.
+ *   - Franzetti-Mini-CV-English.pdf carries no firm dates, but it still spells
+ *     Georgetown's location "Washington, DC" and still lists the University of
+ *     Miami teaching period as "2025-2026" (corrected to "2024-2025").
+ *
+ * Each hidden variant also has a matching 404 redirect for its direct URL in
+ * netlify.toml, because the files are still shipped in the build output.
  *
  * To restore a variant: set its flag to `true` AND delete its redirect block.
  */

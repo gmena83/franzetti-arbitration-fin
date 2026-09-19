@@ -389,11 +389,89 @@ fed back in and resolved rather than filed away.
 - The `/cases` page image `client/public/images/EricaFranzetti39134-RT.jpg` **is**
   present and renders correctly (an earlier draft of this log wrongly said it was
   missing).
+- **CV-versus-site wording that the correction document did not cover** (all
+  flagged, none changed): the CV writes "ArbitralWomen" where the site writes
+  "Arbitral Women"; two counsel matters differ in wording ("an American company"
+  vs "a U.S. company", and the accent/locale forms in the Redes Andinas matter);
+  and two recognition lines differ in their years (Best Lawyers carries a year on
+  the site but not in the CV; the Chambers Band 6 line carries a year in the CV
+  but not on the site).
+- **Residual exposure of the superseded CVs:** the five hidden PDFs are still
+  present in `client/public/cv/` and therefore still ship inside the build; the
+  only thing preventing download is the Netlify 404 rules. A local preview serves
+  them normally. Recommendation: delete them from `client/public/cv/` so the block
+  is structural rather than configurational - held back because the client chose to
+  hide rather than remove them and may want to re-issue corrected files under the
+  same names.
+- Recognition years were not touched: the Recognitions block was outside the
+  client's correction document.
+"""
+
+
+def disposition():
+    return """# Review disposition - status of every finding raised by the four audits
+
+**Read this first.** The four audit reports in this folder were written while the
+work was still moving: each agent was handed the branch at a particular revision,
+and two of them recorded that further commits landed mid-audit. Their "CRITICAL"
+and "MODERATE" grades therefore describe the revision *they* saw, not necessarily
+the delivered one. This file maps every finding to what actually happened to it.
+
+Nothing below was filed and forgotten. Where a finding was correct, it was fixed
+and the fix is named. Where it was pre-existing and outside the client's request,
+it is recorded as a follow-up rather than silently changed.
+
+| # | Raised by | Severity | Finding | Status |
+|---|---|---|---|---|
+| C1 | 04 adversarial | Critical | `/experience` returned a React error boundary (`item.toLowerCase()` on an object) - a routed page was dead | **FIXED** (`c3a51f9`). Every route is now rendered and asserted crash-free by the harness. |
+| M1 | 04 adversarial | Moderate | "Arbitral Experience" subtitle rendered *before* the second paragraph; the client's document orders it after | **FIXED** (`d604667`), with new ordering assertions in EN/ES/PT so a placement error cannot pass as "present". |
+| M2 | 04 adversarial | Moderate | Orphan generated file `thought_leadership_data.json` still held the superseded "Centre of Dispute Resolution", "Ciarb" and "Washington, DC" strings | **FIXED** (`c3a51f9`). No file in the repo now contains wording the client asked to be replaced. |
+| M3 | 04 adversarial | Moderate | `Washington, D.C.` written three different ways across the site | **FIXED** (`c3a51f9`). All 22 offenders normalised; asserted repo-wide. |
+| M4 | 04 adversarial | Moderate | The change log itself falsely claimed `EricaFranzetti39134-RT.jpg` was missing | **FIXED** (`c3a51f9`). The claim was removed and the follow-ups section corrected. |
+| M5 | 04 adversarial | Moderate | Footer printed "Downloads are temporarily unavailable..." directly above a live download link | **FIXED** (`c3a51f9`). Reworded to "Some CV versions..." in EN/ES/PT. |
+| m1 | 04 adversarial | Minor | `favicon.ico` 404s on every route | **PRE-EXISTING, FOLLOW-UP.** Outside the client's request; recorded in the change log. |
+| m2 | 04 adversarial | Minor | Unsubstituted `%VITE_ANALYTICS_ENDPOINT%` / `%VITE_ANALYTICS_WEBSITE_ID%` placeholders | **PRE-EXISTING, FOLLOW-UP.** Recorded in the change log. |
+| m3 | 04 adversarial | Minor | `/contact` meta/OG description still said "Washington, DC" | **FIXED** (`c3a51f9`). |
+| m4 | 04 adversarial | Minor | Pre-existing JSON key-shape and empty-field inconsistencies | **PARTLY FIXED** (`1be44a5`, `c3a51f9`): ES/PT additions closed the ones that produced English fallbacks. Remaining shape differences are cosmetic and pre-existing. |
+| 01-1 | 01 about-page | Partial | "Arbitral Experience" subtitle placement | **FIXED** (`d604667`) - same finding as M1. |
+| 01-2 | 01 about-page | Material risk | The three directory quotes' Spanish/Portuguese are paraphrases, not translations (including the `sobresalta`/`sobresale` error) | **TYPO FIXED** (`d604667`). The paraphrase question is **OPEN - needs a client decision**: these are attributable statements and the client supplied only the English, so rewriting them would mean inventing quoted translations. Recorded in the change log as a follow-up. |
+| 01-3 | 01 about-page | Note | The client's own document omits a space after an en dash ("Rules -Erica") | **NOT A DEFECT** in the site; the site renders the correct typography. |
+| 01-4 | 01 about-page | Observation | "Recognition and Professional Background" (About) versus "Professional Background" (Experience) | **NO ACTION.** Different sections; only flagged in case the client wants them differentiated. |
+| 01-5 | 01 about-page | Tooling risk | The harness could not drive the language switcher, so ES/PT were only checked at the data layer | **RESOLVED.** The harness can now drive the switcher; 25 rendered ES/PT assertions were added and pass. This finding was accurate when written and is obsolete now. |
+| 02-1 | 02 cv-resume | Partial | Georgetown Education entry had no Spanish note, so Spanish fell back to English | **FIXED** (`1be44a5`). A check now fails if any populated English field lacks ES or PT. |
+| 02-2 | 02 cv-resume | Partial | "Tratado de **Direito** Arbitral" (Portuguese) in the English publication record, plus a duplicated "(Co-author)" | **FIXED** (`1be44a5`). |
+| 02-3 | 02 cv-resume | Minor | "Lei nº 9.307/1996" vs the document's "Lei No. 9.307/1996" | **FIXED** (`1be44a5`). |
+| 02-4 | 02 cv-resume | Minor | "A Structured Guide..." dropped the day from its date | **FIXED** (`1be44a5`). |
+| 02-5 | 02 cv-resume | Minor | Weil/Crowell had no explicit ES/PT location keys (English fallback) | **FIXED** (`1be44a5`), extended to the two Brazilian education entries (`c3a51f9`). |
+| 02-6 | 02 cv-resume | Out of scope | Speaking-Engagement event strings elsewhere still read "Washington, DC" | **FIXED anyway** (`c3a51f9`) - normalised site-wide, which also closed 04's M3. |
+| 02-7 | 02 cv-resume | Note | Pre-existing "Advogada da Requerente" casing difference in the Pac Rim matter | **PRE-EXISTING, FOLLOW-UP.** Not part of the instruction set. |
+| 03-F1 | 03 cv-documents | Correctness | The code comment said the English mini CV was hidden because of the old "Dec. 2025" date, but it contains no firm dates at all | **FIXED.** Correct reason now stated in `Footer.tsx`: the mini spells Georgetown's location "Washington, DC" and still shows the University of Miami period as "2025-2026" (corrected to "2024-2025"). |
+| 03-F2 | 03 cv-documents | Minor | CV says "ArbitralWomen"; site says "Arbitral Women" | **FOLLOW-UP.** Not in the client's instruction list; flagged for a decision rather than changed with the quotes. |
+| 03-F3 | 03 cv-documents | Minor | Other CV-vs-site wording divergences ("an American company" vs "a U.S. company"; accent/locale forms in the Redes Andinas matter) | **FOLLOW-UP.** The client's instruction document did not list these matters. |
+| 03-F4 | 03 cv-documents | Minor | Recognition years differ between the CV and the site (Best Lawyers year; Chambers Band 6 year) | **FOLLOW-UP.** Not in the instruction set; the Recognitions block was not touched. |
+| 03-F5 | 03 cv-documents | Residual risk | The five superseded PDFs still ship in `dist/public/cv/`; the only thing hiding them is `netlify.toml`. Local preview serves them with 200 | **OPEN - RECOMMENDED HARDENING.** Deleting the files from `client/public/cv/` would make the block structural rather than configurational. Held back because the client chose to hide rather than remove them, and may want to re-issue corrected versions under the same names. |
+| 03-1..03-6 | 03 cv-documents | - | The six numbered integrity checks (PDF byte-identity, footer flags, redirect rules, staleness, build output, PDF-vs-site cross-check) | **ALL PASS.** No action. |
+
+## What this tells you about the delivered state
+
+- Every CRITICAL and MODERATE finding was a genuine defect and has been fixed.
+- The two findings that remain open - the ES/PT testimonials and the residual PDF
+  exposure - are both **client decisions**, not engineering gaps. They are called
+  out in `change-log.md` so they are not lost.
+- Audits 01 and 04 were written against revisions `3b8dead`/`98949f5`; audits 02
+  and 03 against `3b8dead`. The delivered revision is later. Where an agent
+  explicitly said a later commit had already fixed something, that is noted in its
+  own report.
 """
 
 
 def main():
     os.makedirs(OUT, exist_ok=True)
+    if not os.path.isdir(os.path.join(OUT, "review")):
+        print("WARNING: review/ does not exist yet - run the review agents first")
+    os.makedirs(os.path.join(OUT, "review"), exist_ok=True)
+    with open(os.path.join(OUT, "review", "00-REVIEW-DISPOSITION.md"), "w", encoding="utf-8") as fh:
+        fh.write(disposition())
     shots = screenshots()
     df = diffs()
     open(os.path.join(OUT, "change-log.md"), "w", encoding="utf-8").write(change_log())
@@ -418,7 +496,7 @@ files - no results are asserted from memory.
 | `verification_results.json` | Machine-readable form of the same checks |
 | `screenshots/` | Full-page screenshots of every affected page and tab |
 | `diffs/` | Git diffs of the changed source files against the pre-update branch |
-| `review/` | Independent review agents' findings |
+| `review/` | Independent review agents' findings, plus `00-REVIEW-DISPOSITION.md` mapping every finding to its resolution |
 
 ## How the verification works
 
