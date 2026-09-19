@@ -130,7 +130,7 @@ export default function Experience() {
               </h2>
               <ul className="bullet-aquamarine list-disc list-inside space-y-1">
                 {(languages || ["English", "Spanish", "Portuguese"]).map((item: any, index: number) => (
-                  <li key={index} className="text-gray-700">{t(`lang.${item.toLowerCase()}`)}</li>
+                  <li key={index} className="text-gray-700">{getLocalized(item, 'name')}</li>
                 ))}
               </ul>
             </section>

@@ -395,6 +395,32 @@ def data_checks():
     check("data/publications", "'Lei No. 9.307/1996' in the commented-arbitration-act title",
           any(k.endswith("Lei No. 9.307/1996") for k in pub_txt), "")
 
+    # --- repo-wide: no spelling variant of Washington D.C. other than the corrected one
+    raw = open(os.path.join(REPO, "client", "src", "data", "siteContent.json"), encoding="utf-8").read()
+    for bad in ["Washington, DC", "Washington D.C."]:
+        check("data/experience", f"siteContent.json has no '{bad}' (only 'Washington, D.C.')",
+              bad not in raw, f"{raw.count(bad)} occurrence(s)")
+    check("data/experience", "siteContent.json uses 'Washington, D.C.' consistently",
+          raw.count("Washington, D.C.") >= 50, f"{raw.count('Washington, D.C.')} occurrences")
+
+    # --- footer notice must not claim ALL downloads are unavailable
+    notice = data["translations"]["footer.cvUnavailable"]["EN"]
+    check("data/cv", "footer notice is scoped ('Some CV versions'), not blanket",
+          notice.lower().startswith("some cv versions"), notice)
+
+    # --- the orphaned generated data file carries no superseded wording
+    tl_orphan = os.path.join(REPO, "client", "src", "data", "thought_leadership_data.json")
+    if os.path.exists(tl_orphan):
+        blob = open(tl_orphan, encoding="utf-8").read()
+        for bad in ["Centre of Dispute Resolution", "Ciarb", "Washington, DC", "Washington D.C."]:
+            check("data/speaking", f"thought_leadership_data.json free of stale '{bad}'",
+                  bad not in blob, f"{blob.count(bad)} occurrence(s)")
+
+    # --- route health: the Experience page previously crashed on a data-shape change
+    exp = open(os.path.join(REPO, "client", "src", "pages", "Experience.tsx"), encoding="utf-8").read()
+    check("data/routes", "Experience.tsx no longer calls .toLowerCase() on a languages item",
+          "item.toLowerCase()" not in exp)
+
     # --- CV PDF: byte-identical to the client's supplied file
     import hashlib
     def md5(p):
@@ -543,6 +569,41 @@ def order_checks(cache):
               f"positions {i} / {j}" if (i == -1 or j == -1 or i >= j) else "")
 
 
+# ---------------------------------------------------------------------------
+# E. ROUTE HEALTH
+# Every routed page must actually render. /experience silently threw a React
+# error boundary for an unknown length of time because a data item changed from
+# a string to an object; presence-only checks on other pages never noticed.
+# ---------------------------------------------------------------------------
+ROUTES = ["/", "/experience", "/cases", "/thought-leadership", "/contact",
+          "/disclaimer", "/privacy-policy", "/cookies-policy", "/404"]
+
+CRASH_MARKERS = ["An unexpected error occurred", "TypeError", "is not a function",
+                 "Cannot read properties of", "Something went wrong"]
+
+
+def route_health(cache):
+    for route in ROUTES:
+        key = (route, "health")
+        if key not in cache:
+            try:
+                dom, _ = cdp_render.render(SITE + route)
+            except Exception as e:
+                check("routes", f"{route} renders", False, f"render failed: {e}")
+                continue
+            cache[key] = fold(re.sub(r"<[^>]+>", " ", fold_dom(dom)))
+        text = cache[key]
+        crashed = next((m for m in CRASH_MARKERS if fold(m) in text), None)
+        # the 404 page is legitimately short; everything else must have real content
+        min_len = 300 if route == "/404" else 800
+        check("routes", f"{route} renders without an error boundary",
+              crashed is None and len(text) > min_len,
+              f"crash marker {crashed!r}" if crashed else f"only {len(text)} chars of text")
+        if route == "/404":
+            check("routes", "/404 shows a not-found page",
+                  "not found" in text.lower() or "404" in text, text[:80])
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default=os.path.join(CLIENT_DOCS, "Website-Update-2026-09-18-EVIDENCE"))
@@ -558,6 +619,8 @@ def main():
     language_checks(cache)
 
     order_checks(cache)
+
+    route_health(cache)
 
     data_checks()
 
