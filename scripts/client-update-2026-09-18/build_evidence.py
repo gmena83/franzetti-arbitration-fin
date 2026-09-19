@@ -175,7 +175,9 @@ def diffs():
     d = os.path.join(OUT, "diffs")
     os.makedirs(d, exist_ok=True)
     files = ["client/src/data/siteContent.json", "client/src/pages/Home.tsx",
-             "client/src/components/Footer.tsx", "netlify.toml"]
+             "client/src/pages/Experience.tsx", "client/src/pages/Contact.tsx",
+             "client/src/components/Footer.tsx", "netlify.toml",
+             "client/src/data/thought_leadership_data.json"]
     made = []
     for f in files:
         out = subprocess.run(["git", "diff", "main...HEAD", "--", f],
