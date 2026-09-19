@@ -292,6 +292,31 @@ def data_checks():
         missing = [k for k in ("name", "nameES", "namePT") if not a.get(k)]
         check("data/experience", f"association {a['name'][:45]!r} localised in EN/ES/PT", not missing, str(missing))
 
+    # --- association logos exist, and the HKIAC/B3 pair points at the right artwork
+    try:
+        from PIL import Image
+        for a in c["professionalAssociations"]:
+            if not a.get("logo"):
+                continue
+            p = os.path.join(REPO, "client", "public", a["logo"].lstrip("/"))
+            check("data/experience", f"logo file exists for {a['name'][:45]!r}",
+                  os.path.exists(p), a["logo"])
+        def art(name_frag):
+            for a in c["professionalAssociations"]:
+                if name_frag in a["name"]:
+                    p = os.path.join(REPO, "client", "public", a["logo"].lstrip("/"))
+                    return Image.open(p).size
+            return None
+        hk = art("Hong Kong International")
+        b3 = art("Capital Market Chamber")
+        # HKIAC's wordmark is wide; B3's is a small square mark
+        check("data/experience", "HKIAC entry points at the wide HKIAC wordmark (not the B3 square mark)",
+              hk and hk[0] > 200 and hk[0] > hk[1], str(hk))
+        check("data/experience", "B3/CAM entry points at the B3 square mark (not the HKIAC wordmark)",
+              b3 and b3[0] < 200, str(b3))
+    except ImportError:
+        check("data/experience", "PIL available to check association logo artwork", False, "PIL missing")
+
     # --- cases: language coverage + counts
     arb = c["cases"]["arbitratorAppointments"]
     coun = c["cases"]["mattersAsCounsel"]

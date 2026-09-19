@@ -84,21 +84,31 @@ def render(url, click=None, settle=2.5, timeout=45):
         ws_url = target["webSocketDebuggerUrl"]
         script = f"""
         (async () => {{
+          const ready = (ms) => new Promise(r => setTimeout(r, ms));
           await new Promise(r => {{
             if (document.readyState === 'complete') return r();
             window.addEventListener('load', r, {{once: true}});
-            setTimeout(r, 8000);
+            setTimeout(r, 15000);
           }});
-          await new Promise(r => setTimeout(r, {int(settle*1000)}));
+          // Poll until React has actually mounted and painted real content --
+          // a bare 'load' event fires before the SPA renders.
+          const deadline = Date.now() + 30000;
+          while (Date.now() < deadline) {{
+            const n = (document.body && document.body.innerText ? document.body.innerText.length : 0);
+            if (n > 1500 && document.querySelector('#root') && document.querySelector('#root').children.length > 0) break;
+            await ready(250);
+          }}
+          await ready({int(settle*1000)});
           const needle = {json.dumps((click or '').lower())};
           let clicked = null;
           if (needle) {{
             const els = [...document.querySelectorAll('button,[role=tab],a')];
             const hit = els.find(e => e.textContent.trim().toLowerCase().includes(needle));
             if (hit) {{ hit.click(); clicked = hit.textContent.trim(); }}
-            await new Promise(r => setTimeout(r, 1200));
+            await ready(1500);
           }}
-          return JSON.stringify({{clicked, html: document.documentElement.outerHTML}});
+          return JSON.stringify({{clicked, html: document.documentElement.outerHTML,
+                                  textLen: document.body.innerText.length}});
         }})()
         """
         raw = None
@@ -112,4 +122,6 @@ def render(url, click=None, settle=2.5, timeout=45):
         except Exception:
             pass
         data = json.loads(raw)
+        if data.get("textLen", 0) < 500:
+            raise RuntimeError(f"page body looked empty ({data.get('textLen')} chars) for {url}")
         return data["html"], data["clicked"]
