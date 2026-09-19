@@ -36,16 +36,28 @@ SITE = "http://localhost:4173"
 OUT = "/home/gonzalo-mena/Documents/Franzarb/Website-Update-2026-09-18-EVIDENCE"
 
 PAGES = [
-    ("home", "/", None, "Home / About page"),
-    ("experience", "/cases", None, "Cases (arbitrator + counsel matters)"),
-    ("thought-leadership-recognition", "/thought-leadership", "recognition", "Thought Leadership - Recognition tab"),
-    ("thought-leadership-speaking", "/thought-leadership", "speaking", "Thought Leadership - Speaking Engagements tab"),
-    ("thought-leadership-publications", "/thought-leadership", "publication", "Thought Leadership - Publications tab"),
-    ("thought-leadership-academia", "/thought-leadership", "academia", "Thought Leadership - Academia & Teaching tab"),
+    ("home", "/", None, "Home / About page (EN)", None),
+    ("home-es", "/", None, "Home / About page (ES)", "lang:Español"),
+    ("home-pt", "/", None, "Home / About page (PT)", "lang:Português"),
+    ("cases", "/cases", None, "Cases (arbitrator + counsel matters)", None),
+    ("thought-leadership-recognition", "/thought-leadership", "recognition", "Thought Leadership - Recognition tab", None),
+    ("thought-leadership-speaking", "/thought-leadership", "speaking", "Thought Leadership - Speaking Engagements tab", None),
+    ("thought-leadership-publications", "/thought-leadership", "publication", "Thought Leadership - Publications tab", None),
+    ("thought-leadership-academia", "/thought-leadership", "academia", "Thought Leadership - Academia & Teaching tab", None),
 ]
 
+LANG_SWITCH_JS = """
+  const trig=[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='EN');
+  if(trig) trig.click();
+  await new Promise(r=>setTimeout(r,700));
+  const opt=[...document.querySelectorAll('button')].find(e=>e.textContent.trim()==='__LABEL__');
+  if(opt) opt.click();
+  await new Promise(r=>setTimeout(r,1800));
+  return 'ok';
+"""
 
-async def shoot(ws_url, js):
+
+async def shoot(ws_url, js, port):
     async with websockets.connect(ws_url, max_size=128 * 1024 * 1024) as ws:
         mid = 0
 
@@ -81,11 +93,12 @@ async def shoot(ws_url, js):
 def screenshots():
     os.makedirs(os.path.join(OUT, "screenshots"), exist_ok=True)
     made = []
-    with cdp_render.Chrome() as _:
-        for name, path, tab, label in PAGES:
+    with cdp_render.Chrome() as chrome:
+        port = chrome.port
+        for name, path, tab, label, pre in PAGES:
             url = SITE + path
             req = urllib.request.Request(
-                f"http://127.0.0.1:{cdp_render.PORT}/json/new?{urllib.parse.quote(url, safe='')}",
+                f"http://127.0.0.1:{port}/json/new?{urllib.parse.quote(url, safe='')}",
                 method="PUT")
             target = json.loads(urllib.request.urlopen(req, timeout=15).read())
             js = f"""
@@ -101,6 +114,15 @@ def screenshots():
                 await ready(250);
               }}
               await ready(3000);
+              const pre = {json.dumps(pre or '')};
+              if (pre.startsWith('lang:')) {{
+                const trig=[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='EN');
+                if (trig) trig.click();
+                await ready(700);
+                const opt=[...document.querySelectorAll('button')].find(e=>e.textContent.trim()===pre.slice(5));
+                if (opt) opt.click();
+                await ready(1800);
+              }}
               const needle = {json.dumps((tab or '').lower())};
               if (needle) {{
                 const els = [...document.querySelectorAll('button,[role=tab],a')];
@@ -117,18 +139,18 @@ def screenshots():
             try:
                 for attempt in range(3):
                     try:
-                        png = loop.run_until_complete(shoot(target["webSocketDebuggerUrl"], js))
+                        png = loop.run_until_complete(shoot(target["webSocketDebuggerUrl"], js, port))
                         break
                     except Exception as e:
                         print(f"  retry {name} ({attempt+1}/3): {e}")
                         time.sleep(3)
                         try:
                             urllib.request.urlopen(
-                                f"http://127.0.0.1:{cdp_render.PORT}/json/close/{target['id']}", timeout=5).read()
+                                f"http://127.0.0.1:{port}/json/close/{target['id']}", timeout=5).read()
                         except Exception:
                             pass
                         req2 = urllib.request.Request(
-                            f"http://127.0.0.1:{cdp_render.PORT}/json/new?{urllib.parse.quote(url, safe='')}",
+                            f"http://127.0.0.1:{port}/json/new?{urllib.parse.quote(url, safe='')}",
                             method="PUT")
                         target = json.loads(urllib.request.urlopen(req2, timeout=15).read())
             finally:
@@ -138,10 +160,11 @@ def screenshots():
             fp = os.path.join(OUT, "screenshots", f"{name}.png")
             open(fp, "wb").write(png)
             made.append({"file": f"screenshots/{name}.png", "label": label, "url": url,
-                         "tab_clicked": tab, "bytes": len(png)})
+                         "tab_clicked": tab, "language": (pre or "").replace("lang:", "") or "EN",
+                         "bytes": len(png)})
             print("shot", name, len(png), "bytes")
             try:
-                urllib.request.urlopen(f"http://127.0.0.1:{cdp_render.PORT}/json/close/{target['id']}", timeout=5).read()
+                urllib.request.urlopen(f"http://127.0.0.1:{port}/json/close/{target['id']}", timeout=5).read()
             except Exception:
                 pass
     return made

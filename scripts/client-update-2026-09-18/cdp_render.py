@@ -9,6 +9,7 @@ Speaking Engagements / Publications lists only inside a tab panel.
 import asyncio
 import json
 import os
+import socket
 import subprocess
 import time
 import urllib.parse
@@ -23,9 +24,20 @@ CHROME = "/home/gonzalo-mena/.cache/ms-playwright/chromium-1234/chrome-linux64/c
 PORT = 9333
 
 
+def free_port():
+    """Ask the OS for an unused TCP port. Several agents may drive Chromium at
+    once, so a fixed port collides; each Chrome instance gets its own."""
+    s = socket.socket()
+    s.bind(("127.0.0.1", 0))
+    p = s.getsockname()[1]
+    s.close()
+    return p
+
+
 class Chrome:
-    def __init__(self, port=PORT):
-        self.port = port
+    def __init__(self, port=None):
+        # honour an explicit port, otherwise allocate one to avoid collisions
+        self.port = port or free_port()
         self.proc = None
 
     def __enter__(self):
@@ -73,11 +85,11 @@ async def _evaluate(ws_url, js, wait_after=0.0):
         return res.get("result", {}).get("result", {}).get("value")
 
 
-def render(url, click=None, settle=2.5, timeout=45):
+def render(url, click=None, settle=2.5, timeout=45, pre_js=None):
     """Return the DOM outerHTML of `url`, after clicking the control whose visible
     text contains `click` (case-insensitive), if given."""
-    with Chrome() as _:
-        newtab_url = f"http://127.0.0.1:{PORT}/json/new?{urllib.parse.quote(url, safe='')}"
+    with Chrome() as chrome:
+        newtab_url = f"http://127.0.0.1:{chrome.port}/json/new?{urllib.parse.quote(url, safe='')}"
         # Chrome >= 111 requires PUT for /json/new
         req = urllib.request.Request(newtab_url, method="PUT")
         target = json.loads(urllib.request.urlopen(req, timeout=15).read())
@@ -99,6 +111,10 @@ def render(url, click=None, settle=2.5, timeout=45):
             await ready(250);
           }}
           await ready({int(settle*1000)});
+          if ({json.dumps(bool(pre_js))}) {{
+            await (async () => {{ {pre_js or ''} }})();
+            await ready(500);
+          }}
           const needle = {json.dumps((click or '').lower())};
           let clicked = null;
           if (needle) {{
@@ -118,7 +134,7 @@ def render(url, click=None, settle=2.5, timeout=45):
         finally:
             loop.close()
         try:
-            urllib.request.urlopen(f"http://127.0.0.1:{PORT}/json/close/{target['id']}", timeout=5).read()
+            urllib.request.urlopen(f"http://127.0.0.1:{chrome.port}/json/close/{target['id']}", timeout=5).read()
         except Exception:
             pass
         data = json.loads(raw)

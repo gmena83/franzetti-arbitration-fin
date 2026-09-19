@@ -174,11 +174,11 @@ export default function Home() {
                 <p className="text-sm text-gray-500 font-medium mt-2">– <em>{getLocalized(about.quoteSource1)}</em></p>
               </div>
 
+              <p>{getLocalized(about.p2)}</p>
+
               <h3 className="text-2xl font-serif font-semibold text-charcoal mt-10 mb-6">
                 {t("section.independentArbitrator")}
               </h3>
-
-              <p>{getLocalized(about.p2)}</p>
               <ul className="list-disc pl-6 space-y-2">
                 {getLocalized(about.serviceList1).map((item: string, i: number) => (
                   <li key={i}>{item}</li>

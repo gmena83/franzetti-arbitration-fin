@@ -404,6 +404,117 @@ def data_checks():
               os.path.exists(os.path.join(REPO, "dist", "public", "images", logo)))
 
 
+# ---------------------------------------------------------------------------
+# C. SPANISH / PORTUGUESE RENDERED-DOM CHECKS
+# The switcher is a dropdown whose options are labelled with the full language
+# name, so the pre-step opens it and picks the option.
+# ---------------------------------------------------------------------------
+LANG_SWITCH_JS = """
+  const trig=[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='EN');
+  if(trig) trig.click();
+  await new Promise(r=>setTimeout(r,700));
+  const opt=[...document.querySelectorAll('button')].find(e=>e.textContent.trim()==='OPTION_LABEL');
+  if(opt) opt.click();
+  await new Promise(r=>setTimeout(r,1800));
+  return 'ok';
+"""
+
+LANG_CHECKS = {
+    "Español": [
+        ("About p1 translated", "carrera jurídica de 25 años en firmas de abogados líderes en el mercado"),
+        ("About p2 translated", "Miembro del Chartered Institute of Arbitrators (FCIArb), Erica actúa como árbitra única"),
+        ("Subtitle 'Arbitral Experience'", "Experiencia Arbitral"),
+        ("Subtitle 'Advisory Experience'", "Experiencia en Asesoría"),
+        ("serviceList1 bullet 1 translated", "Experiencia bajo múltiples reglamentos arbitrales"),
+        ("serviceList2 bullet 4 translated", "Estrategia posterior al laudo y de ejecución"),
+        ("Trajectory title translated", "Reconocimiento y Trayectoria Profesional"),
+        ("Association: FCIArb", "Miembro del Chartered Institute of Arbitrators (FCIArb)"),
+        ("Association: CBAr", "Comité Brasileño de Arbitraje (CBAr)"),
+        ("Association: ICC Brazil corrected", "Cámara de Comercio Internacional (CCI) Brasil"),
+        ("Association: ICDR corrected", "Centro Internacional para la Resolución de Disputas (ICDR)"),
+        ("Teaching: American University", "American University Washington College of Law"),
+        ("Teaching: NOVA", "NOVA School of Law"),
+    ],
+    "Português": [
+        ("About p1 translated", "carreira jurídica de 25 anos em escritórios de advocacia líderes de mercado"),
+        ("About p2 translated", "Membro do Chartered Institute of Arbitrators (FCIArb), Erica atua como árbitra única"),
+        ("Subtitle 'Arbitral Experience'", "Experiência Arbitral"),
+        ("Subtitle 'Advisory Experience'", "Experiência em Assessoria"),
+        ("serviceList1 bullet 1 translated", "Experiência sob diversos regulamentos arbitrais"),
+        ("serviceList2 bullet 4 translated", "Estratégia pós-sentença e de execução"),
+        ("Trajectory title translated", "Reconhecimento e Trajetória Profissional"),
+        ("Association: FCIArb", "Membro do Chartered Institute of Arbitrators (FCIArb)"),
+        ("Association: CBAr", "Comitê Brasileiro de Arbitragem (CBAr)"),
+        ("Association: ICC Brazil corrected", "Câmara de Comércio Internacional (CCI) Brasil"),
+        ("Teaching: NOVA", "NOVA School of Law"),
+        ("Teaching: American University", "American University Washington College of Law"),
+    ],
+}
+
+
+def language_checks(cache):
+    for label, probes in LANG_CHECKS.items():
+        key = ("/", "lang-" + label)
+        if key not in cache:
+            dom, _ = cdp_render.render(SITE + "/", pre_js=LANG_SWITCH_JS.replace("OPTION_LABEL", label))
+            cache[key] = fold(re.sub(r"<[^>]+>", " ",
+                                     fold_dom(dom)))
+        text = cache[key]
+        for name, needle in probes:
+            check(f"rendered/{label}", f"[{label}] {name}", fold(needle) in text,
+                  "" if fold(needle) in text else "not found in rendered DOM")
+
+
+def fold_dom(dom):
+    return re.sub(r"<script.*?</script>|<style.*?</style>", " ", dom, flags=re.S)
+
+
+# ---------------------------------------------------------------------------
+# D. SECTION ORDERING CHECKS
+# The client's document prescribes the sequence of the About page, so presence
+# alone is not enough: assert the subtitles sit where the document puts them
+# ("Arbitral Experience" AFTER the second paragraph and BEFORE its bullet list;
+# "Advisory Experience" BEFORE the advisory sentence and its bullet list).
+# ---------------------------------------------------------------------------
+ORDER_CHECKS = [
+    ("/", None, "EN: second paragraph before the 'Arbitral Experience' subtitle",
+     "A fellow of the Chartered Institute of Arbitrators (FCIArb), Erica serves as sole arbitrator",
+     "Arbitral Experience"),
+    ("/", None, "EN: 'Arbitral Experience' subtitle before its bullet list",
+     "Arbitral Experience",
+     "Experience under Multiple Arbitral Rules"),
+    ("/", None, "EN: 'Advisory Experience' subtitle after the arbitral bullets",
+     "Tribunal Management and Awards",
+     "Advisory Experience"),
+    ("/", None, "EN: 'Advisory Experience' subtitle before the advisory sentence",
+     "Advisory Experience",
+     "Erica also provides strategic advisory and consulting services to clients worldwide"),
+    ("/", None, "EN: advisory sentence before its bullet list",
+     "Erica also provides strategic advisory and consulting services to clients worldwide",
+     "Dispute Prevention and Risk Assessment"),
+    ("/", "lang:Español", "ES: para 2 before 'Experiencia Arbitral'",
+     "Miembro del Chartered Institute of Arbitrators (FCIArb), Erica actúa",
+     "Experiencia Arbitral"),
+    ("/", "lang:Português", "PT: para 2 before 'Experiência Arbitral'",
+     "Membro do Chartered Institute of Arbitrators (FCIArb), Erica atua",
+     "Experiência Arbitral"),
+]
+
+
+def order_checks(cache):
+    for path, pre, label, before, after in ORDER_CHECKS:
+        key = (path, pre or "default")
+        if key not in cache:
+            dom, _ = cdp_render.render(
+                SITE + path,
+                pre_js=LANG_SWITCH_JS.replace("OPTION_LABEL", pre.split(":")[1]) if pre else None)
+            cache[key] = fold(re.sub(r"<[^>]+>", " ", fold_dom(dom)))
+        text = cache[key]
+        i, j = text.find(fold(before)), text.find(fold(after))
+        check(f"order{path}", label, i != -1 and j != -1 and i < j,
+              f"positions {i} / {j}" if (i == -1 or j == -1 or i >= j) else "")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default=os.path.join(CLIENT_DOCS, "Website-Update-2026-09-18-EVIDENCE"))
@@ -415,6 +526,10 @@ def main():
         text = render(path, cache)
         check(f"rendered{path}", label, norm(needle) in text,
               "not found in rendered DOM" if norm(needle) not in text else "")
+
+    language_checks(cache)
+
+    order_checks(cache)
 
     data_checks()
 
