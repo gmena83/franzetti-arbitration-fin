@@ -34,13 +34,63 @@
   status = 200
   force = true
 
-# TEMPORARY: the resume/CV documents are withheld while a mistake in them is
-# corrected, so the files are not reachable by direct or bookmarked URL either.
-# Must stay ABOVE the SPA catch-all below (first matching rule wins).
-# To restore access: delete this block and set CV_DOWNLOADS_ENABLED back to
-# `true` in client/src/components/Footer.tsx.
+# Resume/CV documents - release gate.
+#
+# Only the corrected English CV ("Franzetti Curriculum Vitae Sept. 2026 (EN)")
+# is published. On 2026-09-19 the superseded documents were DELETED from the
+# repository rather than merely blocked:
+#     Franzetti-CV-Spanish.pdf, Franzetti-Mini-CV-Spanish.pdf,
+#     Franzetti-CV-Portuguese.pdf, Franzetti-Mini-CV-Portuguese.pdf,
+#     Franzetti-Mini-CV-English.pdf   (and the old ./cv-english.pdf at repo root)
+# That matters because this repository is PUBLIC: a blocked Netlify route never
+# protected these files from being downloaded straight off GitHub. Deleting them
+# is the real control; the rules below are now a secondary gate.
+#
+# The rules stay in place as a release gate for the replacement Spanish and
+# Portuguese CVs that are expected shortly. If a new PDF is committed while it is
+# still under review, it cannot be reached by direct or bookmarked URL even
+# though the file exists in the build output.
+#
+# TO PUBLISH A VARIANT (e.g. the new Spanish CV arrives):
+#   1. place the PDF at the path in client/public/cv/
+#   2. set that variant's flag to `true` in client/src/components/Footer.tsx
+#      (CV_DOWNLOAD_ENABLED)
+#   3. delete that one's [[redirects]] block below
+#   4. add the variant to client/public/cv/cv.json if it is a full CV
+# The verification harness asserts this consistency in both directions, so a
+# mismatch (published but still blocked, or blocked but the flag already on)
+# will fail the build checks rather than silently 404 a live link.
+#
+# These must stay ABOVE the SPA catch-all (first matching rule wins), and keep
+# `force = true`: without it Netlify serves an existing static file in preference
+# to the redirect and the block silently stops working.
+
 [[redirects]]
-  from = "/cv/*"
+  from = "/cv/Franzetti-Mini-CV-English.pdf"
+  to = "/index.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/cv/Franzetti-CV-Spanish.pdf"
+  to = "/index.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/cv/Franzetti-Mini-CV-Spanish.pdf"
+  to = "/index.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/cv/Franzetti-CV-Portuguese.pdf"
+  to = "/index.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/cv/Franzetti-Mini-CV-Portuguese.pdf"
   to = "/index.html"
   status = 404
   force = true

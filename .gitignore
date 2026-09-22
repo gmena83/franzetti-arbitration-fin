@@ -105,3 +105,10 @@ temp/
 *.db
 *.sqlite
 *.sqlite3
+
+# python bytecode from the maintenance scripts
+__pycache__/
+*.pyc
+
+# Local Netlify folder
+.netlify

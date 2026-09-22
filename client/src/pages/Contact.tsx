@@ -34,7 +34,7 @@ export default function Contact() {
 
     let metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Contact Erica Franzetti for international arbitration services. Based in Washington, DC with global reach. Available for arbitrator appointments and counsel services.');
+      metaDescription.setAttribute('content', 'Contact Erica Franzetti for international arbitration services. Based in Washington, D.C. with global reach. Available for arbitrator appointments and counsel services.');
     }
 
     let metaKeywords = document.querySelector('meta[name="keywords"]');
@@ -46,7 +46,7 @@ export default function Contact() {
     if (ogTitle) ogTitle.setAttribute('content', 'Contact | Franzetti Arbitration');
 
     let ogDescription = document.querySelector('meta[property="og:description"]');
-    if (ogDescription) ogDescription.setAttribute('content', 'Contact Erica Franzetti for international arbitration services. Based in Washington, DC.');
+    if (ogDescription) ogDescription.setAttribute('content', 'Contact Erica Franzetti for international arbitration services. Based in Washington, D.C..');
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -231,7 +231,7 @@ export default function Contact() {
                     className="flex items-start gap-3 text-charcoal hover:text-aquamarine transition-colors"
                   >
                     <MapPin className="w-5 h-5 text-aquamarine flex-shrink-0 mt-0.5" />
-                    <span>1701 Pennsylvania Ave NW, Suite 200<br />Washington, DC 20006</span>
+                    <span>1701 Pennsylvania Ave NW, Suite 200<br />Washington, D.C. 20006</span>
                   </a>
                 </div>
               </div>

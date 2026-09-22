@@ -26,12 +26,32 @@ type CvLinks = {
   vcard?: string;
 };
 
-/* TEMPORARY: resume/CV downloads are disabled while the documents are being
- * corrected. The footer entries stay visible but inert.
- * To restore downloads: set this flag back to `true` AND remove the "/cv/*"
- * 404 redirect block in netlify.toml that also blocks the direct file URLs.
+/* Resume/CV download state - Franzetti Arbitration
+ * Client decision (2026-09-18): the corrected ENGLISH CV ("Franzetti Curriculum
+ * Vitae Sept. 2026 (EN)") is published and downloadable again.
+ *
+ * The other five variants are still the superseded versions and stay
+ * visible-but-inert until corrected files are supplied. Specifically:
+ *   - Franzetti-CV-Spanish.pdf / Franzetti-CV-Portuguese.pdf and their minis
+ *     still carry the old King & Spalding end date ("Dic./Dez. 2025", corrected
+ *     to "Jan. 2026") and the old "Washington, DC" spelling.
+ *   - Franzetti-Mini-CV-English.pdf carries no firm dates, but it still spells
+ *     Georgetown's location "Washington, DC" and still lists the University of
+ *     Miami teaching period as "2025-2026" (corrected to "2024-2025").
+ *
+ * Each hidden variant also has a matching 404 redirect for its direct URL in
+ * netlify.toml, because the files are still shipped in the build output.
+ *
+ * To restore a variant: set its flag to `true` AND delete its redirect block.
  */
-const CV_DOWNLOADS_ENABLED: boolean = false;
+const CV_DOWNLOAD_ENABLED: Record<string, boolean> = {
+  english: true,
+  englishMini: false,
+  spanish: false,
+  spanishMini: false,
+  portuguese: false,
+  portugueseMini: false,
+};
 
 export default function Footer() {
   const { t, language } = useLanguage();
@@ -50,15 +70,16 @@ export default function Footer() {
   ];
 
   const cvDownloads = [
-    { href: cv?.english, label: "Full CV (EN)" },
-    { href: cv?.englishMini, label: "One-page CV (EN)" },
-    { href: cv?.spanish, label: "CV Completo (ES)" },
-    { href: cv?.spanishMini, label: "One-page CV (ES)" },
-    { href: cv?.portuguese, label: "CV Completo (PT)" },
-    { href: cv?.portugueseMini, label: "One-page CV (PT)" },
+    { key: "english", href: cv?.english, label: "Full CV (EN)" },
+    { key: "englishMini", href: cv?.englishMini, label: "One-page CV (EN)" },
+    { key: "spanish", href: cv?.spanish, label: "CV Completo (ES)" },
+    { key: "spanishMini", href: cv?.spanishMini, label: "One-page CV (ES)" },
+    { key: "portuguese", href: cv?.portuguese, label: "CV Completo (PT)" },
+    { key: "portugueseMini", href: cv?.portugueseMini, label: "One-page CV (PT)" },
   ].filter((item) => Boolean(item.href?.trim()));
 
   const hasAnyCv = cvDownloads.length > 0;
+  const hasHiddenCv = cvDownloads.some((item) => !CV_DOWNLOAD_ENABLED[item.key]);
 
   const hasVcard = Boolean(cv?.vcard?.trim());
 
@@ -92,7 +113,7 @@ export default function Footer() {
                   {/* CV Links - Vertical Stack */}
                   <div className="flex flex-col gap-2 text-sm">
                     {cvDownloads.map((item) =>
-                      CV_DOWNLOADS_ENABLED ? (
+                      CV_DOWNLOAD_ENABLED[item.key] ? (
                         <a key={item.label} href={item.href} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
                           {item.label}
                         </a>
@@ -108,7 +129,7 @@ export default function Footer() {
                       )
                     )}
                   </div>
-                  {!CV_DOWNLOADS_ENABLED && (
+                  {hasHiddenCv && (
                     <p className="text-xs text-gray-400 max-w-xs">
                       {t("footer.cvUnavailable")}
                     </p>
