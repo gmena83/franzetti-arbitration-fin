@@ -678,9 +678,9 @@
                             "ES": "Global, Arbitraje Internacional, nueve años clasificada"
                         },
                         {
-                            "EN": "USA: International Arbitration: Counsel (Band 6)",
-                            "PT": "EUA, Arbitragem Internacional: Advogada, Banda 6",
-                            "ES": "EE.UU., Arbitraje Internacional: Abogados, Banda 6"
+                            "EN": "USA, International Arbitration Counsel: Band 6 (2025)",
+                            "PT": "EUA, Advogada de Arbitragem Internacional: Banda 6 (2025)",
+                            "ES": "EE.UU., Abogada de Arbitraje Internacional: Banda 6 (2025)"
                         },
                         {
                             "EN": "Brazil: International Arbitration (Band 3)",
@@ -694,8 +694,8 @@
                     "url": "https://www.legal500.com",
                     "details": [
                         {
-                            "EN": "USA: Latin America: International Arbitration",
-                            "PT": "EUA, América Latina, Arbitragem Internacional",
+                            "EN": "USA, Latin America: International Arbitration",
+                            "PT": "EUA, América Latina: Arbitragem Internacional",
                             "ES": "EE.UU., América Latina: Arbitraje Internacional"
                         }
                     ]
@@ -705,9 +705,9 @@
                     "url": "https://whoswholegal.com",
                     "details": [
                         {
-                            "EN": "International Arbitration: Recommended",
-                            "PT": "Arbitragem Internacional, Altamente Recomendada",
-                            "ES": "Arbitraje Internacional"
+                            "EN": "International Arbitration: Highly Recommended",
+                            "PT": "Arbitragem Internacional: Altamente Recomendada",
+                            "ES": "Arbitraje Internacional: Altamente Recomendada"
                         }
                     ]
                 },
@@ -738,9 +738,9 @@
                     "url": "https://www.bestlawyers.com",
                     "details": [
                         {
-                            "EN": "The Best Lawyers in America: International Arbitration - Commercial (2026)",
-                            "PT": "Os Melhores Advogados nos Estados Unidos: Arbitragem Internacional – Comercial (2026)",
-                            "ES": "Los Mejores Abogados en América: Arbitraje Internacional – Comercial (2026)"
+                            "EN": "The Best Lawyers in America: International Arbitration - Commercial",
+                            "PT": "Os Melhores Advogados nos Estados Unidos: Arbitragem Internacional – Comercial",
+                            "ES": "Los Mejores Abogados en América: Arbitraje Internacional – Comercial"
                         }
                     ]
                 },
@@ -749,9 +749,9 @@
                     "url": "https://www.lawdragon.com",
                     "details": [
                         {
-                            "EN": "Leading Global Litigators (2024)",
-                            "PT": "Melhores Advogados Globais em Contencioso (2024)",
-                            "ES": "Principales Litigantes Globales (2024)"
+                            "EN": "Leading Global Litigators",
+                            "PT": "Melhores Advogados Globais em Contencioso",
+                            "ES": "Principales Litigantes Globales"
                         }
                     ]
                 }
@@ -1547,21 +1547,9 @@
             "publications": [
                 {
                     "title": {
-                        "EN": "Arbitragem de Emergência: O Fim da Dependência das Cortes Nacionais?, chapter to AASP Law Review – Issue 169, marking the 30th anniversary of the Brazilian Arbitration Act (co-author), coordinated by Ana Cândida Menezes Marcato and Silvia Rodrigues Pachikoski (2026).",
-                        "ES": "Arbitraje de emergencia: ¿el fin de la dependencia de los tribunales nacionales?, capítulo en AASP Law Review – Edición 169, conmemorando el 30.º aniversario de la Ley Brasileña de Arbitraje (coautora), coordinado por Ana Cândida Menezes Marcato y Silvia Rodrigues Pachikoski (2026).",
-                        "PT": "Emergency Arbitration: The End of Dependence on National Courts?, capítulo para edição 169 da Revista da AASP, sobre os 30 anos da Lei de Arbitragem brasileira (coautora), sob a coordenação de Ana Cândida Menezes Marcato e Silvia Rodrigues Pachikoski (2026)."
-                    },
-                    "publication": {
-                        "EN": "AASP Law Review – Issue 169 (2026)",
-                        "ES": "Revista de la AASP – Edición 169 (2026)",
-                        "PT": "Revista da AASP – Edição 169 (2026)"
-                    }
-                },
-                {
-                    "title": {
-                        "EN": "“Organização da Audiência de Instrução: Boas Práticas,” chapter in the book Produção de Provas em Arbitragens de Construção (co-author), edited by Bruno Guandalini and Romulo Greff Mariana — Synergia (2026).",
-                        "PT": "“Organização da Audiência de Instrução: Boas Práticas,” capítulo do livro Produção de Provas em Arbitragens de Construção (coautora), editado por Bruno Guandalini e Romulo Greff Mariana — Synergia (2026).",
-                        "ES": "“Organização da Audiência de Instrução: Boas Práticas,” capítulo en el libro Produção de Provas em Arbitragens de Construção (coautora), editado por Bruno Guandalini y Romulo Greff Mariana — Synergia (2026)."
+                        "EN": "“Organização da Audiência de Instrução: Boas Práticas,” chapter in the book Produção de Provas em Arbitragens de Construção. Co-author, edited by Bruno Guandalini and Romulo Greff Mariana — Synergia (2026).",
+                        "PT": "“Organização da Audiência de Instrução: Boas Práticas,” capítulo do livro Produção de Provas em Arbitragens de Construção. Coautora, editado por Bruno Guandalini e Romulo Greff Mariana — Synergia (2026).",
+                        "ES": "“Organização da Audiência de Instrução: Boas Práticas,” capítulo en el libro Produção de Provas em Arbitragens de Construção. Coautora, editado por Bruno Guandalini y Romulo Greff Mariana — Synergia (2026)."
                     },
                     "publication": {
                         "EN": "Book chapter in Produção de Provas em Arbitragens de Construção — Synergia (2026)",
@@ -1571,14 +1559,26 @@
                 },
                 {
                     "title": {
+                        "EN": "Arbitragem de Emergência: O Fim da Dependência das Cortes Nacionais?, chapter to AASP Law Review – Issue 169, marking the 30th anniversary of the Brazilian Arbitration Act. Co-Author, coordinated by Ana Cândida Menezes Marcato and Silvia Rodrigues Pachikoski (2026).",
+                        "ES": "Arbitraje de emergencia: ¿el fin de la dependencia de los tribunales nacionales?, capítulo en AASP Law Review – Edición 169, conmemorando el 30.º aniversario de la Ley Brasileña de Arbitraje. Coautora, coordinado por Ana Cândida Menezes Marcato y Silvia Rodrigues Pachikoski (2026).",
+                        "PT": "Emergency Arbitration: The End of Dependence on National Courts?, capítulo para edição 169 da Revista da AASP, sobre os 30 anos da Lei de Arbitragem brasileira. Coautora, sob a coordenação de Ana Cândida Menezes Marcato e Silvia Rodrigues Pachikoski (2026)."
+                    },
+                    "publication": {
+                        "EN": "AASP Law Review – Issue 169 (2026)",
+                        "ES": "Revista de la AASP – Edición 169 (2026)",
+                        "PT": "Revista da AASP – Edição 169 (2026)"
+                    }
+                },
+                {
+                    "title": {
                         "EN": "“The Role of Counsel in International Arbitration: Set-Aside Steps,”",
                         "PT": "“The Role of Counsel in International Arbitration: Set-Aside Steps,",
                         "ES": "The Role of Counsel in International Arbitration: Set-Aside Steps"
                     },
                     "publication": {
-                        "EN": "book chapter in International Arbitration in Practice (co-author), edited by Courtney Lotfi, Alicja Zielinska-Eisen and Veronica Sandler Obregon, Kluwer International Law, 2024",
-                        "PT": "capítulo do livro Arbitragem Internacional na Prática (coautora), editado por Courtney Lotfi, Alicja Zielinska-Eisen e Veronica Sandler Obregon, Kluwer International Law, 2024",
-                        "ES": "capítulo (coautora) en International Arbitration in Practice, editado por Courtney Lotfi, Alicja Zielinska-Eisen y Veronica Sandler Obregon, Kluwer International Law, 2024."
+                        "EN": "Co-author, book chapter in International Arbitration in Practice, edited by Courtney Lotfi, Alicja Zielinska-Eisen and Veronica Sandler Obregon, Kluwer International Law, 2024",
+                        "PT": "Coautora, capítulo do livro Arbitragem Internacional na Prática, editado por Courtney Lotfi, Alicja Zielinska-Eisen e Veronica Sandler Obregon, Kluwer International Law, 2024",
+                        "ES": "Coautora, capítulo en International Arbitration in Practice, editado por Courtney Lotfi, Alicja Zielinska-Eisen y Veronica Sandler Obregon, Kluwer International Law, 2024."
                     }
                 },
                 {
@@ -1588,9 +1588,9 @@
                         "ES": "Lei de Arbitragem Comentada: Lei No. 9.307/1996"
                     },
                     "publication": {
-                        "EN": "co-author, comments to Article 12, Revista dos Tribunais, 2023",
-                        "PT": "coautora, comentários ao Artigo 12, Revista dos Tribunais, 2023",
-                        "ES": "coautora, Comentarios al Artículo 12, Revista dos Tribunais, 2023."
+                        "EN": "Co-author, comments to Article 12, Revista dos Tribunais, 2023",
+                        "PT": "Coautora, comentários ao Artigo 12, Revista dos Tribunais, 2023",
+                        "ES": "Coautora, Comentarios al Artículo 12, Revista dos Tribunais, 2023."
                     }
                 },
                 {
@@ -1612,9 +1612,9 @@
                         "ES": "Navigating Investors’ Rights under the USMCA"
                     },
                     "publication": {
-                        "EN": "co-author, Transnational Dispute Management, Vol. 17, No. 3, March 2020",
-                        "PT": "coautora, Transnational Dispute Management, Vol. 17, Nº 3, março de 2020",
-                        "ES": "coautora, Transnational Dispute Management, vol. 17, nº 3, marzo de 2020."
+                        "EN": "Co-author, Transnational Dispute Management, Vol. 17, No. 3, March 2020",
+                        "PT": "Coautora, Transnational Dispute Management, Vol. 17, Nº 3, março de 2020",
+                        "ES": "Coautora, Transnational Dispute Management, vol. 17, nº 3, marzo de 2020."
                     }
                 },
                 {
@@ -1624,9 +1624,9 @@
                         "ES": "Mining Arbitration in Latin America: Social and Environmental Issues in Investment Arbitration Cases"
                     },
                     "publication": {
-                        "EN": "co-author, Global Arbitration Review: The Guide to Mining Arbitrations, July 2019",
-                        "PT": "coautora, Global Arbitration Review: The Guide to Mining Arbitrations, julho de 2019",
-                        "ES": "coautora, Global Arbitration Review: The Guide to Mining Arbitrations, julio de 2019."
+                        "EN": "Co-author, Global Arbitration Review: The Guide to Mining Arbitrations, July 2019",
+                        "PT": "Coautora, Global Arbitration Review: The Guide to Mining Arbitrations, julho de 2019",
+                        "ES": "Coautora, Global Arbitration Review: The Guide to Mining Arbitrations, julio de 2019."
                     }
                 },
                 {
@@ -1672,9 +1672,9 @@
                         "ES": "Arbitragem Comercial Envolvendo Administraçao Pública: uma Realidade na América Latina?"
                     },
                     "publication": {
-                        "EN": "co-author, Revista Visão Jurídica, April 2017",
+                        "EN": "Co-author, Revista Visão Jurídica, April 2017",
                         "PT": "Revista Visão Jurídica, abril de 2017",
-                        "ES": "coautora, Revista Visão Jurídica, abril de 2017."
+                        "ES": "Coautora, Revista Visão Jurídica, abril de 2017."
                     }
                 },
                 {
@@ -1684,9 +1684,9 @@
                         "ES": "Liçoes a Respeito de Decisoes Vinculantes e Nao Finais Proferidas por Dispute Adjudication Boards: o CasoCRW Joint Operation v. PT Perusahaan Gas Negara (PERSERO)"
                     },
                     "publication": {
-                        "EN": "co-author, Revista de Arbitragem e Mediação – RArb, No. 48, April 2016",
-                        "PT": "coautora, Revista de Arbitragem e Mediação – RArb, nº 48, abril de 2016",
-                        "ES": "coautora, Revista de Arbitraje y Mediación – RArb, nº 48, abril de 2016."
+                        "EN": "Co-author, Revista de Arbitragem e Mediação – RArb, No. 48, April 2016",
+                        "PT": "Coautora, Revista de Arbitragem e Mediação – RArb, nº 48, abril de 2016",
+                        "ES": "Coautora, Revista de Arbitraje y Mediación – RArb, nº 48, abril de 2016."
                     }
                 },
                 {
@@ -1696,9 +1696,9 @@
                         "ES": "Directrices Prácticas Para la Redacción del Acuerdo Arbitral"
                     },
                     "publication": {
-                        "EN": "co-author, Tratado de Derecho Arbitral, Vol. 2, March 2011",
-                        "PT": "coautora, Tratado de Direito Arbitral, Vol. 2, março de 2011",
-                        "ES": "coautora, Tratado de Derecho Arbitral, vol. 2, coautora, marzo de 2011."
+                        "EN": "Co-author, Tratado de Derecho Arbitral, Vol. 2, March 2011",
+                        "PT": "Coautora, Tratado de Direito Arbitral, Vol. 2, março de 2011",
+                        "ES": "Coautora, Tratado de Derecho Arbitral, vol. 2, coautora, marzo de 2011."
                     }
                 },
                 {
