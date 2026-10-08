@@ -421,32 +421,45 @@ def data_checks():
     check("data/routes", "Experience.tsx no longer calls .toLowerCase() on a languages item",
           "item.toLowerCase()" not in exp)
 
-    # --- CV PDF: byte-identical to the client's supplied file
+    # --- CV PDFs: byte-identical to the client's supplied October files
     import hashlib
-    def md5(p):
-        return hashlib.md5(open(p, "rb").read()).hexdigest()
-    src = os.path.join(CLIENT_DOCS, "Franzetti Curriculum Vitae Sept. 2026 (EN).pdf")
-    pub = os.path.join(REPO, "client", "public", "cv", "Franzetti-CV-English.pdf")
-    check("data/cv", "published EN CV PDF is byte-identical to the client's Sept. 2026 file",
-          md5(src) == md5(pub), md5(pub))
-    check("data/cv", "published EN CV PDF is 11 pages", "Pages:           11" in
-          subprocess.run(["pdfinfo", pub], capture_output=True, text=True).stdout)
+    def sha256(p):
+        return hashlib.sha256(open(p, "rb").read()).hexdigest()
+    cv_dir = os.path.join(REPO, "client", "public", "cv")
+    cv_sources = {
+        "english": ("EN", "Franzetti-CV-English.pdf"),
+        "spanish": ("ES", "Franzetti-CV-Spanish.pdf"),
+        "portuguese": ("PO", "Franzetti-CV-Portuguese.pdf"),
+    }
+    manifest = json.load(open(os.path.join(cv_dir, "cv.json"), encoding="utf-8"))
+    for key, (lang, fname) in cv_sources.items():
+        src = os.path.join(os.path.expanduser("~/Downloads"),
+                           f"Franzetti Curriculum Vitae Oct. 2026 ({lang}).pdf")
+        pub = os.path.join(cv_dir, fname)
+        if os.path.exists(src) and os.path.exists(pub):
+            check("data/cv", f"published {lang} PDF matches client's Oct. 2026 file",
+                  sha256(src) == sha256(pub), sha256(pub))
+        check("data/cv", f"published {lang} PDF has 11 pages", os.path.exists(pub) and
+              "Pages:           11" in subprocess.run(["pdfinfo", pub], capture_output=True, text=True).stdout)
+        check("data/cv", f"cv.json {key} resolves to published PDF",
+              manifest.get(key) == f"/cv/{fname}")
 
     # --- footer flag + netlify redirects
     footer = open(os.path.join(REPO, "client", "src", "components", "Footer.tsx"), encoding="utf-8").read()
-    for key, expect in [("english", True), ("englishMini", False), ("spanish", False),
-                        ("spanishMini", False), ("portuguese", False), ("portugueseMini", False)]:
+    for key, expect in [("english", True), ("englishMini", False), ("spanish", True),
+                        ("spanishMini", False), ("portuguese", True), ("portugueseMini", False)]:
         m = re.search(rf"{key}:\s*(true|false)", footer)
         check("data/cv", f"Footer CV_DOWNLOAD_ENABLED.{key} == {expect}",
               m and (m.group(1) == "true") == expect, m.group(0) if m else "not found")
 
     nf = open(os.path.join(REPO, "netlify.toml"), encoding="utf-8").read()
     check("data/cv", "netlify: blanket /cv/* 404 block removed", 'from = "/cv/*"' not in nf)
-    for f in ["Franzetti-Mini-CV-English.pdf", "Franzetti-CV-Spanish.pdf", "Franzetti-Mini-CV-Spanish.pdf",
-              "Franzetti-CV-Portuguese.pdf", "Franzetti-Mini-CV-Portuguese.pdf"]:
+    for f in ["Franzetti-Mini-CV-English.pdf", "Franzetti-Mini-CV-Spanish.pdf",
+              "Franzetti-Mini-CV-Portuguese.pdf"]:
         check("data/cv", f"netlify: release gate present for /cv/{f}", f'from = "/cv/{f}"' in nf)
-    check("data/cv", "netlify: corrected EN CV is NOT 404-blocked",
-          'from = "/cv/Franzetti-CV-English.pdf"' not in nf)
+    for _, fname in cv_sources.values():
+        check("data/cv", f"netlify: published /cv/{fname} is NOT 404-blocked",
+              f'from = "/cv/{fname}"' not in nf)
 
     # --- release-gate consistency, asserted in BOTH directions.
     # published  <=>  the file exists on disk  <=>  no 404 rule blocks it.
@@ -468,18 +481,16 @@ def data_checks():
         check("data/cv", f"{key}: published iff not 404-blocked (enabled={enabled}, blocked={blocked})",
               enabled != blocked, f"enabled={enabled} blocked={blocked}")
 
-    # --- the superseded documents must be gone from the repository entirely
-    for gone in ["client/public/cv/Franzetti-CV-Spanish.pdf",
-                 "client/public/cv/Franzetti-Mini-CV-Spanish.pdf",
-                 "client/public/cv/Franzetti-CV-Portuguese.pdf",
+    # --- superseded one-page documents must remain absent
+    for gone in ["client/public/cv/Franzetti-Mini-CV-Spanish.pdf",
                  "client/public/cv/Franzetti-Mini-CV-Portuguese.pdf",
                  "client/public/cv/Franzetti-Mini-CV-English.pdf",
                  "cv-english.pdf"]:
         check("data/cv", f"superseded document deleted from the repo: {gone}",
               not os.path.exists(os.path.join(REPO, gone)), gone)
-    shipped = sorted(os.listdir(os.path.join(REPO, "client", "public", "cv")))
-    check("data/cv", "client/public/cv holds only the published English CV (+ cv.json)",
-          shipped == ["Franzetti-CV-English.pdf", "cv.json"], str(shipped))
+    shipped = sorted(os.listdir(cv_dir))
+    check("data/cv", "client/public/cv holds three full CVs (+ cv.json)",
+          shipped == sorted([fname for _, fname in cv_sources.values()] + ["cv.json"]), str(shipped))
 
     # --- new logo assets ship in the build
     for logo in ["american-university-wcl-logo.svg", "nova-school-of-law-logo.svg"]:

@@ -27,29 +27,16 @@ type CvLinks = {
 };
 
 /* Resume/CV download state - Franzetti Arbitration
- * Client decision (2026-09-18): the corrected ENGLISH CV ("Franzetti Curriculum
- * Vitae Sept. 2026 (EN)") is published and downloadable again.
- *
- * The other five variants are still the superseded versions and stay
- * visible-but-inert until corrected files are supplied. Specifically:
- *   - Franzetti-CV-Spanish.pdf / Franzetti-CV-Portuguese.pdf and their minis
- *     still carry the old King & Spalding end date ("Dic./Dez. 2025", corrected
- *     to "Jan. 2026") and the old "Washington, DC" spelling.
- *   - Franzetti-Mini-CV-English.pdf carries no firm dates, but it still spells
- *     Georgetown's location "Washington, DC" and still lists the University of
- *     Miami teaching period as "2025-2026" (corrected to "2024-2025").
- *
- * Each hidden variant also has a matching 404 redirect for its direct URL in
- * netlify.toml, because the files are still shipped in the build output.
- *
- * To restore a variant: set its flag to `true` AND delete its redirect block.
+ * The three full October 2026 CVs are published. The one-page versions have
+ * not been replaced and remain unavailable. Keep the release gates here and
+ * in netlify.toml aligned with the actual PDFs in client/public/cv/.
  */
 const CV_DOWNLOAD_ENABLED: Record<string, boolean> = {
   english: true,
   englishMini: false,
-  spanish: false,
+  spanish: true,
   spanishMini: false,
-  portuguese: false,
+  portuguese: true,
   portugueseMini: false,
 };
 
@@ -114,9 +101,15 @@ export default function Footer() {
                   <div className="flex flex-col gap-2 text-sm">
                     {cvDownloads.map((item) =>
                       CV_DOWNLOAD_ENABLED[item.key] ? (
-                        <a key={item.label} href={item.href} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
-                          {item.label}
-                        </a>
+                        <div key={item.key} className="flex flex-wrap gap-x-3 gap-y-1">
+                          <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-aquamarine transition-colors underline">
+                            {item.label} — {language === "ES" ? "Leer" : language === "PT" ? "Ler" : "Read"}
+                          </a>
+                          <a href={item.href} download className="text-gray-200 hover:text-aquamarine transition-colors underline">
+                            {language === "ES" ? "Descargar" : language === "PT" ? "Baixar" : "Download"}
+                            <span className="sr-only"> {item.label}</span>
+                          </a>
+                        </div>
                       ) : (
                         <span
                           key={item.label}
