@@ -16,9 +16,17 @@ type TabType = "recognition" | "speaking" | "publications" | "academia";
 
 export default function ThoughtLeadership() {
   const [activeTab, setActiveTab] = useState<TabType>("recognition");
-  const { t, getLocalized } = useLanguage();
+  const { t, getLocalized, language } = useLanguage();
   const content = siteContent.content;
   const tlContent = content.thoughtLeadership;
+
+  // Per-quote language note: distinguish an original English quote from a translation
+  const quoteNote = (q: any) => {
+    if (language === "EN") return "";
+    const translated = getLocalized(q) !== q.EN;
+    if (language === "ES") return translated ? " (traducción del inglés)" : " (original en inglés)";
+    return translated ? " (tradução do inglês)" : " (original em inglês)";
+  };
 
   // SEO Meta Tags
   useEffect(() => {
@@ -133,6 +141,8 @@ export default function ThoughtLeadership() {
             {/* Recognition Tab */}
             {activeTab === "recognition" && (
               <div id="recognition" className="space-y-12">
+                {/* Note added per client request (2026.11): recognitions current unless year indicated */}
+                <p className="text-sm italic text-gray-500">{t("recognition.note")}</p>
                 {/* Recognition List - WITHOUT bullet points */}
                 <div className="space-y-8">
                   {tlContent.recognitions.map((item, index) => (
@@ -144,7 +154,7 @@ export default function ThoughtLeadership() {
                           rel="noopener noreferrer"
                           className="hover:text-aquamarine transition-colors"
                         >
-                          {item.source}
+                          {getLocalized(item, 'source')}
                         </a>
                       </h3>
                       <div className="space-y-1 ml-0">
@@ -169,7 +179,7 @@ export default function ThoughtLeadership() {
                         </p>
                         <p className="text-sm text-gray-500 font-medium">
                           — {testimonial.source}
-                          {getLocalized({ EN: "", ES: " (original en inglés)", PT: " (original em inglês)" })}
+                          {quoteNote(testimonial.quote)}
                         </p>
                       </div>
                     ))}
@@ -235,7 +245,7 @@ export default function ThoughtLeadership() {
                       </h3>
                       <p className="text-gray-700">{getLocalized(item.role)}</p>
                       <p className="text-gray-600 text-sm">{getLocalized(item.course)}</p>
-                      <p className="text-gray-400 text-sm mt-1">{item.period}</p>
+                      <p className="text-gray-400 text-sm mt-1">{getLocalized(item, 'period')}</p>
                     </div>
                   </div>
                 ))}

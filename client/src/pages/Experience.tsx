@@ -66,7 +66,7 @@ export default function Experience() {
                       <span className="text-gray-600">, {getLocalized(item, 'location')}</span>
                       <span className="text-gray-600">, {getLocalized(item, 'role')}</span>
                     </div>
-                    <span className="text-gray-500 text-sm sm:text-base">{item.period}</span>
+                    <span className="text-gray-500 text-sm sm:text-base">{getLocalized(item, 'period')}</span>
                   </div>
                 ))}
               </div>
@@ -85,7 +85,7 @@ export default function Experience() {
                       <span className="text-gray-600">, {getLocalized(item, 'role')}</span>
                       <span className="text-gray-600">, {getLocalized(item, 'course')}</span>
                     </div>
-                    <span className="text-gray-500 text-sm sm:text-base">{item.period}</span>
+                    <span className="text-gray-500 text-sm sm:text-base">{getLocalized(item, 'period')}</span>
                   </div>
                 ))}
               </div>

@@ -34,8 +34,16 @@ const languages = ["English", "Spanish", "Portuguese"];
 
 // Hero Quotes Carousel Component - Compact with fixed height for hero section
 function HeroQuotesCarousel({ quotes }: { quotes: any[] }) {
-  const { getLocalized } = useLanguage();
+  const { getLocalized, language } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Per-quote language note: distinguish an original English quote from a translation
+  const quoteNote = (q: any) => {
+    if (language === "EN") return "";
+    const translated = getLocalized(q) !== q.EN;
+    if (language === "ES") return translated ? " (traducción del inglés)" : " (original en inglés)";
+    return translated ? " (tradução do inglês)" : " (original em inglês)";
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -64,7 +72,7 @@ function HeroQuotesCarousel({ quotes }: { quotes: any[] }) {
               </p>
               <p className="text-sm text-gray-500 font-medium mt-2">
                 — {quotes[currentIndex].source}
-                {getLocalized({ EN: "", ES: " (original en inglés)", PT: " (original em inglês)" })}
+                {quoteNote(quotes[currentIndex].quote)}
               </p>
             </div>
           </div>
@@ -271,10 +279,10 @@ export default function Home() {
                         <span className="text-gray-600">, {getLocalized(item, 'location')}</span>
                         <span className="text-gray-600">, {getLocalized(item, 'role')}</span>
                       </div>
-                      <span className="text-gray-400 text-sm block sm:hidden mt-1">{item.period}</span>
+                      <span className="text-gray-400 text-sm block sm:hidden mt-1">{getLocalized(item, 'period')}</span>
                     </div>
                   </div>
-                  <span className="text-gray-400 text-sm sm:text-base whitespace-nowrap hidden sm:block">{item.period}</span>
+                  <span className="text-gray-400 text-sm sm:text-base whitespace-nowrap hidden sm:block">{getLocalized(item, 'period')}</span>
                 </div>
               ))}
             </div>
@@ -312,10 +320,10 @@ export default function Home() {
                         <span className="text-gray-600">, {getLocalized(item, 'role')}</span>
                         <span className="text-gray-600">, {getLocalized(item, 'course')}</span>
                       </div>
-                      <span className="text-gray-400 text-sm block sm:hidden mt-1">{item.period}</span>
+                      <span className="text-gray-400 text-sm block sm:hidden mt-1">{getLocalized(item, 'period')}</span>
                     </div>
                   </div>
-                  <span className="text-gray-400 text-sm sm:text-base whitespace-nowrap hidden sm:block">{item.period}</span>
+                  <span className="text-gray-400 text-sm sm:text-base whitespace-nowrap hidden sm:block">{getLocalized(item, 'period')}</span>
                 </div>
               ))}
             </div>

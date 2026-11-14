@@ -13,7 +13,7 @@ import siteContent from "@/data/siteContent.json";
 const subjectMatters = [
   { id: "commercial", label: "Commercial Contracts", labelES: "Contratos Comerciales", labelPT: "Contratos Comerciais" },
   { id: "construction", label: "Construction & Infrastructure", labelES: "Construcción e Infraestructura", labelPT: "Construção e Infraestrutura" },
-  { id: "deal-structure", label: "Deal Structure, Post-Transaction, Governance & Accountability", labelES: "Estructura de Transacciones, Post-Transacción, Gobernanza y Responsabilidad", labelPT: "Estrutura de Transações, Pós-Transação, Governança e Responsabilidade" },
+  { id: "deal-structure", label: "Corporate & M&A", labelES: "Corporativo y Fusiones y Adquisiciones", labelPT: "Societário e Fusões e Aquisições" },
   { id: "energy", label: "Energy & Natural Resources", labelES: "Energía y Recursos Naturales", labelPT: "Energia e Recursos Naturais" },
   { id: "investor-state", label: "Investor-State Disputes", labelES: "Disputas Inversionista-Estado", labelPT: "Disputas Investidor-Estado" },
   { id: "recognition", label: "Recognition & Enforcement of Arbitral Awards", labelES: "Reconocimiento y Ejecución de Laudos Arbitrales", labelPT: "Reconhecimento e Execução de Sentenças Arbitrais" },
@@ -75,9 +75,10 @@ export default function Cases() {
     return getLocalized(matter, 'label');
   };
 
-  // Check if section should show role headings (only for commercial, construction, deal-structure)
-  const shouldShowRoleHeadings = (categoryId: string) => {
-    return ["commercial", "construction", "deal-structure"].includes(categoryId);
+  // Show As Arbitrator / As Counsel headings whenever a category has BOTH roles
+  // (commercial, construction, corporate & energy); single-role sections stay flat.
+  const shouldShowRoleHeadings = (arbitratorCount: number, counselCount: number) => {
+    return arbitratorCount > 0 && counselCount > 0;
   };
 
   return (
@@ -137,7 +138,7 @@ export default function Cases() {
             const { arbitratorCases, counselCases } = getFilteredCases(matter.id);
             if (arbitratorCases.length === 0 && counselCases.length === 0) return null;
 
-            const showRoleHeadings = shouldShowRoleHeadings(matter.id);
+            const showRoleHeadings = shouldShowRoleHeadings(arbitratorCases.length, counselCases.length);
 
             return (
               <motion.div
