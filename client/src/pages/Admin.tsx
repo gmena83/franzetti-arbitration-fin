@@ -208,6 +208,10 @@ export default function Admin() {
                             <CardDescription>Edit the main biography, intro text, and arbitrator services.</CardDescription>
                         </CardHeader>
                         <CardContent className="space-y-6">
+                            <div className="rounded-md border border-blue-200 bg-blue-50 p-3 text-sm text-blue-900">
+                                <strong>What this controls:</strong> the About / biography on the Home page — the intro and "A fellow of…" paragraphs, the arbitrator-services and advisory lists, the industry-sector list, and the first highlighted quote.
+                                <br /><strong>Not editable here:</strong> the rotating client testimonials and the 2nd/3rd pull-quotes are set in the code — ask your developer to change those.
+                            </div>
                             <div className="grid gap-6">
                                 <div className="space-y-4">
                                     <Label className="text-lg font-semibold">Intro Paragraph (p1)</Label>
@@ -307,6 +311,9 @@ export default function Admin() {
                 {/* Experience Lists Section */}
                 {currentSection === "experience" && (
                     <div className="space-y-8">
+                        <div className="rounded-md border border-blue-200 bg-blue-50 p-3 text-sm text-blue-900">
+                            These four lists feed the <strong>Profile</strong> and <strong>Experience</strong> pages: Professional Background, Education, Associations, and Bar Admissions. Fill the English / Español / Português fields for each item so all three languages stay in sync.
+                        </div>
                         {/* Professional Background */}
                         <Card>
                             <CardHeader>
@@ -491,6 +498,9 @@ export default function Admin() {
                 {/* Thought Leadership */}
                 {currentSection === "thoughtLeadership" && (
                     <div className="space-y-8">
+                        <div className="rounded-md border border-blue-200 bg-blue-50 p-3 text-sm text-blue-900">
+                            Recognitions, Speaking Engagements and Publications appear on the <strong>Thought Leadership</strong> page. <strong>Teaching Experience</strong> here also shows on the Home page and on the "Academia &amp; Teaching" tab (one shared source). Tip: for an entry with two courses/dates (e.g. American University) the dates live inside the <em>Course</em> fields; the single "Period" box is for entries with one date. Fill English / Español / Português for every field.
+                        </div>
                         {/* Academia / Teaching */}
                         <Card>
                             <CardHeader>
@@ -727,6 +737,9 @@ export default function Admin() {
                 {/* Cases Section */}
                 {currentSection === "cases" && (
                     <div className="space-y-8">
+                        <div className="rounded-md border border-blue-200 bg-blue-50 p-3 text-sm text-blue-900">
+                            Cases appear on the <strong>Experience</strong> page grouped by the category you assign to each. A case that should appear in more than one category must be added <strong>once per category</strong> (same text, different category). "As Arbitrator" / "As Counsel" headings appear automatically when a category has both. Fill English / Español / Português for every case.
+                        </div>
                         {/* Arbitrator Appointments */}
                         <Card>
                             <CardHeader>
@@ -855,7 +868,7 @@ export default function Admin() {
                 {/* Translations & UI Section */}
                 {currentSection === "translations" && (
                     <Card>
-                        <CardHeader><CardTitle>UI Translations</CardTitle><CardDescription>Edit buttons, labels, and navigation text.</CardDescription></CardHeader>
+                        <CardHeader><CardTitle>UI Translations</CardTitle><CardDescription>Buttons, labels, navigation, and some page text (e.g. the Experience-page intro and section headings). Each row is one item — edit its English / Español / Português columns.</CardDescription></CardHeader>
                         <CardContent className="space-y-6">
                             <div className="grid md:grid-cols-4 gap-4 font-bold border-b pb-2">
                                 <div>Label / Key</div>
