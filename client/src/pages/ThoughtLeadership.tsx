@@ -227,7 +227,7 @@ export default function ThoughtLeadership() {
             {/* Teaching Experience Tab */}
             {activeTab === "academia" && (
               <div id="teaching-experience" className="space-y-6">
-                {tlContent.teachingExperience.map((item, index) => (
+                {content.teachingExperience.map((item, index) => (
                   <div key={index} className="flex items-start gap-6 pb-6 border-b border-gray-100">
                     <div className="w-20 h-20 flex-shrink-0 flex items-center justify-center">
                       <img src={item.logo} alt={item.institution} className="max-w-full max-h-full object-contain" />
@@ -243,8 +243,8 @@ export default function ThoughtLeadership() {
                           {item.institution}
                         </a>
                       </h3>
-                      <p className="text-gray-700">{getLocalized(item.role)}</p>
-                      <p className="text-gray-600 text-sm">{getLocalized(item.course)}</p>
+                      <p className="text-gray-700">{getLocalized(item, 'role')}</p>
+                      <p className="text-gray-600 text-sm">{getLocalized(item, 'course')}</p>
                       <p className="text-gray-400 text-sm mt-1">{getLocalized(item, 'period')}</p>
                     </div>
                   </div>
